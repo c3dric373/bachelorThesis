@@ -1,0 +1,23 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {1}Research Questions}{1}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {2}Background}{2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.1}The Skip-Gram Model}{2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.2}Negative Sampling}{3}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.3}Optimization of the Skip Gram Model}{4}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.3.1}Parallelization}{4}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\nonumberline Parallization in shared and Distributed Memory}{5}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\nonumberline Parallelization by the use of caching}{5}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.3.2}Restating the problem as Matrix factorization}{6}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.3.3}Context sensitive word embedding}{6}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {3}Project Plan}{8}

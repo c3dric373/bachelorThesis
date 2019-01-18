@@ -1,0 +1,16 @@
+\chapter{Project Plan}\label{chap:introduction}
+
+This section will cover the main project plan, we will discuss exactly what we wish to implement and how we are going to test our implementation. 
+The whole process will be done the following way: 
+\begin{itemize}
+\item \texttt{Phase 1: Research} \\ In this phase we will become a broad overlook on the subject, research possible libraries that we can use and start planing the following phases.
+\item \texttt{Phase 2: Implementation} \\ This phase will be our main work, as we will implement our own word2vec version.
+\item \texttt{Phase 3: Testing} \\ Here we will first test if our optimization ideas were succesfull, and if they were we will test the accuracy of our Model. 
+\item \texttt{Phase 4: Writing} \\ In this phase we will summarize Phase 1-3 in our thesis. 
+\end{itemize}
+More details on phase 2 and 3:\\
+\texttt{Phase2}
+First we will implement our own version of the skip gram model. We will implement the optimization techniques stated in \ref{chap:questions}, this means we will use input shuffling and  advanced optimizers.  There exists a python implementation of the original word2vec mode, that is called Gensim \cite{gensim}maybe it's possible to tweak it to fit our needs, if not we are going to implement our own version. 
+\texttt{Phase3}
+First we compare our model against the original gensim word2vec implementation. For this we wil use the dataset \textit{text8}, that was created by Matt Mahoney \footnote{mattmahoney.net}. We will first compare the throughput, this means the number of words our model is able to analyze per second. If we see promising results we will then test the accuracy of our model. This is quite difficult as the quality of word embeddings are often task dependent, but \cite{mikolov2} presented a word analogy task  and \cite{wSimilarity} presented a  word similarity evaluation. We will test our model on both on these task if we achieve a significant optimization. 
+
