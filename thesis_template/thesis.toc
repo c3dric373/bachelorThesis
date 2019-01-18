@@ -21,3 +21,5 @@
 \contentsline {subsection}{\numberline {2.3.3}Context sensitive word embedding}{6}
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {3}Project Plan}{8}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\nonumberline Bibliography}{10}
