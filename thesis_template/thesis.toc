@@ -16,9 +16,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{\nonumberline Parallelization by the use of caching}{5}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.3.2}Restating the problem as Matrix factorization}{6}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.3.3}Context sensitive word embedding}{6}
+\contentsline {subsection}{\numberline {2.3.2}Context sensitive word embedding}{6}
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {3}Project Plan}{8}
 \defcounter {refsection}{0}\relax 
