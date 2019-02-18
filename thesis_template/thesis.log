@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Arch Linux) (preloaded format=pdflatex 2018.5.21)  18 FEB 2019 14:25
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Arch Linux) (preloaded format=pdflatex 2018.5.21)  18 FEB 2019 14:47
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -682,10 +682,10 @@ LaTeX Warning: Citation 'hogwild' on page 3 undefined on input line 44.
 
 LaTeX Warning: Citation 'hogwild' on page 3 undefined on input line 44.
 
-
-LaTeX Warning: Citation 'intel' on page 3 undefined on input line 47.
-
 [3]
+
+LaTeX Warning: Citation 'intel' on page 4 undefined on input line 47.
+
 
 LaTeX Warning: Citation 'efficient' on page 4 undefined on input line 66.
 
@@ -703,17 +703,18 @@ LaTeX Warning: Citation 'efficient' on page 4 undefined on input line 70.
 
 LaTeX Warning: Citation 'efficient' on page 4 undefined on input line 70.
 
+[4]
 
-LaTeX Warning: Citation 'topicalWE' on page 4 undefined on input line 81.
-
-
-LaTeX Warning: Citation 'breaking' on page 4 undefined on input line 81.
+LaTeX Warning: Citation 'topicalWE' on page 5 undefined on input line 81.
 
 
-LaTeX Warning: Citation 'contextWithTensor' on page 4 undefined on input line 8
+LaTeX Warning: Citation 'breaking' on page 5 undefined on input line 81.
+
+
+LaTeX Warning: Citation 'contextWithTensor' on page 5 undefined on input line 8
 1.
 
-[4] [5 <./images/cachingEfficiency.png>]
+[5 <./images/cachingEfficiency.png>]
 <images/multipleContext.png, id=34, 471.7625pt x 89.33376pt>
 File: images/multipleContext.png Graphic file (type png)
 <use images/multipleContext.png>
@@ -789,7 +790,7 @@ Here is how much of TeX's memory you used:
  16580 multiletter control sequences out of 15000+600000
  10162 words of font info for 37 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 46i,19n,67p,8817b,1307s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 46i,19n,73p,8817b,1307s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fon
 ts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/publi
@@ -804,7 +805,7 @@ f-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/t
 ype1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/ams
 fonts/cm/cmti12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt1
 2.pfb>
-Output written on thesis.pdf (10 pages, 239318 bytes).
+Output written on thesis.pdf (10 pages, 239476 bytes).
 PDF statistics:
  103 PDF objects out of 1000 (max. 8388607)
  72 compressed objects within 1 object stream

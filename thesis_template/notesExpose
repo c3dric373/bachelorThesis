@@ -6,20 +6,20 @@ convergence time nicht throughput cant beat up to date ##
 
 background
 for bachelorarbeit: consistent notation 
-    unterscheidung one hot and repreasantion of vector 
-    feasible not the right word 
+    unterscheidung one hot and repreasantion of vector ##
+    feasible not the right word ##
     proposed by Mikolov et al. \cite 
 
     negativ sampling: 
     score for logistic regression and not condition prob p(x"c) 
     explain why we didn't use nce 
-    not random distribution 
+    not random distribution ##
     empiraccely better 
 
 Optimization: 
-    use of this too frequent, do it more explicity 
+    accuracy execution time be aware of which one is not good ##
+    use of this too frequent, do it more explicity ## 
     dont critizice that much related work ##
-    accuracy execution time be aware of which one is not good 
 
 ProjectPlan: 
     throughput vs convergence time ##
