@@ -19,50 +19,6 @@
 
 \refsection{0}
   \sortlist[entry]{nyt/global/}
-    \entry{breaking}{article}{}
-      \name{author}{4}{}{%
-        {{hash=7896fad6d0ebd9548ae7f08eb947c431}{%
-           family={Bartunov},
-           familyi={B\bibinitperiod},
-           given={Sergey},
-           giveni={S\bibinitperiod}}}%
-        {{hash=8af782d4ab2bb6e0c1603c07781af400}{%
-           family={Kondrashkin},
-           familyi={K\bibinitperiod},
-           given={Dmitry},
-           giveni={D\bibinitperiod}}}%
-        {{hash=1cada5b23b77bf3795eb342f76d5f3c5}{%
-           family={Osokin},
-           familyi={O\bibinitperiod},
-           given={Anton},
-           giveni={A\bibinitperiod}}}%
-        {{hash=68bcd68385bb8b89eca36b4342da0cf8}{%
-           family={Vetrov},
-           familyi={V\bibinitperiod},
-           given={Dmitry\bibnamedelima P.},
-           giveni={D\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
-      }
-      \strng{namehash}{56bd6232ba5b20b27d38d039792fab11}
-      \strng{fullhash}{68aa32345fce494e76639b42518164c1}
-      \strng{authornamehash}{56bd6232ba5b20b27d38d039792fab11}
-      \strng{authorfullhash}{68aa32345fce494e76639b42518164c1}
-      \field{labelalpha}{Bar+15}
-      \field{sortinit}{B}
-      \field{sortinithash}{5f6fa000f686ee5b41be67ba6ff7962d}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{eprinttype}{arXiv}
-      \field{journaltitle}{CoRR}
-      \field{title}{Breaking Sticks and Ambiguities with Adaptive Skip-gram}
-      \field{volume}{abs/1502.07257}
-      \field{year}{2015}
-      \verb{eprint}
-      \verb 1502.07257
-      \endverb
-      \verb{url}
-      \verb http://arxiv.org/abs/1502.07257
-      \endverb
-    \endentry
     \entry{intel}{article}{}
       \name{author}{4}{}{%
         {{hash=b340171a83909b667166c95e4c8b890b}{%
@@ -398,6 +354,50 @@
       \field{year}{2010}
       \field{pages}{45\bibrangedash 50}
       \range{pages}{6}
+    \endentry
+    \entry{breaking}{article}{}
+      \name{author}{4}{}{%
+        {{hash=cee34e66d4f17b79c70514106d719d28}{%
+           family={Sergey},
+           familyi={S\bibinitperiod},
+           given={Bartunov},
+           giveni={B\bibinitperiod}}}%
+        {{hash=525962f3baf3195247c40d88dd74420d}{%
+           family={Dmitry},
+           familyi={D\bibinitperiod},
+           given={Kondrashkin},
+           giveni={K\bibinitperiod}}}%
+        {{hash=4c8f0a25e7aa0540ae63ffdc4c354b27}{%
+           family={Anton},
+           familyi={A\bibinitperiod},
+           given={Osokin},
+           giveni={O\bibinitperiod}}}%
+        {{hash=f4885a9c6311ea72c489b7fd6a29ec71}{%
+           family={Dmitry},
+           familyi={D\bibinitperiod},
+           given={P.\bibnamedelimi Vetrov},
+           giveni={P\bibinitperiod\bibinitdelim V\bibinitperiod}}}%
+      }
+      \strng{namehash}{c792b4485c14cdf3a570bd45addafc56}
+      \strng{fullhash}{188fea514272e96fb89b2df396cf7602}
+      \strng{authornamehash}{c792b4485c14cdf3a570bd45addafc56}
+      \strng{authorfullhash}{188fea514272e96fb89b2df396cf7602}
+      \field{labelalpha}{Ser+15}
+      \field{sortinit}{S}
+      \field{sortinithash}{3c1547c63380458f8ca90e40ed14b83e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprinttype}{arXiv}
+      \field{journaltitle}{CoRR}
+      \field{title}{Breaking Sticks and Ambiguities with Adaptive Skip-gram}
+      \field{volume}{abs/1502.07257}
+      \field{year}{2015}
+      \verb{eprint}
+      \verb 1502.07257
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/1502.07257
+      \endverb
     \endentry
     \entry{efficient}{article}{}
       \name{author}{3}{}{%
