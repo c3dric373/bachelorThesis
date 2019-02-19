@@ -19,3 +19,5 @@
 \contentsline {chapter}{\numberline {2}Research Questions}{8}
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {3}Project Plan}{9}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\nonumberline Bibliography}{11}

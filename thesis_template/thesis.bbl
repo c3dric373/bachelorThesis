@@ -1,0 +1,432 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 2.8 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \sortlist[entry]{nyt/global/}
+    \entry{breaking}{inproceedings}{}
+      \name{author}{4}{}{%
+        {{hash=7896fad6d0ebd9548ae7f08eb947c431}{%
+           family={Bartunov},
+           familyi={B\bibinitperiod},
+           given={Sergey},
+           giveni={S\bibinitperiod}}}%
+        {{hash=8af782d4ab2bb6e0c1603c07781af400}{%
+           family={Kondrashkin},
+           familyi={K\bibinitperiod},
+           given={Dmitry},
+           giveni={D\bibinitperiod}}}%
+        {{hash=1cada5b23b77bf3795eb342f76d5f3c5}{%
+           family={Osokin},
+           familyi={O\bibinitperiod},
+           given={Anton},
+           giveni={A\bibinitperiod}}}%
+        {{hash=f1c8fe7ad4d22499bdaaa3917e11783d}{%
+           family={Vetrov},
+           familyi={V\bibinitperiod},
+           given={Dmitry},
+           giveni={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{56bd6232ba5b20b27d38d039792fab11}
+      \strng{fullhash}{6e8c67b91ca5961dea00b06697043029}
+      \strng{authornamehash}{56bd6232ba5b20b27d38d039792fab11}
+      \strng{authorfullhash}{6e8c67b91ca5961dea00b06697043029}
+      \field{labelalpha}{Bar+16}
+      \field{sortinit}{B}
+      \field{sortinithash}{5f6fa000f686ee5b41be67ba6ff7962d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Artificial Intelligence and Statistics}
+      \field{title}{Breaking sticks and ambiguities with adaptive skip-gram}
+      \field{year}{2016}
+      \field{pages}{130\bibrangedash 138}
+      \range{pages}{9}
+    \endentry
+    \entry{intel}{article}{}
+      \name{author}{4}{}{%
+        {{hash=b340171a83909b667166c95e4c8b890b}{%
+           family={Ji},
+           familyi={J\bibinitperiod},
+           given={Shihao},
+           giveni={S\bibinitperiod}}}%
+        {{hash=a930c576ecba694b17665f1e3ed5dfa8}{%
+           family={Satish},
+           familyi={S\bibinitperiod},
+           given={Nadathur},
+           giveni={N\bibinitperiod}}}%
+        {{hash=d8125976d0f2f0c4fddc5c4adeda313d}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Sheng},
+           giveni={S\bibinitperiod}}}%
+        {{hash=03a0853de82447c9c2c5f85d01c7e5b5}{%
+           family={Dubey},
+           familyi={D\bibinitperiod},
+           given={Pradeep},
+           giveni={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{2eac3720ab7715e28fbc3454d58cf379}
+      \strng{fullhash}{968b69981d3fac748efd80cfdf2c7299}
+      \strng{authornamehash}{2eac3720ab7715e28fbc3454d58cf379}
+      \strng{authorfullhash}{968b69981d3fac748efd80cfdf2c7299}
+      \field{labelalpha}{Ji+16}
+      \field{sortinit}{J}
+      \field{sortinithash}{c86bd6cced82a15683b396c2169909ef}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprinttype}{arXiv}
+      \field{journaltitle}{CoRR}
+      \field{title}{Parallelizing Word2Vec in Shared and Distributed Memory}
+      \field{volume}{abs/1604.04661}
+      \field{year}{2016}
+      \verb{eprint}
+      \verb 1604.04661
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/1604.04661
+      \endverb
+    \endentry
+    \entry{wSimilarity}{article}{}
+      \name{author}{2}{}{%
+        {{hash=7d53978d32339650bb4d85746dfa1028}{%
+           family={Leviant},
+           familyi={L\bibinitperiod},
+           given={Ira},
+           giveni={I\bibinitperiod}}}%
+        {{hash=973744e6678559fe62831f24b9f834df}{%
+           family={Reichart},
+           familyi={R\bibinitperiod},
+           given={Roi},
+           giveni={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{73b7a7f7106df3c94c57057f35867280}
+      \strng{fullhash}{73b7a7f7106df3c94c57057f35867280}
+      \strng{authornamehash}{73b7a7f7106df3c94c57057f35867280}
+      \strng{authorfullhash}{73b7a7f7106df3c94c57057f35867280}
+      \field{labelalpha}{LR15}
+      \field{sortinit}{L}
+      \field{sortinithash}{7bba64db83423e3c29ad597f3b682cf3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprinttype}{arXiv}
+      \field{journaltitle}{CoRR}
+      \field{title}{Judgment Language Matters: Multilingual Vector Space Models for Judgment Language Aware Lexical Semantics}
+      \field{volume}{abs/1508.00106}
+      \field{year}{2015}
+      \verb{eprint}
+      \verb 1508.00106
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/1508.00106
+      \endverb
+    \endentry
+    \entry{contextWithTensor}{inproceedings}{}
+      \name{author}{3}{}{%
+        {{hash=b2e07ef809f78891cf3fb983160853ce}{%
+           family={Liu},
+           familyi={L\bibinitperiod},
+           given={Pengfei},
+           giveni={P\bibinitperiod}}}%
+        {{hash=9057ec1bc6c2faaf12dfb4b37a8d37d0}{%
+           family={Qiu},
+           familyi={Q\bibinitperiod},
+           given={Xipeng},
+           giveni={X\bibinitperiod}}}%
+        {{hash=ed0f3403ef6238bb67876d4c6ad27464}{%
+           family={Huang},
+           familyi={H\bibinitperiod},
+           given={Xuanjing},
+           giveni={X\bibinitperiod}}}%
+      }
+      \strng{namehash}{5fb4c79982eb75d167e5e91db1aef15a}
+      \strng{fullhash}{5f22e2d477271d07c9ad36e81e71e8b1}
+      \strng{authornamehash}{5fb4c79982eb75d167e5e91db1aef15a}
+      \strng{authorfullhash}{5f22e2d477271d07c9ad36e81e71e8b1}
+      \field{labelalpha}{LQH15}
+      \field{sortinit}{L}
+      \field{sortinithash}{7bba64db83423e3c29ad597f3b682cf3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{IJCAI}
+      \field{title}{Learning Context-Sensitive Word Embeddings with Neural Tensor Skip-Gram Model.}
+      \field{year}{2015}
+      \field{pages}{1284\bibrangedash 1290}
+      \range{pages}{7}
+    \endentry
+    \entry{topicalWE}{inproceedings}{}
+      \name{author}{4}{}{%
+        {{hash=621013bf54d3546375ad71f17f020b5b}{%
+           family={Liu},
+           familyi={L\bibinitperiod},
+           given={Yang},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=5b9a54b9d83697231299711961622ab8}{%
+           family={Liu},
+           familyi={L\bibinitperiod},
+           given={Zhiyuan},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=57e4257ea3484acff91be2a3df96d16b}{%
+           family={Chua},
+           familyi={C\bibinitperiod},
+           given={Tat-Seng},
+           giveni={T\bibinithyphendelim S\bibinitperiod}}}%
+        {{hash=faa6f5041a22004ca0dd547c03476790}{%
+           family={Sun},
+           familyi={S\bibinitperiod},
+           given={Maosong},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{df83681b9acfd53a0c867d0eb509f8f3}
+      \strng{fullhash}{27d200df9380b7caa88661148d6fbd38}
+      \strng{authornamehash}{df83681b9acfd53a0c867d0eb509f8f3}
+      \strng{authorfullhash}{27d200df9380b7caa88661148d6fbd38}
+      \field{labelalpha}{Liu+15}
+      \field{sortinit}{L}
+      \field{sortinithash}{7bba64db83423e3c29ad597f3b682cf3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{AAAI}
+      \field{title}{Topical Word Embeddings.}
+      \field{year}{2015}
+      \field{pages}{2418\bibrangedash 2424}
+      \range{pages}{7}
+    \endentry
+    \entry{mikolov2}{incollection}{}
+      \name{author}{5}{}{%
+        {{hash=a2d359b12ca2fadf0b40136a73f021bb}{%
+           family={Mikolov},
+           familyi={M\bibinitperiod},
+           given={Tomas},
+           giveni={T\bibinitperiod}}}%
+        {{hash=8d569d1d5b8b5a7836017a98b430f959}{%
+           family={Sutskever},
+           familyi={S\bibinitperiod},
+           given={Ilya},
+           giveni={I\bibinitperiod}}}%
+        {{hash=ee3f7d7b96add98106db907e189d6c13}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={Kai},
+           giveni={K\bibinitperiod}}}%
+        {{hash=d07609f7580c5f06cf743ebef86d1663}{%
+           family={Corrado},
+           familyi={C\bibinitperiod},
+           given={Greg\bibnamedelima S},
+           giveni={G\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=62f954323339abeba6c6a240e9d2855b}{%
+           family={Dean},
+           familyi={D\bibinitperiod},
+           given={Jeff},
+           giveni={J\bibinitperiod}}}%
+      }
+      \name{editor}{5}{}{%
+        {{hash=b70004bbac2b5517c4c32fc5cfe070be}{%
+           family={Burges},
+           familyi={B\bibinitperiod},
+           given={C.\bibnamedelimi J.\bibnamedelimi C.},
+           giveni={C\bibinitperiod\bibinitdelim J\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=27b0ff756cf36911b4cd7d704bfca7a4}{%
+           family={Bottou},
+           familyi={B\bibinitperiod},
+           given={L.},
+           giveni={L\bibinitperiod}}}%
+        {{hash=8b7fe0e4c2b0f504bdf6a5d895d39ee1}{%
+           family={Welling},
+           familyi={W\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+        {{hash=b45872831548714dccc49dcfa20306a1}{%
+           family={Ghahramani},
+           familyi={G\bibinitperiod},
+           given={Z.},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=2cffb24bf1e4e0056d694659663c471c}{%
+           family={Weinberger},
+           familyi={W\bibinitperiod},
+           given={K.\bibnamedelimi Q.},
+           giveni={K\bibinitperiod\bibinitdelim Q\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Curran Associates, Inc.}%
+      }
+      \strng{namehash}{d4849f6d57e38d9b9846cfb360e45131}
+      \strng{fullhash}{c9d4019186e668f056a10a410a6442f4}
+      \strng{authornamehash}{d4849f6d57e38d9b9846cfb360e45131}
+      \strng{authorfullhash}{c9d4019186e668f056a10a410a6442f4}
+      \strng{editornamehash}{4d50aa93a2d5d1803fe877e27e3c95d3}
+      \strng{editorfullhash}{737367293e3a989b67935d60276ebdd1}
+      \field{labelalpha}{Mik+13}
+      \field{sortinit}{M}
+      \field{sortinithash}{c26a05ef03e4429073ed5c825140fac3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Advances in Neural Information Processing Systems 26}
+      \field{title}{Distributed Representations of Words and Phrases and their Compositionality}
+      \field{year}{2013}
+      \field{pages}{3111\bibrangedash 3119}
+      \range{pages}{9}
+      \verb{url}
+      \verb http://papers.nips.cc/paper/5021-distributed-representations-of-words-and-phrases-and-their-compositionality.pdf
+      \endverb
+    \endentry
+    \entry{hsoftmax}{inproceedings}{}
+      \name{author}{2}{}{%
+        {{hash=f2d399fc4062a668c1069923455ef451}{%
+           family={Morin},
+           familyi={M\bibinitperiod},
+           given={Frederic},
+           giveni={F\bibinitperiod}}}%
+        {{hash=40a8e4774982146adc2688546f54efb2}{%
+           family={Bengio},
+           familyi={B\bibinitperiod},
+           given={Yoshua},
+           giveni={Y\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {Citeseer}%
+      }
+      \strng{namehash}{03aa3e09f351437dc03d437823780904}
+      \strng{fullhash}{03aa3e09f351437dc03d437823780904}
+      \strng{authornamehash}{03aa3e09f351437dc03d437823780904}
+      \strng{authorfullhash}{03aa3e09f351437dc03d437823780904}
+      \field{labelalpha}{MB05}
+      \field{sortinit}{M}
+      \field{sortinithash}{c26a05ef03e4429073ed5c825140fac3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Aistats}
+      \field{title}{Hierarchical probabilistic neural network language model.}
+      \field{volume}{5}
+      \field{year}{2005}
+      \field{pages}{246\bibrangedash 252}
+      \range{pages}{7}
+    \endentry
+    \entry{hogwild}{inproceedings}{}
+      \name{author}{4}{}{%
+        {{hash=3503059e1c0c778913607c87d8c5173a}{%
+           family={Recht},
+           familyi={R\bibinitperiod},
+           given={Benjamin},
+           giveni={B\bibinitperiod}}}%
+        {{hash=34d18a316c191e8c4da2a4998c4a36dd}{%
+           family={Re},
+           familyi={R\bibinitperiod},
+           given={Christopher},
+           giveni={C\bibinitperiod}}}%
+        {{hash=7763509f7c4b10ac0b0770c30259cb1d}{%
+           family={Wright},
+           familyi={W\bibinitperiod},
+           given={Stephen},
+           giveni={S\bibinitperiod}}}%
+        {{hash=9fb1e35b9ee806d83cb1d91b210a79d7}{%
+           family={Niu},
+           familyi={N\bibinitperiod},
+           given={Feng},
+           giveni={F\bibinitperiod}}}%
+      }
+      \strng{namehash}{a618d71b4c6d3270d54e80492138de57}
+      \strng{fullhash}{fddae35d1f86e620e885a8899ca1f5de}
+      \strng{authornamehash}{a618d71b4c6d3270d54e80492138de57}
+      \strng{authorfullhash}{fddae35d1f86e620e885a8899ca1f5de}
+      \field{labelalpha}{Rec+11}
+      \field{sortinit}{R}
+      \field{sortinithash}{c15bc8eb6936bc6b3c8baa9e8575af53}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Advances in neural information processing systems}
+      \field{title}{Hogwild: A lock-free approach to parallelizing stochastic gradient descent}
+      \field{year}{2011}
+      \field{pages}{693\bibrangedash 701}
+      \range{pages}{9}
+    \endentry
+    \entry{gensim}{inproceedings}{}
+      \name{author}{2}{}{%
+        {{hash=b18678c3d1080b2d17429891ff481948}{%
+           family={\v{R}eh\r{u}\v{r}ek},
+           familyi={\v{R}\bibinitperiod},
+           given={Radim},
+           giveni={R\bibinitperiod}}}%
+        {{hash=6279e9bacedcff3b6605bcd9faaaf41c}{%
+           family={Sojka},
+           familyi={S\bibinitperiod},
+           given={Petr},
+           giveni={P\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {English}%
+      }
+      \list{location}{1}{%
+        {Valletta, Malta}%
+      }
+      \list{publisher}{1}{%
+        {ELRA}%
+      }
+      \strng{namehash}{0c7724ed4f55cbb86419c913d469aa5c}
+      \strng{fullhash}{0c7724ed4f55cbb86419c913d469aa5c}
+      \strng{authornamehash}{0c7724ed4f55cbb86419c913d469aa5c}
+      \strng{authorfullhash}{0c7724ed4f55cbb86419c913d469aa5c}
+      \field{labelalpha}{\v{R}S10}
+      \field{sortinit}{\v{R}}
+      \field{sortinithash}{c15bc8eb6936bc6b3c8baa9e8575af53}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{{Proceedings of the LREC 2010 Workshop on New Challenges for NLP Frameworks}}
+      \field{month}{5}
+      \field{note}{\url{http://is.muni.cz/publication/884893/en}}
+      \field{title}{{Software Framework for Topic Modelling with Large Corpora}}
+      \field{year}{2010}
+      \field{pages}{45\bibrangedash 50}
+      \range{pages}{6}
+    \endentry
+    \entry{efficient}{article}{}
+      \name{author}{3}{}{%
+        {{hash=36a9fde0e8299fa431de2bb1e9b6e8e2}{%
+           family={Vuurens},
+           familyi={V\bibinitperiod},
+           given={Jeroen\bibnamedelima BP},
+           giveni={J\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+        {{hash=58de468240e30c9310974f0474a16450}{%
+           family={Eickhoff},
+           familyi={E\bibinitperiod},
+           given={Carsten},
+           giveni={C\bibinitperiod}}}%
+        {{hash=f259ef8d07f6337d7298a15d0d29cf04}{%
+           family={Vries},
+           familyi={V\bibinitperiod},
+           given={Arjen\bibnamedelima P},
+           giveni={A\bibinitperiod\bibinitdelim P\bibinitperiod},
+           prefix={de},
+           prefixi={d\bibinitperiod}}}%
+      }
+      \strng{namehash}{8ee09f5dfcb67753f4be70ad5daf065a}
+      \strng{fullhash}{556ec78d60c7f0f413478795b832e164}
+      \strng{authornamehash}{8ee09f5dfcb67753f4be70ad5daf065a}
+      \strng{authorfullhash}{556ec78d60c7f0f413478795b832e164}
+      \field{labelalpha}{VEV16}
+      \field{sortinit}{V}
+      \field{sortinithash}{555737dafdcf1396ebfeae5822e5bde2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{arXiv preprint arXiv:1606.07822}
+      \field{title}{Efficient Parallel Learning of Word2Vec}
+      \field{year}{2016}
+    \endentry
+  \endsortlist
+\endrefsection
+\endinput
+
