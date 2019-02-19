@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Arch Linux) (preloaded format=pdflatex 2018.5.21)  18 FEB 2019 14:47
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Arch Linux) (preloaded format=pdflatex 2018.5.21)  19 FEB 2019 05:44
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -575,8 +575,7 @@ Package csquotes Info: ... none found.
 Package csquotes Warning: No multilingual support.
 (csquotes)                Cannot enable multilingual quotes on input line 77.
 
-(./thesis.aux (./chapters/background.aux) (./chapters/questions.aux)
-(./chapters/projectPlan.aux))
+(./thesis.aux (./chapters/background.aux))
 \openout1 = `thesis.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 77.
@@ -674,6 +673,9 @@ LaTeX Warning: Citation 'mikolov2' on page 3 undefined on input line 30.
 LaTeX Warning: Citation 'mikolov2' on page 3 undefined on input line 37.
 
 
+LaTeX Warning: Citation 'mikolov2' on page 3 undefined on input line 37.
+
+
 LaTeX Warning: Citation 'mikolov2' on page 3 undefined on input line 44.
 
 
@@ -688,6 +690,9 @@ LaTeX Warning: Citation 'intel' on page 4 undefined on input line 47.
 
 
 LaTeX Warning: Citation 'efficient' on page 4 undefined on input line 66.
+
+
+LaTeX Warning: Reference `fig:efficient' on page 4 undefined on input line 66.
 
 
 LaTeX Warning: Citation 'efficient' on page 4 undefined on input line 66.
@@ -715,12 +720,15 @@ LaTeX Warning: Citation 'contextWithTensor' on page 5 undefined on input line 8
 1.
 
 [5 <./images/cachingEfficiency.png>]
+
+LaTeX Warning: Reference `fig:multipleContext' on page 6 undefined on input lin
+e 91.
+
 <images/multipleContext.png, id=34, 471.7625pt x 89.33376pt>
 File: images/multipleContext.png Graphic file (type png)
 <use images/multipleContext.png>
 Package pdftex.def Info: images/multipleContext.png  used on input line 94.
 (pdftex.def)             Requested size: 330.23149pt x 62.53319pt.
-
 
 LaTeX Warning: Citation 'contextWithTensor' on page 6 undefined on input line 9
 7.
@@ -752,6 +760,10 @@ LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 6.
 
 
+LaTeX Warning: Reference `chap:questions' on page 8 undefined on input line 13.
+
+
+
 LaTeX Warning: Citation 'gensim' on page 8 undefined on input line 13.
 
 
@@ -775,6 +787,9 @@ LaTeX Warning: Empty bibliography on input line 135.
 LaTeX Warning: There were undefined references.
 
 
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+
 Package biblatex Warning: Please (re)run Biber on the file:
 (biblatex)                thesis
 (biblatex)                and rerun LaTeX afterwards.
@@ -784,13 +799,13 @@ Package logreq Info: Writing requests to 'thesis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 13165 strings out of 492982
- 256985 string characters out of 6138579
- 796344 words of memory out of 5000000
- 16580 multiletter control sequences out of 15000+600000
+ 13153 strings out of 492982
+ 256688 string characters out of 6138579
+ 789160 words of memory out of 5000000
+ 16572 multiletter control sequences out of 15000+600000
  10162 words of font info for 37 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 46i,19n,73p,8817b,1307s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 48i,19n,72p,8817b,1307s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fon
 ts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/publi
@@ -805,7 +820,7 @@ f-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/t
 ype1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/ams
 fonts/cm/cmti12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt1
 2.pfb>
-Output written on thesis.pdf (10 pages, 239476 bytes).
+Output written on thesis.pdf (10 pages, 239160 bytes).
 PDF statistics:
  103 PDF objects out of 1000 (max. 8388607)
  72 compressed objects within 1 object stream

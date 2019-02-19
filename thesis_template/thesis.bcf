@@ -1929,21 +1929,22 @@
     <bcf:citekey order="4">mikolov2</bcf:citekey>
     <bcf:citekey order="5">mikolov2</bcf:citekey>
     <bcf:citekey order="6">mikolov2</bcf:citekey>
-    <bcf:citekey order="7">hogwild</bcf:citekey>
+    <bcf:citekey order="7">mikolov2</bcf:citekey>
     <bcf:citekey order="8">hogwild</bcf:citekey>
-    <bcf:citekey order="9">intel</bcf:citekey>
-    <bcf:citekey order="10">efficient</bcf:citekey>
+    <bcf:citekey order="9">hogwild</bcf:citekey>
+    <bcf:citekey order="10">intel</bcf:citekey>
     <bcf:citekey order="11">efficient</bcf:citekey>
     <bcf:citekey order="12">efficient</bcf:citekey>
     <bcf:citekey order="13">efficient</bcf:citekey>
-    <bcf:citekey order="14">topicalWE</bcf:citekey>
-    <bcf:citekey order="15">breaking</bcf:citekey>
-    <bcf:citekey order="16">contextWithTensor</bcf:citekey>
+    <bcf:citekey order="14">efficient</bcf:citekey>
+    <bcf:citekey order="15">topicalWE</bcf:citekey>
+    <bcf:citekey order="16">breaking</bcf:citekey>
     <bcf:citekey order="17">contextWithTensor</bcf:citekey>
     <bcf:citekey order="18">contextWithTensor</bcf:citekey>
-    <bcf:citekey order="19">gensim</bcf:citekey>
-    <bcf:citekey order="20">mikolov2</bcf:citekey>
-    <bcf:citekey order="21">wSimilarity</bcf:citekey>
+    <bcf:citekey order="19">contextWithTensor</bcf:citekey>
+    <bcf:citekey order="20">gensim</bcf:citekey>
+    <bcf:citekey order="21">mikolov2</bcf:citekey>
+    <bcf:citekey order="22">wSimilarity</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nyt">
