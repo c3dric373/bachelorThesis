@@ -168,84 +168,6 @@
       \field{pages}{2418\bibrangedash 2424}
       \range{pages}{7}
     \endentry
-    \entry{mikolov2}{incollection}{}
-      \name{author}{5}{}{%
-        {{hash=a2d359b12ca2fadf0b40136a73f021bb}{%
-           family={Mikolov},
-           familyi={M\bibinitperiod},
-           given={Tomas},
-           giveni={T\bibinitperiod}}}%
-        {{hash=8d569d1d5b8b5a7836017a98b430f959}{%
-           family={Sutskever},
-           familyi={S\bibinitperiod},
-           given={Ilya},
-           giveni={I\bibinitperiod}}}%
-        {{hash=ee3f7d7b96add98106db907e189d6c13}{%
-           family={Chen},
-           familyi={C\bibinitperiod},
-           given={Kai},
-           giveni={K\bibinitperiod}}}%
-        {{hash=d07609f7580c5f06cf743ebef86d1663}{%
-           family={Corrado},
-           familyi={C\bibinitperiod},
-           given={Greg\bibnamedelima S},
-           giveni={G\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
-        {{hash=62f954323339abeba6c6a240e9d2855b}{%
-           family={Dean},
-           familyi={D\bibinitperiod},
-           given={Jeff},
-           giveni={J\bibinitperiod}}}%
-      }
-      \name{editor}{5}{}{%
-        {{hash=b70004bbac2b5517c4c32fc5cfe070be}{%
-           family={Burges},
-           familyi={B\bibinitperiod},
-           given={C.\bibnamedelimi J.\bibnamedelimi C.},
-           giveni={C\bibinitperiod\bibinitdelim J\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
-        {{hash=27b0ff756cf36911b4cd7d704bfca7a4}{%
-           family={Bottou},
-           familyi={B\bibinitperiod},
-           given={L.},
-           giveni={L\bibinitperiod}}}%
-        {{hash=8b7fe0e4c2b0f504bdf6a5d895d39ee1}{%
-           family={Welling},
-           familyi={W\bibinitperiod},
-           given={M.},
-           giveni={M\bibinitperiod}}}%
-        {{hash=b45872831548714dccc49dcfa20306a1}{%
-           family={Ghahramani},
-           familyi={G\bibinitperiod},
-           given={Z.},
-           giveni={Z\bibinitperiod}}}%
-        {{hash=2cffb24bf1e4e0056d694659663c471c}{%
-           family={Weinberger},
-           familyi={W\bibinitperiod},
-           given={K.\bibnamedelimi Q.},
-           giveni={K\bibinitperiod\bibinitdelim Q\bibinitperiod}}}%
-      }
-      \list{publisher}{1}{%
-        {Curran Associates, Inc.}%
-      }
-      \strng{namehash}{d4849f6d57e38d9b9846cfb360e45131}
-      \strng{fullhash}{c9d4019186e668f056a10a410a6442f4}
-      \strng{authornamehash}{d4849f6d57e38d9b9846cfb360e45131}
-      \strng{authorfullhash}{c9d4019186e668f056a10a410a6442f4}
-      \strng{editornamehash}{4d50aa93a2d5d1803fe877e27e3c95d3}
-      \strng{editorfullhash}{737367293e3a989b67935d60276ebdd1}
-      \field{labelalpha}{Mik+13}
-      \field{sortinit}{M}
-      \field{sortinithash}{c26a05ef03e4429073ed5c825140fac3}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{booktitle}{Advances in Neural Information Processing Systems 26}
-      \field{title}{Distributed Representations of Words and Phrases and their Compositionality}
-      \field{year}{2013}
-      \field{pages}{3111\bibrangedash 3119}
-      \range{pages}{9}
-      \verb{url}
-      \verb http://papers.nips.cc/paper/5021-distributed-representations-of-words-and-phrases-and-their-compositionality.pdf
-      \endverb
-    \endentry
     \entry{hsoftmax}{inproceedings}{}
       \name{author}{2}{}{%
         {{hash=f2d399fc4062a668c1069923455ef451}{%
@@ -397,6 +319,55 @@
       \endverb
       \verb{url}
       \verb http://arxiv.org/abs/1502.07257
+      \endverb
+    \endentry
+    \entry{mikolov2}{article}{}
+      \name{author}{5}{}{%
+        {{hash=e6c866011f8deaabe91f91af7eceb831}{%
+           family={Tomas},
+           familyi={T\bibinitperiod},
+           given={Mikolov},
+           giveni={M\bibinitperiod}}}%
+        {{hash=b87e95731ae441a05cc6d4d3ebd458e4}{%
+           family={Qiu},
+           familyi={Q\bibinitperiod},
+           given={Ilya\bibnamedelima Sutskever},
+           giveni={I\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=5c63337dd74a700f67215b9a6bf85e0e}{%
+           family={Kai},
+           familyi={K\bibinitperiod},
+           given={Chen},
+           giveni={C\bibinitperiod}}}%
+        {{hash=23050e42af44ed795004e3c4cfc35071}{%
+           family={Greg},
+           familyi={G\bibinitperiod},
+           given={Corado},
+           giveni={C\bibinitperiod}}}%
+        {{hash=2fd376ea3b3a3da11704c0ee86753dcf}{%
+           family={Jeffrey},
+           familyi={J\bibinitperiod},
+           given={Dean},
+           giveni={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{65be2bafaf1ed326e0fe35a22e73fd84}
+      \strng{fullhash}{24287b6dc9246c646e7d8fad7bb07c00}
+      \strng{authornamehash}{65be2bafaf1ed326e0fe35a22e73fd84}
+      \strng{authorfullhash}{24287b6dc9246c646e7d8fad7bb07c00}
+      \field{labelalpha}{Tom+13}
+      \field{sortinit}{T}
+      \field{sortinithash}{2e5c2f51f7fa2d957f3206819bf86dc3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprinttype}{arXiv}
+      \field{journaltitle}{CoRR}
+      \field{title}{Distributed Representations of Words and Phrases and their Compositionality}
+      \field{volume}{abs/1310.4546}
+      \field{year}{2013}
+      \verb{eprint}
+      \verb 1310.4546
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/1310.4546
       \endverb
     \endentry
     \entry{efficient}{article}{}

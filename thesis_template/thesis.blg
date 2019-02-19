@@ -1,17 +1,17 @@
 [0] Config.pm:354> INFO - This is Biber 2.7 (beta)
 [0] Config.pm:357> INFO - Logfile is 'thesis.blg'
-[19] biber:303> INFO - === Di Feb 19, 2019, 11:29:22
-[31] Biber.pm:360> INFO - Reading 'thesis.bcf'
-[82] Biber.pm:836> INFO - Found 10 citekeys in bib section 0
-[92] Biber.pm:3671> INFO - Processing section 0
-[100] Biber.pm:3841> INFO - Looking for bibtex format file 'bibliography.bib' for section 0
-[102] bibtex.pm:1424> INFO - Decoding LaTeX character macros into UTF-8
-[106] bibtex.pm:1281> INFO - Found BibTeX data source 'bibliography.bib'
-[133] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[133] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[133] Biber.pm:3500> INFO - Sorting list 'nyt/global/' of type 'entry' with scheme 'nyt' and locale 'en-US'
-[133] Biber.pm:3506> INFO - No sort tailoring available for locale 'en-US'
-[140] bbl.pm:608> INFO - Writing 'thesis.bbl' with encoding 'ascii'
-[142] Utils.pm:164> WARN - The entry 'gensim' has characters which cannot be encoded in 'ascii'. Recoding problematic characters into macros.
-[143] bbl.pm:712> INFO - Output to thesis.bbl
-[145] Biber.pm:110> INFO - WARNINGS: 1
+[19] biber:303> INFO - === Di Feb 19, 2019, 12:41:10
+[66] Biber.pm:360> INFO - Reading 'thesis.bcf'
+[121] Biber.pm:836> INFO - Found 10 citekeys in bib section 0
+[131] Biber.pm:3671> INFO - Processing section 0
+[140] Biber.pm:3841> INFO - Looking for bibtex format file 'bibliography.bib' for section 0
+[142] bibtex.pm:1424> INFO - Decoding LaTeX character macros into UTF-8
+[146] bibtex.pm:1281> INFO - Found BibTeX data source 'bibliography.bib'
+[174] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[174] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[174] Biber.pm:3500> INFO - Sorting list 'nyt/global/' of type 'entry' with scheme 'nyt' and locale 'en-US'
+[174] Biber.pm:3506> INFO - No sort tailoring available for locale 'en-US'
+[184] bbl.pm:608> INFO - Writing 'thesis.bbl' with encoding 'ascii'
+[187] Utils.pm:164> WARN - The entry 'gensim' has characters which cannot be encoded in 'ascii'. Recoding problematic characters into macros.
+[188] bbl.pm:712> INFO - Output to thesis.bbl
+[190] Biber.pm:110> INFO - WARNINGS: 1
