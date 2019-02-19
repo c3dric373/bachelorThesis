@@ -19,6 +19,34 @@
 
 \refsection{0}
   \sortlist[entry]{nyt/global/}
+    \entry{nce-original}{inproceedings}{}
+      \name{author}{2}{}{%
+        {{hash=d2ad76c067f71732d2c7c56382b2c112}{%
+           family={Gutmann},
+           familyi={G\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod}}}%
+        {{hash=9f23be03b80f7c25a1c0b2fe2f1fb001}{%
+           family={Hyv\"{a}rinen},
+           familyi={H\bibinitperiod},
+           given={Aapo},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{81ae28cbdaf6eeb167753542f8da83b2}
+      \strng{fullhash}{81ae28cbdaf6eeb167753542f8da83b2}
+      \strng{authornamehash}{81ae28cbdaf6eeb167753542f8da83b2}
+      \strng{authorfullhash}{81ae28cbdaf6eeb167753542f8da83b2}
+      \field{labelalpha}{GH10}
+      \field{sortinit}{G}
+      \field{sortinithash}{618d986594b7198ba52cf8b00d348f3f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the Thirteenth International Conference on Artificial Intelligence and Statistics}
+      \field{title}{Noise-contrastive estimation: A new estimation principle for unnormalized statistical models}
+      \field{year}{2010}
+      \field{pages}{297\bibrangedash 304}
+      \range{pages}{8}
+    \endentry
     \entry{intel}{article}{}
       \name{author}{4}{}{%
         {{hash=b340171a83909b667166c95e4c8b890b}{%
@@ -61,40 +89,6 @@
       \endverb
       \verb{url}
       \verb http://arxiv.org/abs/1604.04661
-      \endverb
-    \endentry
-    \entry{wSimilarity}{article}{}
-      \name{author}{2}{}{%
-        {{hash=7d53978d32339650bb4d85746dfa1028}{%
-           family={Leviant},
-           familyi={L\bibinitperiod},
-           given={Ira},
-           giveni={I\bibinitperiod}}}%
-        {{hash=973744e6678559fe62831f24b9f834df}{%
-           family={Reichart},
-           familyi={R\bibinitperiod},
-           given={Roi},
-           giveni={R\bibinitperiod}}}%
-      }
-      \strng{namehash}{73b7a7f7106df3c94c57057f35867280}
-      \strng{fullhash}{73b7a7f7106df3c94c57057f35867280}
-      \strng{authornamehash}{73b7a7f7106df3c94c57057f35867280}
-      \strng{authorfullhash}{73b7a7f7106df3c94c57057f35867280}
-      \field{labelalpha}{LR15}
-      \field{sortinit}{L}
-      \field{sortinithash}{7bba64db83423e3c29ad597f3b682cf3}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{eprinttype}{arXiv}
-      \field{journaltitle}{CoRR}
-      \field{title}{Judgment Language Matters: Multilingual Vector Space Models for Judgment Language Aware Lexical Semantics}
-      \field{volume}{abs/1508.00106}
-      \field{year}{2015}
-      \verb{eprint}
-      \verb 1508.00106
-      \endverb
-      \verb{url}
-      \verb http://arxiv.org/abs/1508.00106
       \endverb
     \endentry
     \entry{contextWithTensor}{inproceedings}{}
@@ -168,6 +162,32 @@
       \field{pages}{2418\bibrangedash 2424}
       \range{pages}{7}
     \endentry
+    \entry{mnih}{article}{}
+      \name{author}{2}{}{%
+        {{hash=effa745fe0078f9f6790f688512c5a53}{%
+           family={Mnih},
+           familyi={M\bibinitperiod},
+           given={Andriy},
+           giveni={A\bibinitperiod}}}%
+        {{hash=577af3eb832d26c33caa634a276d4d7e}{%
+           family={Teh},
+           familyi={T\bibinitperiod},
+           given={Yee\bibnamedelima Whye},
+           giveni={Y\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+      }
+      \strng{namehash}{687522c094198950fb49312dc6d77673}
+      \strng{fullhash}{687522c094198950fb49312dc6d77673}
+      \strng{authornamehash}{687522c094198950fb49312dc6d77673}
+      \strng{authorfullhash}{687522c094198950fb49312dc6d77673}
+      \field{labelalpha}{MT12}
+      \field{sortinit}{M}
+      \field{sortinithash}{c26a05ef03e4429073ed5c825140fac3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{arXiv preprint arXiv:1206.6426}
+      \field{title}{A fast and simple algorithm for training neural probabilistic language models}
+      \field{year}{2012}
+    \endentry
     \entry{hsoftmax}{inproceedings}{}
       \name{author}{2}{}{%
         {{hash=f2d399fc4062a668c1069923455ef451}{%
@@ -199,6 +219,34 @@
       \field{year}{2005}
       \field{pages}{246\bibrangedash 252}
       \range{pages}{7}
+    \endentry
+    \entry{wSimilarity}{article}{}
+      \list{location}{1}{%
+        {New York, NY, USA}%
+      }
+      \list{publisher}{1}{%
+        {ACM}%
+      }
+      \field{labelalpha}{02}
+      \field{sortinit}{P}
+      \field{sortinithash}{24100cef455d7974167575052c29146e}
+      \field{labeltitlesource}{title}
+      \field{issn}{1046-8188}
+      \field{journaltitle}{ACM Trans. Inf. Syst.}
+      \field{month}{1}
+      \field{number}{1}
+      \field{title}{Placing Search in Context: The Concept Revisited}
+      \field{volume}{20}
+      \field{year}{2002}
+      \field{pages}{116\bibrangedash 131}
+      \range{pages}{16}
+      \verb{doi}
+      \verb 10.1145/503104.503110
+      \endverb
+      \verb{url}
+      \verb http://doi.acm.org/10.1145/503104.503110
+      \endverb
+      \keyw{Search,context,invisible web,semantic processing,statistical natural language processing}
     \endentry
     \entry{hogwild}{inproceedings}{}
       \name{author}{4}{}{%

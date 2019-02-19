@@ -2145,26 +2145,28 @@
     <bcf:citekey order="1">mikolov2</bcf:citekey>
     <bcf:citekey order="2">hsoftmax</bcf:citekey>
     <bcf:citekey order="3">mikolov2</bcf:citekey>
-    <bcf:citekey order="4">mikolov2</bcf:citekey>
-    <bcf:citekey order="5">mikolov2</bcf:citekey>
+    <bcf:citekey order="4">nce-original</bcf:citekey>
+    <bcf:citekey order="5">mnih</bcf:citekey>
     <bcf:citekey order="6">mikolov2</bcf:citekey>
     <bcf:citekey order="7">mikolov2</bcf:citekey>
     <bcf:citekey order="8">mikolov2</bcf:citekey>
-    <bcf:citekey order="9">hogwild</bcf:citekey>
-    <bcf:citekey order="10">hogwild</bcf:citekey>
-    <bcf:citekey order="11">intel</bcf:citekey>
-    <bcf:citekey order="12">efficient</bcf:citekey>
-    <bcf:citekey order="13">efficient</bcf:citekey>
+    <bcf:citekey order="9">mikolov2</bcf:citekey>
+    <bcf:citekey order="10">mikolov2</bcf:citekey>
+    <bcf:citekey order="11">hogwild</bcf:citekey>
+    <bcf:citekey order="12">hogwild</bcf:citekey>
+    <bcf:citekey order="13">intel</bcf:citekey>
     <bcf:citekey order="14">efficient</bcf:citekey>
     <bcf:citekey order="15">efficient</bcf:citekey>
-    <bcf:citekey order="16">topicalWE</bcf:citekey>
-    <bcf:citekey order="17">breaking</bcf:citekey>
-    <bcf:citekey order="18">contextWithTensor</bcf:citekey>
-    <bcf:citekey order="19">contextWithTensor</bcf:citekey>
+    <bcf:citekey order="16">efficient</bcf:citekey>
+    <bcf:citekey order="17">efficient</bcf:citekey>
+    <bcf:citekey order="18">topicalWE</bcf:citekey>
+    <bcf:citekey order="19">breaking</bcf:citekey>
     <bcf:citekey order="20">contextWithTensor</bcf:citekey>
-    <bcf:citekey order="21">gensim</bcf:citekey>
-    <bcf:citekey order="22">mikolov2</bcf:citekey>
-    <bcf:citekey order="23">wSimilarity</bcf:citekey>
+    <bcf:citekey order="21">contextWithTensor</bcf:citekey>
+    <bcf:citekey order="22">contextWithTensor</bcf:citekey>
+    <bcf:citekey order="23">gensim</bcf:citekey>
+    <bcf:citekey order="24">mikolov2</bcf:citekey>
+    <bcf:citekey order="25">wSimilarity</bcf:citekey>
   </bcf:section>
   <bcf:sortlist section="0" name="nyt/global/" type="entry" sortscheme="nyt" sortnamekeyscheme="global" labelprefix="">
   <bcf:sorting>

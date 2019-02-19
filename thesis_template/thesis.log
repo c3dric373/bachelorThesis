@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2018.9.22)  19 FEB 2019 12:41
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2018.9.22)  19 FEB 2019 13:13
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -663,10 +663,7 @@ chapter 1.
 
 
 
-]
-Missing character: There is no Ã in font cmr12!
-Missing character: There is no ¤ in font cmr12!
- [2] [3] [4]
+] [2] [3] [4]
 <images/cachingEfficiency.png, id=29, 816.04875pt x 649.42625pt>
 File: images/cachingEfficiency.png Graphic file (type png)
 
@@ -709,32 +706,32 @@ LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
 
 ]) [10]
 chapter without number
-
-Overfull \hbox (3.71585pt too wide) in paragraph at lines 136--136
-[]\OT1/cmr/m/n/12 Bartunov Sergey, Kon-drashkin Dmitry, Os-okin An-ton, and P. 
-Vetrov Dmitry.
- []
-
 [11
 
 
 
 
 
-] [12] (./thesis.aux (./chapters/background.aux) (./chapters/questions.aux)
+]
+Overfull \hbox (3.71585pt too wide) in paragraph at lines 136--136
+[]\OT1/cmr/m/n/12 Bartunov Sergey, Kon-drashkin Dmitry, Os-okin An-ton, and P. 
+Vetrov Dmitry.
+ []
+
+[12] (./thesis.aux (./chapters/background.aux) (./chapters/questions.aux)
 (./chapters/projectPlan.aux))
 Package logreq Info: Writing requests to 'thesis.run.xml'.
 \openout1 = `thesis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 13015 strings out of 493013
- 254499 string characters out of 6135682
- 805161 words of memory out of 5000000
- 16406 multiletter control sequences out of 15000+600000
+ 13026 strings out of 493013
+ 254800 string characters out of 6135682
+ 805237 words of memory out of 5000000
+ 16417 multiletter control sequences out of 15000+600000
  10156 words of font info for 37 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 50i,19n,72p,8817b,1391s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 51i,19n,73p,8817b,1391s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></u
 sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/sha
 re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/tex
@@ -750,7 +747,7 @@ b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share
 /texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texli
 ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on thesis.pdf (13 pages, 258975 bytes).
+Output written on thesis.pdf (13 pages, 259958 bytes).
 PDF statistics:
  113 PDF objects out of 1000 (max. 8388607)
  79 compressed objects within 1 object stream
