@@ -19,7 +19,7 @@
 
 \refsection{0}
   \sortlist[entry]{nyt/global/}
-    \entry{breaking}{inproceedings}{}
+    \entry{breaking}{article}{}
       \name{author}{4}{}{%
         {{hash=7896fad6d0ebd9548ae7f08eb947c431}{%
            family={Bartunov},
@@ -36,26 +36,32 @@
            familyi={O\bibinitperiod},
            given={Anton},
            giveni={A\bibinitperiod}}}%
-        {{hash=f1c8fe7ad4d22499bdaaa3917e11783d}{%
+        {{hash=68bcd68385bb8b89eca36b4342da0cf8}{%
            family={Vetrov},
            familyi={V\bibinitperiod},
-           given={Dmitry},
-           giveni={D\bibinitperiod}}}%
+           given={Dmitry\bibnamedelima P.},
+           giveni={D\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
       }
       \strng{namehash}{56bd6232ba5b20b27d38d039792fab11}
-      \strng{fullhash}{6e8c67b91ca5961dea00b06697043029}
+      \strng{fullhash}{68aa32345fce494e76639b42518164c1}
       \strng{authornamehash}{56bd6232ba5b20b27d38d039792fab11}
-      \strng{authorfullhash}{6e8c67b91ca5961dea00b06697043029}
-      \field{labelalpha}{Bar+16}
+      \strng{authorfullhash}{68aa32345fce494e76639b42518164c1}
+      \field{labelalpha}{Bar+15}
       \field{sortinit}{B}
       \field{sortinithash}{5f6fa000f686ee5b41be67ba6ff7962d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{booktitle}{Artificial Intelligence and Statistics}
-      \field{title}{Breaking sticks and ambiguities with adaptive skip-gram}
-      \field{year}{2016}
-      \field{pages}{130\bibrangedash 138}
-      \range{pages}{9}
+      \field{eprinttype}{arXiv}
+      \field{journaltitle}{CoRR}
+      \field{title}{Breaking Sticks and Ambiguities with Adaptive Skip-gram}
+      \field{volume}{abs/1502.07257}
+      \field{year}{2015}
+      \verb{eprint}
+      \verb 1502.07257
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/1502.07257
+      \endverb
     \endentry
     \entry{intel}{article}{}
       \name{author}{4}{}{%
