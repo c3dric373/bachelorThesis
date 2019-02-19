@@ -12,17 +12,18 @@ This equation can be transformed quite easily into sums by using log probabiliti
   Here $\tilde{v}_{w_t}$ and $ v_{w_t}$ are the vector representations.  There lies a problem in this approach. As a matter of fact it is unsuitable to compute the softmax. For the computation of $\sum_{w=1}^v exp(v_w^T w_t)$ one has to go over the whole corpus data. As very big data sets are needed to train the model, this is not a solution. But different solutions were proposed by \cite{mikolov2}. The first one is to use a Hierarchical soft max introduced by \cite{hsoftmax}. In this model the probability distribution of the output nodes is saved in a binary tree which gives one a logarithmic computation time for each of these probabilities, and this makes it feasable to compute the softmax. Another possibility is the use of negative sampling which is used in the original word2vec implementation \cite{mikolov2}, which I shall discuss in the next section. 
 
 \section{Negative Sampling}
-The idea behind negative sampling is to only update the output nodes of certain words. This will obviously save an enormous amount of computation time. The idea is that given a pair $(x,c) \in D$, where $c$ is a word in the context window of $w$ we will set $p(x|c) =1$. Then select $K$ random words $k_i$ from the corpus data and set $p(x|k_i) = 0$, more one the random distribution later. We will denote the probability that the $(w,c)$ wasn't drawn at random the following way: $p(y=1|w,c)$, and if $(w,k) $ is chosen at random this way: $p(y=0|x,k)$.  Now we will use logistic regression to update the weights of the $k$ selected context words and $c$. By doing so we will only have to update $k+1$ output nodes.
+An alternative to the Hierarchical Softmax is Noise Contrastive Estimation (NCE) which was introduced by Gutmann and Hyvärinen, and first applied to NLP by Mnih and Teh. The idea behind is to distinguish targets words from noise. It does so by reducing the problem to a logistic regression task, and does it by maximizing the log probability. The skip-gram Model is only interested in good word representation, hence the probability of the word is not meaningful as long as the quality of the word representations remains high. Mikolov et al. \cite{mikolov2} simplified NCE and called it Negative Sampling. Let's dive into it.\\
+The idea behind negative sampling is to only update the output nodes of certain words. This will obviously save an enormous amount of computation time. The idea is that given a pair $(c,w) \in D$, where $c$ is a word in the context window of $w$ we will set $p(c|w) =1$, here $p$ is the score for our logistic regression. Then select $K$ random words $k_i$ from the corpus data and set $p(k_i|w) = 0$, more one the random distribution later. We will denote the probability that the $(c,w)$ wasn't drawn at random the following way: $p(y=1|c,w)$, and if $(k,w) $ is chosen at random this way: $p(y=0|k,w)$.  Now we will use logistic regression to update the weights of the $k$ selected context words and $c$. By doing so we will only have to update $k+1$ output nodes.
 
 Let's look at how we construct our objective function for a given word $w$ and one of its context words $c$: 
 
 \begin{align*}
-p(x|c) &= p(y=1|w,c) + \prod_{k\in K} p(y=0|k,c) 
-\\&= p(y=1|w,c) + \prod_{k\in K} 1- p(y=1|k,c) 
-\\&= log((p(y=1|w,c)) + \sum_{k\in K} log(1- p(y=1|k,c)) &&\text{Use of log probabilities}
-\\&=  log(\frac{1}{1+e^{-v_c v_x }})  + \sum_{k\in K} log(1-\frac{1}{1+e^{-v_c v_k}}) 
-\\&=  log(\frac{1}{1+e^{-v_c v_x }})  + \sum_{k\in K} log(\frac{1}{1+e^{v_c v_k }})
-\\&= log(\sigma(v_c v_x ) + \sum_{k\in K} \sigma(log(-v_c v_k )) &&\text{$ where, \sigma = \frac{1}{1+e^{-x}}$}
+p(c|w) &= p(y=1|c,w) + \prod_{k\in K} p(y=0|k,c) 
+\\&= p(y=1|c,w) + \prod_{k\in K} 1- p(y=1|k,c) 
+\\&= log((p(y=1|c,w)) + \sum_{k\in K} log(1- p(y=1|k,c)) 
+\\&=  log(\frac{1}{1+e^{-v_c v_w }})  + \sum_{k\in K} log(1-\frac{1}{1+e^{-v_c v_k}}) 
+\\&=  log(\frac{1}{1+e^{-v_c v_w }})  + \sum_{k\in K} log(\frac{1}{1+e^{v_c v_k }})
+\\&= log(\sigma(v_c v_w ) + \sum_{k\in K} \sigma(log(-v_c v_k )) &&\text{$ where, \sigma = \frac{1}{1+e^{-x}}$}
 \end{align*}
 
 We see that to compute our objective function we will only have to compute the sum over $K$. Which in practice is very small (2-20). Too put things in perspective lets imagine our data set consists of 100000 words, we set $K=2$ and let's say that each output neuron has weight vector $v$ with $|v| = 300$. When updating our weights we would only update  $0.2*10^{-2}$ of the 300 million weights in the output layer. 

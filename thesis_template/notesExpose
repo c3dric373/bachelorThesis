@@ -11,8 +11,8 @@ for bachelorarbeit: consistent notation
     proposed by Mikolov et al. \cite 
 
     negativ sampling: 
-    score for logistic regression and not condition prob p(x"c) 
-    explain why we didn't use nce 
+    score for logistic regression and not condition prob p(x"c) ##
+    explain why we didn't use nce ##
     not random distribution ##
     empiraccely better ## 
 
