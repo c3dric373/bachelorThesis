@@ -1,0 +1,10 @@
+dataset classe neu machen als input liste von sätzen 
+
+datensatz klasse nur die sätze 
+ausrechnen wie viel paare kommen 
+
+bei getitem 
+
+List von allen paaren 
+
+get_batches von pyTorch lesen 
