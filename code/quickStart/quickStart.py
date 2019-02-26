@@ -21,11 +21,31 @@ class MySentences:
                 yield line.split()
 
 sentences = MySentences('./data/')
-print(list(sentences))
+#print(list(sentences))
+test_data_dir = '{}'.format(os.sep).join([gensim.__path__[0], 'test', 'test_data']) + os.sep
+lee_train_file = test_data_dir + 'lee_background.cor' 
 
+
+class MyText:
+    def __init__(self, file):
+        self.file = file
+
+    def __iter__(self): 
+        for line in open(self.file):
+            yield line.lower().split()
+
+sentences = MyText(lee_train_file)
 model = gensim.models.Word2Vec(sentences, min_count=1)
-print(model)
-print(model.wv.vocab)
+model.evaluate_word_pairs(test_data_dir + 'wordsim353.tsv')
 
 
+###################
+#Testing our model with text8
+###################
 
+
+input_data = os.path.join(os.getcwd(), './data/text8')
+print(input_data)
+sentences = MyText(input_data)
+newModel = gensim.models.Word2Vec(sentences)
+print(newModel)
