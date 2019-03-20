@@ -126,13 +126,16 @@ It does so by adding a percentage of the last gradient vector  to the update vec
 \begin{equation}
 v_t = \gamma v_{t-1} + \alpha \nabla J (\theta)
 \end{equation}
-And then we update our weights as usual: $\theta = \theta - v_t$
+The value $0.9$ for $\gamma$ has shown great results, but this, same as a learning rate, another hyper parameter that need to be tuned according to the specific task. 
+And then we update our weights as usual: $\theta = \theta - v_t$ 
 \subsection{Nesterov}
-Momentum can be a powerful tool, and sometimes be it's own enemy. With momentum the learning algorithm often overshoots, and blows by the local optima. Hence it will never converge. This problem was addressed by Nesterov. The idea behind his algorithm is to incorporate the momentum in the computation of our gradients. We will substract the momentum vector from our weights before computing the gradients. Therefore we will kind of compute the gradients from the position where we would be with momentum. which will allow us to make a step in a better direction. The computation of the update vector will look the following way:
+Momentum can be a powerful tool, but sometimes be it's own enemy. With momentum the learning algorithm often overshoots, and blows by the  optima. Hence it will never converge. This problem was addressed by Nesterov. The idea behind his algorithm is to incorporate the momentum in the computation of our gradients. We will subtract the momentum vector, or just a fraction,  from our parameters before computing the gradients. Therefore we will compute the gradients of the position where we would be with momentum, which will allow us to make a step in a better direction. The computation of the update vector will look the following way:
 \begin{equation}
 v_t = \gamma v_{t-1} + \alpha \nabla J (\theta -  \gamma v_{t-1})
 \end{equation}
-.  this have shown to work very well, especially for RNN's. 
+
+SGD wiht momentum and Nesterov accelerated gradient (NAG) has shown tremendous results in RNN's. But some of the earlier mentioned problems still remains.  NAG, still treats every parameter the same way. Therefore we need a more complex optimization algorithm, that takes the frequency of a feature into account. Adagrad does just that. 
+
 \subsection{Adagrad}
 Adagrad first introduced by..., is an optimzer that tries to apply different learning rates to different parameters according to their frequency. the idea is to give very frequent features a small learning rate, and very sparse features a high learning rate. 
 For this let's define: 

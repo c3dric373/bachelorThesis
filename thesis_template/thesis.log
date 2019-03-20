@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Arch Linux) (preloaded format=pdflatex 2019.2.26)  20 MAR 2019 16:49
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Arch Linux) (preloaded format=pdflatex 2019.2.26)  20 MAR 2019 17:09
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -605,9 +605,9 @@ Package csquotes Warning: No multilingual support.
 (csquotes)                Cannot enable multilingual quotes on input line 77.
 
 (./thesis.aux (./includes/BA-titlepage.aux) (./includes/abstract.aux)
-(./includes/acknowledgements.aux) (./chapters/introduction.aux)
-(./chapters/background.aux) (./chapters/methods.aux) (./chapters/results.aux)
-(./chapters/discussion.aux) (./chapters/conclusion.aux))
+(./chapters/introduction.aux) (./chapters/background.aux)
+(./chapters/methods.aux) (./chapters/results.aux) (./chapters/discussion.aux)
+(./chapters/conclusion.aux))
 \openout1 = `thesis.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 77.
@@ -758,12 +758,12 @@ File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 114.
- [8 <./images/multipleContext.png>] [9]) [10]
+ [8 <./images/multipleContext.png>] [9]) [10] [11]
 \openout2 = `chapters/methods.aux'.
 
  (./chapters/methods.tex
 chapter 3.
-) [11
+) [12
 
 
 
@@ -773,7 +773,7 @@ chapter 3.
 
  (./chapters/results.tex
 chapter 4.
-) [12
+) [13
 
 
 
@@ -783,7 +783,7 @@ chapter 4.
 
  (./chapters/discussion.tex
 chapter 5.
-) [13
+) [14
 
 
 
@@ -793,14 +793,14 @@ chapter 5.
 
  (./chapters/conclusion.tex
 chapter 6.
-) [14
+) [15
 
 
 
 
 ]
 chapter without number
-[15
+[16
 
 
 
@@ -812,7 +812,7 @@ Overfull \hbox (3.71585pt too wide) in paragraph at lines 134--134
 Vetrov Dmitry.
  []
 
-[16] (./thesis.aux (./includes/BA-titlepage.aux) (./includes/abstract.aux)
+[17] (./thesis.aux (./includes/BA-titlepage.aux) (./includes/abstract.aux)
 (./chapters/introduction.aux) (./chapters/background.aux)
 (./chapters/methods.aux) (./chapters/results.aux) (./chapters/discussion.aux)
 (./chapters/conclusion.aux))
@@ -821,13 +821,13 @@ Package logreq Info: Writing requests to 'thesis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 13518 strings out of 492616
- 269653 string characters out of 6135177
- 855413 words of memory out of 5000000
- 17233 multiletter control sequences out of 15000+600000
+ 13514 strings out of 492616
+ 269549 string characters out of 6135177
+ 853087 words of memory out of 5000000
+ 17232 multiletter control sequences out of 15000+600000
  13959 words of font info for 50 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 52i,19n,74p,9085b,1439s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 52i,19n,73p,9085b,1439s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texmf-dist/fo
 nts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/publ
@@ -842,10 +842,10 @@ mf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/share/texmf-dist/font
 s/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public
 /amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cm
 ti12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on thesis.pdf (21 pages, 285407 bytes).
+Output written on thesis.pdf (22 pages, 286306 bytes).
 PDF statistics:
- 145 PDF objects out of 1000 (max. 8388607)
- 100 compressed objects within 1 object stream
+ 149 PDF objects out of 1000 (max. 8388607)
+ 102 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  16 words of extra memory for PDF output out of 10000 (max. 10000000)
 

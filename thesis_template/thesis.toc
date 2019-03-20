@@ -30,14 +30,14 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.4.5}Adadelta}{10}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.4.6}Adam}{10}% 
+\contentsline {subsection}{\numberline {2.4.6}Adam}{11}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {3}Methods}{11}% 
+\contentsline {chapter}{\numberline {3}Methods}{12}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {4}Results}{12}% 
+\contentsline {chapter}{\numberline {4}Results}{13}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {5}Discussion}{13}% 
+\contentsline {chapter}{\numberline {5}Discussion}{14}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {6}Conclusion}{14}% 
+\contentsline {chapter}{\numberline {6}Conclusion}{15}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\nonumberline Bibliography}{15}% 
+\contentsline {chapter}{\nonumberline Bibliography}{16}% 
