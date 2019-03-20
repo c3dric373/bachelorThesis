@@ -100,8 +100,24 @@ and the rest lines are the results of our model" \cite{contextWithTensor}}
 \end{figure}
 
 \section{Optimizers in Machine learning}
-This section will give a quick overview about a few optimizers existing in machine learning. Those optimizers were used to optimize the Skip-Gram Model.
-\subsection{SGD}
+This section will give a quick overview about a few optimizers existing in machine learning. First of all let's define a few notation: 
+$\alpha$ will be the learning rate, $\theta$ all the parameters of our model, $J(\theta)$ our objective function. The goal of an optimizer is to find values for $\theta$ such that $J(\theta)$ can either be minimized or maximized depending on the task. Stochastic gradient descent is the most common optimization technique used in machine learning.  We will address it in it's original form and the existing extensions. 
+\subsection{Stochastic Gradient Descent}
+In this work we will address stochastic gradient as mini-batach gradient descent. At each optimiation time step $t$, Stochastic gradient descent will compute the gradient of all our parameters. Denoted as $  \nabla J(\theta_{t-1}$. We will then substract this term, multiplied by our learning rate, from our weights $\theta$. The gradients will give the direction of the optimization step, whereas the learning rate will give the amplitude of that step.
+\begin{equation}
+\theta_t = \theta_{t-1} - \alpha \nabla J(\theta_{t-1})
+\end{equation}
+
+SGD, through it's simplicity, is very limited, therefore somme issues appear:
+
+\begin{itemize}
+\item The learning rate needs to be tuned, it's is often necessacary to try out a set of learning rate to find the optimal one for the given network. 
+\item Learning rate schedules, that are very often needed, as one gets closer to the optimal a smaller learning rate is often needed, must be set before the training starts and hence cannot adapt to the learning set
+\item SGD does not take the parameters into account, every parameter will be following the same update rule
+\end{itemize}
+
+Thererfore there exists numerous advanced optimizers that take those issues into consideration. Let's look into theim. 
+
 \subsection{Momentum}
 The main Idea behind momentum is to use the previous gradient to compute the current update vector.  We do this, because SGD can have trouble, when the loss function is very steep in only one direction. SGD would then osciliate and only taking small steps into the steep direction.  While using the previous gradient, momentum will accelerate the learning in the correct direction. At the update $t$ we will comppute our update vector $v_t$ the following way:
 \begin{equation}

@@ -20,24 +20,24 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {2.4}Optimizers in Machine learning}{8}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.4.1}SGD}{8}% 
+\contentsline {subsection}{\numberline {2.4.1}Stochastic Gradient Descent}{8}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.4.2}Momentum}{8}% 
+\contentsline {subsection}{\numberline {2.4.2}Momentum}{9}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.4.3}Nesterov}{8}% 
+\contentsline {subsection}{\numberline {2.4.3}Nesterov}{9}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.4.4}Adagrad}{9}% 
+\contentsline {subsection}{\numberline {2.4.4}Adagrad}{10}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.4.5}Adadelta}{9}% 
+\contentsline {subsection}{\numberline {2.4.5}Adadelta}{10}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.4.6}Adam}{9}% 
+\contentsline {subsection}{\numberline {2.4.6}Adam}{10}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {3}Methods}{10}% 
+\contentsline {chapter}{\numberline {3}Methods}{11}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {4}Results}{11}% 
+\contentsline {chapter}{\numberline {4}Results}{12}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {5}Discussion}{12}% 
+\contentsline {chapter}{\numberline {5}Discussion}{13}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {6}Conclusion}{13}% 
+\contentsline {chapter}{\numberline {6}Conclusion}{14}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\nonumberline Bibliography}{14}% 
+\contentsline {chapter}{\nonumberline Bibliography}{15}% 
