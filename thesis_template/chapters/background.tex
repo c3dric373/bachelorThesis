@@ -99,5 +99,34 @@ and the rest lines are the results of our model" \cite{contextWithTensor}}
     \label{fig:multipleContext}
 \end{figure}
 
+\section{Optimizers in Machine learning}
+This section will give a quick overview about a few optimizers existing in machine learning. Those optimizers were used to optimize the Skip-Gram Model.
+\subsection{SGD}
+\subsection{Momentum}
+The main Idea behind momentum is to use the previous gradient to compute the current update vector.  We do this, because SGD can have trouble, when the loss function is very steep in only one direction. SGD would then osciliate and only taking small steps into the steep direction.  While using the previous gradient, momentum will accelerate the learning in the correct direction. At the update $t$ we will comppute our update vector $v_t$ the following way:
+\begin{equation}
+v_t = \gamma v_{t-1} + \alpha \nabla J (\theta)
+\end{equation}
+And then we update our weights as usual: $\theta = \theta - v_t$
+\subsection{Nesterov}
+Momentum can be a powerful tool, and sometimes be it's own enemy. With momentum the learning algorithm often overshoots, and blows by the local optima. Hence it will never converge. This problem was addressed by Nesterov. The idea behind his algorithm is to incorporate the momentum in the computation of our gradients. We will substract the momentum vector from our weights before computing the gradients. Therefore we will kind of compute the gradients from the position where we would be with momentum. which will allow us to make a step in a better direction. The computation of the update vector will look the following way:
+\begin{equation}
+v_t = \gamma v_{t-1} + \alpha \nabla J (\theta -  \gamma v_{t-1})
+\end{equation}
+.  this have shown to work very well, especially for RNN's. 
+\subsection{Adagrad}
+Adagrad first introduced by..., is an optimzer that tries to apply different learning rates to different parameters according to their frequency. the idea is to give very frequent features a small learning rate, and very sparse features a high learning rate. 
+For this let's define: 
+$g_{t,i} = \nabla J(\theta_{t,i})$ which is the partial derivate of the loss function with respect to the parameter $\theta_i$ at time step $t$
+The classic update would look like this $\theta_{t+1,i} = \theta_{t_i}-\alpha g_{t,i}$ Now we want  to change the learning rate decreasing it for very frequent words. For this we will look at the following diagonal matrix $G_{t_{i,i}}$ of the sum of the squares of the graditents. This means that the matrix for very frequent features will be very big. We know divide the learning rate through the square root of our matrix and multiply (vector matrix multiplication) it with our gradient vector. 
+The equation will look the following way: 
+\begin{equation}
+\theta_{t+1,i} = \theta_{t_i}- \frac{\alpha}{\sqrt{G_{t_{i,i}} + \epsilon}} g_{t,i}, 
+\end{equation}
+where $\epsilon$ is a smoothing factor usually set to $1e-8$. There lies one weakniss in this approach: the sum of the squares of the previous gradients grows constantly. This means after a certain number of epochs the learning rate will be insufficent. 
+This issue was addressed by ... in his implementation of Addadelta. 
+\subsection{Adadelta}
+Addadelta addresses two issues of Addagrad, first the problem of the consistent growing of the gradients. And then the unit problem. 
+\subsection{Adam}
 
 

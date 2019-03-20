@@ -1,25 +1,43 @@
 \boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {1}Introduction}{1}
+\contentsline {chapter}{\numberline {1}Introduction}{1}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {2}Background}{2}
+\contentsline {chapter}{\numberline {2}Background}{2}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.1}The Skip-Gram Model}{2}
+\contentsline {section}{\numberline {2.1}The Skip-Gram Model}{2}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.2}Negative Sampling}{3}
+\contentsline {section}{\numberline {2.2}Negative Sampling}{3}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.3}Optimization of the Skip Gram Model}{5}
+\contentsline {section}{\numberline {2.3}Optimization of the Skip Gram Model}{5}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.3.1}Parallelization}{5}
+\contentsline {subsection}{\numberline {2.3.1}Parallelization}{5}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Parallization in shared and Distributed Memory}{5}
+\contentsline {subsubsection}{\nonumberline Parallization in shared and Distributed Memory}{5}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Parallelization by the use of caching}{6}
+\contentsline {subsubsection}{\nonumberline Parallelization by the use of caching}{6}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.3.2}Context sensitive word embedding}{7}
+\contentsline {subsection}{\numberline {2.3.2}Context sensitive word embedding}{7}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {3}Research Questions}{9}
+\contentsline {section}{\numberline {2.4}Optimizers in Machine learning}{8}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {4}Project Plan}{10}
+\contentsline {subsection}{\numberline {2.4.1}SGD}{8}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\nonumberline Bibliography}{12}
+\contentsline {subsection}{\numberline {2.4.2}Momentum}{8}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.4.3}Nesterov}{8}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.4.4}Adagrad}{9}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.4.5}Adadelta}{9}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.4.6}Adam}{9}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {3}Methods}{10}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {4}Results}{11}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {5}Discussion}{12}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {6}Conclusion}{13}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\nonumberline Bibliography}{14}% 

@@ -1,5 +1,5 @@
 % $ biblatex auxiliary file $
-% $ biblatex bbl format version 2.8 $
+% $ biblatex bbl format version 3.0 $
 % Do not modify the above lines!
 %
 % This is an auxiliary file used by the 'biblatex' package.
@@ -18,7 +18,38 @@
 
 
 \refsection{0}
-  \sortlist[entry]{nyt/global/}
+  \datalist[entry]{nyt/global//global/global}
+    \entry{wSimilarity}{article}{}
+      \list{location}{1}{%
+        {New York, NY, USA}%
+      }
+      \list{publisher}{1}{%
+        {ACM}%
+      }
+      \field{labelalpha}{02}
+      \field{sortinit}{}
+      \field{sortinithash}{495dc9894017a8b12cafa9c619d10c0c}
+      \field{labeltitlesource}{title}
+      \field{issn}{1046-8188}
+      \field{journaltitle}{ACM Trans. Inf. Syst.}
+      \field{month}{1}
+      \field{number}{1}
+      \field{title}{Placing Search in Context: The Concept Revisited}
+      \field{volume}{20}
+      \field{year}{2002}
+      \field{pages}{116\bibrangedash 131}
+      \range{pages}{16}
+      \verb{doi}
+      \verb 10.1145/503104.503110
+      \endverb
+      \verb{urlraw}
+      \verb http://doi.acm.org/10.1145/503104.503110
+      \endverb
+      \verb{url}
+      \verb http://doi.acm.org/10.1145/503104.503110
+      \endverb
+      \keyw{Search,context,invisible web,semantic processing,statistical natural language processing}
+    \endentry
     \entry{nce-original}{inproceedings}{}
       \name{author}{2}{}{%
         {{hash=d2ad76c067f71732d2c7c56382b2c112}{%
@@ -27,18 +58,20 @@
            given={Michael},
            giveni={M\bibinitperiod}}}%
         {{hash=9f23be03b80f7c25a1c0b2fe2f1fb001}{%
-           family={Hyv\"{a}rinen},
+           family={Hyv{ä}rinen},
            familyi={H\bibinitperiod},
            given={Aapo},
            giveni={A\bibinitperiod}}}%
       }
       \strng{namehash}{81ae28cbdaf6eeb167753542f8da83b2}
       \strng{fullhash}{81ae28cbdaf6eeb167753542f8da83b2}
+      \strng{bibnamehash}{81ae28cbdaf6eeb167753542f8da83b2}
+      \strng{authorbibnamehash}{81ae28cbdaf6eeb167753542f8da83b2}
       \strng{authornamehash}{81ae28cbdaf6eeb167753542f8da83b2}
       \strng{authorfullhash}{81ae28cbdaf6eeb167753542f8da83b2}
       \field{labelalpha}{GH10}
       \field{sortinit}{G}
-      \field{sortinithash}{618d986594b7198ba52cf8b00d348f3f}
+      \field{sortinithash}{5e8d2bf9d38de41b1528bd307546008f}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Proceedings of the Thirteenth International Conference on Artificial Intelligence and Statistics}
@@ -72,11 +105,13 @@
       }
       \strng{namehash}{2eac3720ab7715e28fbc3454d58cf379}
       \strng{fullhash}{968b69981d3fac748efd80cfdf2c7299}
+      \strng{bibnamehash}{968b69981d3fac748efd80cfdf2c7299}
+      \strng{authorbibnamehash}{968b69981d3fac748efd80cfdf2c7299}
       \strng{authornamehash}{2eac3720ab7715e28fbc3454d58cf379}
       \strng{authorfullhash}{968b69981d3fac748efd80cfdf2c7299}
       \field{labelalpha}{Ji+16}
       \field{sortinit}{J}
-      \field{sortinithash}{c86bd6cced82a15683b396c2169909ef}
+      \field{sortinithash}{fce5f8d0bd05e8d93f3dbe21c78897ca}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{eprinttype}{arXiv}
@@ -86,6 +121,9 @@
       \field{year}{2016}
       \verb{eprint}
       \verb 1604.04661
+      \endverb
+      \verb{urlraw}
+      \verb http://arxiv.org/abs/1604.04661
       \endverb
       \verb{url}
       \verb http://arxiv.org/abs/1604.04661
@@ -111,11 +149,14 @@
       }
       \strng{namehash}{5fb4c79982eb75d167e5e91db1aef15a}
       \strng{fullhash}{5f22e2d477271d07c9ad36e81e71e8b1}
+      \strng{bibnamehash}{5f22e2d477271d07c9ad36e81e71e8b1}
+      \strng{authorbibnamehash}{5f22e2d477271d07c9ad36e81e71e8b1}
       \strng{authornamehash}{5fb4c79982eb75d167e5e91db1aef15a}
       \strng{authorfullhash}{5f22e2d477271d07c9ad36e81e71e8b1}
+      \field{extraname}{1}
       \field{labelalpha}{LQH15}
       \field{sortinit}{L}
-      \field{sortinithash}{7bba64db83423e3c29ad597f3b682cf3}
+      \field{sortinithash}{2c7981aaabc885868aba60f0c09ee20f}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{IJCAI}
@@ -149,11 +190,14 @@
       }
       \strng{namehash}{df83681b9acfd53a0c867d0eb509f8f3}
       \strng{fullhash}{27d200df9380b7caa88661148d6fbd38}
+      \strng{bibnamehash}{27d200df9380b7caa88661148d6fbd38}
+      \strng{authorbibnamehash}{27d200df9380b7caa88661148d6fbd38}
       \strng{authornamehash}{df83681b9acfd53a0c867d0eb509f8f3}
       \strng{authorfullhash}{27d200df9380b7caa88661148d6fbd38}
+      \field{extraname}{2}
       \field{labelalpha}{Liu+15}
       \field{sortinit}{L}
-      \field{sortinithash}{7bba64db83423e3c29ad597f3b682cf3}
+      \field{sortinithash}{2c7981aaabc885868aba60f0c09ee20f}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{AAAI}
@@ -169,19 +213,21 @@
            familyi={M\bibinitperiod},
            given={Andriy},
            giveni={A\bibinitperiod}}}%
-        {{hash=577af3eb832d26c33caa634a276d4d7e}{%
+        {{hash=a71fae003da84f44e31d26e868859945}{%
            family={Teh},
            familyi={T\bibinitperiod},
            given={Yee\bibnamedelima Whye},
            giveni={Y\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
       }
-      \strng{namehash}{687522c094198950fb49312dc6d77673}
-      \strng{fullhash}{687522c094198950fb49312dc6d77673}
-      \strng{authornamehash}{687522c094198950fb49312dc6d77673}
-      \strng{authorfullhash}{687522c094198950fb49312dc6d77673}
+      \strng{namehash}{7fec024b9da1a93290419d629722f4bc}
+      \strng{fullhash}{7fec024b9da1a93290419d629722f4bc}
+      \strng{bibnamehash}{7fec024b9da1a93290419d629722f4bc}
+      \strng{authorbibnamehash}{7fec024b9da1a93290419d629722f4bc}
+      \strng{authornamehash}{7fec024b9da1a93290419d629722f4bc}
+      \strng{authorfullhash}{7fec024b9da1a93290419d629722f4bc}
       \field{labelalpha}{MT12}
       \field{sortinit}{M}
-      \field{sortinithash}{c26a05ef03e4429073ed5c825140fac3}
+      \field{sortinithash}{cfd219b90152c06204fab207bc6c7cab}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{arXiv preprint arXiv:1206.6426}
@@ -206,11 +252,13 @@
       }
       \strng{namehash}{03aa3e09f351437dc03d437823780904}
       \strng{fullhash}{03aa3e09f351437dc03d437823780904}
+      \strng{bibnamehash}{03aa3e09f351437dc03d437823780904}
+      \strng{authorbibnamehash}{03aa3e09f351437dc03d437823780904}
       \strng{authornamehash}{03aa3e09f351437dc03d437823780904}
       \strng{authorfullhash}{03aa3e09f351437dc03d437823780904}
       \field{labelalpha}{MB05}
       \field{sortinit}{M}
-      \field{sortinithash}{c26a05ef03e4429073ed5c825140fac3}
+      \field{sortinithash}{cfd219b90152c06204fab207bc6c7cab}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Aistats}
@@ -219,34 +267,6 @@
       \field{year}{2005}
       \field{pages}{246\bibrangedash 252}
       \range{pages}{7}
-    \endentry
-    \entry{wSimilarity}{article}{}
-      \list{location}{1}{%
-        {New York, NY, USA}%
-      }
-      \list{publisher}{1}{%
-        {ACM}%
-      }
-      \field{labelalpha}{02}
-      \field{sortinit}{P}
-      \field{sortinithash}{24100cef455d7974167575052c29146e}
-      \field{labeltitlesource}{title}
-      \field{issn}{1046-8188}
-      \field{journaltitle}{ACM Trans. Inf. Syst.}
-      \field{month}{1}
-      \field{number}{1}
-      \field{title}{Placing Search in Context: The Concept Revisited}
-      \field{volume}{20}
-      \field{year}{2002}
-      \field{pages}{116\bibrangedash 131}
-      \range{pages}{16}
-      \verb{doi}
-      \verb 10.1145/503104.503110
-      \endverb
-      \verb{url}
-      \verb http://doi.acm.org/10.1145/503104.503110
-      \endverb
-      \keyw{Search,context,invisible web,semantic processing,statistical natural language processing}
     \endentry
     \entry{hogwild}{inproceedings}{}
       \name{author}{4}{}{%
@@ -273,11 +293,13 @@
       }
       \strng{namehash}{a618d71b4c6d3270d54e80492138de57}
       \strng{fullhash}{fddae35d1f86e620e885a8899ca1f5de}
+      \strng{bibnamehash}{fddae35d1f86e620e885a8899ca1f5de}
+      \strng{authorbibnamehash}{fddae35d1f86e620e885a8899ca1f5de}
       \strng{authornamehash}{a618d71b4c6d3270d54e80492138de57}
       \strng{authorfullhash}{fddae35d1f86e620e885a8899ca1f5de}
       \field{labelalpha}{Rec+11}
       \field{sortinit}{R}
-      \field{sortinithash}{c15bc8eb6936bc6b3c8baa9e8575af53}
+      \field{sortinithash}{da6b42bd3ab22fee61abed031ee405f7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Advances in neural information processing systems}
@@ -289,8 +311,8 @@
     \entry{gensim}{inproceedings}{}
       \name{author}{2}{}{%
         {{hash=b18678c3d1080b2d17429891ff481948}{%
-           family={\v{R}eh\r{u}\v{r}ek},
-           familyi={\v{R}\bibinitperiod},
+           family={{Ř}eh{ů}{ř}ek},
+           familyi={Ř\bibinitperiod},
            given={Radim},
            giveni={R\bibinitperiod}}}%
         {{hash=6279e9bacedcff3b6605bcd9faaaf41c}{%
@@ -310,11 +332,13 @@
       }
       \strng{namehash}{0c7724ed4f55cbb86419c913d469aa5c}
       \strng{fullhash}{0c7724ed4f55cbb86419c913d469aa5c}
+      \strng{bibnamehash}{0c7724ed4f55cbb86419c913d469aa5c}
+      \strng{authorbibnamehash}{0c7724ed4f55cbb86419c913d469aa5c}
       \strng{authornamehash}{0c7724ed4f55cbb86419c913d469aa5c}
       \strng{authorfullhash}{0c7724ed4f55cbb86419c913d469aa5c}
-      \field{labelalpha}{\v{R}S10}
-      \field{sortinit}{\v{R}}
-      \field{sortinithash}{c15bc8eb6936bc6b3c8baa9e8575af53}
+      \field{labelalpha}{ŘS10}
+      \field{sortinit}{Ř}
+      \field{sortinithash}{da6b42bd3ab22fee61abed031ee405f7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{{Proceedings of the LREC 2010 Workshop on New Challenges for NLP Frameworks}}
@@ -342,19 +366,21 @@
            familyi={A\bibinitperiod},
            given={Osokin},
            giveni={O\bibinitperiod}}}%
-        {{hash=f4885a9c6311ea72c489b7fd6a29ec71}{%
+        {{hash=9b4a6b7a3a445fefa9c2fef0134ac0b7}{%
            family={Dmitry},
            familyi={D\bibinitperiod},
            given={P.\bibnamedelimi Vetrov},
            giveni={P\bibinitperiod\bibinitdelim V\bibinitperiod}}}%
       }
       \strng{namehash}{c792b4485c14cdf3a570bd45addafc56}
-      \strng{fullhash}{188fea514272e96fb89b2df396cf7602}
+      \strng{fullhash}{33cca26839bd56ea6fc7dc1b2b495c8c}
+      \strng{bibnamehash}{33cca26839bd56ea6fc7dc1b2b495c8c}
+      \strng{authorbibnamehash}{33cca26839bd56ea6fc7dc1b2b495c8c}
       \strng{authornamehash}{c792b4485c14cdf3a570bd45addafc56}
-      \strng{authorfullhash}{188fea514272e96fb89b2df396cf7602}
+      \strng{authorfullhash}{33cca26839bd56ea6fc7dc1b2b495c8c}
       \field{labelalpha}{Ser+15}
       \field{sortinit}{S}
-      \field{sortinithash}{3c1547c63380458f8ca90e40ed14b83e}
+      \field{sortinithash}{322b1d5276f2f6c1bccdcd15920dbee6}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{eprinttype}{arXiv}
@@ -364,6 +390,9 @@
       \field{year}{2015}
       \verb{eprint}
       \verb 1502.07257
+      \endverb
+      \verb{urlraw}
+      \verb http://arxiv.org/abs/1502.07257
       \endverb
       \verb{url}
       \verb http://arxiv.org/abs/1502.07257
@@ -376,7 +405,7 @@
            familyi={T\bibinitperiod},
            given={Mikolov},
            giveni={M\bibinitperiod}}}%
-        {{hash=b87e95731ae441a05cc6d4d3ebd458e4}{%
+        {{hash=d2e8aac50e6f2a0d51da8bebe064cae5}{%
            family={Qiu},
            familyi={Q\bibinitperiod},
            given={Ilya\bibnamedelima Sutskever},
@@ -398,12 +427,14 @@
            giveni={D\bibinitperiod}}}%
       }
       \strng{namehash}{65be2bafaf1ed326e0fe35a22e73fd84}
-      \strng{fullhash}{24287b6dc9246c646e7d8fad7bb07c00}
+      \strng{fullhash}{04ec955a0b6b0a9cd492669635ebf94c}
+      \strng{bibnamehash}{04ec955a0b6b0a9cd492669635ebf94c}
+      \strng{authorbibnamehash}{04ec955a0b6b0a9cd492669635ebf94c}
       \strng{authornamehash}{65be2bafaf1ed326e0fe35a22e73fd84}
-      \strng{authorfullhash}{24287b6dc9246c646e7d8fad7bb07c00}
+      \strng{authorfullhash}{04ec955a0b6b0a9cd492669635ebf94c}
       \field{labelalpha}{Tom+13}
       \field{sortinit}{T}
-      \field{sortinithash}{2e5c2f51f7fa2d957f3206819bf86dc3}
+      \field{sortinithash}{6f7aff9db9dcfeb7f95fd5bbd2f78df9}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{eprinttype}{arXiv}
@@ -414,13 +445,16 @@
       \verb{eprint}
       \verb 1310.4546
       \endverb
+      \verb{urlraw}
+      \verb http://arxiv.org/abs/1310.4546
+      \endverb
       \verb{url}
       \verb http://arxiv.org/abs/1310.4546
       \endverb
     \endentry
     \entry{efficient}{article}{}
       \name{author}{3}{}{%
-        {{hash=36a9fde0e8299fa431de2bb1e9b6e8e2}{%
+        {{hash=28172af17905555c4cb3e79e6304da70}{%
            family={Vuurens},
            familyi={V\bibinitperiod},
            given={Jeroen\bibnamedelima BP},
@@ -430,7 +464,7 @@
            familyi={E\bibinitperiod},
            given={Carsten},
            giveni={C\bibinitperiod}}}%
-        {{hash=f259ef8d07f6337d7298a15d0d29cf04}{%
+        {{hash=d2ffc3042955600bd5adb7bb85c2c6bd}{%
            family={Vries},
            familyi={V\bibinitperiod},
            given={Arjen\bibnamedelima P},
@@ -438,20 +472,22 @@
            prefix={de},
            prefixi={d\bibinitperiod}}}%
       }
-      \strng{namehash}{8ee09f5dfcb67753f4be70ad5daf065a}
-      \strng{fullhash}{556ec78d60c7f0f413478795b832e164}
-      \strng{authornamehash}{8ee09f5dfcb67753f4be70ad5daf065a}
-      \strng{authorfullhash}{556ec78d60c7f0f413478795b832e164}
+      \strng{namehash}{94f857be51b2d62198aecacbd76c2d0a}
+      \strng{fullhash}{50ca10a5a5f8a5f959d9dee9b0032fc8}
+      \strng{bibnamehash}{50ca10a5a5f8a5f959d9dee9b0032fc8}
+      \strng{authorbibnamehash}{50ca10a5a5f8a5f959d9dee9b0032fc8}
+      \strng{authornamehash}{94f857be51b2d62198aecacbd76c2d0a}
+      \strng{authorfullhash}{50ca10a5a5f8a5f959d9dee9b0032fc8}
       \field{labelalpha}{VEV16}
       \field{sortinit}{V}
-      \field{sortinithash}{555737dafdcf1396ebfeae5822e5bde2}
+      \field{sortinithash}{75dd7385c90b2252c3ae853a80ca853b}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{arXiv preprint arXiv:1606.07822}
       \field{title}{Efficient Parallel Learning of Word2Vec}
       \field{year}{2016}
     \endentry
-  \endsortlist
+  \enddatalist
 \endrefsection
 \endinput
 
