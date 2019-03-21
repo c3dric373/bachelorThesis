@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Arch Linux) (preloaded format=pdflatex 2019.2.26)  20 MAR 2019 21:56
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Arch Linux) (preloaded format=pdflatex 2019.2.26)  21 MAR 2019 10:54
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -762,22 +762,22 @@ LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
 
 LaTeX Warning: Citation 'adagrad' on page 10 undefined on input line 140.
 
-[10]) [11]
+[10]) [11] [12]
 \openout2 = `chapters/methods.aux'.
 
  (./chapters/methods.tex
 chapter 3.
-) [12
+) [13
 
 
 
 
-] [13]
+] [14]
 \openout2 = `chapters/results.aux'.
 
  (./chapters/results.tex
 chapter 4.
-) [14
+) [15
 
 
 
@@ -787,7 +787,7 @@ chapter 4.
 
  (./chapters/discussion.tex
 chapter 5.
-) [15
+) [16
 
 
 
@@ -797,14 +797,14 @@ chapter 5.
 
  (./chapters/conclusion.tex
 chapter 6.
-) [16
+) [17
 
 
 
 
 ]
 chapter without number
-[17
+[18
 
 
 
@@ -816,12 +816,15 @@ Overfull \hbox (3.71585pt too wide) in paragraph at lines 134--134
 Vetrov Dmitry.
  []
 
-[18] (./thesis.aux (./includes/BA-titlepage.aux) (./includes/abstract.aux)
+[19] (./thesis.aux (./includes/BA-titlepage.aux) (./includes/abstract.aux)
 (./chapters/introduction.aux) (./chapters/background.aux)
 (./chapters/methods.aux) (./chapters/results.aux) (./chapters/discussion.aux)
 (./chapters/conclusion.aux))
 
 LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
 
 Package biblatex Warning: Please (re)run Biber on the file:
@@ -854,10 +857,10 @@ mf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/share/texmf-dist/font
 s/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public
 /amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cm
 ti12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on thesis.pdf (24 pages, 292894 bytes).
+Output written on thesis.pdf (25 pages, 294077 bytes).
 PDF statistics:
- 155 PDF objects out of 1000 (max. 8388607)
- 106 compressed objects within 2 object streams
+ 159 PDF objects out of 1000 (max. 8388607)
+ 109 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  16 words of extra memory for PDF output out of 10000 (max. 10000000)
 

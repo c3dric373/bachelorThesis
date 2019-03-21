@@ -34,26 +34,26 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {2.5}Input Shuffling}{11}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {3}Methods}{12}% 
+\contentsline {chapter}{\numberline {3}Methods}{13}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.1}PyTorch}{12}% 
+\contentsline {section}{\numberline {3.1}PyTorch}{13}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.2}Implementation}{12}% 
+\contentsline {section}{\numberline {3.2}Implementation}{13}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.2.1}class SkipGramModel}{12}% 
+\contentsline {subsection}{\numberline {3.2.1}class SkipGramModel}{13}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline method forward}{12}% 
+\contentsline {subsubsection}{\nonumberline method forward}{13}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.2.2}class Dataset}{12}% 
+\contentsline {subsection}{\numberline {3.2.2}class Dataset}{13}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.2.3}class W2Vec}{12}% 
+\contentsline {subsection}{\numberline {3.2.3}class W2Vec}{13}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline method train\_with\_loader}{13}% 
+\contentsline {subsubsection}{\nonumberline method train\_with\_loader}{14}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {4}Results}{14}% 
+\contentsline {chapter}{\numberline {4}Results}{15}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {5}Discussion}{15}% 
+\contentsline {chapter}{\numberline {5}Discussion}{16}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {6}Conclusion}{16}% 
+\contentsline {chapter}{\numberline {6}Conclusion}{17}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\nonumberline Bibliography}{17}% 
+\contentsline {chapter}{\nonumberline Bibliography}{18}% 

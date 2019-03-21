@@ -168,4 +168,5 @@ The general update is done exactly in the same way as in Adadelta:
 \end{equation}
 
 \section{Input Shuffling}
-Input shuffling is a technique used to avoid over fitting. It's blablaalba. batches...
+Let $X = {x_1...x_n}$ be our input data set. Input Shuffling describes the process of taking a random permutation of the dataset as an input at each epoch. 
+The idea behind this technique, is the same as the use of mini batches. We want to present our optimizer with different loss surfaces, so that it's able to find the best optimum. But both combined can be a very powerful, there always lies a risk that a mini-batch isn't a good representative of the true gradient. This way, by shuffling the input, one would avoid this bias.
