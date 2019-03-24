@@ -99,5 +99,74 @@ and the rest lines are the results of our model" \cite{contextWithTensor}}
     \label{fig:multipleContext}
 \end{figure}
 
+\section{Optimizers in Machine learning}
+This section will give a quick overview about a few optimizers existing in machine learning. First of all let's define a few notation: 
+$\eta$ will be the learning rate, $\theta$ all the parameters of our model, $J(\theta)$ our objective function. The goal of an optimizer is to find values for $\theta$ such that $J(\theta)$ can either be minimized or maximized depending on the task. Stochastic gradient descent is the most common optimization technique used in machine learning.  We will address it in it's original form and the existing extensions. 
+\subsection{Stochastic Gradient Descent}
+In this work we will address stochastic gradient as mini-batach gradient descent. At each optimiation time step $t$, Stochastic gradient descent will compute the gradient of all our parameters. Denoted as $  \nabla J(\theta_{t-1})$. We will then substract this term, multiplied by our learning rate, from our weights $\theta$. The gradients will give the direction of the optimization step, whereas the learning rate will give the amplitude of that step.
+\begin{equation}
+\theta_t = \theta_{t-1} - \eta \nabla J(\theta_{t-1})
+\end{equation}
 
+SGD, through it's simplicity, is very limited, therefore somme issues appear:
 
+\begin{itemize}
+\item The learning rate needs to be tuned, it's is often necessacary to try out a set of learning rate to find the optimal one for the given network. 
+\item Learning rate schedules, that are very often needed, as one gets closer to the optimal a smaller learning rate is often needed, must be set before the training starts and hence cannot adapt to the learning set
+\item SGD does not take the parameters into account, every parameter will be following the same update rule
+\end{itemize}
+
+Thererfore there exists numerous advanced optimizers that take those issues into consideration. Let's look into theim. 
+
+\subsection{Momentum}
+Momentum is a technique used to adress one of SGD weak points. As a matter of fact because SGD can have trouble computing the optimum of objective function that are only steep in one directions. The problem here is that SGD often osciliates in the direction that is not very steep, and only takes small steps in the steep direction. This issue is addressed by SGD with momentum. 
+
+It does so by adding a percentage of the last gradient vector  to the update vector. By doing so the gradient that go in the same direction will get bigger (building momentum) and gradients that go in different directions will anhill themselves. 
+ At the update $t$ we will comppute our update vector $v_t$ the following way:
+\begin{equation}
+v_t = \gamma v_{t-1} + \eta \nabla J (\theta)
+\end{equation}
+The value $0.9$ for $\gamma$ has shown great results, but this, same as a learning rate, another hyper parameter that need to be tuned according to the specific task. 
+And then we update our weights as usual: $\theta = \theta - v_t$ 
+\subsection{Nesterov}
+Momentum can be a powerful tool, but sometimes be it's own enemy. With momentum the learning algorithm often overshoots, and blows by the  optima. Hence it will never converge. This problem was addressed by Nesterov. The idea behind his algorithm is to incorporate the momentum in the computation of our gradients. We will subtract the momentum vector, or just a fraction,  from our parameters before computing the gradients. Therefore we will compute the gradients of the position where we would be with momentum, which will allow us to make a step in a better direction. The computation of the update vector will look the following way:
+\begin{equation}
+v_t = \gamma v_{t-1} + \eta \nabla J (\theta -  \gamma v_{t-1})
+\end{equation}
+
+SGD wiht momentum and Nesterov accelerated gradient (NAG) has shown tremendous results in RNN's. But some of the earlier mentioned problems still remains.  NAG, still treats every parameter the same way. Therefore we need a more complex optimization algorithm, that takes the frequency of a feature into account. Adagrad does just that. 
+
+\subsection{Adagrad}
+Adagrad first introduced by \cite{adagrad} is an optimzer that tries to apply different learning rates to different parameters, according to their frequency. The idea is to give very frequent features a small learning rate, and very sparse features a high learning rate. This can be very important for our task of word embeddings, as rare words in the corpus are more important then very frequent ones. As a matter of fact Pennigton et al. used this algorithm for their training of Glove, another word embedding system. \\
+Each parameter $\theta_i$, at time step $t$ will have it's own learning rate $\eta_{t,i}$
+ \begin{equation}
+\eta_{t,i} = \frac{\eta_0}{\sqrt{\sum^{t}_{i=1} g^{2}_{t,i}} \epsilon}
+\end{equation}
+where
+$g_{t,i} = \nabla J(\theta_{t,i})$  is the partial derivative of the loss function with respect to the parameter $\theta_i$ at time step $t$. \\ We see that each parameter $\theta_{i}$ has it's one learning rate. For a very frequent feature the sum of the previous gradients will be very high, hence the learning rate low. This is how Adagrad acheives a different learning rate for each feature. 
+Therefore we have $ \theta_{t+1,i} = \theta_{t_i} - \eta_{t,i} g_{t,i} $, and we can now construct our global parameter update as follows: 
+\begin{equation}
+\theta_{t+1,i} = \theta_{t_i}- \frac{\eta}{\sqrt{G_{t_{i,i}}} + \epsilon} g_{t,i}, 
+\end{equation} 
+
+with  $G_{t_{i,i}}$ being the diagonal Matrix of the sum of the squares of the graditents ($g_{t,i} $). 
+There lies one weakness in this approach: the sum of the squares of the previous gradients grows constantly. This means that after a certain number of epochs the learning rate will be insufficient, to update the model. This issue was addressed by the Adadelta algorithm, that will be covered in the next session. 
+
+\subsection{Adadelta}
+Adadelta not ownly solves the constantly growing sum problem, but also the fact that one does not have to tune the learning rate by not having one. The gist of Adadelta is that instead of taking all the gradients to compute the sum we will only take a fixed number $w$ of gradients.  
+\subsection{Adam}
+Adaptive Moment Estimation (Adam), is a more recent optimization algorithm. It also computes adaptive learning rates. In comparison to Adagrad and Adadelta, it does not only take into considaration the decaying average of the previous squared gradients but also the decay of the past gradients. 
+Let's introduce : \\
+$m_t = \beta_1 m_{t-1} + (1- \beta_1) g_t $ as the decaying average of the previous gradients  \\
+and $v_t = \beta_2 v_{t-1} + (1- \beta_2) g^2_t $, as the decaying average of the previous squared gradients . \\
+One problem arises when using this formula, $m_t$  and $tv_t$ are initialized as vectors of zero. Therefore they are biased towards zero. therofore et al. advised to use a bias corrected version:\\
+$ \tilde{m_t} = \frac{m_t}{1-\beta^t_1}$\\
+$ \tilde{v_t} = \frac{v_t}{1-\beta^t_2}$\\
+The general update is done exactly in the same way as in Adadelta:
+\begin{equation}
+\theta_{t+1} = \theta_t - \frac{\eta}{\tilde{v_t}+ \epsilon} \tilde{m_t}
+\end{equation}
+
+\section{Input Shuffling}
+Let $X = {x_1...x_n}$ be our input data set. Input Shuffling describes the process of taking a random permutation of the dataset as an input at each epoch. 
+The idea behind this technique, is the same as the use of mini batches. We want to present our optimizer with different loss surfaces, so that it's able to find the best optimum. But both combined can be a very powerful, there always lies a risk that a mini-batch isn't a good representative of the true gradient. This way, by shuffling the input, one would avoid this bias.

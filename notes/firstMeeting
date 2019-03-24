@@ -1,0 +1,14 @@
+E
+posé Inhalt
+    related work  
+    fragestellung (was du machen willst)  sagen was du machen willst 
+    lösungsansätze (wie du es machen willst (datensätze, bibliotheken, evaluierungs methoden))
+        gensim macht nur sgd -> also adam optimizer 
+        textaid datensatz 
+        input shuffling 
+        pyTorch implementation
+
+Deadlines:
+    21.01 expose abgeben 
+    23.01 feedback expose 
+
