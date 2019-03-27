@@ -2,9 +2,28 @@
 \frametitle{Discussion}
 How are we going to compare our work? 
 \begin{itemize}
-\item Convergence time vs Gensim
+
 \item Word Similarity vs. Related Work
+\begin{table}[]
+\begin{tabular}{|l|l|}
+\hline
+model         & Wordsimilarity \\ \hline
+Gensim           & 0.67           \\ \hline
+w2vec (original) & 0.63           \\ \hline
+our Work         & \textbf{0.69}       \\ \hline
+\end{tabular}
+\end{table}
+\item Convergence time vs Gensim
+\begin{table}[]
+\begin{tabular}{|l|l|}
+\hline
+model         & Convergence Time \\ \hline
+Gensim           & 4          \\ \hline
+our Work & \textbf{3}           \\ \hline
+\end{tabular}
+\end{table}
 \end{itemize}
 
-\includegraphics[scale=0.5]{images/wordsim353_text8}
+
+% \includegraphics[scale=0.5]{images/wordsim353_text8}
 \end{frame}
