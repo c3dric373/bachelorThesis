@@ -102,10 +102,10 @@ Negative Sampling
 \begin{itemize}
 \item Distinguish data from noise $\Rightarrow$ reduce problem to a logistic regression. 
 \item Guess k random samples 
-\item For each pair $(w,c)$ we want to maximize:
+\item For each pair $(w,c)$ we get:
 \medskip
 \end{itemize}
   \begin{equation}
- arg max \theta  log(\sigma({v^{'}_c}^\intercal v_w ) + \sum_{k\in K} \sigma(log(-{v^{'}_k}^\intercal  v_w ))  
+ \argmax_{\theta } log(\sigma({v^{'}_c}^\intercal v_w ) + \sum_{k\in K} \sigma(log(-{v^{'}_k}^\intercal  v_w ))  
   \end{equation}
 \end{frame}
