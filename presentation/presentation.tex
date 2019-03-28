@@ -27,10 +27,12 @@
 %=================================================
 % packages and new commands
 %=================================================
-\usepackage[ruled, linesnumbered, vlined]{algorithm2e}
+\usepackage{colortbl}
+%\usepackage[ruled, linesnumbered, vlined]{algorithm2e}
 \usepackage{epsfig, subfigure, amssymb, multirow, algorithmic, amsmath}
 \newcommand*{\superscript}[1]{\ensuremath{^{\rm #1}}}
 \newcommand*{\subscript}[1]{\ensuremath{_{\rm #1}}}
+\DeclareMathOperator*{\argmax}{arg\,max}
 
 %=================================================
 % thesis details (preamble)
@@ -51,7 +53,7 @@
 \begin{frame}
   \begin{center}
     \vspace{0.1cm}
-    \includegraphics[scale=0.7]{USlogo.pdf}
+    \includegraphics[scale=0.3]{uplogo.png}
   \end{center}
   \titlepage
 \end{frame}
@@ -62,6 +64,11 @@
 \input{slides/motivation}
 \input{slides/outline}
 \input{slides/background}
+\input{slides/implementation}
+\input{slides/results}
+\input{slides/discussion}
+\input{slides/conclusion}
+\input{slides/backup}
 %========================
 % example slides:
 %========================
