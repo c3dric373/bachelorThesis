@@ -4,39 +4,33 @@
 \textbf{How can we encode vectors for machine learning? }\\
 \bigskip 
 \centerline{
-He = 
-$
-\begin{bmatrix}
+He =$
+\left(
+\begin{array}{c}
+\rowcolor{green! 20}
 1\\
 0\\
 0\\
-0\\
-\end{bmatrix}
+\end{array}\right)
 $
 is = $
-\begin{bmatrix}
+\left(
+\begin{array}{c}
 0\\
+\rowcolor{blue! 20}
 1\\
 0\\
-0\\
-\end{bmatrix}
-$
-a = $
-\begin{bmatrix}
-0\\
-0\\
-1\\
-0\\
-\end{bmatrix}
+\end{array}\right)
 $
 King =
 $
-\begin{bmatrix}
+\left(
+\begin{array}{c}
 0\\
 0\\
-0\\
+\rowcolor{red! 20}
 1\\
-\end{bmatrix}
+\end{array}\right)
 $}
 \bigskip
 \begin{itemize}
@@ -51,7 +45,7 @@ $}
     \framesubtitle{Why are word embeddings necessary?}
     \textbf{We need a new system to create word embeddings }
       \begin{itemize}
- \item $\Rightarrow $Skip-Gram Model
+ \item $\Rightarrow $Skip-Gram Model  (Mikolov et al. 2013) \cite{mikolov}
  \item Low dimension
  \item Captures meaning
  \item Speeds up and improves other NLP tasks, for example machine translation. 

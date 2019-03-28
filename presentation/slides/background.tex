@@ -1,75 +1,100 @@
 \begin{frame}\frametitle{Background}
+\begin{Large}
+Background
+\end{Large}
+\begin{enumerate}
+\item Skip Gram Model 
+\item Skip Gram with Negative Sampling (SGNS)
+\end{enumerate}
+\end{frame}
+\begin{frame}\frametitle{Background}
 Main idea: train a network on a "fake task" then use the weights as embedding. \bigskip
 \begin{itemize}
 \item The fake task:
 \item Given a word $w$ guess the context words. 
-\item We want to maximize the following probability:
+%\item We want to maximize the following probability:
 \end{itemize}
-\begin{equation}
-\prod_{t=1}^T \prod_{-m<j<m}  p(w_{t+j}|w_t)
-\end{equation}
-\includegraphics[scale=0.37]{images/context_pairs.pdf}
+%\begin{equation}
+%\prod_{t=1}^T \prod_{-m<j<m}  p(w_{t+j}|w_t)
+%\end{equation}
+\includegraphics[scale=0.37]{images/context_pairs.png}
 \end{frame}
 
 \begin{frame}\frametitle{Background}\framesubtitle{Network achitecture}
 \includegraphics[scale=0.37]{images/ntw_architecture.png}
 (Source: http://mccormickml.com/2016/04/19/word2vec-tutorial-the-skip-gram-model/) 
 \end{frame}
-
+\iffalse
 \begin{frame}\frametitle{Background}\framesubtitle{Example}
 $
-\begin{bmatrix}
-0 & 0 & 1 & 0 
-\end{bmatrix}
-\begin{bmatrix}
-1 & 3 & 1.2  \\
-0.3 & 0.2 & -1 \\
-1 & 2 & 3 \\
--2 & 3 & 1 \\
--1 & 0 & 1 \\
-\end{bmatrix}
+\newcolumntype{g}{>{\columncolor{green! 20}}c}
+\newcolumntype{b}{>{\columncolor{blue! 20}}c}
+\newcolumntype{r}{>{\columncolor{red! 20}}c}
+\left(
+\begin{array}{cbc}
+0 & 1 & 0 
+\end{array}\right)
+\left(
+\begin{array}{ccc}
+\rowcolor{green! 20}
+1 & 1 & 1  \\
+\rowcolor{blue! 20}
+2 & 2 & 2 \\
+\rowcolor{red! 20}
+3 & 3 & 3 \\
+\end{array}\right)
 = 
-\begin{bmatrix}
-1& 2 & 3
-\end{bmatrix}
+\left(
+\begin{array}{ccc}
+\rowcolor{blue! 20}
+2& 2 & 2
+\end{array}\right)
+\newcolumntype{g}{>{\columncolor{green! 20}}c}
+\newcolumntype{b}{>{\columncolor{blue! 20}}c}
+\newcolumntype{r}{>{\columncolor{red! 20}}c}
+\left(
+\begin{array}{gbr}
+0.1 & 0.2&0.3  \\
+0.1 & 0.2&0.3  \\
+0.1 & 0.2&0.3 \\
+\end{array}\right)
 $
-\bigskip
 $
-\begin{bmatrix}
-1& 2 & 3
-\end{bmatrix}
-\begin{bmatrix}
-0.1 & 0.25&0.5& 1  \\
-0.1 & 0.25&0.5 & 1 \\
-0.1 & 0.25&0.5 & 1 \\
-\end{bmatrix}
 = 
-\begin{bmatrix}
-0.6 & 1.5 & 3 & 6 
-\end{bmatrix}
+\newcolumntype{g}{>{\columncolor{green! 20}}c}
+\newcolumntype{b}{>{\columncolor{blue! 20}}c}
+\newcolumntype{r}{>{\columncolor{red! 20}}c}
+\left(
+\begin{array}{gbr}
+0.6 & 1.5 & 3 
+\end{array}\right)
+\implies Softmax:
+\left(
+\begin{array}{gbr}
+0.13 & 0.31 & 0.56 
+\end{array}\right)
 $
-\bigskip 
-\\Apply Softmax:
 $
-\begin{bmatrix}
-0. & 0.1 & 0.5 & 0.94
-\end{bmatrix}
+c
 $
-\end{frame}
+\vspace{10pt}
 
+$
+p(v_{he}| v_{is})   
+ $
+ 
+ \vspace{10pt}
+ 
+ $
+ p(v_{king}| v_{is})
+ $
+
+\end{frame}
+\fi
 \begin{frame}\frametitle{Background}\framesubtitle{Softmax}
-\begin{Large}
-It's unsuitable to compute the softmax
-\end{Large}
-   \begin{equation}
-  p(c|w) =  \frac{exp( {v^{'}_c}^\intercal v_w )}{\sum_{i=1}^T exp({v^{'}_i}^\intercal v_{w})}
-   \end{equation}
-   \begin{itemize}
-   \item $v_w$ and $v^{'}_c$ are the "input" and "output" representation of $w$
-\item For each pair we have to go over the whole training corpus. (Billions of word in practice) 
-   \end{itemize}
+\centerline{
+\includegraphics[scale=0.5]{images/skip_gram_example.pdf}}
 \end{frame}
-
 \begin{frame}\frametitle{Background}\framesubtitle{Negative Sampling}
 \begin{large}
 Negative Sampling
@@ -77,8 +102,10 @@ Negative Sampling
 \begin{itemize}
 \item Distinguish data from noise $\Rightarrow$ reduce problem to a logistic regression. 
 \item Guess k random samples 
+\item For each pair $(w,c)$ we get:
+\medskip
 \end{itemize}
   \begin{equation}
-  p(c|w) =  log(\sigma({v^{'}_c}^\intercal v_w ) + \sum_{k\in K} \sigma(log(-{v^{'}_k}^\intercal  v_w ))  
+ \argmax_{\theta }\ log(\sigma({v^{'}_c}^\intercal v_w ) + \sum_{k\in K} \sigma(log(-{v^{'}_k}^\intercal  v_w ))  
   \end{equation}
 \end{frame}
