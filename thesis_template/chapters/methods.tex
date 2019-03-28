@@ -1,14 +1,14 @@
 \chapter{Methods}\label{chap:methods}
-
-
 Describe the method/software/tool/algorithm you have developed here
+
+We developped a  full replication of the original w2vec implementation of the Skip Gram Model in Pytorch. And then tried to optimize it. This chapter will illustrate our proceeding. First it will give a short introduction to PyTorch, and then cover the most interesting parts of our implementation. 
 \section{PyTorch}
 torch.optim dataloader etc. 
 \section{Implementation}
 \subsection{class SkipGramModel}
-embedings
-\subsubsection{method forward}
-forward pass objective function
+This class is responsable for the forward pass of our data, and represents the neural network, that will result in the word embeddings. We used the class torch.embeddings to generate our word embedings. This class allows us to give a single integer to the embeding and it will return our embedding.  
+\subsubsection{Method forward()}
+In the forward method we apply the idea of shared memory distribution \cite{intel}. We will take as an input a number of word and their context and then use the same negative samples for all of those words. We will create a matrix made out contex words and samples. Create matrix containing all our words. Multiply the two matrices. this will result in a matrix having each score of equation \ref{obj_neg_samples}. And we will then sum all our scores to return our loss. 
 \subsection{class Dataset}
 data loader, pairs neg samples etc.
 \subsection{class W2Vec}
