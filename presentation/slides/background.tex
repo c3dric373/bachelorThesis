@@ -12,11 +12,11 @@ Main idea: train a network on a "fake task" then use the weights as embedding. \
 \begin{itemize}
 \item The fake task:
 \item Given a word $w$ guess the context words. 
-\item We want to maximize the following probability:
+%\item We want to maximize the following probability:
 \end{itemize}
-\begin{equation}
-\prod_{t=1}^T \prod_{-m<j<m}  p(w_{t+j}|w_t)
-\end{equation}
+%\begin{equation}
+%\prod_{t=1}^T \prod_{-m<j<m}  p(w_{t+j}|w_t)
+%\end{equation}
 \includegraphics[scale=0.37]{images/context_pairs.png}
 \end{frame}
 
@@ -95,20 +95,6 @@ p(v_{he}| v_{is})
 \centerline{
 \includegraphics[scale=0.5]{images/skip_gram_example.pdf}}
 \end{frame}
-\begin{frame}\frametitle{Background}\framesubtitle{Softmax}
-\begin{Large}
-BACKGROUND
-It's unsuitable to compute the softmax
-\end{Large}
-   \begin{equation}
-  p(c|w) =  \frac{exp( {v^{'}_c}^\intercal v_w )}{\sum_{i=1}^T exp({v^{'}_i}^\intercal v_{w})}
-   \end{equation}
-   \begin{itemize}
-   \item $v_w$ and $v^{'}_c$ are the "input" and "output" representation of $w$
-\item For each pair we have to go over the whole training corpus. (Billions of word in practice) 
-   \end{itemize}
-\end{frame}
-
 \begin{frame}\frametitle{Background}\framesubtitle{Negative Sampling}
 \begin{large}
 Negative Sampling
@@ -116,9 +102,10 @@ Negative Sampling
 \begin{itemize}
 \item Distinguish data from noise $\Rightarrow$ reduce problem to a logistic regression. 
 \item Guess k random samples 
+\item For each pair $(w,c)$ we want to maximize:
 \medskip
 \end{itemize}
   \begin{equation}
-  p(c|w) =  log(\sigma({v^{'}_c}^\intercal v_w ) + \sum_{k\in K} \sigma(log(-{v^{'}_k}^\intercal  v_w ))  
+ arg max \theta  log(\sigma({v^{'}_c}^\intercal v_w ) + \sum_{k\in K} \sigma(log(-{v^{'}_k}^\intercal  v_w ))  
   \end{equation}
 \end{frame}

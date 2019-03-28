@@ -1,0 +1,12 @@
+begin{frame}\frametitle{Background}\framesubtitle{Softmax}
+\begin{Large}
+It's unsuitable to compute the softmax
+\end{Large}
+   \begin{equation}
+  p(c|w) =  \frac{exp( {v^{'}_c}^\intercal v_w )}{\sum_{i=1}^T exp({v^{'}_i}^\intercal v_{w})}
+   \end{equation}
+   \begin{itemize}
+   \item $v_w$ and $v^{'}_c$ are the "input" and "output" representation of $w$
+\item For each pair we have to go over the whole training corpus. (Billions of word in practice) 
+   \end{itemize}
+\end{frame}
