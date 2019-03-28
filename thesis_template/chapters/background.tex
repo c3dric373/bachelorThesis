@@ -17,7 +17,7 @@ The idea behind negative sampling is to only update the output nodes of certain 
 
 Let's look at how we construct our objective function for a given word $w$ and one of its context words $c$: 
 
-\begin{align*}
+\begin{align*} \label{obj_neg_samples}
 p(c|w) &= p(y=1|c,w) + \prod_{k\in K} p(y=0|k,c) 
 \\&= p(y=1|c,w) + \prod_{k\in K} 1- p(y=1|k,c) 
 \\&= log((p(y=1|c,w)) + \sum_{k\in K} log(1- p(y=1|k,c)) 
