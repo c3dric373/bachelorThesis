@@ -2018,6 +2018,7 @@
     <bcf:citekey order="23">contextWithTensor</bcf:citekey>
     <bcf:citekey order="24">contextWithTensor</bcf:citekey>
     <bcf:citekey order="25">adagrad</bcf:citekey>
+    <bcf:citekey order="26">intel</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nyt">

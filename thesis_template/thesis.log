@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Arch Linux) (preloaded format=pdflatex 2019.2.26)  21 MAR 2019 10:54
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Arch Linux) (preloaded format=pdflatex 2019.3.25)  28 MAR 2019 18:37
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -767,12 +767,16 @@ LaTeX Warning: Citation 'adagrad' on page 10 undefined on input line 140.
 
  (./chapters/methods.tex
 chapter 3.
-) [13
+
+LaTeX Warning: Reference `obj_neg_samples' on page 13 undefined on input line 1
+1.
+
+[13
 
 
 
 
-] [14]
+]) [14]
 \openout2 = `chapters/results.aux'.
 
  (./chapters/results.tex
@@ -824,9 +828,6 @@ Vetrov Dmitry.
 LaTeX Warning: There were undefined references.
 
 
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-
 Package biblatex Warning: Please (re)run Biber on the file:
 (biblatex)                thesis
 (biblatex)                and rerun LaTeX afterwards.
@@ -836,10 +837,10 @@ Package logreq Info: Writing requests to 'thesis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 13516 strings out of 492616
- 269582 string characters out of 6135177
- 853103 words of memory out of 5000000
- 17234 multiletter control sequences out of 15000+600000
+ 13517 strings out of 492616
+ 269599 string characters out of 6135177
+ 853113 words of memory out of 5000000
+ 17235 multiletter control sequences out of 15000+600000
  14266 words of font info for 51 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  52i,19n,73p,9085b,1439s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -857,7 +858,7 @@ mf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/share/texmf-dist/font
 s/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public
 /amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cm
 ti12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on thesis.pdf (25 pages, 294077 bytes).
+Output written on thesis.pdf (25 pages, 296043 bytes).
 PDF statistics:
  159 PDF objects out of 1000 (max. 8388607)
  109 compressed objects within 2 object streams

@@ -42,11 +42,11 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {3.2.1}class SkipGramModel}{13}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline method forward}{13}% 
+\contentsline {subsubsection}{\nonumberline Method forward()}{14}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.2.2}class Dataset}{13}% 
+\contentsline {subsection}{\numberline {3.2.2}class Dataset}{14}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.2.3}class W2Vec}{13}% 
+\contentsline {subsection}{\numberline {3.2.3}class W2Vec}{14}% 
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{\nonumberline method train\_with\_loader}{14}% 
 \defcounter {refsection}{0}\relax 
