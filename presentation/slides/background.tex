@@ -95,7 +95,10 @@ p(v_{he}| v_{is})
 \centerline{
 \includegraphics[scale=0.5]{images/skip_gram_example.pdf}}
 \end{frame}
-\begin{frame}\frametitle{Background}\framesubtitle{Negative Sampling}
+\begin{frame}\frametitle{Background}
+   \begin{flalign}
+\text{Softmax: } &&  p(c|w) =  \frac{exp( {v^{'}_c}^\intercal v_w )}{\sum_{i=1}^T exp({v^{'}_i}^\intercal v_{w})}
+   \end{flalign}
 \begin{large}
 Negative Sampling
 \end{large}
@@ -105,7 +108,7 @@ Negative Sampling
 \item For each pair $(w,c)$ we get:
 \medskip
 \end{itemize}
-  \begin{equation}
- \argmax_{\theta }\ log(\sigma({v^{'}_c}^\intercal v_w ) + \sum_{k\in K} \sigma(log(-{v^{'}_k}^\intercal  v_w ))  
-  \end{equation}
+  \begin{flalign}
+ && \argmax_{\theta }\ log(\sigma({v^{'}_c}^\intercal v_w ) + \sum_{k\in K} \sigma(log(-{v^{'}_k}^\intercal  v_w ))  
+  \end{flalign}
 \end{frame}
