@@ -112,3 +112,23 @@ Negative Sampling
  && \argmax_{\theta }\ log(\sigma({v^{'}_c}^\intercal v_w ) + \sum_{k\in K} \sigma(log(-{v^{'}_k}^\intercal  v_w ))  
   \end{flalign}
 \end{frame}
+
+\begin{frame}
+\frametitle{Background}
+\begin{Large}
+State of the Art
+\end{Large}
+\begin{itemize}
+\item word2vec (Mikolov et al. 2013) 
+\item Parallelizing Word2Vec in Shared and Distributed Memory (Ji et al. 2016)
+\item Acceleration of Word2vec Using GPUs (Seulki and Youngmin  2016)
+\item Gensim ({\v R}eh{\r u}{\v r}ek and Sojka)
+\end{itemize}
+\begin{Large}
+Research Questions:
+\end{Large}
+\begin{itemize}
+\item Can the convergence time of the skip Gram Model be optimized by the use of advanced optimizers, while at the same time maintaining it's accuracy? 
+\item Can the convergence time of the skip Gram Model be optimized by the use of input shuffling, while at the same time maintaining it's accuracy? 
+\end{itemize}
+\end{frame}
