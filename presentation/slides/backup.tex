@@ -35,3 +35,17 @@ It's unsuitable to compute the softmax
         \includegraphics[scale=0.35]{images/neg_samples_example}
   \end{columns}
 \end{frame}
+
+\begin{frame}
+Each parameter $\theta_i$, at time step $t$ will have it's own learning rate $\eta_{t,i}$
+ \begin{equation}
+\eta_{t,i} = \frac{\eta_0}{\sqrt{\sum^{t}_{i=1} g^{2}_{t,i}} \epsilon}
+\end{equation}
+where
+$g_{t,i} = \nabla J(\theta_{t,i})$  is the partial derivative of the loss function with respect to the parameter $\theta_i$ at time step $t$. \\ We see that each parameter $\theta_{i}$ has it's one learning rate. For a very frequent feature the sum of the previous gradients will be very high, hence the learning rate low. This is how Adagrad acheives a different learning rate for each feature. 
+Therefore we have $ \theta_{t+1,i} = \theta_{t_i} - \eta_{t,i} g_{t,i} $, and we can now construct our global parameter update as follows: 
+\begin{equation}
+\theta_{t+1,i} = \theta_{t_i}- \frac{\eta}{\sqrt{G_{t_{i,i}}} + \epsilon} g_{t,i}, 
+\end{equation} 
+with  $G_{t_{i,i}}$ being the diagonal Matrix of the sum of the squares of the graditents ($g_{t,i} $).
+\end{frame}
