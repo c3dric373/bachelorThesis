@@ -5,9 +5,10 @@ Describe the experimental setup, the used datasets/parameters and the experiment
 
 \section{Dataset}
 In this implementation we used the following datasets: text8\footnote{matt mahoney} and ewik9\footnote{matt}, these are both repsectively the first 30 and 100MB of clean text from Wikipedia. We chose the first dataset because it is very small, hence giving us a fast computation time, but at the same time used in a lot of related work. \cite{intel} \cite{gpu}. We needed the second dataset to compute the analogy task (more on this in results). 
-Both of these datasets contain documents of 10k senteces. Therefore we needed to split the dataset into sentences. We arbitrarly chose a length of 20. Furthermore we applied subsampling too both of these datasets. Statistics regarding the dataset can be found in the following subsection. 
+Both of these datasets contain documents of 10k senteces. Therefore we needed to split the dataset into sentences. We arbitrarly chose a length of 20. Furthermore we applied subsampling too both of these datasets. We also applied a Statistics regarding the dataset can be found in the following subsection. We also deleted every word that did not occur more than 5 times in the dataset. 
 
 \subsection{Specification of datasets}
+todo add number of subsampled word number of words deleted by min count.
 \begin{table}[]
 \begin{tabular}{|l|l|l|l|}
 \hline
