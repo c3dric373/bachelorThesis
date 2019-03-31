@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Arch Linux) (preloaded format=pdflatex 2019.3.25)  31 MAR 2019 14:18
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Arch Linux) (preloaded format=pdflatex 2019.3.25)  31 MAR 2019 16:19
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -786,10 +786,10 @@ LaTeX Warning: Citation 'gpu' on page 15 undefined on input line 7.
 
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 11.
+               Default added (so using `tbp') on input line 12.
 
 
-Overfull \hbox (43.31451pt too wide) in paragraph at lines 12--18
+Overfull \hbox (43.31451pt too wide) in paragraph at lines 13--19
 [][] 
  []
 
@@ -800,7 +800,7 @@ Overfull \hbox (43.31451pt too wide) in paragraph at lines 12--18
 
 ]
 
-LaTeX Warning: Citation 'mikolov' on page 16 undefined on input line 25.
+LaTeX Warning: Citation 'mikolov' on page 16 undefined on input line 26.
 
 ) [16]
 \openout2 = `chapters/discussion.aux'.
@@ -844,9 +844,6 @@ Vetrov Dmitry.
 LaTeX Warning: There were undefined references.
 
 
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-
 Package biblatex Warning: Please (re)run Biber on the file:
 (biblatex)                thesis
 (biblatex)                and rerun LaTeX afterwards.
@@ -858,7 +855,7 @@ Package logreq Info: Writing requests to 'thesis.run.xml'.
 Here is how much of TeX's memory you used:
  13520 strings out of 492616
  269654 string characters out of 6135177
- 853156 words of memory out of 5000000
+ 853149 words of memory out of 5000000
  17238 multiletter control sequences out of 15000+600000
  14266 words of font info for 51 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -879,7 +876,7 @@ onts/cm/cmssbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy
 10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/sh
 are/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texmf-dist
 /fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on thesis.pdf (26 pages, 319120 bytes).
+Output written on thesis.pdf (26 pages, 321793 bytes).
 PDF statistics:
  170 PDF objects out of 1000 (max. 8388607)
  117 compressed objects within 2 object streams
