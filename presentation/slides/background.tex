@@ -91,10 +91,7 @@ p(v_{he}| v_{is})
 
 \end{frame}
 \fi
-\begin{frame}\frametitle{Background}\framesubtitle{Softmax}
-\centerline{
-\includegraphics[scale=0.5]{images/skip_gram_example.pdf}}
-\end{frame}
+
 \begin{frame}\frametitle{Background}
    \begin{flalign}
 \text{Softmax: } &&  p(c|w) =  \frac{exp( {v^{'}_c}^\intercal v_w )}{\sum_{i=1}^T exp({v^{'}_i}^\intercal v_{w})}
@@ -127,8 +124,14 @@ State of the Art
 \begin{Large}
 Research Questions:
 \end{Large}
+\medskip \\
+ Can the convergence time of the skip Gram Model be optimized by the use of:
 \begin{itemize}
-\item Can the convergence time of the skip Gram Model be optimized by the use of advanced optimizers, while at the same time maintaining it's accuracy? 
-\item Can the convergence time of the skip Gram Model be optimized by the use of input shuffling, while at the same time maintaining it's accuracy? 
+\item Advanced optimizers
 \end{itemize}
+and
+\begin{itemize}
+\item Input Shuffling
+\end{itemize}
+while at the same time maintaining it's accuracy? 
 \end{frame}
