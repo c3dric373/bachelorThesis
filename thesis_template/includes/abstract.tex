@@ -1,4 +1,9 @@
 % !TeX spellcheck = en_US
 % !TeX encoding = UTF-8
 \chapter*{Abstract}
-The Skip-gram Model with negative sampling is an effective algorithm to create word embeddings. While a lot of effort has gone into increasing the throughput of words of the model, not much work has gone into optimizing the convergence time. Our work focused on the latter. We used two techniques to achieve a better convergence time, namely advanced optimizers and input shuffling. We did achieve to decrease the convergence time of the skip-gtram model from 4(Gensim) to 2, by combining adam as an optimizer and shuffling the input at the same time. 
+The Skip-gram Model with negative sampling is an effective algorithm to create word embedding. While a lot of effort has gone into increasing the throughput of words , not much work has gone into optimizing the convergence time. Our work focused on the latter. We used two techniques to achieve a better convergence time, namely advanced optimizers and input shuffling. We compared our work to the state of the art implementation Gensim. We used the Text8 dataset, and word similarity as a measure of word embedings. We did achieve to decrease the convergence time of the skip-gtram model from 4(Gensim) to 2, by combining adam as an optimizer and shuffling the input at the same time, while maintaining the same accuracy as gensim
+
+- The problem
+- our solution
+- our solution in detail
+- so what? 
