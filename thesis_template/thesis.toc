@@ -52,8 +52,14 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {4}Results}{15}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {5}Discussion}{16}% 
+\contentsline {section}{\numberline {4.1}Dataset}{15}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {6}Conclusion}{17}% 
+\contentsline {subsection}{\numberline {4.1.1}Specification of datasets}{16}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\nonumberline Bibliography}{18}% 
+\contentsline {section}{\numberline {4.2}Configuration of the network}{16}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {5}Discussion}{17}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {6}Conclusion}{18}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\nonumberline Bibliography}{19}% 
