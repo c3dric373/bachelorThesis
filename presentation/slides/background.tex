@@ -106,8 +106,11 @@ Negative Sampling
 \medskip
 \end{itemize}
   \begin{flalign}
- && \argmax_{\theta }\ log(\sigma({v^{'}_c}^\intercal v_w ) + \sum_{k\in K} \sigma(log(-{v^{'}_k}^\intercal  v_w ))  
+ && \argmax_{\theta }\ log(\sigma({v^{'}_c}^\intercal v_w ) + \sum_{k\in K} log(\sigma(-{v^{'}_k}^\intercal  v_w ))  
   \end{flalign}
+  \begin{itemize}
+  \item Uses SGD as an optimizer
+  \end{itemize}
 \end{frame}
 
 \begin{frame}
@@ -118,8 +121,8 @@ State of the Art
 \begin{itemize}
 \item word2vec (Mikolov et al. 2013)  \cite{mikolov}
 \item Parallelizing Word2Vec in Shared and Distributed Memory (Ji et al. 2016)\cite{intel}
-\item Acceleration of Word2vec Using GPUs (Seulki and Youngmin  2016)
-\item Gensim ({\v R}eh{\r u}{\v r}ek and Sojka)
+\item Acceleration of Word2vec Using GPUs (Seulki and Youngmin  2016) \cite{gpu}
+\item Gensim ({\v R}eh{\r u}{\v r}ek and Sojka) \cite{gensim}
 \end{itemize}
 \begin{Large}
 Research Questions:
