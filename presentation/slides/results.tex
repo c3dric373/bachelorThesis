@@ -35,10 +35,29 @@ What is word similarity?
 \centerline{ \includegraphics[scale=0.4]{images/cosine}}
 \end{frame}
 \begin{frame}
+\frametitle{Word Similarity}
+\begin{itemize}
+
+\item Word Similarity vs. Related Work
+\begin{table}[]
+\begin{tabular}{|l|l|}
+\hline
+model         & Word Similarity \\ \hline
+Gensim           & \textbf{ 0.66   }        \\ \hline
+w2vec (original) & 0.63           \\ \hline
+our Work         & \textbf{0.66}       \\ \hline
+\end{tabular}
+\end{table}
+\end{itemize}
+\hfill (Ji et al. 2016) \cite{intel}
+% \includegraphics[scale=0.5]{images/wordsim353_text8}
+\end{frame}
+
+\begin{frame}
 \frametitle{Convergence time}
 \begin{itemize}
 \item Defined convergence time based on word similarity
-\item Early Stoppage if: $ \rho -  \rho_{prev} < 0.009$ 
+\item Early Stoppage if: $ \rho -  \rho_{prev} < 0.009 \vee \rho > 0.66$ 
 \item No more than 20 epochs. 
 \end{itemize}
 \includegraphics[scale=0.3]{images/wordsim_convergence}

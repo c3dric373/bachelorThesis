@@ -1,40 +1,16 @@
 \begin{frame}
 \frametitle{Discussion}
-Comparison to related work
-\begin{itemize}
-\item Convergence Time
-\item Word similarity
-\end{itemize}
-\end{frame}
-\begin{frame}
-\frametitle{Discussion}
-\begin{itemize}
-
-\item Word Similarity vs. Related Work
-\begin{table}[]
-\begin{tabular}{|l|l|}
-\hline
-model         & Word Similarity \\ \hline
-Gensim           & \textbf{ 0.66   }        \\ \hline
-w2vec (original) & 0.63           \\ \hline
-our Work         & \textbf{0.66}       \\ \hline
-\end{tabular}
-\end{table}
-\end{itemize}
-\hfill (Ji et al. 2016) \cite{intel}
-% \includegraphics[scale=0.5]{images/wordsim353_text8}
-\end{frame}
-
-\begin{frame}
-\frametitle{Discussion}
 Convergence time vs Gensim 
     \begin{table}[]
 \begin{tabular}{|l|l|l|}
 \hline
 Model    & Convergence Time & Word Similarity \\ \hline
-our work & \textbf{5}              & 0.66            \\ \hline
-Gensim   & 7           & 0.66            \\ \hline
+SGD & {11}              & 0.65            \\ \hline
+SGD w/shuffling & {7}              & 0.66            \\ \hline
+Adam & {3}              & 0.66            \\ \hline
+Adam w/ shuffling & \textbf{2}              & 0.66      \\ \hline
+Gensim   & 4          & 0.66            \\ \hline
 \end{tabular}
 \end{table}
-\includegraphics[scale=0.3]{images/gensim_vs_adam}
+\includegraphics[scale=0.25]{images/gensim_vs_adam}
   \end{frame}
