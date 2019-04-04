@@ -54,7 +54,9 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {4.1}Dataset}{15}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.1.1}Specification of datasets}{15}% 
+\contentsline {subsection}{\numberline {4.1.1}Subsampling}{15}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.1.2}Specification of datasets}{16}% 
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {4.2}Configuration of the network}{16}% 
 \defcounter {refsection}{0}\relax 
