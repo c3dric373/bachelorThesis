@@ -5,8 +5,7 @@ Describe the experimental setup, the used datasets/parameters and the experiment
 
 \section{Dataset}
 In this implementation we used the following datasets: text8\footnote{matt mahoney} and ewik9\footnote{matt}, these are both repsectively the first 30 and 100MB of clean text from Wikipedia. We chose the first dataset because it is very small, hence giving us a fast computation time, but at the same time used in a lot of related work. \cite{intel} \cite{gpu}. We needed the second dataset to compute the analogy task (more on this in results). 
-Both of these datasets contain documents of 10k senteces. Therefore we needed to split the dataset into sentences. We arbitrarly chose a length of 20. Furthermore we applied subsampling (described in the next subsection)  too both of these datasets. We also applied a Statistics regarding the dataset can be found in the following subsection. We also deleted every word that did not occur more than 5 times in the dataset. 
-%TODO add min count
+Both of these datasets contain documents of 10k senteces. Therefore we needed to split the dataset into sentences. We arbitrarly chose a length of 20. Furthermore we applied subsampling (described in the next subsection)  too both of these datasets. We also applied a Statistics regarding the dataset can be found in the following subsection. 
 \subsection{Subsampling}
 Subsection is a technique introduced by Mikolov et al. in \cite{mikolov}. Certain words that appear very frequently in the dataset such as: "the, as, it, of". Do not give an intrinsic value to the words that appear in it's context. Therefore the idea of subsampling is to delete theim from the dataset. This will increase the computation time and should in theory increase the accuracy of the model. Another interesting fact of subsampling is that words that would not have appeard in the context of the word will now be it. 
 Subsampling will be the first step of our preprocing. A word $w$ will be eliminated with the following probability:
@@ -14,6 +13,8 @@ Subsampling will be the first step of our preprocing. A word $w$ will be elimina
 P(w) = 1- \sqrt{{\frac{t}{f(w)}}}
 \end{equation}
 where $f(w)$ is the frecquency of w, and $t$ is a treshhold set empirecally. (Mikolov et al.)  recommends a value between $0$ and $1e-5$. We experimented with different values and $1e-4$, seemed the most suted. We did this analysis by looking at and random set of sentences and analyzed the best context pairs. 
+\subsubsection{Min count}
+We also applied a techniqued, called min count, we deleted every word thatt did not appeared more than 5 times in our dataset. We got this idea from gensim \cite{gensim}. Therer were a few words that had no meaning (aldk, ahdfo) VERIFY in our dataset. and a word that only appears one time will be very dependent on it's original setting which will influence the words tha appear in its context and will therefore not be a true value. Therefore we applied this technique. It should in theory, such as subsampling, improve both the accuracy and computation. 
 \subsection{Specification of datasets}
 todo add number of subsampled word number of words deleted by min count.
 \begin{table}[]
