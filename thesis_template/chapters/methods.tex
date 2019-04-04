@@ -5,7 +5,7 @@ We developped a  full replication of the original w2vec implementation of the Sk
 \section{PyTorch}
 For our implementation we choosed the open source library PyTorch. It offers a few  implementation features that enormlhy facilitates the implemenatation process. First of all it computes the gradient of the loss function online, therofore there is no need for us to implement the calcluation of htose gradients. For the learning ew will only have to use the already implemented optimizers, that can be found in the module torch.optim. Another feature of Pytorch that we used are the classes dataset and dataloader. Both of these classes works closely together.   The dataset has to function to offer namely: "\_\_len\_\_" and " \_\_getitem\_\_". Those are then used by a data loader object. it will construct a batch based on those two function. The loader object has a very nice feature it can shuffle the datsaet before each epochs. 
 \section{Implementation}
-\subsection{class SkipGramModel}
+\subsection{Batched SkipGramModel}
 This class is responsable for the forward pass of our data, and represents the neural network, that will result in the word embeddings. We used the class torch.embeddings to generate our word embedings. This class allows us to give a single integer to the embeding and it will return our embedding.  
 \subsubsection{Forwarding}
 . We will take as an input a number of word and their context and then use the same negative samples for all of those words. We will create a matrix made out contex words and samples. Create matrix containing all our words. Multiply the two matrices. this will result in a matrix having each score of equation \ref{obj_neg_samples}. And we will then sum all our scores to return our loss. 
@@ -58,7 +58,7 @@ Finnally we sum up the score and multiply it with minus one to make it a minimiz
 \EndProcedure
 \end{algorithmic}
 \end{algorithm}
-\subsection{class Dataset}
+\subsection{Creating the context pairs}
 This class should provide a way for the dataloader to access each word context pair. Here the challenge is that one cannot store all the pairs in a list as this would not be feasble for a large dataset. We therefore propose a way to compute th i-th word-context pair of the dataset. we therofore had to implement the len method. Here we knew that every sentence expcept the last would have a length of 20 words. therefore it was easy to compute the number of pairs in those sentences.
 We will distinguish two types of wordes in the sentences: first center words, those have the maxiumum amount of possible context words. The border pairs are the words that do not have this proprety because they are two close to the start or end of the sentence. The amount of context pairs per center pair is easy to compute, it's $2*ctx\_window$. Therefore we get that for sentences with length $LEN\_SEN$, with $LEN_SEN  > ctx\_window*2$:
 \begin{lstlisting}[language=python]

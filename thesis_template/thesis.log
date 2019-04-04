@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Arch Linux) (preloaded format=pdflatex 2019.3.25)  4 APR 2019 20:28
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Arch Linux) (preloaded format=pdflatex 2019.3.25)  4 APR 2019 20:34
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -928,7 +928,7 @@ chapter without number
 
 
 ]
-Overfull \hbox (3.71585pt too wide) in paragraph at lines 150--150
+Overfull \hbox (3.71585pt too wide) in paragraph at lines 153--153
 []\OT1/cmr/m/n/12 Bartunov Sergey, Kon-drashkin Dmitry, Os-okin An-ton, and P. 
 Vetrov Dmitry.
  []
@@ -950,10 +950,10 @@ Package logreq Info: Writing requests to 'thesis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 15855 strings out of 492616
- 300786 string characters out of 6135177
- 902520 words of memory out of 5000000
- 19540 multiletter control sequences out of 15000+600000
+ 15856 strings out of 492616
+ 300803 string characters out of 6135177
+ 903639 words of memory out of 5000000
+ 19541 multiletter control sequences out of 15000+600000
  14967 words of font info for 53 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  52i,19n,76p,9085b,1439s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -973,7 +973,7 @@ onts/cm/cmssbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy
 10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/sh
 are/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texmf-dist
 /fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on thesis.pdf (35 pages, 352666 bytes).
+Output written on thesis.pdf (35 pages, 352438 bytes).
 PDF statistics:
  198 PDF objects out of 1000 (max. 8388607)
  136 compressed objects within 2 object streams
