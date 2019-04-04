@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Arch Linux) (preloaded format=pdflatex 2019.3.25)  4 APR 2019 19:26
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Arch Linux) (preloaded format=pdflatex 2019.3.25)  4 APR 2019 19:52
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -868,7 +868,7 @@ chapter 4.
 LaTeX Warning: Citation 'gpu' on page 16 undefined on input line 7.
 
 
-LaTeX Warning: Citation 'mikolov' on page 16 undefined on input line 10.
+LaTeX Warning: Citation 'mikolov' on page 16 undefined on input line 11.
 
 [16
 
@@ -878,40 +878,49 @@ LaTeX Warning: Citation 'mikolov' on page 16 undefined on input line 10.
 ]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 18.
+               Default added (so using `tbp') on input line 19.
 
 
-Overfull \hbox (43.31451pt too wide) in paragraph at lines 19--25
+Overfull \hbox (43.31451pt too wide) in paragraph at lines 20--26
 [][] 
  []
 
 [17]
 
-LaTeX Warning: Citation 'mikolov' on page 18 undefined on input line 41.
+LaTeX Warning: Citation 'mikolov' on page 18 undefined on input line 42.
 
 [18] [19] [20]) [21]
 \openout2 = `chapters/discussion.aux'.
 
  (./chapters/discussion.tex
 chapter 5.
-) [22
+
+LaTeX Warning: Citation 'Mikolov' on page 22 undefined on input line 8.
+
+[22
 
 
 
 
-]
+] [23]
+Overfull \hbox (34.05566pt too wide) in paragraph at lines 37--38
+\OT1/cmr/m/n/12 sim.utils.RULE[]DISCARD, gen-sim.utils.RULE[]KEEP or gen-sim.ut
+ils.RULE[]DEFAULT.
+ []
+
+[24]) [25]
 \openout2 = `chapters/conclusion.aux'.
 
  (./chapters/conclusion.tex
 chapter 6.
-) [23
+) [26
 
 
 
 
 ]
 chapter without number
-[24
+[27
 
 
 
@@ -923,7 +932,7 @@ Overfull \hbox (3.71585pt too wide) in paragraph at lines 138--138
 Vetrov Dmitry.
  []
 
-[25] (./thesis.aux (./includes/BA-titlepage.aux) (./includes/abstract.aux)
+[28] (./thesis.aux (./includes/BA-titlepage.aux) (./includes/abstract.aux)
 (./chapters/introduction.aux) (./chapters/background.aux)
 (./chapters/methods.aux) (./chapters/results.aux) (./chapters/discussion.aux)
 (./chapters/conclusion.aux))
@@ -942,7 +951,7 @@ Package logreq Info: Writing requests to 'thesis.run.xml'.
 Here is how much of TeX's memory you used:
  15855 strings out of 492616
  300786 string characters out of 6135177
- 902504 words of memory out of 5000000
+ 903520 words of memory out of 5000000
  19540 multiletter control sequences out of 15000+600000
  14967 words of font info for 53 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -963,10 +972,10 @@ onts/cm/cmssbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy
 10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/sh
 are/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texmf-dist
 /fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on thesis.pdf (31 pages, 340588 bytes).
+Output written on thesis.pdf (34 pages, 349054 bytes).
 PDF statistics:
- 186 PDF objects out of 1000 (max. 8388607)
- 128 compressed objects within 2 object streams
+ 195 PDF objects out of 1000 (max. 8388607)
+ 134 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  16 words of extra memory for PDF output out of 10000 (max. 10000000)
 
