@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Arch Linux) (preloaded format=pdflatex 2019.3.25)  4 APR 2019 13:45
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Arch Linux) (preloaded format=pdflatex 2019.3.25)  4 APR 2019 14:06
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -837,15 +837,6 @@ LaTeX Warning: Citation 'gpu' on page 16 undefined on input line 7.
 
 LaTeX Warning: Citation 'mikolov' on page 16 undefined on input line 10.
 
-
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 13.
-
-
-Overfull \hbox (43.31451pt too wide) in paragraph at lines 14--20
-[][] 
- []
-
 [16
 
 
@@ -853,14 +844,23 @@ Overfull \hbox (43.31451pt too wide) in paragraph at lines 14--20
 
 ]
 
-LaTeX Warning: Citation 'mikolov' on page 17 undefined on input line 27.
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 18.
 
-) [17]
+
+Overfull \hbox (43.31451pt too wide) in paragraph at lines 19--25
+[][] 
+ []
+
+
+LaTeX Warning: Citation 'mikolov' on page 17 undefined on input line 32.
+
+[17]) [18]
 \openout2 = `chapters/discussion.aux'.
 
  (./chapters/discussion.tex
 chapter 5.
-) [18
+) [19
 
 
 
@@ -870,14 +870,14 @@ chapter 5.
 
  (./chapters/conclusion.tex
 chapter 6.
-) [19
+) [20
 
 
 
 
 ]
 chapter without number
-[20
+[21
 
 
 
@@ -889,7 +889,7 @@ Overfull \hbox (3.71585pt too wide) in paragraph at lines 137--137
 Vetrov Dmitry.
  []
 
-[21] (./thesis.aux (./includes/BA-titlepage.aux) (./includes/abstract.aux)
+[22] (./thesis.aux (./includes/BA-titlepage.aux) (./includes/abstract.aux)
 (./chapters/introduction.aux) (./chapters/background.aux)
 (./chapters/methods.aux) (./chapters/results.aux) (./chapters/discussion.aux)
 (./chapters/conclusion.aux))
@@ -929,10 +929,10 @@ onts/cm/cmssbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy
 10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/sh
 are/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texmf-dist
 /fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on thesis.pdf (27 pages, 329943 bytes).
+Output written on thesis.pdf (28 pages, 330918 bytes).
 PDF statistics:
- 173 PDF objects out of 1000 (max. 8388607)
- 119 compressed objects within 2 object streams
+ 176 PDF objects out of 1000 (max. 8388607)
+ 121 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  16 words of extra memory for PDF output out of 10000 (max. 10000000)
 

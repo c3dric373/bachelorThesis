@@ -8,6 +8,11 @@ In this implementation we used the following datasets: text8\footnote{matt mahon
 Both of these datasets contain documents of 10k senteces. Therefore we needed to split the dataset into sentences. We arbitrarly chose a length of 20. Furthermore we applied subsampling (described in the next subsection)  too both of these datasets. We also applied a Statistics regarding the dataset can be found in the following subsection. We also deleted every word that did not occur more than 5 times in the dataset. 
 \subsection{Subsampling}
 Subsection is a technique introduced by Mikolov et al. in \cite{mikolov}. Certain words that appear very frequently in the dataset such as: "the, as, it, of". Do not give an intrinsic value to the words that appear in it's context. Therefore the idea of subsampling is to delete theim from the dataset. This will increase the computation time and should in theory increase the accuracy of the model. Another interesting fact of subsampling is that words that would not have appeard in the context of the word will now be it. 
+Subsampling will be the first step of our preprocing. A word $w$ will be eliminated with the following probability:
+\begin{equation}
+P(w) = 1- \sqrt{{\frac{t}{f(w)}}}
+\end{equation}
+where $f(w)$ is the frecquency of w, and $t$ is a treshhold set empirecally. (Mikolov et al.)  recommends a value between $0$ and $1e-5$. We experimented with different values and $1e-4$, seemed the most suted. We did this analysis by looking at and random set of sentences and analyzed the best context pairs. 
 \subsection{Specification of datasets}
 todo add number of subsampled word number of words deleted by min count.
 \begin{table}[]

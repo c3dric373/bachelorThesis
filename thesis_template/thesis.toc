@@ -60,8 +60,8 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {4.2}Configuration of the network}{17}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {5}Discussion}{18}% 
+\contentsline {chapter}{\numberline {5}Discussion}{19}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {6}Conclusion}{19}% 
+\contentsline {chapter}{\numberline {6}Conclusion}{20}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\nonumberline Bibliography}{20}% 
+\contentsline {chapter}{\nonumberline Bibliography}{21}% 
