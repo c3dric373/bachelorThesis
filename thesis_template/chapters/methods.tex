@@ -68,7 +68,9 @@ We then need to compute the amount of borde words. For this we will only need to
 \begin{equation}
 \sum_{i=0}^{ctx\_window -1} ctx\_window + i
 \end{equation}
- Then we had to add the number of pairs from the last sentence and are done. 
+ Then we had to add the number of pairs from the last sentence and are done. First  we have to check if the sentence is longer then $2 ctx_window$. 
+ If it's the case we can apply the samDe principle as shown above. If not we need to do the following:\\
+ %TODO \\
 Now we need to access each pair individually, so first we have to define an order. We will go over the Dataset sequentially adding first the pairs from the left then from the right. Now that we have defined an order, let's look at how we can acces theim. Given an item index $x$ we need to find in which sentence the pairs is. Because we know how many pairs per sentence their is we can. We only have to devide $x$ by the number of pairs that can be built within one sentence. Know we can access this sentence because we have the list that stores our dataset. then we have to iterate over all the possible pairs that we can builld within this sentence count theim, and stop when we arrived at the wished id. S
 
 \subsection{class W2Vec}
