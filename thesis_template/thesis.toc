@@ -32,37 +32,49 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.4.6}Adam}{11}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.5}Input Shuffling}{11}% 
+\contentsline {chapter}{\numberline {3}Methods}{12}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {3}Methods}{13}% 
+\contentsline {section}{\numberline {3.1}PyTorch}{12}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.1}PyTorch}{13}% 
+\contentsline {section}{\numberline {3.2}Implementation}{13}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.2}Implementation}{14}% 
+\contentsline {subsection}{\numberline {3.2.1}class SkipGramModel}{13}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.2.1}class SkipGramModel}{14}% 
+\contentsline {subsubsection}{\nonumberline Forwarding}{13}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Forwarding}{14}% 
+\contentsline {subsection}{\numberline {3.2.2}class Dataset}{13}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.2.2}class Dataset}{14}% 
+\contentsline {subsection}{\numberline {3.2.3}class W2Vec}{14}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.2.3}class W2Vec}{15}% 
+\contentsline {subsubsection}{\nonumberline method train\_with\_loader}{14}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline method train\_with\_loader}{15}% 
+\contentsline {chapter}{\numberline {4}Results}{15}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {4}Results}{16}% 
+\contentsline {section}{\numberline {4.1}Dataset}{15}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.1}Dataset}{16}% 
+\contentsline {subsection}{\numberline {4.1.1}Subsampling}{15}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.1.1}Subsampling}{16}% 
+\contentsline {subsection}{\numberline {4.1.2}Specification of datasets}{16}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.1.2}Specification of datasets}{17}% 
+\contentsline {section}{\numberline {4.2}Word similarity}{16}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.2}Word similarity}{17}% 
+\contentsline {subsection}{\numberline {4.2.1}wordsim353}{17}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.2.1}wordsim353}{18}% 
+\contentsline {section}{\numberline {4.3}Configuration of the network}{17}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.3}Configuration of the network}{18}% 
+\contentsline {section}{\numberline {4.4}Input Shuffling}{18}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.5}Results by optimizer}{18}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.5.1}SGD}{18}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.5.2}Momentum and Nesterov}{18}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.5.3}Adagrad}{18}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.5.4}Adadelta}{18}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.5.5}Adam}{18}% 
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {5}Discussion}{19}% 
 \defcounter {refsection}{0}\relax 

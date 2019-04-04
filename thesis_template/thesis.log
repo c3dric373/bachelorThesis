@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Arch Linux) (preloaded format=pdflatex 2019.3.25)  4 APR 2019 14:36
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Arch Linux) (preloaded format=pdflatex 2019.3.25)  4 APR 2019 15:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -811,33 +811,33 @@ LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
 
 LaTeX Warning: Citation 'adagrad' on page 10 undefined on input line 140.
 
-[10]) [11] [12]
+[10]) [11]
 \openout2 = `chapters/methods.aux'.
 
  (./chapters/methods.tex
 chapter 3.
-[13
+[12
 
 
 
 
 ]
 
-LaTeX Warning: Reference `obj_neg_samples' on page 14 undefined on input line 1
+LaTeX Warning: Reference `obj_neg_samples' on page 13 undefined on input line 1
 1.
 
-[14]) [15]
+[13]) [14]
 \openout2 = `chapters/results.aux'.
 
  (./chapters/results.tex
 chapter 4.
 
-LaTeX Warning: Citation 'gpu' on page 16 undefined on input line 7.
+LaTeX Warning: Citation 'gpu' on page 15 undefined on input line 7.
 
 
-LaTeX Warning: Citation 'mikolov' on page 16 undefined on input line 10.
+LaTeX Warning: Citation 'mikolov' on page 15 undefined on input line 10.
 
-[16
+[15
 
 
 
@@ -852,11 +852,11 @@ Overfull \hbox (43.31451pt too wide) in paragraph at lines 19--25
 [][] 
  []
 
-[17]
+[16]
 
-LaTeX Warning: Citation 'mikolov' on page 18 undefined on input line 41.
+LaTeX Warning: Citation 'mikolov' on page 17 undefined on input line 41.
 
-) [18]
+[17]) [18]
 \openout2 = `chapters/discussion.aux'.
 
  (./chapters/discussion.tex
@@ -898,6 +898,9 @@ Vetrov Dmitry.
 LaTeX Warning: There were undefined references.
 
 
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+
 Package biblatex Warning: Please (re)run Biber on the file:
 (biblatex)                thesis
 (biblatex)                and rerun LaTeX afterwards.
@@ -930,7 +933,7 @@ onts/cm/cmssbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy
 10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/sh
 are/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texmf-dist
 /fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on thesis.pdf (28 pages, 332642 bytes).
+Output written on thesis.pdf (28 pages, 333601 bytes).
 PDF statistics:
  176 PDF objects out of 1000 (max. 8388607)
  121 compressed objects within 2 object streams

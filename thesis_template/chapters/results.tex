@@ -52,9 +52,14 @@ The idea behind this technique, is the same as the use of mini batches. We want 
 There are two reasons why we thnik that input shuffling is particulary well suited for the skip gram model. The first one has to do with the fact that when we read our words sequentially that words that only appear very early will not benefit from the context words being already updated from others. The second thing is that we used the special batch technique described in section x.  When using this technique and not using shuffling we will always have words that appear next to each other in a batch and will therefore updat similar words at the same time. We then loose some accuracy. But if instead we would use input shuffling then in one batch the words would likely not be similar and therefore overwriting will be less likely. 
 One thing to consider is that when using input shuffling we cannot use a sliding window size. 
 
+\section{Convergence time} 
+To optimize convergence time we have to define convergence time first. Therefore we used the already available implementation gensim. we know from \cite{intel}. that a score of $0.66$ in the task of word similarity is the state of the art. We also know after testing Gensim ( more on this process in section discussion), that it takes 4 epochs to converge. Therefore we defined the following criteria for convergence: \\
+$\rho - \rho_{prev} < 0.009 \vee or \rho = 0.66$ \\
+where $\rho$ is the pearson coefficient with the wordsim353 task. 
+
 \section{Results by optimizer}
 \subsection{SGD}
-
+The first think we had two manage was finding a correct learning rate for our model. We tried the learning rate from gensim first then expirmanted with different learning rates. 
 \subsection{Momentum and Nesterov}
 \subsection{Adagrad}
 \subsection{Adadelta}
