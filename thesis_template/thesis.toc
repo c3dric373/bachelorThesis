@@ -64,20 +64,22 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {4.4}Input Shuffling}{18}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.5}Results by optimizer}{18}% 
+\contentsline {section}{\numberline {4.5}Convergence time}{18}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.5.1}SGD}{18}% 
+\contentsline {section}{\numberline {4.6}Results by optimizer}{19}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.5.2}Momentum and Nesterov}{18}% 
+\contentsline {subsection}{\numberline {4.6.1}SGD}{19}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.5.3}Adagrad}{18}% 
+\contentsline {subsection}{\numberline {4.6.2}Momentum and Nesterov}{19}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.5.4}Adadelta}{18}% 
+\contentsline {subsection}{\numberline {4.6.3}Adagrad}{19}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.5.5}Adam}{18}% 
+\contentsline {subsection}{\numberline {4.6.4}Adadelta}{19}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {5}Discussion}{19}% 
+\contentsline {subsection}{\numberline {4.6.5}Adam}{19}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {6}Conclusion}{20}% 
+\contentsline {chapter}{\numberline {5}Discussion}{20}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\nonumberline Bibliography}{21}% 
+\contentsline {chapter}{\numberline {6}Conclusion}{21}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\nonumberline Bibliography}{22}% 
