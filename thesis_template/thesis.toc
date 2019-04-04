@@ -84,9 +84,13 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {5.2}word2vec}{22}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.3}Gensim}{22}% 
+\contentsline {section}{\numberline {5.3}Gensim}{23}% 
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {5.4}Challenges faced}{25}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.4.1}Using the wrong embeddings}{25}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.4.2}Too big of a batch size}{25}% 
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {5.5}Further Work}{25}% 
 \defcounter {refsection}{0}\relax 

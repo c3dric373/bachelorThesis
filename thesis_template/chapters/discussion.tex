@@ -8,6 +8,10 @@ In this section we will compare our work to related work, try to make sense out 
 In this section we will compare - our work to related work, we will first compare us to the baseline model, the original c implementation from Mikolov et al \cite{Mikolov}. We will then compare our self to Gensim, we do this because Gensim allowed us to easily and fastly compute the embeddings, while having access to the loss, and being a python implementaion made everything easier. 
 
 \section{word2vec}
+%TODO ask jorg
+word2vec only trained their model on the very large google news datset incorporating more than 3 billio words. Therefore we have a problem to compare our work. But we will make some assumptions. 
+ the original paper paer of word2vec they show results from one or 3 epochs. We accord these good results to the very large dataset. And as a matter of fact their result are better with 3 than with 1 epochs. We do not have any informtaion about the convergence. But we can talk about the quality of the word embeddings as Ji et al. reported wordsim ressults on text8 with the original c code, namely 0 .63. This is worse than our results with sgd and adam. we did not find anything that would explain those results as shuffling and wihtout shuffling VERIFY beat the original c code. It is also possible that if we would apply an advanced optimizer to the large dataset we would get a better word embedding as we achieved a wordsim score of 0.67 with adam and gensim only 0.66. 
+
 
 \section{Gensim}
 Gensim does propose the class w2vec with the following possible parameters, we will describe theim, show our setting, and why we chose the following: 
@@ -48,9 +52,7 @@ Gensim does propose the class w2vec with the following possible parameters, we w
 
 \end{itemize}
 
-
-
-
-
 \section{Challenges faced}
+\subsection{Using the wrong embeddings}
+\subsection{Too big of a batch size}
 \section{Further Work}
