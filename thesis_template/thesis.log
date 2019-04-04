@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Arch Linux) (preloaded format=pdflatex 2019.3.25)  4 APR 2019 15:36
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Arch Linux) (preloaded format=pdflatex 2019.3.25)  4 APR 2019 16:51
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -285,6 +285,31 @@ Package scrlayer-scrpage Info: deactivating warning for font element
 )
 Package scrlayer-scrpage Info: auto-selection of `pagestyleset=KOMA-Script'.
 
+(/usr/share/texmf-dist/tex/latex/listings/listings.sty
+\lst@mode=\count113
+\lst@gtempboxa=\box57
+\lst@token=\toks18
+\lst@length=\count114
+\lst@currlwidth=\dimen128
+\lst@column=\count115
+\lst@pos=\count116
+\lst@lostspace=\dimen129
+\lst@width=\dimen130
+\lst@newlines=\count117
+\lst@lineno=\count118
+\lst@maxwidth=\dimen131
+
+(/usr/share/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2018/09/02 1.7 (Carsten Heinz)
+\c@lstnumber=\count119
+\lst@skipnumbers=\count120
+\lst@framebox=\box58
+)
+(/usr/share/texmf-dist/tex/latex/listings/listings.cfg
+File: listings.cfg 2018/09/02 1.7 listings configuration
+))
+Package: listings 2018/09/02 1.7 (Carsten Heinz)
+
 (/usr/share/texmf-dist/tex/latex/biblatex/biblatex.sty
 Package: biblatex 2018/11/02 v3.12 programmable bibliographies (PK/MW)
 
@@ -312,7 +337,7 @@ Package pdftexcmds Info: \pdfdraftmode found.
 )
 (/usr/share/texmf-dist/tex/latex/etoolbox/etoolbox.sty
 Package: etoolbox 2018/08/19 v2.5f e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count113
+\etb@tempcnta=\count121
 )
 (/usr/share/texmf-dist/tex/latex/oberdiek/kvoptions.sty
 Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
@@ -329,7 +354,7 @@ Package etexcmds Info: Could not find \expanded.
 )))
 (/usr/share/texmf-dist/tex/latex/logreq/logreq.sty
 Package: logreq 2010/08/04 v1.0 xml request logger
-\lrq@indent=\count114
+\lrq@indent=\count122
 
 (/usr/share/texmf-dist/tex/latex/logreq/logreq.def
 File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
@@ -338,47 +363,47 @@ File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
 \Urlmuskip=\muskip10
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
-\c@tabx@nest=\count115
-\c@listtotal=\count116
-\c@listcount=\count117
-\c@liststart=\count118
-\c@liststop=\count119
-\c@citecount=\count120
-\c@citetotal=\count121
-\c@multicitecount=\count122
-\c@multicitetotal=\count123
-\c@instcount=\count124
-\c@maxnames=\count125
-\c@minnames=\count126
-\c@maxitems=\count127
-\c@minitems=\count128
-\c@citecounter=\count129
-\c@maxcitecounter=\count130
-\c@savedcitecounter=\count131
-\c@uniquelist=\count132
-\c@uniquename=\count133
-\c@refsection=\count134
-\c@refsegment=\count135
-\c@maxextratitle=\count136
-\c@maxextratitleyear=\count137
-\c@maxextraname=\count138
-\c@maxextradate=\count139
-\c@maxextraalpha=\count140
-\c@abbrvpenalty=\count141
-\c@highnamepenalty=\count142
-\c@lownamepenalty=\count143
-\c@maxparens=\count144
-\c@parenlevel=\count145
-\blx@tempcnta=\count146
-\blx@tempcntb=\count147
-\blx@tempcntc=\count148
-\blx@maxsection=\count149
-\blx@maxsegment@0=\count150
-\blx@notetype=\count151
-\blx@parenlevel@text=\count152
-\blx@parenlevel@foot=\count153
-\blx@sectionciteorder@0=\count154
-\blx@entrysetcounter=\count155
+\c@tabx@nest=\count123
+\c@listtotal=\count124
+\c@listcount=\count125
+\c@liststart=\count126
+\c@liststop=\count127
+\c@citecount=\count128
+\c@citetotal=\count129
+\c@multicitecount=\count130
+\c@multicitetotal=\count131
+\c@instcount=\count132
+\c@maxnames=\count133
+\c@minnames=\count134
+\c@maxitems=\count135
+\c@minitems=\count136
+\c@citecounter=\count137
+\c@maxcitecounter=\count138
+\c@savedcitecounter=\count139
+\c@uniquelist=\count140
+\c@uniquename=\count141
+\c@refsection=\count142
+\c@refsegment=\count143
+\c@maxextratitle=\count144
+\c@maxextratitleyear=\count145
+\c@maxextraname=\count146
+\c@maxextradate=\count147
+\c@maxextraalpha=\count148
+\c@abbrvpenalty=\count149
+\c@highnamepenalty=\count150
+\c@lownamepenalty=\count151
+\c@maxparens=\count152
+\c@parenlevel=\count153
+\blx@tempcnta=\count154
+\blx@tempcntb=\count155
+\blx@tempcntc=\count156
+\blx@maxsection=\count157
+\blx@maxsegment@0=\count158
+\blx@notetype=\count159
+\blx@parenlevel@text=\count160
+\blx@parenlevel@foot=\count161
+\blx@sectionciteorder@0=\count162
+\blx@entrysetcounter=\count163
 \labelnumberwidth=\skip65
 \labelalphawidth=\skip66
 \biblabelsep=\skip67
@@ -389,9 +414,9 @@ Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 \bibhang=\skip72
 \blx@bcfin=\read1
 \blx@bcfout=\write3
-\c@mincomprange=\count156
-\c@maxcomprange=\count157
-\c@mincompwidth=\count158
+\c@mincomprange=\count164
+\c@maxcomprange=\count165
+\c@mincompwidth=\count166
 Package biblatex Info: Trying to load biblatex default data model...
 Package biblatex Info: ... file 'blx-dm.def' found.
 
@@ -402,74 +427,74 @@ Package biblatex Info: Trying to load biblatex citestyle data model...
 Package biblatex Info: ... file 'alphabetic.dbx' not found.
 Package biblatex Info: Trying to load biblatex custom data model...
 Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
-\c@afterword=\count159
-\c@savedafterword=\count160
-\c@annotator=\count161
-\c@savedannotator=\count162
-\c@author=\count163
-\c@savedauthor=\count164
-\c@bookauthor=\count165
-\c@savedbookauthor=\count166
-\c@commentator=\count167
-\c@savedcommentator=\count168
-\c@editor=\count169
-\c@savededitor=\count170
-\c@editora=\count171
-\c@savededitora=\count172
-\c@editorb=\count173
-\c@savededitorb=\count174
-\c@editorc=\count175
-\c@savededitorc=\count176
-\c@foreword=\count177
-\c@savedforeword=\count178
-\c@holder=\count179
-\c@savedholder=\count180
-\c@introduction=\count181
-\c@savedintroduction=\count182
-\c@namea=\count183
-\c@savednamea=\count184
-\c@nameb=\count185
-\c@savednameb=\count186
-\c@namec=\count187
-\c@savednamec=\count188
-\c@translator=\count189
-\c@savedtranslator=\count190
-\c@shortauthor=\count191
-\c@savedshortauthor=\count192
-\c@shorteditor=\count193
-\c@savedshorteditor=\count194
-\c@labelname=\count195
-\c@savedlabelname=\count196
-\c@institution=\count197
-\c@savedinstitution=\count198
-\c@lista=\count199
-\c@savedlista=\count266
-\c@listb=\count267
-\c@savedlistb=\count268
-\c@listc=\count269
-\c@savedlistc=\count270
-\c@listd=\count271
-\c@savedlistd=\count272
-\c@liste=\count273
-\c@savedliste=\count274
-\c@listf=\count275
-\c@savedlistf=\count276
-\c@location=\count277
-\c@savedlocation=\count278
-\c@organization=\count279
-\c@savedorganization=\count280
-\c@origlocation=\count281
-\c@savedoriglocation=\count282
-\c@origpublisher=\count283
-\c@savedorigpublisher=\count284
-\c@publisher=\count285
-\c@savedpublisher=\count286
-\c@language=\count287
-\c@savedlanguage=\count288
-\c@origlanguage=\count289
-\c@savedoriglanguage=\count290
-\c@pageref=\count291
-\c@savedpageref=\count292
+\c@afterword=\count167
+\c@savedafterword=\count168
+\c@annotator=\count169
+\c@savedannotator=\count170
+\c@author=\count171
+\c@savedauthor=\count172
+\c@bookauthor=\count173
+\c@savedbookauthor=\count174
+\c@commentator=\count175
+\c@savedcommentator=\count176
+\c@editor=\count177
+\c@savededitor=\count178
+\c@editora=\count179
+\c@savededitora=\count180
+\c@editorb=\count181
+\c@savededitorb=\count182
+\c@editorc=\count183
+\c@savededitorc=\count184
+\c@foreword=\count185
+\c@savedforeword=\count186
+\c@holder=\count187
+\c@savedholder=\count188
+\c@introduction=\count189
+\c@savedintroduction=\count190
+\c@namea=\count191
+\c@savednamea=\count192
+\c@nameb=\count193
+\c@savednameb=\count194
+\c@namec=\count195
+\c@savednamec=\count196
+\c@translator=\count197
+\c@savedtranslator=\count198
+\c@shortauthor=\count199
+\c@savedshortauthor=\count266
+\c@shorteditor=\count267
+\c@savedshorteditor=\count268
+\c@labelname=\count269
+\c@savedlabelname=\count270
+\c@institution=\count271
+\c@savedinstitution=\count272
+\c@lista=\count273
+\c@savedlista=\count274
+\c@listb=\count275
+\c@savedlistb=\count276
+\c@listc=\count277
+\c@savedlistc=\count278
+\c@listd=\count279
+\c@savedlistd=\count280
+\c@liste=\count281
+\c@savedliste=\count282
+\c@listf=\count283
+\c@savedlistf=\count284
+\c@location=\count285
+\c@savedlocation=\count286
+\c@organization=\count287
+\c@savedorganization=\count288
+\c@origlocation=\count289
+\c@savedoriglocation=\count290
+\c@origpublisher=\count291
+\c@savedorigpublisher=\count292
+\c@publisher=\count293
+\c@savedpublisher=\count294
+\c@language=\count295
+\c@savedlanguage=\count296
+\c@origlanguage=\count297
+\c@savedoriglanguage=\count298
+\c@pageref=\count299
+\c@savedpageref=\count300
 \shorthandwidth=\skip73
 \shortjournalwidth=\skip74
 \shortserieswidth=\skip75
@@ -495,13 +520,13 @@ Package biblatex Info: ... file 'biblatex.def' found.
 
 (/usr/share/texmf-dist/tex/latex/biblatex/biblatex.def
 File: biblatex.def 2018/11/02 v3.12 biblatex compatibility (PK/MW)
-\c@textcitecount=\count293
-\c@textcitetotal=\count294
-\c@textcitemaxnames=\count295
-\c@biburlnumpenalty=\count296
-\c@biburlucpenalty=\count297
-\c@biburllcpenalty=\count298
-\c@smartand=\count299
+\c@textcitecount=\count301
+\c@textcitetotal=\count302
+\c@textcitemaxnames=\count303
+\c@biburlnumpenalty=\count304
+\c@biburlucpenalty=\count305
+\c@biburllcpenalty=\count306
+\c@smartand=\count307
 )
 Package biblatex Info: Trying to load bibliography style 'alphabetic'...
 Package biblatex Info: ... file 'alphabetic.bbx' found.
@@ -513,8 +538,8 @@ Package biblatex Info: ... file 'standard.bbx' found.
 
 (/usr/share/texmf-dist/tex/latex/biblatex/bbx/standard.bbx
 File: standard.bbx 2018/11/02 v3.12 biblatex bibliography style (PK/MW)
-\c@bbx:relatedcount=\count300
-\c@bbx:relatedtotal=\count301
+\c@bbx:relatedcount=\count308
+\c@bbx:relatedtotal=\count309
 ))
 Package biblatex Info: Trying to load citation style 'alphabetic'...
 Package biblatex Info: ... file 'alphabetic.cbx' found.
@@ -540,13 +565,13 @@ File: biblatex.cfg
 ))
 (/usr/share/texmf-dist/tex/latex/csquotes/csquotes.sty
 Package: csquotes 2018/04/13 v5.2d context-sensitive quotations (JAW)
-\csq@reset=\count302
-\csq@gtype=\count303
-\csq@glevel=\count304
-\csq@qlevel=\count305
-\csq@maxlvl=\count306
-\csq@tshold=\count307
-\csq@ltx@everypar=\toks18
+\csq@reset=\count310
+\csq@gtype=\count311
+\csq@glevel=\count312
+\csq@qlevel=\count313
+\csq@maxlvl=\count314
+\csq@tshold=\count315
+\csq@ltx@everypar=\toks19
 
 (/usr/share/texmf-dist/tex/latex/csquotes/csquotes.def
 File: csquotes.def 2018/04/13 v5.2d csquotes generic definitions (JAW)
@@ -563,9 +588,9 @@ Package csquotes Info: Redefining alias 'german' -> 'german/quotes'.
 )
 (/usr/share/texmf-dist/tex/latex/appendix/appendix.sty
 Package: appendix 2009/09/02 v1.2b extra appendix facilities
-\c@@pps=\count308
-\c@@ppsavesec=\count309
-\c@@ppsaveapp=\count310
+\c@@pps=\count316
+\c@@ppsavesec=\count317
+\c@@ppsaveapp=\count318
 )
 (/usr/share/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2018/12/01 v2.17b AMS math features
@@ -577,51 +602,51 @@ Package: amstext 2000/06/29 v2.01 AMS text
 
 (/usr/share/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
-\@emptytoks=\toks19
-\ex@=\dimen128
+\@emptytoks=\toks20
+\ex@=\dimen132
 ))
 (/usr/share/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
-\pmbraise@=\dimen129
+\pmbraise@=\dimen133
 )
 (/usr/share/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 2016/03/08 v2.02 operator names
 )
-\inf@bad=\count311
+\inf@bad=\count319
 LaTeX Info: Redefining \frac on input line 223.
-\uproot@=\count312
-\leftroot@=\count313
+\uproot@=\count320
+\leftroot@=\count321
 LaTeX Info: Redefining \overline on input line 385.
-\classnum@=\count314
-\DOTSCASE@=\count315
+\classnum@=\count322
+\DOTSCASE@=\count323
 LaTeX Info: Redefining \ldots on input line 482.
 LaTeX Info: Redefining \dots on input line 485.
 LaTeX Info: Redefining \cdots on input line 606.
-\Mathstrutbox@=\box57
-\strutbox@=\box58
-\big@size=\dimen130
+\Mathstrutbox@=\box59
+\strutbox@=\box60
+\big@size=\dimen134
 LaTeX Font Info:    Redeclaring font encoding OML on input line 729.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 730.
-\macc@depth=\count316
-\c@MaxMatrixCols=\count317
+\macc@depth=\count324
+\c@MaxMatrixCols=\count325
 \dotsspace@=\muskip11
-\c@parentequation=\count318
-\dspbrk@lvl=\count319
-\tag@help=\toks20
-\row@=\count320
-\column@=\count321
-\maxfields@=\count322
-\andhelp@=\toks21
-\eqnshift@=\dimen131
-\alignsep@=\dimen132
-\tagshift@=\dimen133
-\tagwidth@=\dimen134
-\totwidth@=\dimen135
-\lineht@=\dimen136
-\@envbody=\toks22
+\c@parentequation=\count326
+\dspbrk@lvl=\count327
+\tag@help=\toks21
+\row@=\count328
+\column@=\count329
+\maxfields@=\count330
+\andhelp@=\toks22
+\eqnshift@=\dimen135
+\alignsep@=\dimen136
+\tagshift@=\dimen137
+\tagwidth@=\dimen138
+\totwidth@=\dimen139
+\lineht@=\dimen140
+\@envbody=\toks23
 \multlinegap=\skip88
 \multlinetaggap=\skip89
-\mathdisplay@stack=\toks23
+\mathdisplay@stack=\toks24
 LaTeX Info: Redefining \[ on input line 2844.
 LaTeX Info: Redefining \] on input line 2845.
 )
@@ -636,7 +661,7 @@ Package csquotes Info: ... none found.
 
 
 Package csquotes Warning: No multilingual support.
-(csquotes)                Cannot enable multilingual quotes on input line 80.
+(csquotes)                Cannot enable multilingual quotes on input line 81.
 
 (./thesis.aux (./includes/BA-titlepage.aux) (./includes/abstract.aux)
 (./chapters/introduction.aux) (./chapters/background.aux)
@@ -644,32 +669,32 @@ Package csquotes Warning: No multilingual support.
 (./chapters/conclusion.aux))
 \openout1 = `thesis.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 80.
-LaTeX Font Info:    ... okay on input line 80.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 80.
-LaTeX Font Info:    ... okay on input line 80.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 80.
-LaTeX Font Info:    ... okay on input line 80.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 80.
-LaTeX Font Info:    ... okay on input line 80.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 80.
-LaTeX Font Info:    ... okay on input line 80.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 80.
-LaTeX Font Info:    ... okay on input line 80.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 81.
+LaTeX Font Info:    ... okay on input line 81.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 81.
+LaTeX Font Info:    ... okay on input line 81.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 81.
+LaTeX Font Info:    ... okay on input line 81.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 81.
+LaTeX Font Info:    ... okay on input line 81.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 81.
+LaTeX Font Info:    ... okay on input line 81.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 81.
+LaTeX Font Info:    ... okay on input line 81.
 
 (/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count323
-\scratchdimen=\dimen137
-\scratchbox=\box59
-\nofMPsegments=\count324
-\nofMParguments=\count325
-\everyMPshowfont=\toks24
-\MPscratchCnt=\count326
-\MPscratchDim=\dimen138
-\MPnumerator=\count327
-\makeMPintoPDFobject=\count328
-\everyMPtoPDFconversion=\toks25
+\scratchcounter=\count331
+\scratchdimen=\dimen141
+\scratchbox=\box61
+\nofMPsegments=\count332
+\nofMParguments=\count333
+\everyMPshowfont=\toks25
+\MPscratchCnt=\count334
+\MPscratchDim=\dimen142
+\MPnumerator=\count335
+\makeMPintoPDFobject=\count336
+\everyMPtoPDFconversion=\toks26
 ) (/usr/share/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
 
@@ -690,6 +715,7 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
+\c@lstlisting=\count337
 Package biblatex Info: Input encoding 'utf8' detected.
 Package biblatex Info: Automatic encoding selection.
 (biblatex)             Assuming data encoding 'utf8'.
@@ -698,8 +724,8 @@ Package biblatex Info: Automatic encoding selection.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'thesis.bbl' found.
  (./thesis.bbl)
-Package biblatex Info: Reference section=0 on input line 80.
-Package biblatex Info: Reference segment=0 on input line 80.
+Package biblatex Info: Reference section=0 on input line 81.
+Package biblatex Info: Reference segment=0 on input line 81.
 \openout2 = `includes/BA-titlepage.aux'.
 
 
@@ -826,18 +852,25 @@ chapter 3.
 LaTeX Warning: Reference `obj_neg_samples' on page 13 undefined on input line 1
 1.
 
-[13]) [14]
+(/usr/share/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2018/09/02 1.7 listings language file
+) [13]
+Overfull \hbox (24.21823pt too wide) in paragraph at lines 65--66
+[][][][][][][][][][][][][][][][][][][] 
+ []
+
+[14]) [15]
 \openout2 = `chapters/results.aux'.
 
  (./chapters/results.tex
 chapter 4.
 
-LaTeX Warning: Citation 'gpu' on page 15 undefined on input line 7.
+LaTeX Warning: Citation 'gpu' on page 16 undefined on input line 7.
 
 
-LaTeX Warning: Citation 'mikolov' on page 15 undefined on input line 10.
+LaTeX Warning: Citation 'mikolov' on page 16 undefined on input line 10.
 
-[15
+[16
 
 
 
@@ -852,16 +885,16 @@ Overfull \hbox (43.31451pt too wide) in paragraph at lines 19--25
 [][] 
  []
 
-[16]
+[17]
 
-LaTeX Warning: Citation 'mikolov' on page 17 undefined on input line 41.
+LaTeX Warning: Citation 'mikolov' on page 18 undefined on input line 41.
 
-[17] [18]) [19]
+[18] [19]) [20]
 \openout2 = `chapters/discussion.aux'.
 
  (./chapters/discussion.tex
 chapter 5.
-) [20
+) [21
 
 
 
@@ -871,26 +904,26 @@ chapter 5.
 
  (./chapters/conclusion.tex
 chapter 6.
-) [21
+) [22
 
 
 
 
 ]
 chapter without number
-[22
+[23
 
 
 
 
 
 ]
-Overfull \hbox (3.71585pt too wide) in paragraph at lines 137--137
+Overfull \hbox (3.71585pt too wide) in paragraph at lines 138--138
 []\OT1/cmr/m/n/12 Bartunov Sergey, Kon-drashkin Dmitry, Os-okin An-ton, and P. 
 Vetrov Dmitry.
  []
 
-[23] (./thesis.aux (./includes/BA-titlepage.aux) (./includes/abstract.aux)
+[24] (./thesis.aux (./includes/BA-titlepage.aux) (./includes/abstract.aux)
 (./chapters/introduction.aux) (./chapters/background.aux)
 (./chapters/methods.aux) (./chapters/results.aux) (./chapters/discussion.aux)
 (./chapters/conclusion.aux))
@@ -907,13 +940,13 @@ Package logreq Info: Writing requests to 'thesis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 14099 strings out of 492616
- 278073 string characters out of 6135177
- 866458 words of memory out of 5000000
- 17800 multiletter control sequences out of 15000+600000
+ 15855 strings out of 492616
+ 300786 string characters out of 6135177
+ 902504 words of memory out of 5000000
+ 19540 multiletter control sequences out of 15000+600000
  14967 words of font info for 53 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 52i,19n,76p,9085b,1441s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 52i,19n,76p,9085b,1439s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texmf-dist/fo
 nts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/publ
@@ -930,10 +963,10 @@ onts/cm/cmssbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy
 10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/sh
 are/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texmf-dist
 /fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on thesis.pdf (29 pages, 335625 bytes).
+Output written on thesis.pdf (30 pages, 338338 bytes).
 PDF statistics:
- 179 PDF objects out of 1000 (max. 8388607)
- 123 compressed objects within 2 object streams
+ 182 PDF objects out of 1000 (max. 8388607)
+ 125 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  16 words of extra memory for PDF output out of 10000 (max. 10000000)
 
