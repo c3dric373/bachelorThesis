@@ -70,18 +70,16 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {4.6.1}SGD}{20}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.6.2}SGD with shuffling}{20}% 
+\contentsline {subsection}{\numberline {4.6.2}Momentum and Nesterov}{20}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.6.3}Momentum and Nesterov}{20}% 
+\contentsline {subsection}{\numberline {4.6.3}Adagrad}{20}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.6.4}Adagrad}{20}% 
+\contentsline {subsection}{\numberline {4.6.4}Adadelta}{21}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.6.5}Adadelta}{20}% 
+\contentsline {subsection}{\numberline {4.6.5}Adam}{21}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.6.6}Adam}{20}% 
+\contentsline {chapter}{\numberline {5}Discussion}{22}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {5}Discussion}{21}% 
+\contentsline {chapter}{\numberline {6}Conclusion}{23}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {6}Conclusion}{22}% 
-\defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\nonumberline Bibliography}{23}% 
+\contentsline {chapter}{\nonumberline Bibliography}{24}% 

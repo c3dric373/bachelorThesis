@@ -60,9 +60,12 @@ where $\rho$ is the pearson coefficient with the wordsim353 task.
 \section{Results by optimizer}
 \subsection{SGD}
 The first think we had two manage was finding a correct learning rate for our model. We tried the learning rate from gensim first then expirmanted with different learning rates. As expected a bell curve shape resulted. the optimal setting that we found is $0.0075$. We converged in 11 epochs. 
-
-\subsection{SGD with shuffling}
+We then added input shuffling to the equation. We see that for all the learning rates this helped to increase the convergenge time. Our models know converges in 7 epochs. An interesting point to notice is that we achieve this with a higher learning rate. 
 \subsection{Momentum and Nesterov}
+Momentum and nesterov accelerated gradient both have an additional hyper parameter $\gamma$, that, as described in secction background, defines the importance of the previous gradient taking in the equation. We set $\gamma = 0.9|$ this is the typical value. Let's talk results: Momentum and NAG only slighltly respectively decrease or increasethe convergence time. NAG convergences in 12 epochs while momentum took 8 epochs. 
 \subsection{Adagrad}
+Adagrad is a very interesting tool for learning word embedding as they decrease the loearning rate for very frequent occuring features, and vice versa for low frequent words. Because words that appear very frequently often do not have a real semantic gain to their context words, it's good to have a low learning rate. this is also confirmed by the results adagrad converges in 4 epochs. When combined with shuffling adagrad only takes 3 epochs to converge. This shows the tendency of the skip gram model to converge faster with input shuffling.
 \subsection{Adadelta}
+Adadelta was the Advanced optimizer that showed the most disapointing results. Because it didn't has any learning rate to tune, we only did 2 experiments, with and without input shuffling. the results where very much disapointing. Adadelta converged in 10 epochs with shuffling and 7 epochs without. Therefore barely beating sgd. This is interesting as Adadelta is an expansion of Adagrad, and is supposed, in theory to work better then the latter. 
 \subsection{Adam}
+Adam is the most advanced of all the optimizers used in our experiemnts. Did it therefore yield the best results? Indeed this was the case, as seen in figure 2, Adam converged in 3 epochs without shuflfling and 2 with. This are the best result that we got. 
