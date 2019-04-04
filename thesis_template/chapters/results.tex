@@ -25,6 +25,13 @@ enwik9  & 750k     & 100000                 & 5000                              
 \caption{Specifications of the dataset}
 \end{table}
 
+\section{Word similarity}
+Evaluating word embedding is not an easy task. We cannot split our data set into train and test set. Therefore we need to verify that our embedings are of quality with other techniques. We therefore define the principle of word similarity. We need to define a measure for our word embedings, if they are similar. We will use the cosine distance for this task. The cosine distance of vectors $v$ and $w$ is 1 minus the cosine of the angle between the two vectors. The cosine distance is 0 if two vectors are pointing in the same direction. It's 1 if they are 90 deg aparts from each other and 2 if they are pointing exactly in the opposited direction. It's calculated by taking the dot product of $v$ and $w$ and deviding it by the magnitude of $v$ and $w$ divided by each other. (equation x). We get
+\begin{equation}
+cos(v,w) =1 - \frac{v \cdot w}{|v| |w|} 
+\end{equation}
+
+
 \section{Configuration of the network}
 The skip-gram model contains a lot of hyper parameters that can be tuned. 
 Let's have a look at theim and how they potentially could influence the network
