@@ -38,30 +38,30 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {3.1}PyTorch}{13}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.2}Implementation}{13}% 
+\contentsline {section}{\numberline {3.2}Implementation}{14}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.2.1}class SkipGramModel}{13}% 
+\contentsline {subsection}{\numberline {3.2.1}class SkipGramModel}{14}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Method forward()}{14}% 
+\contentsline {subsubsection}{\nonumberline Forwarding}{14}% 
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {3.2.2}class Dataset}{14}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.2.3}class W2Vec}{14}% 
+\contentsline {subsection}{\numberline {3.2.3}class W2Vec}{15}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline method train\_with\_loader}{14}% 
+\contentsline {subsubsection}{\nonumberline method train\_with\_loader}{15}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {4}Results}{15}% 
+\contentsline {chapter}{\numberline {4}Results}{16}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.1}Dataset}{15}% 
+\contentsline {section}{\numberline {4.1}Dataset}{16}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.1.1}Subsampling}{15}% 
+\contentsline {subsection}{\numberline {4.1.1}Subsampling}{16}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.1.2}Specification of datasets}{16}% 
+\contentsline {subsection}{\numberline {4.1.2}Specification of datasets}{17}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.2}Configuration of the network}{16}% 
+\contentsline {section}{\numberline {4.2}Configuration of the network}{17}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {5}Discussion}{17}% 
+\contentsline {chapter}{\numberline {5}Discussion}{18}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {6}Conclusion}{18}% 
+\contentsline {chapter}{\numberline {6}Conclusion}{19}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\nonumberline Bibliography}{19}% 
+\contentsline {chapter}{\nonumberline Bibliography}{20}% 

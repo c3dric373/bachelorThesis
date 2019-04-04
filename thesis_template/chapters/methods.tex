@@ -3,11 +3,11 @@ Describe the method/software/tool/algorithm you have developed here
 
 We developped a  full replication of the original w2vec implementation of the Skip Gram Model in Pytorch. And then tried to optimize it. This chapter will illustrate our proceeding. First it will give a short introduction to PyTorch, and then cover the most interesting parts of our implementation. 
 \section{PyTorch}
-For our implementation we choosed the open source library PyTorch. It offers a few  implementation features that enormlhy facilitates the implemenatation process. First of all it computes the gradient of the loss function online, therofore there is no need for us to implement the calcluation of htose gradients. For the learning ew will only have to use the already implemented optimizers, that can be found in the module torch.optim. Another feature of Pytorch that we used are the classes dataset and dataloader. Both of these classes works closely together.   The dataset has to function to offer namely: "__len__" and " __getitem__". Those are then used by a data loader object. it will construct a batch based on those two function. The loader object has a very nice feature it can shuffle the datsaet before each epochs. 
+For our implementation we choosed the open source library PyTorch. It offers a few  implementation features that enormlhy facilitates the implemenatation process. First of all it computes the gradient of the loss function online, therofore there is no need for us to implement the calcluation of htose gradients. For the learning ew will only have to use the already implemented optimizers, that can be found in the module torch.optim. Another feature of Pytorch that we used are the classes dataset and dataloader. Both of these classes works closely together.   The dataset has to function to offer namely: "\_\_len\_\_" and " \_\_getitem\_\_". Those are then used by a data loader object. it will construct a batch based on those two function. The loader object has a very nice feature it can shuffle the datsaet before each epochs. 
 \section{Implementation}
 \subsection{class SkipGramModel}
 This class is responsable for the forward pass of our data, and represents the neural network, that will result in the word embeddings. We used the class torch.embeddings to generate our word embedings. This class allows us to give a single integer to the embeding and it will return our embedding.  
-\subsubsection{Method forward()}
+\subsubsection{Forwarding}
 . We will take as an input a number of word and their context and then use the same negative samples for all of those words. We will create a matrix made out contex words and samples. Create matrix containing all our words. Multiply the two matrices. this will result in a matrix having each score of equation \ref{obj_neg_samples}. And we will then sum all our scores to return our loss. 
 Let's examine an example: $(w_1,c_1)(w_2,c_2)(w_3,c_3)$ be our batch. 
 Therefore $pos_u = \begin{bmatrix}
@@ -37,8 +37,30 @@ w_3 \cdot c_3 &-w_3 \cdot c_3  k_{1,3} & -w_3 \cdot c_3 k_{2,3}& k_{3,3}\\
 \end{bmatrix}$
 Finnally we sum up the score and multiply it with minus one to make it a minimizing problem: \\
  $-(\sum_{i=1}^3 w_i \cdot c_i - \sum_{j=0}^3 -w_i \cdot -k_i,j)$
+ 
+ \begin{algorithm}
+\caption{My algorithm}\label{euclid}
+\begin{algorithmic}[1]
+\Procedure{MyProcedure}{}
+\State $\textit{stringlen} \gets \text{length of }\textit{string}$
+\State $i \gets \textit{patlen}$
+\If {$i > \textit{stringlen}$} \Return false
+\EndIf
+\State $j \gets \textit{patlen}$
+\If {$\textit{string}(i) = \textit{path}(j)$}
+\State $j \gets j-1$.
+\State $i \gets i-1$.
+\State \textbf{goto} \emph{loop}.
+\State \textbf{close};
+\EndIf
+\State $i \gets i+\max(\textit{delta}_1(\textit{string}(i)),\textit{delta}_2(j))$.
+\State \textbf{goto} \emph{top}.
+\EndProcedure
+\end{algorithmic}
+\end{algorithm}
 \subsection{class Dataset}
-data loader, pairs neg samples etc.
+This class should provide a way for the dataloader to access each word context pair. Here the challenge is that one cannot store all the pairs in a list as this would not be feasble for a large dataset. We therefore propose a way to compute th i-th word-context pair of the dataset. we therofore had to implement the len method. Here we knew that every sentence expcept the last would have a length of 20 words. therefore it was easy to compute the number of pairs in those sentences. Then we had to add the number of pairs from the last sentence and are done. 
+Now we need to access each pair individually, so first we have to define an order. We will go over the Dataset sequentially adding first the pairs from the left then from the right. Now that we have defined an order, let's look at how we can acces theim. Given an item index $x$ we need to find in which sentence the pairs is. Because we know how many pairs per sentence their is we can 
 \subsection{class W2Vec}
 tst
 \subsubsection{method train\_with\_loader}
