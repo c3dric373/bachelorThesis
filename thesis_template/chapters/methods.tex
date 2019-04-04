@@ -60,7 +60,8 @@ Finnally we sum up the score and multiply it with minus one to make it a minimiz
 \end{algorithm}
 \subsection{class Dataset}
 This class should provide a way for the dataloader to access each word context pair. Here the challenge is that one cannot store all the pairs in a list as this would not be feasble for a large dataset. We therefore propose a way to compute th i-th word-context pair of the dataset. we therofore had to implement the len method. Here we knew that every sentence expcept the last would have a length of 20 words. therefore it was easy to compute the number of pairs in those sentences. Then we had to add the number of pairs from the last sentence and are done. 
-Now we need to access each pair individually, so first we have to define an order. We will go over the Dataset sequentially adding first the pairs from the left then from the right. Now that we have defined an order, let's look at how we can acces theim. Given an item index $x$ we need to find in which sentence the pairs is. Because we know how many pairs per sentence their is we can 
+Now we need to access each pair individually, so first we have to define an order. We will go over the Dataset sequentially adding first the pairs from the left then from the right. Now that we have defined an order, let's look at how we can acces theim. Given an item index $x$ we need to find in which sentence the pairs is. Because we know how many pairs per sentence their is we can. We only have to devide $x$ by the number of pairs that can be built within one sentence. Know we can access this sentence because we have the list that stores our dataset. then we have to iterate over all the possible pairs that we can builld within this sentence count theim, and stop when we arrived at the wished id. S
+
 \subsection{class W2Vec}
 tst
 \subsubsection{method train\_with\_loader}
