@@ -28,9 +28,11 @@ enwik9  & 750k     & 100000                 & 5000                              
 \section{Word similarity}
 Evaluating word embedding is not an easy task. We cannot split our data set into train and test set. Therefore we need to verify that our embedings are of quality with other techniques. We therefore define the principle of word similarity. We need to define a measure for our word embedings, if they are similar. We will use the cosine distance for this task. The cosine distance of vectors $v$ and $w$ is 1 minus the cosine of the angle between the two vectors. The cosine distance is 0 if two vectors are pointing in the same direction. It's 1 if they are 90 deg aparts from each other and 2 if they are pointing exactly in the opposited direction. It's calculated by taking the dot product of $v$ and $w$ and deviding it by the magnitude of $v$ and $w$ divided by each other. (equation x). We get
 \begin{equation}
-cos(v,w) =1 - \frac{v \cdot w}{|v| |w|} 
+cos_dis(v,w) =1 - \frac{v \cdot w}{|v| |w|} 
 \end{equation}
-
+If we normalize the vectors then their the cosine angle becomes the dot product which allows us to compute the distance much faster using gpu's. 
+\subsection{wordsim353}
+To rate our word embedings we will need a dataset that gives us the similarity of words. This is exactly what wordsim353 is. It's 353 pairs of words rated by humans on their similarity. The score goes from 10 and 1, 10 being the most similar. We will rank our embedings on the pearson corelation coefficient between the cosine distance and the score attributed by humans. 
 
 \section{Configuration of the network}
 The skip-gram model contains a lot of hyper parameters that can be tuned. 
