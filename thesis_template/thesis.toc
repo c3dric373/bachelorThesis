@@ -94,8 +94,10 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {5.4.2}Too big of a batch size}{26}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.5}Further Work}{26}% 
+\contentsline {subsection}{\numberline {5.4.3}Correct loss function}{26}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {6}Conclusion}{27}% 
+\contentsline {section}{\numberline {5.5}Further Work}{27}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\nonumberline Bibliography}{28}% 
+\contentsline {chapter}{\numberline {6}Conclusion}{28}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\nonumberline Bibliography}{29}% 

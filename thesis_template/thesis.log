@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Arch Linux) (preloaded format=pdflatex 2019.3.25)  5 APR 2019 20:03
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Arch Linux) (preloaded format=pdflatex 2019.3.25)  5 APR 2019 20:13
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -909,19 +909,19 @@ LaTeX Warning: Citation 'Mikolov' on page 23 undefined on input line 8.
 
 
 
-] [24] [25]) [26]
+] [24] [25]) [26] [27]
 \openout2 = `chapters/conclusion.aux'.
 
  (./chapters/conclusion.tex
 chapter 6.
-) [27
+) [28
 
 
 
 
 ]
 chapter without number
-[28
+[29
 
 
 
@@ -933,7 +933,7 @@ Overfull \hbox (3.71585pt too wide) in paragraph at lines 156--156
 Vetrov Dmitry.
  []
 
-[29] (./thesis.aux (./includes/BA-titlepage.aux) (./includes/abstract.aux)
+[30] (./thesis.aux (./includes/BA-titlepage.aux) (./includes/abstract.aux)
 (./chapters/introduction.aux) (./chapters/background.aux)
 (./chapters/methods.aux) (./chapters/results.aux) (./chapters/discussion.aux)
 (./chapters/conclusion.aux))
@@ -976,10 +976,10 @@ onts/cm/cmssbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy
 10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/sh
 are/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texmf-dist
 /fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on thesis.pdf (35 pages, 358757 bytes).
+Output written on thesis.pdf (36 pages, 359590 bytes).
 PDF statistics:
- 199 PDF objects out of 1000 (max. 8388607)
- 136 compressed objects within 2 object streams
+ 202 PDF objects out of 1000 (max. 8388607)
+ 138 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  21 words of extra memory for PDF output out of 10000 (max. 10000000)
 
