@@ -37,14 +37,14 @@ If we normalize the vectors then their the cosine angle becomes the dot product 
 To rate our word embedings we will need a dataset that gives us the similarity of words. This is exactly what wordsim353 is. It's 353 pairs of words rated by humans on their similarity. The score goes from 10 and 1, 10 being the most similar. We will rank our embedings on the pearson corelation coefficient between the cosine distance and the score attributed by humans. 
 
 \section{Configuration of the network}
-The skip-gram model contains a lot of hyper parameters that can be tuned. 
-Let's have a look at theim and how they potentially could influence the network
+The skip gram model, has a lot of possible options, that can be tuned. We configured one model and then only changed the learning rate. The explanation of the parameters will be structerd as follow: 
+\texttt{Parameter} - Description and tuning -  \textit{Value}
 \begin{itemize}
-\item Negative Samples: the recommended range in \cite{mikolov} is 10-20. The training accuracy should increase as the sample increases, therefore the computation time should go up. There is a tradeoff to to find. 
-\item Context Window: The bigger the window the more training examples the network will have, but if the window is to big the semantic meaning of the window will be erased. The recommended setting was 2-10. 
-\item Dimension of the embedding: here the choice is less obvious, in their paper mikolov et al choosed an embedding size of 300. their dataset was pretty huge, with 1 billion words. We therefore choosed a smaller one. 
-\item Batch size: more on the batch size in section intel description. Too big of a batch size will lead to too much overwirting and therefor not getting the best resulsts. If we turn dhte batch size down too much we will get a higher computation time. 
-\item Alpha: learnng rate. We tried out a variety of lr in the range of 0.00001 to 2 
+\item \texttt{Negative Samples} Here we have to find a trade off between, setting the parameter too high which will result in increased accuracy but a longer computation time. For smaller dataset a higher negative samples is often needed. We experimented early with 5, 10,15 - \textit{10}
+\item \texttt{Context Window:} The bigger the window the more training examples the network will have, but if the window is to big the semantic meaning of the window will be erased. Mikolov et al. proposed a setting between 2-10. - \textit{5}
+\item\texttt{ Dimension of the embedding}: Here the choice is less obvious, the higher the dimension the better the embedding should be.( cite paper dimension vectors talk about gensim ) but when tested on gensim 100 yielded better results than 300 - \textit{100}
+\item \texttt{Batch size}: As described in section FORWARD, there is a trade off to find between accuracy and training time. We first used a batch size of 5000, but then decide after non conclusive results  that 2000 would be better - \textit{2000}
+\item \texttt{Alpha}: learnng rate, this hyper parameter was tuned in every optimizer therefore only the range will be indicated - \textit{(1e-5,1)}
 \end{itemize}
 
 \section{Input Shuffling}
