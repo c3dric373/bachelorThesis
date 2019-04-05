@@ -1,7 +1,74 @@
 % !TeX spellcheck = en_US
 % !TeX encoding = UTF-8
 \chapter{Code}
+\section{Gensim}
+\begin{lstlisting}
+from gensim.models.callbacks import CallbackAny2Vec
+from gensim.models import Word2Vec
+vocab = set(text8_ds1)
+gensim_emb = dict()
+
+    
+class EpochLogger(CallbackAny2Vec):
+    def __init__(self):
+        self.epoch = 0
+        self.cum_loss = 0
+        self.loss_list = []
+        self.ws_list = []
+        self.prev_score = -1
+        self.no_improvement =0
+
+
+    def on_epoch_end(self, model):
+        for word in vocab:
+            gensim_emb[word] = model.wv[word]
+            
+        score = -1*wordsim_task(gensim_emb)[0][1]
+        self.ws_list.append(score)
+        
+        if(score - self.prev_score < 0.0009):
+            self.no_improvement +=1
+            
+        print("Epoch #{} end: cum_loss={}, ws_score={}".format(self.epoch,self.cum_loss,score))
+        
+        
+        if(self.no_improvement == 2):
+            print("No improvement in word similarity early stoppage")
+            
+            
+            
+        self.epoch += 1
+        self.prev_score = score
+    
+    def on_batch_end(self, model):
+        """Method called at the end of each batch.
+        Parameters
+        ----------
+        model : :class:`~gensim.models.base_any2vec.BaseWordEmbeddingsModel`
+            Current model.
+        """
+        self.cum_loss += model.get_latest_training_loss()
+        
+\end{lstlisting}
 
 \chapter{Math}
 
+\chapter{Parameters}
+
 \chapter{Dataset}
+\begin{itemize}
+ \item  \texttt{ corpus\_file} (str, optional) – None
+   \item \texttt{cbow}\_mean ({0, 1}, optional) - Unnecessary since cbow is not used
+    \item seed (int, optional) – Seed for the random number generator. Initial vectors for each word are seeded with a hash of the concatenation of word + str(seed). Note that for a fully deterministically-reproducible run, you must also limit the model to a single worker thread (workers=1), to eliminate ordering jitter from OS thread scheduling. (In Python 3, reproducibility between interpreter launches also requires use of the PYTHONHASHSEED environment variable to control hash randomization). - None 
+\item   \texttt{ max\_vocab\_size} (int, optional) – Limits the RAM during vocabulary building; if there are more unique words than this, then prune the infrequent ones. Every 10 million word types need about 1GB of RAM. Set to None for no limit. - None 
+\item \texttt{   max\_final\_vocab} (int, optional) – Limits the vocab to a target vocab size by automatically picking a matching min\_count. If the specified min\_count is more than the calculated min\_count, the specified min\_count will be used. Set to None if not required. - None
+item\texttt{   trim\_rule} (function, optional) –Vocabulary trimming rule, specifies whether certain words should remain in the vocabulary, be trimmed away, or handled using the default (discard if word count < min\_count). Can be None (min\_count will be used, look to keep\_vocab\_item()), or a callable that accepts parameters (word, count, min\_count) and returns either gensim.utils.RULE\_DISCARD, gensim.utils.RULE\_KEEP or gensim.utils.RULE\_DEFAULT. The rule, if given, is only used to prune vocabulary during build\_vocab() and is not stored as part of the model.
+
+    The input parameters are of the following types:
+            word (str) - the word we are examining
+            count (int) - the word’s frequency count in the corpus
+            min\_count (int) - the minimum count threshold. - None
+
+  \item  \texttt{sorted\_vocab }({0, 1}, optional) – If 1, sort the vocabulary by descending frequency before assigning word indexes. See sort\_vocab(). - None
+ \item   \texttt{batch\_words }(int, optional) – Target size (in words) for batches of examples passed to worker threads (and thus cython routines).(Larger batches will be passed if individual texts are longer than 10000 words, but the standard cython code truncates to that maximum.) - None 
+\end{itemize}

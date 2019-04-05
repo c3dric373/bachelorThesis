@@ -14,41 +14,37 @@ word2vec only trained their model on the very large google news datset incorpora
 
 
 \section{Gensim}
-Gensim does propose the class w2vec with the following possible parameters\footnote{link to gensim params}, we will describe theim, show our setting, and why we chose the following: 
+Gensim does propose the class w2vec with the following possible parameters\footnote{link to gensim params}, we will describe theim, show our setting, and why we chose the following, we will only describe the prametrs we changed from the default value will be explained, the rest can be found in the appendix. 
+They will be presented in the following way: \\
+\texttt{name} (type) - \textit{Description} - Value
 \begin{itemize}
 
-   \item \texttt{sentences} (iterable of iterables, optional) – Dataset - we used the Original text8 document splitted into sentences of length 20
- \item  \texttt{ corpus\_file} (str, optional) – None
-  \item \texttt{ size }(int, optional) – Dimensionality of the word vectors - 100
-\item    \texttt{window} (int, optional) – Maximum distance between the current and predicted word within a sentence - 100
-  \item  \texttt{min\_count }(int, optional) – Ignores all words with total frequency lower than this - 5
- \item   \texttt{workers} (int, optional) – Use these many worker threads to train the model (=faster training with multicore machines) - 4 
-\item    \texttt{sg} ({0, 1}, optional) – Training algorithm: 1 for skip-gram; otherwise CBOW. -1
-  \item  \texttt{hs} ({0, 1}, optional) – If 1, hierarchical softmax will be used for model training. If 0, and negative is non-zero, negative sampling will be used. - 0
-  \item  \texttt{negative} (int, optional) – If > 0, negative sampling will be used, the int for negative specifies how many “noise words” should be drawn (usually between 5-20). If set to 0, no negative sampling is used - 10 
-\item   \texttt{ ns\_exponent} (float, optional) – The exponent used to shape the negative sampling distribution. A value of 1.0 samples exactly in proportion to the frequencies, 0.0 samples all words equally, while a negative value samples low-frequency words more than high-frequency words. The popular default value of 0.75 was chosen by the original Word2Vec paper. More recently, in https://arxiv.org/abs/1804.04212, Caselles-Dupré, Lesaint, \& Royo-Letelier suggest that other values may perform better for recommendation applications. - 0.75
-   \item \texttt{cbow}\_mean ({0, 1}, optional) – If 0, use the sum of the context word vectors. If 1, use the mean, only applies when cbow is used. - None
-\item    \texttt{alpha} (float, optional) – The initial learning rate. - 0.025
- \item   \texttt{min\_alpha} (float, optional) – Learning rate will linearly drop to min\_alpha as training progresses. -0.0001
-    \item seed (int, optional) – Seed for the random number generator. Initial vectors for each word are seeded with a hash of the concatenation of word + str(seed). Note that for a fully deterministically-reproducible run, you must also limit the model to a single worker thread (workers=1), to eliminate ordering jitter from OS thread scheduling. (In Python 3, reproducibility between interpreter launches also requires use of the PYTHONHASHSEED environment variable to control hash randomization). - None 
-\item   \texttt{ max\_vocab\_size} (int, optional) – Limits the RAM during vocabulary building; if there are more unique words than this, then prune the infrequent ones. Every 10 million word types need about 1GB of RAM. Set to None for no limit. - None 
-\item \texttt{   max\_final\_vocab} (int, optional) – Limits the vocab to a target vocab size by automatically picking a matching min\_count. If the specified min\_count is more than the calculated min\_count, the specified min\_count will be used. Set to None if not required. - None
- \item   \texttt{sample} (float, optional) – The threshold for configuring which higher-frequency words are randomly downsampled, useful range is (0, 1e-5). - 1e-4
-   \item \texttt{hashfxn} (function, optional) – Hash function to use to randomly initialize weights, for increased training reproducibility. - VERIFY 
-  \item  \texttt{iter} (int, optional) – Number of iterations (epochs) over the corpus. - 10 
- \item\texttt{   trim\_rule} (function, optional) –Vocabulary trimming rule, specifies whether certain words should remain in the vocabulary, be trimmed away, or handled using the default (discard if word count < min\_count). Can be None (min\_count will be used, look to keep\_vocab\_item()), or a callable that accepts parameters (word, count, min\_count) and returns either gensim.utils.RULE\_DISCARD, gensim.utils.RULE\_KEEP or gensim.utils.RULE\_DEFAULT. The rule, if given, is only used to prune vocabulary during build\_vocab() and is not stored as part of the model.
+   \item \texttt{sentences} (iterable of iterables) – Dataset - we used the Original text8 document splitted into sentences of length 20
+  \item \texttt{ size }(int) – Dimensionality of the word vectors - 100
+\item    \texttt{window} (int) – Maximum distance between the current and predicted word within a sentence - 100
+  \item  \texttt{min\_count }(int) – Ignores all words with total frequency lower than this - 5
+ \item   \texttt{workers} (int) – Use these many worker threads to train the model (=faster training with multicore machines) - 4 
+\item    \texttt{sg} ({0, 1}) – Training algorithm: 1 for skip-gram; otherwise CBOW. -1
+  \item  \texttt{hs} ({0, 1}) – If 1, hierarchical softmax will be used for model training. If 0, and negative is non-zero, negative sampling will be used. - 0
+  \item  \texttt{negative} (int) – If > 0, negative sampling will be used, the int for negative specifies how many “noise words” should be drawn (usually between 5-20). If set to 0, no negative sampling is used - 10 
+\item   \texttt{ ns\_exponent} (float) – Exponent in the unigram distribution, when choosing random samples REFERENCE EQUATION. - 0.75
+\item    \texttt{alpha} (float) – The initial learning rate. - 0.025
+ \item   \texttt{min\_alpha} (float) – Learning rate will linearly drop to min\_alpha as training progresses. -0.0001
 
-    The input parameters are of the following types:
-            word (str) - the word we are examining
-            count (int) - the word’s frequency count in the corpus
-            min\_count (int) - the minimum count threshold. - None
-
-  \item  \texttt{sorted\_vocab }({0, 1}, optional) – If 1, sort the vocabulary by descending frequency before assigning word indexes. See sort\_vocab(). - None
- \item   \texttt{batch\_words }(int, optional) – Target size (in words) for batches of examples passed to worker threads (and thus cython routines).(Larger batches will be passed if individual texts are longer than 10000 words, but the standard cython code truncates to that maximum.) - None 
-  \item  \texttt{compute\_loss} (bool, optional) – If True, computes and stores loss value which can be retrieved using get\_latest\_training\_loss(). - True
- \item   \texttt{callbacks} (iterable of CallbackAny2Vec, optional) – Sequence of callbacks to be executed at specific stages during training. - see Appendix
-
+ \item   \texttt{sample} (float) – The threshold for configuring which higher-frequency words are randomly downsampled, useful range is (0, 1e-5). - 1e-4
+   \item \texttt{hashfxn} (function) – Hash function to use to randomly initialize weights, for increased training reproducibility. - VERIFY 
+  \item  \texttt{iter} (int) – Number of iterations (epochs) over the corpus. - 10 
+ \
+  \item  \texttt{compute\_loss} (bool) – If True, computes and stores loss value which can be retrieved using get\_latest\_training\_loss(). - True
+ \item   \texttt{callbacks} (iterable of CallbackAny2Vec) – Sequence of callbacks to be executed at specific stages during training. - see Appendix
 \end{itemize}
+
+\subsection{Gensim vs. SGD}
+First we have to note that we cannot compare ourselves to gensim in computation time, this woudl not be very smart as our code is written in python and gensim uses advanced cython routines\footnote{link to tutorial thesis}. 
+The first interesting thing to note is that we did not have the same values in convergence time as gensim when using sgd. There are differnet possiblilities why this could be the case. First our batched approach could hinder performance in term of convergence as some overwriting may happen. Another differnce between our implementation is the fact that gensim checks whether negative samples are real negative samples. Thererfore the learning of the input and output context is optimized. 
+The first hypothesis may be confirmed by the fact that our input shuffling reduces the number of overwritings and therefore we achieved conv time of 7 epcohs which is closer to 4 epochs. and the last difference maybe explained by the eg samples thing. 
+
+\subsection{Gensim vs. Adam}
 
 \section{Challenges faced}
 \subsection{Using the wrong embeddings}

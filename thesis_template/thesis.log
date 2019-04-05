@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Arch Linux) (preloaded format=pdflatex 2019.3.25)  5 APR 2019 15:00
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Arch Linux) (preloaded format=pdflatex 2019.3.25)  5 APR 2019 15:39
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -903,13 +903,7 @@ LaTeX Warning: Citation 'Mikolov' on page 23 undefined on input line 8.
 
 
 
-] [24]
-Overfull \hbox (34.05566pt too wide) in paragraph at lines 41--42
-\OT1/cmr/m/n/12 sim.utils.RULE[]DISCARD, gen-sim.utils.RULE[]KEEP or gen-sim.ut
-ils.RULE[]DEFAULT.
- []
-
-[25]) [26]
+] [24]) [25] [26]
 \openout2 = `chapters/conclusion.aux'.
 
  (./chapters/conclusion.tex
@@ -928,7 +922,7 @@ chapter without number
 
 
 ]
-Overfull \hbox (3.71585pt too wide) in paragraph at lines 154--154
+Overfull \hbox (3.71585pt too wide) in paragraph at lines 155--155
 []\OT1/cmr/m/n/12 Bartunov Sergey, Kon-drashkin Dmitry, Os-okin An-ton, and P. 
 Vetrov Dmitry.
  []
@@ -939,6 +933,9 @@ Vetrov Dmitry.
 (./chapters/conclusion.aux))
 
 LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
 
 Package biblatex Warning: Please (re)run Biber on the file:
@@ -973,7 +970,7 @@ onts/cm/cmssbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy
 10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/sh
 are/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texmf-dist
 /fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on thesis.pdf (35 pages, 353622 bytes).
+Output written on thesis.pdf (35 pages, 351356 bytes).
 PDF statistics:
  198 PDF objects out of 1000 (max. 8388607)
  136 compressed objects within 2 object streams

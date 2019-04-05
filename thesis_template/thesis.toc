@@ -84,6 +84,10 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {5.3}Gensim}{24}% 
 \defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.3.1}Gensim vs. SGD}{25}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.3.2}Gensim vs. Adam}{26}% 
+\defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {5.4}Challenges faced}{26}% 
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {5.4.1}Using the wrong embeddings}{26}% 
