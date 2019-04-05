@@ -50,8 +50,9 @@ The Adam optimizer did outperform the Gensim application in performance (only sl
 \subsection{Using the wrong embeddings}
 To start our comutation we did choose some wrong, at leat not in coordinance with gensim, initialization embeddings. The context vectors were set between (-1,1) distributed normally. Gensim does it buy putting theim all to 0. As we did the latter the first time our model did not train, but this is possably due to a learning rate that was too low. So we chosed theim to (-1,1). With theim we did not acheive the same similarity as gensim. But when we changed theim back we performed the same results as gensim. Therefore this is a recommendation to future work to not set the initialization to (-1,1)
 \subsection{Too big of a batch size}
-Another challenged we faced was finding a good batch size.
-
+Another challenged we faced was finding a good batch size. We trained our batch size for a long time with a bs of 5000. But this seemed to worked fine in the beginning but a high lr seemed to work too which was very suspect. We then decided to take a batch size of 2000. Which slightly decreased the learning time, and increased the convergence time and adjusted the learning rate. 
+\subsection{Correct loss function}
+We expirimented with different loss function as we did not have exactly the same as introduced by mikolov et al. We therefore first ook the average of each score in our tensor. But we then took the sum which seemed to work  better. Is this because the shape of the loss function suits bettter advanced optimizers. Or because it approaches the original loss function more. 
 
 
 \section{Further Work}
