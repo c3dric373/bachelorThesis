@@ -35,6 +35,12 @@ cos_dis(v,w) =1 - \frac{v \cdot w}{|v| |w|}
 If we normalize the vectors then their the cosine angle becomes the dot product which allows us to compute the distance much faster using gpu's. 
 \subsection{wordsim353}
 To rate our word embedings we will need a dataset that gives us the similarity of words. This is exactly what wordsim353 is. It's 353 pairs of words rated by humans on their similarity. The score goes from 10 and 1, 10 being the most similar. We will rank our embedings on the pearson corelation coefficient between the cosine distance and the score attributed by humans. 
+\begin{figure}[ht]
+    \centering
+			\includegraphics[scale=0.7]{images/wordsim353_example} 
+    \caption{Example of pairs and their rating in wordsim353}
+    \label{fig:efficient}
+\end{figure}
 
 \section{Configuration of the network}
 The skip gram model, has a lot of possible options, that can be tuned. We configured one model and then only changed the learning rate. The explanation of the parameters will be structerd as follow: 
