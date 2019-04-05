@@ -16,7 +16,16 @@ where $f(w)$ is the frecquency of w, and $t$ is a treshhold set empirecally. (Mi
 \subsubsection{Min count}
 We also applied a techniqued, called min count, we deleted every word thatt did not appeared more than 5 times in our dataset. We got this idea from gensim \cite{gensim}. Therer were a few words that had no meaning (aldk, ahdfo) VERIFY in our dataset. and a word that only appears one time will be very dependent on it's original setting which will influence the words tha appear in its context and will therefore not be a true value. Therefore we applied this technique. It should in theory, such as subsampling, improve both the accuracy and computation. 
 \subsection{Specification of datasets}
-todo add number of subsampled word number of words deleted by min count.
+\begin{itemize}
+\item Text 8 original: \\
+17 mio words\\
+1702 docs of 10k words/ no sentences 
+\item Applied subsampling:
+8mio words.
+1702 w of 5k words
+\item Transformed to  250k sen of 20 words
+\end{itemize}
+
 \begin{table}[]
 \begin{tabular}{|l|l|l|l|}
 \hline
