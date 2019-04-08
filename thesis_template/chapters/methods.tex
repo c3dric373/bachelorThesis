@@ -8,11 +8,10 @@ For our implementation we chosed the open source library PyTorch.\footnote{pytor
 \subsection{Batched SkipGramModel}
 We implemented the model in the \texttt{Model} interface from torch.model. We used two embeddings as they are proposed in torch.embedding. they do esactly what we need, given an integer they return a vector. Hence they can be seen as the look up matrix. The real interesting part of our implementation is the way we modified the loss function to get a faster computation. 
 \subsubsection{Forwarding}
+The forwarding method will take two vectors, and a matrix as an input. The first vector represents all the center words in a batch, the second one the context words. The two vectors need to have the same length. If we have two vectors $v$ and $w$ as an input, then our training batch $X$ can be seen in the following way:  $X = \{(v_i, w_i)\|\i \in \{1, ..., n\}, n = |v| \}$. The matrix must be of dimension $|v|xn$, with $k$, being the number of negative samples per pair.  First we will concatenate $w$ and our Matrix $A$. To compute the dot product of each pair we only have to compute $vA$. When we sum the resulting matrix of and multiply it with $-1$ we get the wanted loss. 
 
 
 
-
-. We will take as an input a number of word and their context and then use the same negative samples for all of those words. We will create a matrix made out contex words and samples. Create matrix containing all our words. Multiply the two matrices. this will result in a matrix having each score of equation \ref{obj_neg_samples}. And we will then sum all our scores to return our loss. 
 
 \subsection{Creating the context pairs}
 This class should provide a way for the dataloader to access each word context pair. Here the challenge is that one cannot store all the pairs in a list as this would not be feasble for a large dataset. We therefore propose a way to compute th i-th word-context pair of the dataset. we therofore had to implement the len method. Here we knew that every sentence expcept the last would have a length of 20 words. therefore it was easy to compute the number of pairs in those sentences.
