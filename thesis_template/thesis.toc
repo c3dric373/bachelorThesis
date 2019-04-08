@@ -58,7 +58,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {4.2.1}wordsim353}{18}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.3}Configuration of the network}{18}% 
+\contentsline {section}{\numberline {4.3}Configuration of the network}{19}% 
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {4.4}Input Shuffling}{19}% 
 \defcounter {refsection}{0}\relax 
@@ -70,7 +70,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {4.6.2}Momentum and Nesterov}{21}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.6.3}Adagrad}{22}% 
+\contentsline {subsection}{\numberline {4.6.3}Adagrad}{21}% 
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {4.6.4}Adadelta}{22}% 
 \defcounter {refsection}{0}\relax 
