@@ -14,7 +14,7 @@ P(w) = 1- \sqrt{{\frac{t}{f(w)}}}
 \end{equation}
 where $f(w)$ is the frecquency of w, and $t$ is a treshhold set empirecally. (Mikolov et al.)  recommends a value between $0$ and $1e-5$. We experimented with different values and $1e-4$, seemed the most suted. See figure 3 for examples and table stats for inforamtion about sampling. We did this analysis by looking at and random set of sentences and analyzed the best context pairs. 
 \subsubsection{Min count}
-We also applied a techniqued, called min count, we deleted every word thatt did not appeared more than 5 times in our dataset. We got this idea from gensim \cite{gensim}. Therer were a few words that had no meaning (aldk, ahdfo) VERIFY in our dataset. and a word that only appears one time will be very dependent on it's original setting which will influence the words tha appear in its context and will therefore not be a true value. Therefore we applied this technique. It should in theory, such as subsampling, improve both the accuracy and computation. 
+We also applied a treshhold in the lower bound, we deleted every word that did not appear more than 5 times in our dataset. We got this idea from gensim \cite{gensim}. This is a good idea becaus of two reasons: first a few words of our data sets had no meaning (aldk, ahdfo) VERIFY. Secondly a word that only appears one time in our dataset will be very dependent on it's original initialization.Therefore we applied this technique. It should in theory, such as subsampling, improve both the accuracy and computation. 
 \subsection{Specification of datasets}
 \begin{itemize}
 \item Text 8 original: \\
