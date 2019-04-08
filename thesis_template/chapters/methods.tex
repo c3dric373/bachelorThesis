@@ -10,14 +10,11 @@ We implemented the model in the \texttt{Model} interface from torch.model. We us
 \subsubsection{Forwarding}
 The forwarding method will take two vectors, and a matrix as an input. The first vector represents all the center words in a batch, the second one the context words. The two vectors need to have the same length. If we have two vectors $v$ and $w$ as an input, then our training batch $X$ can be seen in the following way:  $X = \{(v_i, w_i)\|\i \in \{1, ..., n\}, n = |v| \}$. The matrix must be of dimension $|v|xn$, with $k$, being the number of negative samples per pair.  First we will concatenate $w$ and our Matrix $A$. To compute the dot product of each pair we only have to compute $vA$. When we sum the resulting matrix of and multiply it with $-1$ we get the wanted loss. 
 
-
-
-
 \subsection{Creating the context pairs}
 This class should provide a way for the dataloader to access each word context pair. Here the challenge is that one cannot store all the pairs in a list as this would not be feasble for a large dataset. We therefore propose a way to compute th i-th word-context pair of the dataset. we therofore had to implement the len method. Here we knew that every sentence expcept the last would have a length of 20 words. therefore it was easy to compute the number of pairs in those sentences.
 We will distinguish two types of wordes in the sentences: first center words, those have the maxiumum amount of possible context words. The border pairs are the words that do not have this proprety because they are two close to the start or end of the sentence. The amount of context pairs per center pair is easy to compute, it's $2*ctx\\_window$. Therefore we get that for sentences with length $LEN\\_SEN$, with $LEN\_SEN  > ctx\\_window*2$:
 \begin{lstlisting}[language=python]
-number\_center\_pairs = ((LEN\_SEN -  ctx\_window*2)*self.ctx\_window*2)
+number\_center\_pairs = ((LEN\_SEN - \\ ctx\_window*2)*self.ctx\_window*2)
 \end{lstlisting}
 We then need to compute the amount of borde words. For this we will only need to compute the following:
 \begin{equation}
