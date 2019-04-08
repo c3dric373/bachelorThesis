@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Arch Linux) (preloaded format=pdflatex 2019.3.25)  6 APR 2019 17:22
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Arch Linux) (preloaded format=pdflatex 2019.3.25)  8 APR 2019 13:01
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -832,16 +832,16 @@ chapter 3.
 ]
 
 LaTeX Warning: Reference `obj_neg_samples' on page 14 undefined on input line 1
-1.
+5.
 
 (/usr/share/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2018/09/02 1.7 listings language file
-) [14]
-Overfull \hbox (59.46817pt too wide) in paragraph at lines 45--46
+)
+Overfull \hbox (59.46817pt too wide) in paragraph at lines 21--22
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-) [15]
+[14]) [15]
 \openout2 = `chapters/results.aux'.
 
  (./chapters/results.tex
@@ -868,23 +868,12 @@ Overfull \hbox (43.31451pt too wide) in paragraph at lines 30--36
  []
 
 [17]
-<images/wordsim353_example.png, id=97, 561.09625pt x 18.0675pt>
+<images/wordsim353_example.png, id=98, 561.09625pt x 18.0675pt>
 File: images/wordsim353_example.png Graphic file (type png)
 <use images/wordsim353_example.png>
 Package pdftex.def Info: images/wordsim353_example.png  used on input line 49.
 (pdftex.def)             Requested size: 392.7647pt x 12.64714pt.
  [18 <./images/wordsim353_example.png>] [19]
-
-! LaTeX Error: Unknown float option `H'.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.81 \begin{figure}[H]
-                      
-Option `H' ignored and `p' used.
-
 <images/results_sgd_shuffle.png, id=107, 803.0pt x 501.875pt>
 File: images/results_sgd_shuffle.png Graphic file (type png)
 <use images/results_sgd_shuffle.png>
@@ -892,15 +881,8 @@ Package pdftex.def Info: images/results_sgd_shuffle.png  used on input line 83.
 
 (pdftex.def)             Requested size: 361.34666pt x 225.84166pt.
 
-! LaTeX Error: Unknown float option `H'.
 
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.89 \begin{figure}[H]
-                      
-Option `H' ignored and `p' used.
+LaTeX Warning: `h' float specifier changed to `ht'.
 
 <images/results_mom_shuffle.png, id=108, 803.0pt x 501.875pt>
 File: images/results_mom_shuffle.png Graphic file (type png)
@@ -925,43 +907,22 @@ Overfull \hbox (16.83638pt too wide) in paragraph at lines 100--101
  []
 
 [20]
-
-! LaTeX Error: Unknown float option `H'.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.107 \begin{figure}[H]
-                       
-Option `H' ignored and `p' used.
-
 <images/results_adagrad_shuffle.png, id=113, 803.0pt x 501.875pt>
 File: images/results_adagrad_shuffle.png Graphic file (type png)
 <use images/results_adagrad_shuffle.png>
 Package pdftex.def Info: images/results_adagrad_shuffle.png  used on input line
  109.
 (pdftex.def)             Requested size: 361.34666pt x 225.84166pt.
-
-! LaTeX Error: Unknown float option `H'.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.117 \begin{figure}[H]
-                       
-Option `H' ignored and `p' used.
-
-<images/results_adam_shuffle.png, id=114, 803.0pt x 501.875pt>
+ [21 <./images/results_sgd_shuffle.png> <./images/results_mom_shuffle.png> <./i
+mages/results_nag_shuffle.png>]
+<images/results_adam_shuffle.png, id=120, 803.0pt x 501.875pt>
 File: images/results_adam_shuffle.png Graphic file (type png)
 <use images/results_adam_shuffle.png>
 Package pdftex.def Info: images/results_adam_shuffle.png  used on input line 11
 9.
 (pdftex.def)             Requested size: 361.34666pt x 225.84166pt.
-) [21] [22 <./images/results_sgd_shuffle.png> <./images/results_mom_shuffle.png
-> <./images/results_nag_shuffle.png>] [23 <./images/results_adagrad_shuffle.png
-> <./images/results_adam_shuffle.png>]
+) [22 <./images/results_adagrad_shuffle.png>] [23 <./images/results_adam_shuffl
+e.png>]
 \openout2 = `chapters/discussion.aux'.
 
  (./chapters/discussion.tex
@@ -1020,7 +981,7 @@ Package logreq Info: Writing requests to 'thesis.run.xml'.
 Here is how much of TeX's memory you used:
  15427 strings out of 492616
  294901 string characters out of 6135177
- 892746 words of memory out of 5000000
+ 892295 words of memory out of 5000000
  19118 multiletter control sequences out of 15000+600000
  14266 words of font info for 51 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1041,7 +1002,7 @@ onts/cm/cmssbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy
 10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/sh
 are/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texmf-dist
 /fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on thesis.pdf (37 pages, 485553 bytes).
+Output written on thesis.pdf (37 pages, 484639 bytes).
 PDF statistics:
  218 PDF objects out of 1000 (max. 8388607)
  143 compressed objects within 2 object streams
