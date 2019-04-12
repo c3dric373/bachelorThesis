@@ -9,7 +9,8 @@ In this section we will compare - our work to related work, we will first compar
 
 \section{word2vec}
 %TODO ask jorg
-word2vec only trained their model on the very large google news datset incorporating more than 3 billio words. Therefore we have a problem to compare our work. But we will make some assumptions. 
+
+As mikolov et al. published the original paper about which introduced the SGNS, it is of course releveant to compare ourselves to theim. The first important thing to notice is that Mikolov et al. only trained their model on the very large google news dataset incorporating more than 3 billion words. This makes the comparison of our work more problematic and more of a guessing game. But we will make some assumptions, as they can become interesting. 
  the original paper paer of word2vec they show results from one or 3 epochs. We accord these good results to the very large dataset. And as a matter of fact their result are better with 3 than with 1 epochs. We do not have any informtaion about the convergence. But we can talk about the quality of the word embeddings as Ji et al. reported wordsim ressults on text8 with the original c code, namely 0 .63. This is worse than our results with sgd and adam. we did not find anything that would explain those results as shuffling and wihtout shuffling VERIFY beat the original c code. It is also possible that if we would apply an advanced optimizer to the large dataset we would get a better word embedding as we achieved a wordsim score of 0.67 with adam and gensim only 0.66. 
 
 
