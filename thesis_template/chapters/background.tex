@@ -1,10 +1,18 @@
 \chapter{Background}\label{chap:background}
 
+Es muss ein Absatz unter jeden {berpunkt, auch ywischen Background und 2.1. Ich kann dir wenn du magst die Folien von meinem Seminar nachher schicken, das hatte ich ja beim Granityer und da hat er ein bisschen drauf geschrieben, was er bei Scientific Writing wichtig findet, ich wei- aber nicht mehr, wie hilfreich die Folien sind. Aber das steht auf alle F'lle drin.
+
 \section{The Skip-Gram Model} 
-The Skip Gram Model is a model used to embed words into vectors, by analyzing the context in which the words happens. It's achieving this by maximizing the following equation:\begin{equation} \label{basicSkip} \prod_{t=1}^T \prod_{-m<j<m}  p(w_{t+j}|w_t) \end{equation} Where T is the number of words in the corpus data, $w_t$ the $t-th$ word in the corpus data and $m$ is the context window. This means that the $m$ nearest words to $w$ are considered as context words.
-This equation can be transformed quite easily into sums by using log probabilities: 
+The Skip Gram Model is a model used to embed words into vectors, by analyzing the context in which the words happens.
+% the context in which the words happens_ ich krieg kein Frageyeichen hin. Appear_
+ It's achieving this by maximizing the following equation:\begin{equation} \label{basicSkip} \prod_{t=1}^T \prod_{-m<j<m}  p(w_{t+j}|w_t) \end{equation} Where T is the number of words in the corpus data, $w_t$ the $t-th$ word in the corpus data and $m$ is the context window. This means that the $m$ nearest words to $w$ are considered as context words.
+This equation can be transformed quite easily 
+% bewertende Sat<teile wie quite easily w[rde ich glaub ich einfach weglassen. 
+into sums by using log probabilities: 
 \begin{equation} \sum _{t=1}^T \sum_{-m<j<m} log( p(w_{t+j}|w_t) )\end{equation} 
-    where the parameters are the same as in \ref{basicSkip}. The basic Skip-Gram Model uses a classical Softmax to calculate the conditional probability $p(w_{t+j}|w_t)$: 
+    where the parameters are the same as in \ref{basicSkip}
+% Vor einer Referenz immer die Art der Sache auf die du referenyierst mit angeben, in dem Fall das Wort equation vor backslash ref. Sonst ist das uneindeutig, es gibt sowohl ein Kapitel 2.1, als auch eine Figure 2.1, als auch eine equation 2.1.    
+    . The basic Skip-Gram Model uses a classical Softmax to calculate the conditional probability $p(w_{t+j}|w_t)$: 
    \begin{equation}
    p(w_{t+j}|w_t)=  \frac{exp( \tilde{v}_{w_{t+j}}^Tv_{w_t})}{\sum_{w=1}^v exp(\tilde{v}_w^Tv_{ w_t})}
    \end{equation}
