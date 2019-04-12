@@ -2,102 +2,102 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {1}Introduction}{2}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {2}Background}{3}% 
+\contentsline {chapter}{\numberline {2}Background}{4}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.1}The Skip-Gram Model}{3}% 
+\contentsline {section}{\numberline {2.1}The Skip-Gram Model}{4}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.2}Negative Sampling}{4}% 
+\contentsline {section}{\numberline {2.2}Negative Sampling}{5}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.3}Optimization of the Skip Gram Model}{6}% 
+\contentsline {section}{\numberline {2.3}Optimization of the Skip Gram Model}{7}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.3.1}Parallelization}{6}% 
+\contentsline {subsection}{\numberline {2.3.1}Parallelization}{7}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Parallization in shared and Distributed Memory}{6}% 
+\contentsline {subsubsection}{\nonumberline Parallization in shared and Distributed Memory}{7}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Parallelization by the use of caching}{7}% 
+\contentsline {subsubsection}{\nonumberline Parallelization by the use of caching}{8}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.3.2}Context sensitive word embedding}{8}% 
+\contentsline {subsection}{\numberline {2.3.2}Context sensitive word embedding}{9}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.4}Optimizers in Machine learning}{9}% 
+\contentsline {section}{\numberline {2.4}Optimizers in Machine learning}{10}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.4.1}Stochastic Gradient Descent}{9}% 
+\contentsline {subsection}{\numberline {2.4.1}Stochastic Gradient Descent}{10}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.4.2}Momentum}{10}% 
+\contentsline {subsection}{\numberline {2.4.2}Momentum}{11}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.4.3}Nesterov}{10}% 
+\contentsline {subsection}{\numberline {2.4.3}Nesterov}{11}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.4.4}Adagrad}{11}% 
+\contentsline {subsection}{\numberline {2.4.4}Adagrad}{12}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.4.5}Adadelta}{12}% 
+\contentsline {subsection}{\numberline {2.4.5}Adadelta}{13}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.4.6}Adam}{12}% 
+\contentsline {subsection}{\numberline {2.4.6}Adam}{13}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {3}Methods}{13}% 
+\contentsline {chapter}{\numberline {3}Methods}{14}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.1}PyTorch}{13}% 
+\contentsline {section}{\numberline {3.1}PyTorch}{14}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.2}Implementation}{14}% 
+\contentsline {section}{\numberline {3.2}Implementation}{15}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.2.1}Batched SkipGramModel}{14}% 
+\contentsline {subsection}{\numberline {3.2.1}Batched SkipGramModel}{15}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Forwarding}{14}% 
+\contentsline {subsubsection}{\nonumberline Forwarding}{15}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.2.2}Creating the context pairs}{14}% 
+\contentsline {subsection}{\numberline {3.2.2}Creating the context pairs}{15}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {4}Results}{16}% 
+\contentsline {chapter}{\numberline {4}Results}{17}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.1}Dataset}{16}% 
+\contentsline {section}{\numberline {4.1}Dataset}{17}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.1.1}Subsampling}{16}% 
+\contentsline {subsection}{\numberline {4.1.1}Subsampling}{17}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Min count}{17}% 
+\contentsline {subsubsection}{\nonumberline Min count}{18}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.1.2}Specification of datasets}{17}% 
+\contentsline {subsection}{\numberline {4.1.2}Specification of datasets}{18}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.2}Word similarity}{18}% 
+\contentsline {section}{\numberline {4.2}Word similarity}{19}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.2.1}wordsim353}{18}% 
+\contentsline {subsection}{\numberline {4.2.1}wordsim353}{19}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.3}Configuration of the network}{19}% 
+\contentsline {section}{\numberline {4.3}Configuration of the network}{20}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.4}Input Shuffling}{19}% 
+\contentsline {section}{\numberline {4.4}Input Shuffling}{20}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.5}Convergence time}{20}% 
+\contentsline {section}{\numberline {4.5}Convergence time}{21}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.6}Results by optimizer}{20}% 
+\contentsline {section}{\numberline {4.6}Results by optimizer}{21}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.6.1}SGD}{20}% 
+\contentsline {subsection}{\numberline {4.6.1}SGD}{21}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.6.2}Momentum and Nesterov}{21}% 
+\contentsline {subsection}{\numberline {4.6.2}Momentum and Nesterov}{22}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.6.3}Adagrad}{21}% 
+\contentsline {subsection}{\numberline {4.6.3}Adagrad}{22}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.6.4}Adadelta}{22}% 
+\contentsline {subsection}{\numberline {4.6.4}Adadelta}{23}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.6.5}Adam}{23}% 
+\contentsline {subsection}{\numberline {4.6.5}Adam}{24}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {5}Discussion}{24}% 
+\contentsline {chapter}{\numberline {5}Discussion}{25}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.1}Related Work}{24}% 
+\contentsline {section}{\numberline {5.1}Related Work}{25}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.2}word2vec}{24}% 
+\contentsline {section}{\numberline {5.2}word2vec}{25}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.3}Gensim}{25}% 
+\contentsline {section}{\numberline {5.3}Gensim}{26}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.3.1}Gensim vs. SGD}{26}% 
+\contentsline {subsection}{\numberline {5.3.1}Gensim vs. SGD}{27}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.3.2}Gensim vs. Adam}{26}% 
+\contentsline {subsection}{\numberline {5.3.2}Gensim vs. Adam}{27}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.4}Challenges faced}{27}% 
+\contentsline {section}{\numberline {5.4}Challenges faced}{28}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.4.1}Using the wrong embeddings}{27}% 
+\contentsline {subsection}{\numberline {5.4.1}Using the wrong embeddings}{28}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.4.2}Too big of a batch size}{27}% 
+\contentsline {subsection}{\numberline {5.4.2}Too big of a batch size}{28}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.4.3}Correct loss function}{27}% 
+\contentsline {subsection}{\numberline {5.4.3}Correct loss function}{28}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.5}Further Work}{28}% 
+\contentsline {section}{\numberline {5.5}Further Work}{29}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {6}Conclusion}{29}% 
+\contentsline {chapter}{\numberline {6}Conclusion}{30}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\nonumberline Bibliography}{30}% 
+\contentsline {chapter}{\nonumberline Bibliography}{31}% 

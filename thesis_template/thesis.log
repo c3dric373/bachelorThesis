@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Arch Linux) (preloaded format=pdflatex 2019.3.25)  12 APR 2019 16:39
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Arch Linux) (preloaded format=pdflatex 2019.3.25)  12 APR 2019 17:03
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -780,33 +780,33 @@ Class scrbook Warning: \float@addtolists detected!
 (scrbook)              a package that still implements the
 (scrbook)              deprecated \float@addtolist interface .
 
-) [2
+[2
 
 
 
-]
+]) [3]
 \openout2 = `chapters/background.aux'.
 
  (./chapters/background.tex
 chapter 2.
-[3
+[4
 
 
 
 
-] [4] [5] [6]
-<images/cachingEfficiency.png, id=58, 816.04875pt x 649.42625pt>
+] [5] [6] [7]
+<images/cachingEfficiency.png, id=62, 816.04875pt x 649.42625pt>
 File: images/cachingEfficiency.png Graphic file (type png)
 <use images/cachingEfficiency.png>
 Package pdftex.def Info: images/cachingEfficiency.png  used on input line 70.
 (pdftex.def)             Requested size: 244.81651pt x 194.82938pt.
- [7 <./images/cachingEfficiency.png>]
-<images/multipleContext.png, id=63, 471.7625pt x 89.33376pt>
+ [8 <./images/cachingEfficiency.png>]
+<images/multipleContext.png, id=66, 471.7625pt x 89.33376pt>
 File: images/multipleContext.png Graphic file (type png)
 <use images/multipleContext.png>
 Package pdftex.def Info: images/multipleContext.png  used on input line 95.
 (pdftex.def)             Requested size: 330.23149pt x 62.53319pt.
- [8]
+ [9]
 LaTeX Font Info:    Try loading font information for OMS+cmr on input line 113.
 
 
@@ -815,16 +815,16 @@ File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 113.
- [9 <./images/multipleContext.png>] [10]
+ [10 <./images/multipleContext.png>] [11]
 
-LaTeX Warning: Citation 'adagrad' on page 11 undefined on input line 138.
+LaTeX Warning: Citation 'adagrad' on page 12 undefined on input line 138.
 
-[11]) [12]
+[12]) [13]
 \openout2 = `chapters/methods.aux'.
 
  (./chapters/methods.tex
 chapter 3.
-[13
+[14
 
 
 
@@ -835,20 +835,20 @@ LaTeX Warning: Command \i invalid in math mode on input line 11.
 
 (/usr/share/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2018/09/02 1.7 listings language file
-) [14]
+) [15]
 Overfull \hbox (73.56815pt too wide) in paragraph at lines 17--18
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-) [15]
+) [16]
 \openout2 = `chapters/results.aux'.
 
  (./chapters/results.tex
 chapter 4.
 
-LaTeX Warning: Citation 'mikolov' on page 16 undefined on input line 10.
+LaTeX Warning: Citation 'mikolov' on page 17 undefined on input line 10.
 
-[16
+[17
 
 
 
@@ -863,21 +863,21 @@ Overfull \hbox (43.31451pt too wide) in paragraph at lines 30--36
 [][] 
  []
 
-[17]
-<images/wordsim353_example.png, id=98, 561.09625pt x 18.0675pt>
+[18]
+<images/wordsim353_example.png, id=101, 561.09625pt x 18.0675pt>
 File: images/wordsim353_example.png Graphic file (type png)
 <use images/wordsim353_example.png>
 Package pdftex.def Info: images/wordsim353_example.png  used on input line 53.
 (pdftex.def)             Requested size: 392.7647pt x 12.64714pt.
- [18 <./images/wordsim353_example.png>] [19]
-<images/results_sgd_shuffle.png, id=107, 803.0pt x 501.875pt>
+ [19 <./images/wordsim353_example.png>] [20]
+<images/results_sgd_shuffle.png, id=110, 803.0pt x 501.875pt>
 File: images/results_sgd_shuffle.png Graphic file (type png)
 <use images/results_sgd_shuffle.png>
 Package pdftex.def Info: images/results_sgd_shuffle.png  used on input line 87.
 
 (pdftex.def)             Requested size: 361.34666pt x 225.84166pt.
- [20]
-<images/results_mom_shuffle.png, id=111, 803.0pt x 501.875pt>
+ [21]
+<images/results_mom_shuffle.png, id=114, 803.0pt x 501.875pt>
 File: images/results_mom_shuffle.png Graphic file (type png)
 <use images/results_mom_shuffle.png>
 Package pdftex.def Info: images/results_mom_shuffle.png  used on input line 97.
@@ -888,7 +888,7 @@ Overfull \hbox (16.83638pt too wide) in paragraph at lines 97--98
  [][] 
  []
 
-<images/results_nag_shuffle.png, id=112, 803.0pt x 501.875pt>
+<images/results_nag_shuffle.png, id=115, 803.0pt x 501.875pt>
 File: images/results_nag_shuffle.png Graphic file (type png)
 <use images/results_nag_shuffle.png>
 Package pdftex.def Info: images/results_nag_shuffle.png  used on input line 104
@@ -902,47 +902,47 @@ Overfull \hbox (16.83638pt too wide) in paragraph at lines 104--105
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<images/results_adagrad_shuffle.png, id=113, 803.0pt x 501.875pt>
+<images/results_adagrad_shuffle.png, id=116, 803.0pt x 501.875pt>
 File: images/results_adagrad_shuffle.png Graphic file (type png)
 <use images/results_adagrad_shuffle.png>
 Package pdftex.def Info: images/results_adagrad_shuffle.png  used on input line
  113.
 (pdftex.def)             Requested size: 361.34666pt x 225.84166pt.
-[21 <./images/results_sgd_shuffle.png>] [22 <./images/results_mom_shuffle.png> 
+[22 <./images/results_sgd_shuffle.png>] [23 <./images/results_mom_shuffle.png> 
 <./images/results_nag_shuffle.png> <./images/results_adagrad_shuffle.png>]
-<images/results_adam_shuffle.png, id=124, 803.0pt x 501.875pt>
+<images/results_adam_shuffle.png, id=127, 803.0pt x 501.875pt>
 File: images/results_adam_shuffle.png Graphic file (type png)
 <use images/results_adam_shuffle.png>
 Package pdftex.def Info: images/results_adam_shuffle.png  used on input line 12
 3.
 (pdftex.def)             Requested size: 361.34666pt x 225.84166pt.
 )
-[23 <./images/results_adam_shuffle.png>]
+[24 <./images/results_adam_shuffle.png>]
 \openout2 = `chapters/discussion.aux'.
 
  (./chapters/discussion.tex
 chapter 5.
 
-LaTeX Warning: Citation 'Mikolov' on page 24 undefined on input line 8.
+LaTeX Warning: Citation 'Mikolov' on page 25 undefined on input line 8.
 
-[24
-
-
+[25
 
 
-] [25] [26]) [27] [28]
+
+
+] [26] [27]) [28] [29]
 \openout2 = `chapters/conclusion.aux'.
 
  (./chapters/conclusion.tex
 chapter 6.
-) [29
+) [30
 
 
 
 
 ]
 chapter without number
-[30
+[31
 
 
 
@@ -954,7 +954,7 @@ Overfull \hbox (3.71585pt too wide) in paragraph at lines 155--155
 Vetrov Dmitry.
  []
 
-[31] (./thesis.aux (./includes/BA-titlepage.aux) (./includes/abstract.aux)
+[32] (./thesis.aux (./includes/BA-titlepage.aux) (./includes/abstract.aux)
 (./chapters/introduction.aux) (./chapters/background.aux)
 (./chapters/methods.aux) (./chapters/results.aux) (./chapters/discussion.aux)
 (./chapters/conclusion.aux))
@@ -997,10 +997,10 @@ onts/cm/cmssbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy
 10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/sh
 are/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texmf-dist
 /fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on thesis.pdf (37 pages, 486498 bytes).
+Output written on thesis.pdf (38 pages, 488357 bytes).
 PDF statistics:
- 218 PDF objects out of 1000 (max. 8388607)
- 143 compressed objects within 2 object streams
+ 221 PDF objects out of 1000 (max. 8388607)
+ 145 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  46 words of extra memory for PDF output out of 10000 (max. 10000000)
 
