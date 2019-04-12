@@ -78,25 +78,27 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {5}Discussion}{25}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.1}Related Work}{25}% 
+\contentsline {section}{\numberline {5.1}Our work}{25}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.2}word2vec}{25}% 
+\contentsline {section}{\numberline {5.2}Related Work}{25}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.3}Gensim}{26}% 
+\contentsline {subsection}{\numberline {5.2.1}word2vec}{25}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.3.1}Gensim vs. SGD}{27}% 
+\contentsline {subsection}{\numberline {5.2.2}Gensim}{26}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.3.2}Gensim vs. Adam}{27}% 
+\contentsline {subsubsection}{\nonumberline Gensim vs. SGD}{27}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.4}Challenges faced}{28}% 
+\contentsline {subsubsection}{\nonumberline Gensim vs. Adam}{28}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.4.1}Using the wrong embeddings}{28}% 
+\contentsline {section}{\numberline {5.3}Challenges faced}{28}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.4.2}Too big of a batch size}{28}% 
+\contentsline {subsection}{\numberline {5.3.1}Using the wrong embeddings}{28}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.4.3}Correct loss function}{28}% 
+\contentsline {subsection}{\numberline {5.3.2}Too big of a batch size}{28}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.5}Further Work}{29}% 
+\contentsline {subsection}{\numberline {5.3.3}Correct loss function}{29}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5.4}Further Work}{29}% 
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {6}Conclusion}{30}% 
 \defcounter {refsection}{0}\relax 

@@ -3,18 +3,30 @@
 
 %Discuss the results. What is the outcome of your experimetns?
 
-In this section we will compare our work to related work, try to make sense out of our results, discuss some challenges faced and finally possible future work. 
+In this secftion we will shortly discuss our results then extensively compare our work to related work, try to make sense out of our results, discuss some challenges faced and finally possible future work. 
+
+\section{Our work}
+
 \section{Related Work}
 In this section we will compare - our work to related work, we will first compare us to the baseline model, the original c implementation from Mikolov et al \cite{Mikolov}. We will then compare our self to Gensim, we do this because Gensim allowed us to easily and fastly compute the embeddings, while having access to the loss, and being a python implementaion made everything easier. 
 
-\section{word2vec}
+This section will give an overview over 
+
+
+
+
+
+\subsection{word2vec}
 %TODO ask jorg
 
 As mikolov et al. published the original paper about which introduced the SGNS, it is of course releveant to compare ourselves to theim. The first important thing to notice is that Mikolov et al. only trained their model on the very large google news dataset incorporating more than 3 billion words. This makes the comparison of our work more problematic and more of a guessing game. But we will make some assumptions, as they can become interesting. 
- the original paper paer of word2vec they show results from one or 3 epochs. We accord these good results to the very large dataset. And as a matter of fact their result are better with 3 than with 1 epochs. We do not have any informtaion about the convergence. But we can talk about the quality of the word embeddings as Ji et al. reported wordsim ressults on text8 with the original c code, namely 0 .63. This is worse than our results with sgd and adam. we did not find anything that would explain those results as shuffling and wihtout shuffling VERIFY beat the original c code. It is also possible that if we would apply an advanced optimizer to the large dataset we would get a better word embedding as we achieved a wordsim score of 0.67 with adam and gensim only 0.66. 
+In their original paper, Mikolov et al. reported results from 1 and 3. We accord these good results to the very large dataset  and furthermore as a matter of fact their result are better with 3 than with 1 epochs. We do not have any informtaion about the convergence. Hence it would be intersting to use their dataset for comparison. \\
+One thing we can compare is the quality of our word embeddings. Mikolov et al. did not report any results on their model with the text8 dataset, but they therefore published their code, and Ji et al \cite{intel} tested the model on the text8 dataset. They reported a similarity of 0.63 on the wordsim task. This is obviously outperformed by all our models. We did not find any explanation on why those results differ as much. \\
+The final assumption is that an advanced optimizer could maybe outperform Sgd in terms of quality on a large embedding. This will be discussed in further work.
+ 
 
 
-\section{Gensim}
+\subsection{Gensim}
 Gensim does propose the class w2vec with the following possible parameters\footnote{link to gensim params}, we will describe theim, show our setting, and why we chose the following, we will only describe the prametrs we changed from the default value will be explained, the rest can be found in the appendix. 
 They will be presented in the following way: \\
 \texttt{name} (type) - \textit{Description} - Value
@@ -40,12 +52,12 @@ They will be presented in the following way: \\
  \item   \texttt{callbacks} (iterable of CallbackAny2Vec) – Sequence of callbacks to be executed at specific stages during training. - see Appendix
 \end{itemize}
 
-\subsection{Gensim vs. SGD}
+\subsubsection{Gensim vs. SGD}
 First we have to note that we cannot compare ourselves to gensim in computation time, this woudl not be very smart as our code is written in python and gensim uses advanced cython routines\footnote{link to tutorial thesis}. 
 The first interesting thing to note is that we did not have the same values in convergence time as gensim when using sgd. There are differnet possiblilities why this could be the case. First our batched approach could hinder performance in term of convergence as some overwriting may happen. Another differnce between our implementation is the fact that gensim checks whether negative samples are real negative samples. Thererfore the learning of the input and output context is optimized. 
 The first hypothesis may be confirmed by the fact that our input shuffling reduces the number of overwritings and therefore we achieved conv time of 7 epcohs which is closer to 4 epochs. and the last difference maybe explained by the eg samples thing. 
 
-\subsection{Gensim vs. Adam}
+\subsubsection{Gensim vs. Adam}
 The Adam optimizer did outperform the Gensim application in performance (only slighltlly: 0.01 corr coeff advantage) and convergence time. Adam converged in 2 epochs vs. Gensim in 4. The case to be made here is that one would have to look at the computational advantage to calculate the simple sgd vs.  the adam update rule. Another aspect to look at is that we mainly tested our implementation on the text8 dataset. We only experienced once one the enwik9 dataset. Here the argument that can be made is that, some optimizers work better on specific loss functions in comparison to others, hence we need to show that our optimizer words on amultiued on theim and that it is not just a statistical anomaly.
 \section{Challenges faced}
 \subsection{Using the wrong embeddings}
