@@ -71,22 +71,24 @@ Size of Dataset    & 16 mio & 15mio & 11 mio & 8mio & 4 mio \\ \hline
 We also applied a threshold in the lower bound, we deleted every word that did not appear more than 5 times in our dataset. We got this tecnique from gensim \cite{gensim}, that introduced this parameter into their training. This is a good technique because of two reasons: first certain words of our data sets do not appear in a common lexicon (twigleg, melqu), or words from a foreign language (gastarbeiter), or names and acronyms. Secondly a word that only appears one time in our dataset will be very dependent on it's original initialization as it will only be updated with it's context pairs. Therefore we applied this technique. It should in theory, such as subsampling, improve the accuracy and  decrease computation time. 
 
 \section{Word similarity}
-Evaluating word embedding is not an easy task. We cannot split our data set into train and test set. Therefore we need to verify that our embedings are of quality with other techniques. We therefore need to define a measure that will give us the similarity of 2 word vectors. We will use the cosine distance for this task. The cosine distance of vectors $v$ and $w$ is 1 minus the cosine of the angle between the two vectors. The cosine distance is 0 if two vectors are pointing in the same direction. It's 1 if they are 90 deg aparts from each other and 2 if they are pointing exactly in the opposited direction. It's calculated by taking the dot product of $v$ and $w$ and dividing it by the magnitude of $v$ and $w$ multiplied with each other. We get
+Evaluating word embedding is not an easy task. We cannot split our data set into train and test set. As the task that the network is learning is of no interest to us. Therefore we need to verify that our embedding are of quality with other techniques. To define quality we first need to define a measure of similarity between two vectors. We will use the cosine distance for this task. The cosine distance of vectors $v$ and $w$ is 1 minus the cosine of the angle between the two vectors. The cosine distance is 0 if two vectors are pointing in the same direction. It's 1 if they are 90 degrees from each other and 2 if they are pointing exactly in the opposite direction. The cosine of the angle between two vectors is calculated by taking the dot product of $v$ and $w$ and dividing it by the magnitude of $v$ and $w$ multiplied with each other. We get then for the cosine distance:
 \begin{equation}
-cos_dis(v,w) =1 - \frac{v \cdot w}{|v| |w|} 
+cos\_dis(v,w) =1 - \frac{v \cdot w}{|v| |w|} 
 \end{equation}
 
-From a geographic percpective, this measeures the angle between two vectors. Hence the distance will be 0 if $v$ and $w$  if they are pointing in exactly the same direcction. Magnitude does not play any role. Hence for our tasks, two vectors will be considered equal if they are of different amgnitude but point in the same direction. 
-If we normalize the vectors then their the cosine angle becomes the dot product which allows us to compute the distance much faster using gpu's. 
+By subtracting 1 from the angle we create a distance between the two vectors, this distance does not take into account any order of magnitude.  Hence for our tasks, two vectors will be considered equal if they are of different magnitude but point in the same direction. 
+This technique a part from being shown empirically to work very well to measure the quality of word embedding has another advantage. By normalizing the vectors the calculation of the cosine angle becomes the dot product of the two vectors. Which can be computed very fast on modern gpu's. 
+
+Know that we have a measure to compute the similairty of two vectors let us introduce a way to rate the quality of our embedings.
 
 
-\subsection{wordsim353}
-To rate our word embedings we will need a dataset that gives us the similarity of words. This is exactly what wordsim353 is. It's 353 pairs of words rated by humans on their similarity. The score goes from 10 and 1, 10 being the most similar. We will rank our embedings on the pearson corelation coefficient between the cosine distance and the score attributed by humans. 
+\subsubsection{wordsim353}
+To measure the quality of our word embedding we will need a dataset to compare our results too. We chose  wordsim353\footnote{wordsim353} for this task, as it's the most used in similar literature. The data set consits of 353 pairs of words rated by humans on their similarity. The similarity score is in the range of 1 and 10. See \ref{fig:ws353_ex} for two examples of such pairs. We will rank our embedings on the pearson corelation coefficient between the cosine distance and the scores attributed by humans. 
 \begin{figure}[ht]
     \centering
 			\includegraphics[scale=0.7]{images/wordsim353_example} 
     \caption{Example of pairs and their rating in wordsim353}
-    \label{fig:efficient}
+    \label{fig:ws353_ex}
 \end{figure}
 
 \section{Configuration of the network}
