@@ -50,56 +50,54 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {4.1.1}Subsampling}{17}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Min count}{18}% 
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.1.2}Specification of datasets}{18}% 
+\contentsline {subsubsection}{\nonumberline Min count}{19}% 
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {4.2}Word similarity}{19}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.2.1}wordsim353}{19}% 
+\contentsline {subsection}{\numberline {4.2.1}wordsim353}{20}% 
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {4.3}Configuration of the network}{20}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.4}Input Shuffling}{20}% 
+\contentsline {section}{\numberline {4.4}Input Shuffling}{21}% 
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {4.5}Convergence time}{21}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.6}Results by optimizer}{21}% 
+\contentsline {section}{\numberline {4.6}Results by optimizer}{22}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.6.1}SGD}{21}% 
+\contentsline {subsection}{\numberline {4.6.1}SGD}{22}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.6.2}Momentum and Nesterov}{22}% 
+\contentsline {subsection}{\numberline {4.6.2}Momentum and Nesterov}{23}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.6.3}Adagrad}{22}% 
+\contentsline {subsection}{\numberline {4.6.3}Adagrad}{23}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.6.4}Adadelta}{24}% 
+\contentsline {subsection}{\numberline {4.6.4}Adadelta}{23}% 
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {4.6.5}Adam}{24}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {5}Discussion}{25}% 
+\contentsline {chapter}{\numberline {5}Discussion}{26}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.1}Our work}{25}% 
+\contentsline {section}{\numberline {5.1}Our work}{26}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.2}Related Work}{25}% 
+\contentsline {section}{\numberline {5.2}Related Work}{26}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.2.1}word2vec}{25}% 
+\contentsline {subsection}{\numberline {5.2.1}word2vec}{26}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.2.2}Gensim}{26}% 
+\contentsline {subsection}{\numberline {5.2.2}Gensim}{27}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Gensim vs. SGD}{27}% 
+\contentsline {subsubsection}{\nonumberline Gensim vs. SGD}{28}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Gensim vs. Adam}{28}% 
+\contentsline {subsubsection}{\nonumberline Gensim vs. Adam}{29}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.3}Challenges faced}{28}% 
+\contentsline {section}{\numberline {5.3}Challenges faced}{29}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.3.1}Using the wrong embeddings}{28}% 
+\contentsline {subsection}{\numberline {5.3.1}Using the wrong embeddings}{29}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.3.2}Too big of a batch size}{28}% 
+\contentsline {subsection}{\numberline {5.3.2}Too big of a batch size}{29}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.3.3}Correct loss function}{29}% 
+\contentsline {subsection}{\numberline {5.3.3}Correct loss function}{30}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.4}Further Work}{29}% 
+\contentsline {section}{\numberline {5.4}Further Work}{30}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {6}Conclusion}{30}% 
+\contentsline {chapter}{\numberline {6}Conclusion}{31}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\nonumberline Bibliography}{31}% 
+\contentsline {chapter}{\nonumberline Bibliography}{32}% 
