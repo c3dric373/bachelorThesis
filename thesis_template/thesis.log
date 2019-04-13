@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Arch Linux) (preloaded format=pdflatex 2019.3.25)  13 APR 2019 15:23
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Arch Linux) (preloaded format=pdflatex 2019.3.25)  13 APR 2019 15:41
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -939,34 +939,26 @@ Overfull \hbox (16.83638pt too wide) in paragraph at lines 143--144
  [][] 
  []
 
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<images/results_adagrad_shuffle.png, id=117, 803.0pt x 501.875pt>
+[22]
+<images/results_adagrad_shuffle.png, id=120, 803.0pt x 501.875pt>
 File: images/results_adagrad_shuffle.png Graphic file (type png)
 <use images/results_adagrad_shuffle.png>
 Package pdftex.def Info: images/results_adagrad_shuffle.png  used on input line
  152.
 (pdftex.def)             Requested size: 361.34666pt x 225.84166pt.
-[22]
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<images/results_adam_shuffle.png, id=121, 803.0pt x 501.875pt>
+ [23 <./images/results_sgd_shuffle.png> <./images/results_mom_shuffle.png> <./i
+mages/results_nag_shuffle.png>]
+<images/results_adam_shuffle.png, id=127, 803.0pt x 501.875pt>
 File: images/results_adam_shuffle.png Graphic file (type png)
 <use images/results_adam_shuffle.png>
-Package pdftex.def Info: images/results_adam_shuffle.png  used on input line 16
-2.
+Package pdftex.def Info: images/results_adam_shuffle.png  used on input line 17
+3.
 (pdftex.def)             Requested size: 361.34666pt x 225.84166pt.
-) [23 <./images/results_sgd_shuffle.png>]
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[24 <./images/results_mom_shuffle.png> <./images/results_nag_shuffle.png>]
-[25 <./images/results_adagrad_shuffle.png> <./images/results_adam_shuffle.png>]
+) [24 <./images/results_adagrad_shuffle.png>] [25 <./images/results_adam_shuffl
+e.png>]
 \openout2 = `chapters/discussion.aux'.
 
-(./chapters/discussion.tex
+ (./chapters/discussion.tex
 chapter 5.
 
 LaTeX Warning: Citation 'Mikolov' on page 26 undefined on input line 11.
@@ -1024,10 +1016,10 @@ Package logreq Info: Writing requests to 'thesis.run.xml'.
 ### simple group (level 1) entered at line 3 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 16553 strings out of 492616
- 315429 string characters out of 6135177
- 905159 words of memory out of 5000000
- 20234 multiletter control sequences out of 15000+600000
+ 16554 strings out of 492616
+ 315453 string characters out of 6135177
+ 905171 words of memory out of 5000000
+ 20235 multiletter control sequences out of 15000+600000
  15406 words of font info for 55 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  52i,19n,76p,9085b,1525s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1047,7 +1039,7 @@ e1/public/amsfonts/cm/cmssbx10.pfb></usr/share/texmf-dist/fonts/type1/public/am
 sfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy
 8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/sh
 are/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on thesis.pdf (39 pages, 509823 bytes).
+Output written on thesis.pdf (39 pages, 510598 bytes).
 PDF statistics:
  225 PDF objects out of 1000 (max. 8388607)
  147 compressed objects within 2 object streams

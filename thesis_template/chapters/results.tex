@@ -146,7 +146,7 @@ Momentum and Nesterov accelerated gradient both have an additional hyper paramet
 \end{minipage}
 \end{figure}
 \subsection{Adagrad}
-Adagrad is a very interesting tool for learning word embedding as they decrease the loearning rate for very frequent occuring features, and vice versa for low frequent words. Because words that appear very frequently often do not have a real semantic gain to their context words, it's good to have a low learning rate. this is also confirmed by the results adagrad converges in 4 epochs. When combined with shuffling adagrad only takes 3 epochs to converge. This shows the tendency of the skip gram model to converge faster with input shuffling.
+Adagrad is a very interesting tool for learning word embedding as they decrease the learning rate for very frequent occuring features, and vice versa for low frequent words. Because words that appear very frequently often do not have a real semantic gain to their context words, it's good to have a low learning rate. So in theory Adagrad is particullary well suited for our task. This was confirmed empirically as our model converged in 4 epochs. When combined with shuffling adagrad only took 3 epochs to converge. This shows the tendency of the skip gram model to converge faster with input shuffling and the big impact of having different learning rate for each feature. 
 \begin{figure}[h]
     \centering
 			\includegraphics[scale=0.45]{images/results_adagrad_shuffle} 

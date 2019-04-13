@@ -70,9 +70,9 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {4.6.3}Adagrad}{23}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.6.4}Adadelta}{23}% 
+\contentsline {subsection}{\numberline {4.6.4}Adadelta}{24}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.6.5}Adam}{24}% 
+\contentsline {subsection}{\numberline {4.6.5}Adam}{25}% 
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {5}Discussion}{26}% 
 \defcounter {refsection}{0}\relax 
