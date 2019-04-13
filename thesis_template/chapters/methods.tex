@@ -60,7 +60,7 @@ We will distinguish two types of wordes in the sentences: first center words, th
 
 We then need to compute the amount of borde words. For this we will only need to compute the following:
 \begin{equation}
-\sum\_{i=0}^{ctx\\_window -1} ctx\\_window + i
+\sum_{i=0}^{ctx\_window -1} ctx\_window + i
 \end{equation}
  Then we had to add the number of pairs from the last sentence and are done. First  we have to check if the sentence is longer then $2 ctx\_window$. 
  If it's the case we can apply the same principle as shown above. If not we need to do the following:\\
@@ -71,16 +71,13 @@ Now we need to access each pair individually, so first we have to define an orde
 \caption{Getting the context pair from the id}
 \label{alg1}
 \begin{algorithmic}[1]
-\STATE $border\_pairs \leftarrow n$
-\STATE $ center\_pairs \leftarrow m$
-\STATE $ n\_pairs\_in\_sen = border\_pairs  + center\_pairs$
- \STATE$ border_pairs = sum([self.ctx_window + i for i in range(self.ctx_window)])*2$
-        \STATE $center_pairs = ((self.LEN_SEN - self.ctx_window*2)*self.ctx_window*2)$
-        \STATE $n_pairs_in_sen = border_pairs + center_pairs$
-        \STATE $id_sen = int(idx/n_pairs_in_sen)$
-\STATE         $sen  = self.dataset[id_sen]$
-       \STATE  $pair_id_in_sen = idx - id_sen*(n_pairs_in_sen)$
-        \STATE $counter = 0$
+ \STATE border\_pairs =$(\sum_{i=0}^{window -1} window + i)*2$
+        \STATE center\_pairs =$ ((len\_sen - window*2)*window*2)$
+        \STATE n\_pairs\_in\_sen = border\_pairs + center\_pairs
+        \STATE id\_sen = $\lfloor \frac{idx}{n\_pairs\_in\_sen} \rfloor$
+\STATE         sen  = dataset[id\_sen]
+       \STATE  pair\_id\_in\_sen = $idx - id\_sen*(n\_pairs\_in\_sen)$
+        \STATE counter = 0
 
 \FOR{i,word in enumerate(sen)}
 \FOR{$j=0$ \TO $window$}
