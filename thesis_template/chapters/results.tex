@@ -128,7 +128,7 @@ As seen is figure \ref{fig:results_sgd}, for every learning rate the convergence
     \label{fig:results_sgd}
 \end{figure}
 \subsection{Momentum and Nesterov}
-Momentum and nesterov accelerated gradient both have an additional hyper parameter $\gamma$, that, as described in secction background, defines the importance of the previous gradient taking in the equation. We set $\gamma = 0.9|$ this is the typical value. Let's talk results: Momentum and NAG only slighltly respectively decrease or increasethe convergence time. NAG convergences in 12 epochs while momentum took 8 epochs. 
+Momentum and Nesterov accelerated gradient both have an additional hyper parameter $\gamma$, that, as described in Section \ref{optimizers}, defines the percentage of the previous gradient that will be added to the current gradients. We set $\gamma = 0.9$ as this is the typical value, and did not alter it during our experiments. Momentum and Nesterov alone respectively only slightly decrease or increase the convergence time. As the first one optimally converges in 9 epochs and the second one in 13. If we add input shuffling to the equation, interestingly the same things appear as with plain SGD. The convergence time gets better, 8 and 3 epochs until convergence respectively, and higher learning rate do also yield better results. 
 \begin{figure}[h]
 \centering
 \begin{minipage}{.5\textwidth}
