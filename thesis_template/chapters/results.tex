@@ -168,7 +168,7 @@ With Shuffling    & 3                & 0.59            \\ \hline
 \label{table:results_adadelta}
 \end{table}
 \subsection{Adam}
-Adam is the most advanced of all the optimizers used in our experiemnts. Did it therefore yield the best results? Indeed this was the case, as seen in figure 2, Adam converged in 3 epochs without shuflfling and 2 with. This are the best result that we got. 
+Adam is the most advanced of all the optimizers used in our experiments. Did it therefore yield the best results? Indeed this was the case, as seen in figure \ref{fig:results_adam_shuffle}, Adam converged in 3 epochs without shuffling and 2 with. This are the best result that we got with any optimizer.  It's also intersting to note that as same as with Adagrad it did not react to input shuffling the same way as SGD did. In fact it worked in the opposit direction. We achieved our best result with input shuffling with a lower learning rate $0.001$ then we used to achieve the best result without input shuffling $0.05$
 \begin{figure}[h]
     \centering
 			\includegraphics[scale=0.45]{images/results_adam_shuffle} 
