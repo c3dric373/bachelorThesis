@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Arch Linux) (preloaded format=pdflatex 2019.3.25)  13 APR 2019 17:24
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Arch Linux) (preloaded format=pdflatex 2019.3.25)  13 APR 2019 18:06
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -616,12 +616,27 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 730.
 LaTeX Info: Redefining \[ on input line 2844.
 LaTeX Info: Redefining \] on input line 2845.
 )
+(/usr/share/texmf-dist/tex/latex/algorithms/algorithm.sty
+Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating enviro
+nment
+
+(/usr/share/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count322
+\float@exts=\toks22
+\float@box=\box59
+\@float@everytoks=\toks23
+\@floatcapt=\box60
+)
+\@float@every@algorithm=\toks24
+\c@algorithm=\count323
+)
 (/usr/share/texmf-dist/tex/latex/algorithms/algorithmic.sty
 Package: algorithmic 2009/08/24 v0.1 Document Style `algorithmic'
-\c@ALC@unique=\count322
-\c@ALC@line=\count323
-\c@ALC@rem=\count324
-\c@ALC@depth=\count325
+\c@ALC@unique=\count324
+\c@ALC@line=\count325
+\c@ALC@rem=\count326
+\c@ALC@depth=\count327
 \ALC@tlm=\skip87
 \algorithmicindent=\skip88
 )
@@ -643,12 +658,13 @@ Package caption3 Info: TeX engine: e-TeX on input line 64.
 \caption@hangindent=\dimen147
 )
 Package caption Info: KOMA-Script document class.
-\c@caption@flags=\count326
-\c@ContinuedFloat=\count327
+\c@caption@flags=\count328
+\c@ContinuedFloat=\count329
+Package caption Info: float package is loaded.
 Package caption Info: listings package is loaded.
 )
-\c@subfigure=\count328
-\c@subtable=\count329
+\c@subfigure=\count330
+\c@subtable=\count331
 )
 Package biblatex Info: Trying to load language 'english'...
 Package biblatex Info: ... file 'english.lbx' found.
@@ -661,7 +677,7 @@ Package csquotes Info: ... none found.
 
 
 Package csquotes Warning: No multilingual support.
-(csquotes)                Cannot enable multilingual quotes on input line 82.
+(csquotes)                Cannot enable multilingual quotes on input line 83.
 
 (./thesis.aux (./includes/BA-titlepage.aux) (./includes/abstract.aux)
 (./chapters/introduction.aux) (./chapters/background.aux)
@@ -672,32 +688,32 @@ LaTeX Warning: Label `fig:results_mom' multiply defined.
 ) (./chapters/discussion.aux) (./chapters/conclusion.aux))
 \openout1 = `thesis.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 82.
-LaTeX Font Info:    ... okay on input line 82.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 82.
-LaTeX Font Info:    ... okay on input line 82.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 82.
-LaTeX Font Info:    ... okay on input line 82.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 82.
-LaTeX Font Info:    ... okay on input line 82.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 82.
-LaTeX Font Info:    ... okay on input line 82.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 82.
-LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 83.
+LaTeX Font Info:    ... okay on input line 83.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 83.
+LaTeX Font Info:    ... okay on input line 83.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 83.
+LaTeX Font Info:    ... okay on input line 83.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 83.
+LaTeX Font Info:    ... okay on input line 83.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 83.
+LaTeX Font Info:    ... okay on input line 83.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 83.
+LaTeX Font Info:    ... okay on input line 83.
 
 (/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count330
+\scratchcounter=\count332
 \scratchdimen=\dimen148
-\scratchbox=\box59
-\nofMPsegments=\count331
-\nofMParguments=\count332
-\everyMPshowfont=\toks22
-\MPscratchCnt=\count333
+\scratchbox=\box61
+\nofMPsegments=\count333
+\nofMParguments=\count334
+\everyMPshowfont=\toks25
+\MPscratchCnt=\count335
 \MPscratchDim=\dimen149
-\MPnumerator=\count334
-\makeMPintoPDFobject=\count335
-\everyMPtoPDFconversion=\toks23
+\MPnumerator=\count336
+\makeMPintoPDFobject=\count337
+\everyMPtoPDFconversion=\toks26
 ) (/usr/share/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
 
@@ -718,7 +734,7 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-\c@lstlisting=\count336
+\c@lstlisting=\count338
 Package biblatex Info: Input encoding 'utf8' detected.
 Package biblatex Info: Automatic encoding selection.
 (biblatex)             Assuming data encoding 'utf8'.
@@ -727,8 +743,8 @@ Package biblatex Info: Automatic encoding selection.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'thesis.bbl' found.
  (./thesis.bbl)
-Package biblatex Info: Reference section=0 on input line 82.
-Package biblatex Info: Reference segment=0 on input line 82.
+Package biblatex Info: Reference section=0 on input line 83.
+Package biblatex Info: Reference segment=0 on input line 83.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
 \openout2 = `includes/BA-titlepage.aux'.
@@ -857,28 +873,21 @@ chapter 3.
 
 LaTeX Warning: Command \i invalid in math mode on input line 12.
 
-[15] (/usr/share/texmf-dist/tex/latex/listings/lstlang1.sty
-File: lstlang1.sty 2018/09/02 1.7 listings language file
-)
-Overfull \hbox (73.56815pt too wide) in paragraph at lines 61--62
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-[16]) [17]
+[15] [16]) [17] [18]
 \openout2 = `chapters/results.aux'.
 
  (./chapters/results.tex
 chapter 4.
 
-LaTeX Warning: Citation 'mikolov' on page 18 undefined on input line 18.
+LaTeX Warning: Citation 'mikolov' on page 19 undefined on input line 18.
 
-[18
+[19
 
 
 
 
 ]
-<images/treshold1.png, id=101, 1047.915pt x 51.19125pt>
+<images/treshold1.png, id=105, 1047.915pt x 51.19125pt>
 File: images/treshold1.png Graphic file (type png)
 <use images/treshold1.png>
 Package pdftex.def Info: images/treshold1.png  used on input line 39.
@@ -899,15 +908,15 @@ File: images/treshold1.png Graphic file (type png)
 <use images/treshold1.png>
 Package pdftex.def Info: images/treshold1.png  used on input line 63.
 (pdftex.def)             Requested size: 448.13095pt x 21.89151pt.
- [19 <./images/treshold1.png>] [20]
-<images/wordsim353_example.png, id=109, 561.09625pt x 18.0675pt>
+ [20 <./images/treshold1.png>] [21]
+<images/wordsim353_example.png, id=112, 561.09625pt x 18.0675pt>
 File: images/wordsim353_example.png Graphic file (type png)
 <use images/wordsim353_example.png>
 Package pdftex.def Info: images/wordsim353_example.png  used on input line 89.
 (pdftex.def)             Requested size: 392.7647pt x 12.64714pt.
- [21 <./images/wordsim353_example.png>]
-[22]
-<images/results_sgd_shuffle.png, id=117, 803.0pt x 501.875pt>
+ [22 <./images/wordsim353_example.png>]
+[23]
+<images/results_sgd_shuffle.png, id=120, 803.0pt x 501.875pt>
 File: images/results_sgd_shuffle.png Graphic file (type png)
 <use images/results_sgd_shuffle.png>
 Package pdftex.def Info: images/results_sgd_shuffle.png  used on input line 126
@@ -917,7 +926,7 @@ Package pdftex.def Info: images/results_sgd_shuffle.png  used on input line 126
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<images/results_mom_shuffle.png, id=118, 803.0pt x 501.875pt>
+<images/results_mom_shuffle.png, id=121, 803.0pt x 501.875pt>
 File: images/results_mom_shuffle.png Graphic file (type png)
 <use images/results_mom_shuffle.png>
 Package pdftex.def Info: images/results_mom_shuffle.png  used on input line 136
@@ -928,7 +937,7 @@ Overfull \hbox (16.83638pt too wide) in paragraph at lines 136--137
  [][] 
  []
 
-<images/results_nag_shuffle.png, id=119, 803.0pt x 501.875pt>
+<images/results_nag_shuffle.png, id=122, 803.0pt x 501.875pt>
 File: images/results_nag_shuffle.png Graphic file (type png)
 <use images/results_nag_shuffle.png>
 Package pdftex.def Info: images/results_nag_shuffle.png  used on input line 143
@@ -939,44 +948,44 @@ Overfull \hbox (16.83638pt too wide) in paragraph at lines 143--144
  [][] 
  []
 
-[23]
-<images/results_adagrad_shuffle.png, id=123, 803.0pt x 501.875pt>
+[24]
+<images/results_adagrad_shuffle.png, id=126, 803.0pt x 501.875pt>
 File: images/results_adagrad_shuffle.png Graphic file (type png)
 <use images/results_adagrad_shuffle.png>
 Package pdftex.def Info: images/results_adagrad_shuffle.png  used on input line
  153.
 (pdftex.def)             Requested size: 361.34666pt x 225.84166pt.
- [24 <./images/results_sgd_shuffle.png> <./images/results_mom_shuffle.png> <./i
+ [25 <./images/results_sgd_shuffle.png> <./images/results_mom_shuffle.png> <./i
 mages/results_nag_shuffle.png>]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<images/results_adam_shuffle.png, id=130, 803.0pt x 501.875pt>
+<images/results_adam_shuffle.png, id=134, 803.0pt x 501.875pt>
 File: images/results_adam_shuffle.png Graphic file (type png)
 <use images/results_adam_shuffle.png>
 Package pdftex.def Info: images/results_adam_shuffle.png  used on input line 17
 4.
 (pdftex.def)             Requested size: 361.34666pt x 225.84166pt.
-) [25 <./images/results_adagrad_shuffle.png>] [26 <./images/results_adam_shuffl
+) [26 <./images/results_adagrad_shuffle.png>] [27 <./images/results_adam_shuffl
 e.png>]
 \openout2 = `chapters/discussion.aux'.
 
  (./chapters/discussion.tex
 chapter 5.
 
-LaTeX Warning: Citation 'Mikolov' on page 27 undefined on input line 11.
+LaTeX Warning: Citation 'Mikolov' on page 28 undefined on input line 11.
 
-[27
-
-
+[28
 
 
-] [28] [29] [30]) [31]
+
+
+] [29] [30] [31]) [32]
 \openout2 = `chapters/conclusion.aux'.
 
  (./chapters/conclusion.tex
 chapter 6.
-) [32
+) [33
 
 
 
@@ -989,7 +998,7 @@ File: omlcmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <12> not available
 (Font)              Font shape `OML/cmm/m/it' tried instead on input line 29.
- [33
+ [34
 
 
 
@@ -1008,14 +1017,14 @@ Overfull \hbox (87.66812pt too wide) in paragraph at lines 47--48
 [][][][][][][][][][][][][][][][][][] 
  []
 
-[34]
+[35]
 chapter B.
-[35
+[36
 
 
 ]
 chapter C.
-[36
+[37
 
 
 ]
@@ -1026,23 +1035,23 @@ Overfull \hbox (9.541pt too wide) in paragraph at lines 64--66
 im.utils.RULE[]DISCARD,
  []
 
-[37
+[38
 
 
-]) [38]
+]) [39]
 chapter without number
-[39
+[40
 
 
 
 
 ]
-Overfull \hbox (3.71585pt too wide) in paragraph at lines 157--157
+Overfull \hbox (3.71585pt too wide) in paragraph at lines 158--158
 []\OT1/cmr/m/n/12 Bartunov Sergey, Kon-drashkin Dmitry, Os-okin An-ton, and P. 
 Vetrov Dmitry.
  []
 
-[40] (./thesis.aux (./includes/BA-titlepage.aux) (./includes/abstract.aux)
+[41] (./thesis.aux (./includes/BA-titlepage.aux) (./includes/abstract.aux)
 (./chapters/introduction.aux) (./chapters/background.aux)
 (./chapters/methods.aux) (./chapters/results.aux) (./chapters/discussion.aux)
 (./chapters/conclusion.aux))
@@ -1066,13 +1075,13 @@ Package logreq Info: Writing requests to 'thesis.run.xml'.
 ### simple group (level 1) entered at line 3 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 16621 strings out of 492616
- 316399 string characters out of 6135177
- 910427 words of memory out of 5000000
- 20297 multiletter control sequences out of 15000+600000
+ 16529 strings out of 492616
+ 315500 string characters out of 6135177
+ 909092 words of memory out of 5000000
+ 20202 multiletter control sequences out of 15000+600000
  15406 words of font info for 55 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 53i,19n,76p,9085b,1991s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 53i,19n,76p,9085b,1990s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pf
 b></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share
 /texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fo
@@ -1089,10 +1098,10 @@ e1/public/amsfonts/cm/cmssbx10.pfb></usr/share/texmf-dist/fonts/type1/public/am
 sfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy
 8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/sh
 are/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on thesis.pdf (46 pages, 524038 bytes).
+Output written on thesis.pdf (47 pages, 527395 bytes).
 PDF statistics:
- 247 PDF objects out of 1000 (max. 8388607)
- 162 compressed objects within 2 object streams
+ 250 PDF objects out of 1000 (max. 8388607)
+ 164 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  51 words of extra memory for PDF output out of 10000 (max. 10000000)
 
