@@ -6,21 +6,22 @@
 This section will give an overview over the used datasets, the used metric to evaluate our models, the configuration of our model and finally the experimental results achieved.
 
 \section{Dataset}
-In this implementation we mainly used the text8 \footnote{matt mahoney.zip} dataset. We chose this dataset for two reasons. First of all it's a very small dataset, more on exact specifics later, that enabled us to do a lot of computations. Secondly this data set was used in a lot of related work (cite gpu, cpu,) hence giving us a very good benchmark. The text8 dataset consists of 1702 lines of 1000 words, there is no punctuation. Know we had to choose between building arbitrary sentences and keeping the dataset as it is. We chose the first option because it gives us a faster computation time, and did not show any loss in accuracy empirically. We chose a sentences lentgh of 20. Furtheremore we applied a technique called subsampling that reduces the data set size. 
+In this implementation we mainly used the text8 \footnote{matt mahoney.zip} dataset. We chose this dataset for two reasons. First of all it's a very small dataset, more on exact specifics later, that enabled us to do a lot of computations. Secondly this data set was used in a lot of related work (cite gpu, cpu,) hence giving us a very good benchmark. The text8 dataset consists of 1702 lines of 1000 words, there is no punctuation. Know we had to choose between building arbitrary sentences and keeping the dataset as it is. We chose the first option because it gives us a faster computation time, and did not show any loss in accuracy empirically. We chose a sentences length of 20. Furtheremore we applied a technique called subsampling that reduces the data set size. 
 We needed a second more larger dataset to confrim our results.  We therefore chose the enwik9 dataset\footnote{matt enwik9}. This datast neede some more preprocessing as it's plain html. We therefor used the script that can be found at the bottom of this page\footnote{script}. We applied exactly the same preprocessing technique afterwards.
-
+We will know explain the technique called subsampling. 
 
 
  
  
  
 \subsection{Subsampling}
-Subsampling is a technique introduced by Mikolov et al. in \cite{mikolov}. Certain words that appear very frequently in the dataset such as: "the, as, it, of" do not give an intrinsic value to the words that appear in it's context. Therefore the idea of subsampling is to delete them from the dataset. This will decrease the computation time and should in theory increase the accuracy of the model. Another reason how subsampling can increase the accuracy, is that words that would not have appeared in the context of each other, may know do, because words between have been deleted. 
-Subsampling will be the first step of our preprocessing. A word $w$ will be eliminated with the following probability:
+Subsampling is a technique introduced by Mikolov et al. in \cite{mikolov} to reduce the dataset size while at the same time increasing the quality of the dataset, i.e getting better word embeddings. Certain words that appear very frequently in the dataset such as: "the, as, it, of" do not give an intrinsic value to the words that appear in it's context. Therefore the idea of subsampling is to delete such words from the dataset. This will decrease the computation time and should in theory increase the accuracy of the model. The increase in accuracy can also be explained by the fact that words that would not have appeared in the context of each other, may know, because words between have been deleted, do.
+Know the question arises, how one chooses to delete a word. Mikolov et al. chose the following equation to compute the deletion of a word $w$ in the data set:
 \begin{equation}
 P(w) = 1- \sqrt{{\frac{t}{f(w)}}}
 \end{equation}
-where $f(w)$ is the frecquency of w, and $t$ is a treshhold set empirecally. (Mikolov et al.)  recommends a value between $0$ and $1e-5$. We experimented with different values and $1e-4$, seemed the most suted. See figure 3 for examples and table stats for inforamtion about sampling. We did this analysis by looking at and random set of sentences and analyzed the best context pairs. 
+where $f(w)$ is the frequency of w, and $t$ is a threshold set empirically. (Mikolov et al.)  recommends a value between $0$ and $10^{-5}$, depending on the size of the dataset. We experimented with different values and $10^{-4}$, seemed the most suited. We did this by simply looking at a random set of sentences and humanly judging the results. Stats about subsampling can be found in table 5. Examples in figure4. 
+
 \subsubsection{Min count}
 We also applied a treshhold in the lower bound, we deleted every word that did not appear more than 5 times in our dataset. We got this idea from gensim \cite{gensim}. This is a good idea becaus of two reasons: first a few words of our data sets had no meaning (aldk, ahdfo) VERIFY. Secondly a word that only appears one time in our dataset will be very dependent on it's original initialization.Therefore we applied this technique. It should in theory, such as subsampling, improve both the accuracy and computation. 
 \subsection{Specification of datasets}

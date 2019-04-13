@@ -72,7 +72,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {4.6.3}Adagrad}{22}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.6.4}Adadelta}{23}% 
+\contentsline {subsection}{\numberline {4.6.4}Adadelta}{24}% 
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {4.6.5}Adam}{24}% 
 \defcounter {refsection}{0}\relax 
