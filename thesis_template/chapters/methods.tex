@@ -9,7 +9,50 @@ For our implementation we chosed the open source library PyTorch.\footnote{pytor
 We implemented the model in the \texttt{Model} interface from torch.model. We used two embeddings as they are proposed in torch.embedding. they do esactly what we need, given an integer they return a vector. Hence they can be seen as the look up matrix. The real interesting part of our implementation is the way we modified the loss function to get a faster computation. 
 We wanted to achieve a faster computation therefore we  had the idea to use a kind of a batch. The idea is to update the weights of different vectors. 
 \subsubsection{Forwarding}
-The forwarding method will take two vectors $v$ and $w$, and a matrix $A$ as an input. The first vector represents all the center words in a batch, the second one the context words. The Matrix represents the negative samples. The two vectors need to have the same length $n$. Our training batch $X$ can be seen as in the following way:  $X = \{(v_i, w_i)\|\i \in \{1, ..., n\}, n = |v| \}$. Where $(v_i,w_i)$ is a context pair. The matrix must be of dimension $|w|\times k$, with $k$, being the number of negative samples per pair.  First we will concatenate $w$ and our Matrix $A$. This will result in a Matrix $\tilde{A}$.  Know we need to get our Embedings. Therefore we will create a Matrik $E_v$ of dimensionality $n \times d$ where $d$ is the dimension of our word embeding which will store the word embeding of the $i^{th}$ word from our input vector $v$ in it's $i^{th}$ row. We will do the same for the our Matrix $\tilde{A}$ This will result in a $n \times k+1 \times d$ Array $E_v$. To compute the dot product of each word vector with it's pair and the negative samples we only have to compute $E_v E_u$. This will result in a $n\times k+1$ Matrix $S$. Know we only have to multply the last $k$ rows with minus one.  We then sum the resulting matrix of and multiply it with $-1$  and we get the wanted loss. 
+The forwarding method will take two vectors $v$ and $c$, and a matrix $A$ as an input. The first vector represents all the center words in a batch, the second one the context words. The Matrix represents the negative samples. The two vectors need to have the same length $n$. Our training batch $X$ can be seen as in the following way:  $X = \{(v_i, c_i)\|\i \in \{1, ..., n\}, n = |v| \}$. Where $(v_i,c_i)$ is a context pair. The matrix must be of dimension $|w|\times k$, with $k$, being the number of negative samples per pair.  First we will concatenate $w$ and our Matrix $A$. This will result in a Matrix $\tilde{A}$.  Know we need to get our Embedings. Therefore we will create a Matrik $E_v$ of dimensionality $n \times d$ where $d$ is the dimension of our word embeding which will store the word embeding of the $i^{th}$ word from our input vector $v$ in it's $i^{th}$ row. We will do the same for the our Matrix $\tilde{A}$ This will result in a $n \times k+1 \times d$ Array $E_v$. To compute the dot product of each word vector with it's pair and the negative samples we only have to compute $E_v E_u$. This will result in a $n\times k+1$ Matrix $S$. Know we only have to multply the last $k$ rows with minus one.  We then sum the resulting matrix of and multiply it with $-1$  and we get the wanted loss. It is best understand with an example. 
+
+Let's examine an example: let $(v_1,c_1)(v_2,c_2)(v_3,c_3)$ be our batch. \\
+Input:\\
+ $v = \begin{bmatrix}
+v_1 & v_2 & v_3
+\end{bmatrix}, c = \begin{bmatrix}
+c1\\
+c2\\
+c3\end{bmatrix}$ and $A = 
+\begin{bmatrix}
+k_{1,1} & k_{2,1} & k_{3,1}\\
+k_{1,2} & k_{2,2} & k_{3,2}\\
+k_{1,3} & k_{2,3} & k_{3,3}\\
+\end{bmatrix}$\\
+ We then concatenate $c$ and $A$, 
+resulting in: \\
+$\tilde{A} = \begin{bmatrix}
+c_1 & k_{1,1} & k_{2,1} & k_{3,1}\\
+c_2 & k_{1,2} & k_{2,2} & k_{3,2}\\
+c_3 & k_{1,3} & k_{2,3}& k_{3,3}\\
+\end{bmatrix}$
+
+Embeddings:\\
+$E_v = \begin{bmatrix}
+\tilde{v_1}_1 & \ldots & \tilde{v_1}_d\\
+\tilde{v_2}_1 & \ldots & \tilde{v_2}_d\\
+\tilde{v_3}_1 & \ldots & \tilde{v_3}_d\\
+\end{bmatrix}
+$, where $\begin{bmatrix}
+\tilde{v_i}_1 & \ldots & \tilde{v_i}_d \end{bmatrix}$ is the embedding of $v_i$.  \\$E_c = \begin{bmatrix}
+\tilde{c_1 }& \tilde{k_{1,1}} & \tilde{k_{2,1}} \\
+\tilde{c_2 }& \tilde{k_{1,2}}& \tilde{k_{2,2}} \\
+\tilde{c_3 }&\tilde{ k_{1,3} }& \tilde{k_{2,3}}\\
+\end{bmatrix}$,
+where each entry of the matrix is a vector of dimensionality $d$\\
+Batch multiplication \footnote{torch.bmm}:\\
+$S = \begin{bmatrix}
+v_1 \cdot c_1 & -v_1 \cdot k_{1,1} & -v_1 \cdot  k_{2,1} & -v_1 \cdot  k_{3,1}\\
+v_2 \cdot c_2 & -v_2 \cdot k_{1,2} & -v_2 \cdot k_{2,2} & -v_2 \cdot k_{3,2}\\
+v_3 \cdot c_3 &-v_3 \cdot c_3  k_{1,3} & -v_3 \cdot c_3 k_{2,3}&-v_3 \cdot k_{3,3}\\
+\end{bmatrix}$\\
+Loss computation: \\
+ L = $-(\sum_{i=1}^3 v_i \cdot c_i - \sum_{j=0}^3 -v_i \cdot -k_i,j)$
 
 \subsection{Creating the context pairs}
 This class should provide a way for the dataloader to access each word context pair. Here the challenge is that one cannot store all the pairs in a list as this would not be feasble for a large dataset. We therefore propose a way to compute th i-th word-context pair of the dataset. we therofore had to implement the len method. Here we knew that every sentence expcept the last would have a length of 20 words. therefore it was easy to compute the number of pairs in those sentences.
