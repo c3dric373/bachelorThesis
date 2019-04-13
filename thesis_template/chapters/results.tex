@@ -154,7 +154,18 @@ Adagrad is a very interesting tool for learning word embedding as they decrease 
     \label{fig:results_adagrad_shuffle}
 \end{figure}
 \subsection{Adadelta}
-Adadelta was the Advanced optimizer that showed the most disapointing results. Because it didn't has any learning rate to tune, we only did 2 experiments, with and without input shuffling. the results where very much disapointing. Adadelta converged in 10 epochs with shuffling and 7 epochs without. Therefore barely beating sgd. This is interesting as Adadelta is an expansion of Adagrad, and is supposed, in theory to work better then the latter. 
+In theory Adadelta should outperfrom Adagrad as it's its upgrade. But it did not hold up to our excpectations. Because it didn't has any learning rate to tune, we only did 2 experiments, with and without input shuffling. Adadelta did not manage to achieve a word similarity of 0.66. It only converged to a similarity of 0.59. It did this in 20 epochs without input shuffling and in 3 with input shuffling. As seen in table \ref{table:results_adadelta}
+\begin{table}[h]
+\centering
+\begin{tabular}{|l|l|l|}
+\hline
+Adadelta Model    & Convergence Time & Word similarity \\ \hline
+Without Shuffling & 20               & 0.59            \\ \hline
+With Shuffling    & 3                & 0.59            \\ \hline
+\end{tabular}
+\caption{Convergence Time and Quality with Adadelta}
+\label{table:results_adadelta}
+\end{table}
 \subsection{Adam}
 Adam is the most advanced of all the optimizers used in our experiemnts. Did it therefore yield the best results? Indeed this was the case, as seen in figure 2, Adam converged in 3 epochs without shuflfling and 2 with. This are the best result that we got. 
 \begin{figure}[h]
