@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Arch Linux) (preloaded format=pdflatex 2019.3.25)  13 APR 2019 15:47
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Arch Linux) (preloaded format=pdflatex 2019.3.25)  13 APR 2019 16:49
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -855,12 +855,12 @@ chapter 3.
 
 ]
 
-LaTeX Warning: Command \i invalid in math mode on input line 11.
+LaTeX Warning: Command \i invalid in math mode on input line 12.
 
 (/usr/share/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2018/09/02 1.7 listings language file
 ) [15]
-Overfull \hbox (73.56815pt too wide) in paragraph at lines 17--18
+Overfull \hbox (73.56815pt too wide) in paragraph at lines 18--19
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
@@ -981,10 +981,57 @@ chapter 6.
 
 
 
-]
-chapter without number
-[32
+] (./appendix.tex
+chapter A.
+LaTeX Font Info:    Try loading font information for OML+cmr on input line 29.
+(/usr/share/texmf-dist/tex/latex/base/omlcmr.fd
+File: omlcmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <12> not available
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 29.
+ [32
 
+
+
+]
+Overfull \hbox (221.61789pt too wide) in paragraph at lines 32--35
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (38.3182pt too wide) in paragraph at lines 36--40
+[][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (87.66812pt too wide) in paragraph at lines 47--48
+[][][][][][][][][][][][][][][][][][] 
+ []
+
+[33]
+chapter B.
+[34
+
+
+]
+chapter C.
+[35
+
+
+]
+chapter D.
+
+Overfull \hbox (9.541pt too wide) in paragraph at lines 64--66
+\OT1/cmr/m/n/12 ram-e-ters (word, count, min[]count) and re-turns ei-ther gen-s
+im.utils.RULE[]DISCARD,
+ []
+
+[36
+
+
+]) [37]
+chapter without number
+[38
 
 
 
@@ -995,7 +1042,7 @@ Overfull \hbox (3.71585pt too wide) in paragraph at lines 157--157
 Vetrov Dmitry.
  []
 
-[33] (./thesis.aux (./includes/BA-titlepage.aux) (./includes/abstract.aux)
+[39] (./thesis.aux (./includes/BA-titlepage.aux) (./includes/abstract.aux)
 (./chapters/introduction.aux) (./chapters/background.aux)
 (./chapters/methods.aux) (./chapters/results.aux) (./chapters/discussion.aux)
 (./chapters/conclusion.aux))
@@ -1019,13 +1066,13 @@ Package logreq Info: Writing requests to 'thesis.run.xml'.
 ### simple group (level 1) entered at line 3 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 16554 strings out of 492616
- 315453 string characters out of 6135177
- 905171 words of memory out of 5000000
- 20235 multiletter control sequences out of 15000+600000
+ 16621 strings out of 492616
+ 316399 string characters out of 6135177
+ 911728 words of memory out of 5000000
+ 20297 multiletter control sequences out of 15000+600000
  15406 words of font info for 55 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 52i,19n,76p,9085b,1525s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 53i,19n,76p,9085b,1991s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pf
 b></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share
 /texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fo
@@ -1042,10 +1089,10 @@ e1/public/amsfonts/cm/cmssbx10.pfb></usr/share/texmf-dist/fonts/type1/public/am
 sfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy
 8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/sh
 are/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on thesis.pdf (39 pages, 511123 bytes).
+Output written on thesis.pdf (45 pages, 521450 bytes).
 PDF statistics:
- 225 PDF objects out of 1000 (max. 8388607)
- 147 compressed objects within 2 object streams
+ 244 PDF objects out of 1000 (max. 8388607)
+ 160 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  51 words of extra memory for PDF output out of 10000 (max. 10000000)
 
