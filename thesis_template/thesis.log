@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Arch Linux) (preloaded format=pdflatex 2019.4.14)  14 APR 2019 11:14
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Arch Linux) (preloaded format=pdflatex 2019.4.14)  14 APR 2019 11:27
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -873,12 +873,7 @@ chapter 3.
 
 LaTeX Warning: Command \i invalid in math mode on input line 12.
 
-[15] [16]
-Underfull \hbox (badness 10000) in paragraph at lines 88--91
-
- []
-
-[17]) [18]
+[15] [16] [17]) [18]
 \openout2 = `chapters/results.aux'.
 
  (./chapters/results.tex
@@ -1103,7 +1098,7 @@ e1/public/amsfonts/cm/cmssbx10.pfb></usr/share/texmf-dist/fonts/type1/public/am
 sfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy
 8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/sh
 are/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on thesis.pdf (47 pages, 528743 bytes).
+Output written on thesis.pdf (47 pages, 529537 bytes).
 PDF statistics:
  250 PDF objects out of 1000 (max. 8388607)
  164 compressed objects within 2 object streams
