@@ -54,8 +54,11 @@ There are a few interesting contradictions to note between gensim and our own im
 The first hypothesis may be confirmed by the fact that when combined with input shuffling sgd does perform closer to gensim, going from 11 to 7 epochs to converge. Input shuffling does reduce the amount of overwriting that happens, as words next to each other will not be in the same batch as often anymore. 
 
 \subsubsection{Gensim vs. Adam}
-The Adam optimizer did outperform the Gensim application in performance (only slighltlly: 0.01 correlation coefficient better) and convergence time. Adam converged in 2 epochs while Gensim in 4. The case to be made here is that one would have to look at the computational advantage to calculate the update rule of SGD in comparision to Adam.
-Another aspect of our implementation that can be prejudicial is that we only extensively tested our model with one small dataset. It has been shown that some optimizers perfrom better with specif shapes of loss functions. Hence it's necessary to show that Adam also outperfrom gensim with other data sets, to make a compelling argument. 
+The Adam optimizer did outperform the Gensim application in performance (only slighltlly: 0.01 correlation coefficient better) and convergence time. Adam converged in 2 epochs while Gensim in 4. To be sure of our results we ran each computation 40 time. The results can be  seen in Figure \ref{fig:gensim_vs_adam}.
+Their are two things to take into consideration before saying that our version with the Adam optimizer clearly outperforms.
+First and foremost an aspect of our implementation that can be prejudicial is that we only extensively tested our model with one small dataset. It has been shown that some optimizers perfrom better with specif shapes of loss functions. Hence it's necessary to show that Adam also outperfrom gensim with other data sets, to make a compelling argument. 
+Furthermore having a better convergence time is not very useful if the runtime is hindered by a too complex computation, as for example second order optimization techniques. Therefore there is still need to show that Adam does not hinder computation time. 
+
 
 
 \begin{figure}[h]
