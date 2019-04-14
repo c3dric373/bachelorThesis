@@ -6,15 +6,15 @@
 In this secftion we will shortly discuss our results then extensively compare our work to related work, try to make sense out of our results, discuss some challenges faced and finally possible future work. 
 
 \section{Our work}
+In this section we will quickly discuss our findings, and try to give some explanation to it.  
+\subsection{Shuffling and learning rate with SGD}
+As shown in figures \ref{fig:results_sgd}, \ref{fig:results_mom} and \ref{fig:results_nag}, the model, when using SGD as an optimizer,  was able to use a higher learning rate when the input was shuffled as when not. Therefore arises the questions why those this phenomen happen. One possibility is that the model is presented with a slightly different loss function every time, which is closer to the optimal loss function, therefore the steps taken by the optimizer are closer to the optimum and can therefore be bigger. 
+
+\subsubsection{Large differences with nag and sgd when using shuffling}
+As swhon in figures \ref{fig:results_sgd} and \ref{fig:results_nag}, plain SGD and Nesterov Accelerated gradient, greatly differ in their convergence time when using shufflin in to comparison when not. We attribute these results partially to a good random initialization guess and not only input shuffling. Due to a lack of time these results where not replicate more then once. 
 
 \section{Related Work}
 In this section we will compare - our work to related work, we will first compare us to the baseline model, the original c implementation from Mikolov et al \cite{Mikolov}. We will then compare our self to Gensim, we do this because Gensim allowed us to easily and fastly compute the embeddings, while having access to the loss, and being a python implementaion made everything easier. 
-
-This section will give an overview over 
-
-
-
-
 
 \subsection{word2vec}
 %TODO ask jorg
