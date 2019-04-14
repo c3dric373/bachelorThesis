@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Arch Linux) (preloaded format=pdflatex 2019.4.14)  14 APR 2019 10:38
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Arch Linux) (preloaded format=pdflatex 2019.4.14)  14 APR 2019 11:14
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -873,7 +873,12 @@ chapter 3.
 
 LaTeX Warning: Command \i invalid in math mode on input line 12.
 
-[15] [16]) [17] [18]
+[15] [16]
+Underfull \hbox (badness 10000) in paragraph at lines 88--91
+
+ []
+
+[17]) [18]
 \openout2 = `chapters/results.aux'.
 
  (./chapters/results.tex
@@ -1075,10 +1080,10 @@ Package logreq Info: Writing requests to 'thesis.run.xml'.
 ### simple group (level 1) entered at line 3 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 16529 strings out of 492616
- 315500 string characters out of 6135177
- 909092 words of memory out of 5000000
- 20202 multiletter control sequences out of 15000+600000
+ 16530 strings out of 492616
+ 315506 string characters out of 6135177
+ 909106 words of memory out of 5000000
+ 20203 multiletter control sequences out of 15000+600000
  15406 words of font info for 55 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  53i,19n,76p,9085b,1990s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1098,7 +1103,7 @@ e1/public/amsfonts/cm/cmssbx10.pfb></usr/share/texmf-dist/fonts/type1/public/am
 sfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy
 8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/sh
 are/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on thesis.pdf (47 pages, 528436 bytes).
+Output written on thesis.pdf (47 pages, 528743 bytes).
 PDF statistics:
  250 PDF objects out of 1000 (max. 8388607)
  164 compressed objects within 2 object streams

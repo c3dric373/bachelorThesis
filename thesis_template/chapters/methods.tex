@@ -61,10 +61,28 @@ We know that every center word has exactly 2 times the amount of the window size
 \begin{equation}
 \sum_{i=0}^{ctx\_window -1} ctx\_window + i
 \end{equation}
-Finally we have to compute the number of pairs in the last sentence. 
+Finally we have to compute the number of pairs in the last sentence, here the challenge is to compute it if the sentence is shorter then twice the length of our window, because then the equation described previously does not work. We will iterate over the length and add each time step we will compute the number of context pairs the given word has. A description can be found in Algorithm \ref{alg2}.
 
-
-
+\begin{algorithm}
+\caption{Computing the number of pairs in the last sen}
+\label{alg2}
+\begin{algorithmic}[1]
+\FOR{ $j=0$ \TO len\_last\_sen}
+\IF{$j<window$}
+\IF{$j+window \geq len\_last\_sen$}
+\STATE pairs\_last\_sen += len\_last\_sen-1
+\ELSE
+\STATE pairs\_last\_sen += j+window
+\ENDIF
+\ELSIF {$j \geq len\_last\_sen - window$}
+\STATE pairs\_last\_sen += len\_last\_sen -1 -j + window
+\ELSE
+\STATE pairs\_last\_sen += 2*window
+\ENDIF
+\ENDFOR
+\RETURN pairs\_last\_sen
+\end{algorithmic}
+\end{algorithm}
 
  Then we had to add the number of pairs from the last sentence and are done. First  we have to check if the sentence is longer then $2 ctx\_window$. 
  If it's the case we can apply the same principle as shown above. If not we need to do the following:\\
