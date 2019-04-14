@@ -55,13 +55,9 @@ The first hypothesis may be confirmed by the fact that when combined with input 
 
 \subsubsection{Gensim vs. Adam}
 The Adam optimizer did outperform the Gensim application in performance (only slighltlly: 0.01 correlation coefficient better) and convergence time. Adam converged in 2 epochs while Gensim in 4. To be sure of our results we ran each computation 40 time. The results can be  seen in Figure \ref{fig:gensim_vs_adam}.
-Their are two things to take into consideration before saying that our version with the Adam optimizer clearly outperforms.
-First and foremost an aspect of our implementation that can be prejudicial is that we only extensively tested our model with one small dataset. It has been shown that some optimizers perfrom better with specif shapes of loss functions. Hence it's necessary to show that Adam also outperfrom gensim with other data sets, to make a compelling argument. 
-Furthermore having a better convergence time is not very useful if the runtime is hindered by a too complex computation, as for example second order optimization techniques. Therefore there is still need to show that Adam does not hinder computation time. 
 
 
-
-\begin{figure}[h]
+\begin{figure}[H]
     \centering
 			\includegraphics[scale=0.45]{images/gensim_vs_adam} 
     \caption{Training time Stochastic Gradient Descent with input Shuffling}
@@ -69,17 +65,23 @@ Furthermore having a better convergence time is not very useful if the runtime i
 \end{figure}
 
 
+\section{Further Work}
+This work only focused on testing the approach of using advanced optimizers and input shuffling to improve the convergence time of the SGNS. While we did show that in theory it could work there still needs a bit of work to be done to show that this claim holds consistently.First and foremost an aspect of our implementation that can be prejudicial is that we only extensively tested our model with one small dataset. Both of these aspects are problematic. By using a very small dataset we do not use the model in the condition it is mostly needed for as the dataset used in practice a usually 3b words. There is a small argument that can be made for machine translation as the use of small parllel corpus is not unusual . But the main issue with using only one data set it that it has been shown that some optimizers perfrom better with specif shapes of loss functions. Hence it's necessary to show that Adam also outperfrom gensim with other data sets, to make a compelling argument. 
+Furthermore having a better convergence time is not very useful if the runtime is hindered by a too complex computation, as for example second order optimization techniques. Therefore there is still need to show that Adam does not hinder computation time.  One would have to improve one of the already efficient implementation in order to show that we can imporve the convergence time while at the same time maintaining the same convergence time.
+
+
+
 \section{Challenges faced}
+During our implentation we did make some mistakes, this section has the purpose of informing the scientific community to not make the same mistakes. 
 \subsection{Using the wrong embeddings}
-To start our comutation we did choose some wrong, at leat not in coordinance with gensim, initialization embeddings. The context vectors were set between (-1,1) distributed normally. Gensim does it buy putting theim all to 0. As we did the latter the first time our model did not train, but this is possably due to a learning rate that was too low. So we chosed theim to (-1,1). With theim we did not acheive the same similarity as gensim. But when we changed theim back we performed the same results as gensim. Therefore this is a recommendation to future work to not set the initialization to (-1,1)
+To start with, we did not chose the same initialization value as gensim in our word embeddings. We initialized the input layer with a normal distribution between (-1,1). We did this because as we first started, we did indeed do the same thing as gensim, initializing the input layer with 0. But then our model did not seem to train well. Retrospectively we accord this to a learning rate too low. But back  then we changed the input layer intitialization. After a few trainings we saw that we did not perform as good as gensim. And as we changed theim back to 0 we performed well again. Therefore this is a recommendation to future work to not set the initialization to (-1,1)
+
+
+
 \subsection{Too big of a batch size}
 Another challenge we faced was finding a good batch size. We trained our batch size for a long time with a bs of 5000. But this seemed to worked fine in the beginning but a high lr seemed to work too which was very suspect. We then decided to take a batch size of 2000. Which slightly decreased the learning time, and increased the convergence time and adjusted the learning rate. 
 \subsection{Correct loss function}
 We expirimented with different loss function as we did not have exactly the same as introduced by mikolov et al. We therefore first ook the average of each score in our tensor. But we then took the sum which seemed to work  better. Is this because the shape of the loss function suits bettter advanced optimizers. Or because it approaches the original loss function more. 
-
-
-\section{Further Work}
-This work only focused on testing the approach of using advanced optimizers and input shuffling to improve the convergence time of the SGNS. While we did show that in theory it could work there dstill needs a bit of work to be done to show that this claim holds consistently. The first thing to do is to use another data set we only tried our approach on only one and a very small dataset. Both of these aspects are problematic. By using a very small dataset we do not use the model in the condition it is mostly needed for as the dataset used in practice a usually 3b words. There is a small argument that can be made for machine translation as the use of small parllel corpus is not unusual . The second one is that some optimizers have shown to perform better on some specific shapes of loss functions. Therefore it could be possible that adam and adagrad only outperform the sgd on this specific loss function for this dataset. Therefore there still needs to be more extensive work done to confirm to confirm our interesting early results. Antoher issue with our implementation is that we didn't care about the throughput of words, so in this matter our implementation is inefficient. One would have to improve one of the already efficient implementation in order to show that we can imporve the convergence time while at the same time maintaining the same convergence time.
 
 
 
