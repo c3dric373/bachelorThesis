@@ -87,31 +87,32 @@ The final case is simply calculating the amount of pairs per center word, if the
 \end{algorithm}
  
  \subsubsection{Accessing each pair individually}
-Now we need to access each pair individually, so first we have to define an order. We will go over the Dataset sequentially adding first the pairs from the left then from the right. Now that we have defined an order, let's look at how we can acces theim. Given an item index $x$ we need to find in which sentence the pairs is. Because we know how many pairs per sentence their is we can. We only have to devide $x$ by the number of pairs that can be built within one sentence. Know we can access this sentence because we have the list that stores our dataset. then we have to iterate over all the possible pairs that we can builld within this sentence count theim, and stop when we arrived at the wished id. 
-
+Now we need to access each pair individually,a pseudo code description can be found in \ref{alg1}.
+Given an item index $idx$ we need to find in which sentence the pair is. Because we know that how many pairs their is in each sentence, excpet the last one this is not a Problem. We only have to devide $idx$ by the number of pairs that can be built within one sentence (line2). Once this is done we have access to the sentence where our pair is located. (line3). We have to find the id of our pair within our sentence. We know the number of pairs in all sentence before our sentence(this also holds true if our sentence is the last one), we can substract the number of pairs that are in all the snetnces before our sentence. (line4). Once this is done we only have to iterate over all the possible pairs in our sentence and keep count and return when we find the good pair (line 6-15).
 \begin{algorithm}
 \caption{Getting the context pair from the id}
 \label{alg1}
 \begin{algorithmic}[1]
- \STATE border\_pairs =$(\sum_{i=0}^{window -1} window + i)*2$
-        \STATE center\_pairs =$ ((len\_sen - window*2)*window*2)$
-        \STATE n\_pairs\_in\_sen = border\_pairs + center\_pairs
-        \STATE id\_sen = $\lfloor \frac{idx}{n\_pairs\_in\_sen} \rfloor$
-		\STATE         sen  = dataset[id\_sen]
-       \STATE  pair\_id\_in\_sen = $idx - id\_sen*(n\_pairs\_in\_sen)$
-        \STATE counter = 0
 
-\FOR{i,word in enumerate(sen)}
+\STATE n\_pairs\_in\_sen = border\_pairs + center\_pairs
+ \STATE id\_sen = $\lfloor \frac{idx}{n\_pairs\_in\_sen} \rfloor$
+\STATE  sen  = dataset[id\_sen]
+\STATE  pair\_id\_in\_sen = $idx - id\_sen*(n\_pairs\_in\_sen)$
+\STATE counter = 0
+
+\FOR{$i=0$ \TO $len\_sen $}
 \FOR{$j=0$ \TO $window$}
-\IF{i+j $<$ len(sen)}
+\IF{$i+j < len\_sen $}
 \IF{counter == pair\_id\_sen}
 \RETURN (word2idx[word], word2idx[sen[i+j]])
 \ENDIF
+\STATE counter += 1
 \ENDIF
 \IF{$i-j \geq 0$}
 \IF{counter == pair\_id\_sen}
 \RETURN (word2idx[word], word2idx[sen[i-j]])
 \ENDIF
+\STATE counter += 1
 \ENDIF
 \ENDFOR
 \ENDFOR
