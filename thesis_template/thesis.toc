@@ -102,9 +102,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {5.4.1}Using the wrong embeddings}{34}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.4.2}Too big of a batch size}{34}% 
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.4.3}Correct loss function}{34}% 
+\contentsline {subsection}{\numberline {5.4.2}Batch size and loss function adjustements}{34}% 
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {6}Conclusion}{35}% 
 \defcounter {refsection}{0}\relax 
