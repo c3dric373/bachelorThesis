@@ -29,27 +29,25 @@ The final assumption is that an advanced optimizer could maybe outperform Sgd in
 \subsection{Gensim}
 Gensim does propose the class w2vec with the following possible parameters\footnote{link to gensim params}, we will describe theim, show our setting, and why we chose the following, we will only describe the prametrs we changed from the default value will be explained, the rest can be found in the appendix. 
 They will be presented in the following way: \\
-\texttt{name} (type) - \textit{Description} - Value
+\texttt{name} (type) -- \textit{Description} -- Value
 \begin{itemize}
+   \item \texttt{sentences} (iterable of iterables) -- \textit{Dataset -- we used the Original text8 document splitted into sentences of length} -- 20
+  \item \texttt{ size }(int) – \textit{Dimensionality of the word vectors }-- 100
+\item    \texttt{window} (int) --\textit {Maximum distance between the current and predicted word within a sentence }-- 100
+  \item  \texttt{min\_count }(int) --\textit{ Ignores all words with total frequency lower than this }-- 5
+ \item   \texttt{workers} (int) -- \textit{ Use these many worker threads to train the model (=faster training with multicore machines) }-- 4 
+\item    \texttt{sg} ({0, 1}) --\textit{ Training algorithm: 1 for skip--gram; otherwise CBOW. }--1
+  \item  \texttt{negative} (int) --\textit{ If > 0, negative sampling will be used, the int for negative specifies how many “noise words” should be drawn (usually between 5--20). If set to 0, no negative sampling is used }-- 10 
+\item   \texttt{ ns\_exponent} (float) --\textit{ Exponent in the unigram distribution, when choosing random samples REFERENCE EQUATION. }-- 0.75
+\item    \texttt{alpha} (float) --\textit{ The initial learning rate. }-- 0.025
+ \item   \texttt{min\_alpha} (float) --\textit{ Learning rate will linearly drop to min\_alpha as training progresses. }--0.0001
 
-   \item \texttt{sentences} (iterable of iterables) – Dataset - we used the Original text8 document splitted into sentences of length 20
-  \item \texttt{ size }(int) – Dimensionality of the word vectors - 100
-\item    \texttt{window} (int) – Maximum distance between the current and predicted word within a sentence - 100
-  \item  \texttt{min\_count }(int) – Ignores all words with total frequency lower than this - 5
- \item   \texttt{workers} (int) – Use these many worker threads to train the model (=faster training with multicore machines) - 4 
-\item    \texttt{sg} ({0, 1}) – Training algorithm: 1 for skip-gram; otherwise CBOW. -1
-  \item  \texttt{hs} ({0, 1}) – If 1, hierarchical softmax will be used for model training. If 0, and negative is non-zero, negative sampling will be used. - 0
-  \item  \texttt{negative} (int) – If > 0, negative sampling will be used, the int for negative specifies how many “noise words” should be drawn (usually between 5-20). If set to 0, no negative sampling is used - 10 
-\item   \texttt{ ns\_exponent} (float) – Exponent in the unigram distribution, when choosing random samples REFERENCE EQUATION. - 0.75
-\item    \texttt{alpha} (float) – The initial learning rate. - 0.025
- \item   \texttt{min\_alpha} (float) – Learning rate will linearly drop to min\_alpha as training progresses. -0.0001
-
- \item   \texttt{sample} (float) – The threshold for configuring which higher-frequency words are randomly downsampled, useful range is (0, 1e-5). - 1e-4
-   \item \texttt{hashfxn} (function) – Hash function to use to randomly initialize weights, for increased training reproducibility. - VERIFY 
-  \item  \texttt{iter} (int) – Number of iterations (epochs) over the corpus. - 10 
+ \item   \texttt{sample} (float) --\textit{ The threshold for configuring which higher--frequency words are randomly downsampled, useful range is (0, 1e--5). }-- 1e--4
+   \item \texttt{hashfxn} (function) --\textit{ Hash function to use to randomly initialize weights, for increased training reproducibility. }-- VERIFY 
+  \item  \texttt{iter} (int) --\textit{ Number of iterations (epochs) over the corpus. }-- 10 
  \
-  \item  \texttt{compute\_loss} (bool) – If True, computes and stores loss value which can be retrieved using get\_latest\_training\_loss(). - True
- \item   \texttt{callbacks} (iterable of CallbackAny2Vec) – Sequence of callbacks to be executed at specific stages during training. - see Appendix
+  \item  \texttt{compute\_loss} (bool) --\textit{ If True, computes and stores loss value which can be retrieved using get\_latest\_training\_loss(). }-- True
+ \item   \texttt{callbacks} (iterable of CallbackAny2Vec) --\textit{ Sequence of callbacks to be executed at specific stages during training. }-- see Appendix
 \end{itemize}
 
 \subsubsection{Gensim vs. SGD}
