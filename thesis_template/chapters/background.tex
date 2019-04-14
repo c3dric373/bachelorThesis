@@ -3,21 +3,19 @@
 Es muss ein Absatz unter jeden {berpunkt, auch ywischen Background und 2.1. Ich kann dir wenn du magst die Folien von meinem Seminar nachher schicken, das hatte ich ja beim Granityer und da hat er ein bisschen drauf geschrieben, was er bei Scientific Writing wichtig findet, ich wei- aber nicht mehr, wie hilfreich die Folien sind. Aber das steht auf alle F'lle drin.
 
 \section{The Skip-Gram Model} 
-The Skip Gram Model is a model used to embed words into vectors, by analyzing the context in which the words happens.
-% the context in which the words happens_ ich krieg kein Frageyeichen hin. Appear_
- It's achieving this by maximizing the following equation:\begin{equation} \label{basicSkip} \prod_{t=1}^T \prod_{-m<j<m}  p(w_{t+j}|w_t) \end{equation} Where T is the number of words in the corpus data, $w_t$ the $t-th$ word in the corpus data and $m$ is the context window. This means that the $m$ nearest words to $w$ are considered as context words.
-This equation can be transformed quite easily 
-% bewertende Sat<teile wie quite easily w[rde ich glaub ich einfach weglassen. 
-into sums by using log probabilities: 
+The Skip Gram Model is a model used to embed words into vectors, by analyzing the context in which the words happens. It's trained to predict the words that are next to the input word $w$. 
+It's achieving this by maximizing the following equation:
+\begin{equation} \label{basicSkip} \prod_{t=1}^T \prod_{-m<j<m}  p(w_{t+j}|w_t) \end{equation} Where T is the number of words in the corpus data, $w_t$ the $t-th$ word in the corpus data and $m$ is the context window. This means that the $m$ nearest words to $w$ are considered as context words.
+This equation can be transformed into sums by using log probabilities: 
 \begin{equation} \sum _{t=1}^T \sum_{-m<j<m} log( p(w_{t+j}|w_t) )\end{equation} 
-    where the parameters are the same as in \ref{basicSkip}
-% Vor einer Referenz immer die Art der Sache auf die du referenyierst mit angeben, in dem Fall das Wort equation vor backslash ref. Sonst ist das uneindeutig, es gibt sowohl ein Kapitel 2.1, als auch eine Figure 2.1, als auch eine equation 2.1.    
-    . The basic Skip-Gram Model uses a classical Softmax to calculate the conditional probability $p(w_{t+j}|w_t)$: 
+    where the parameters are the same as in Equation \ref{basicSkip}.
+
+The basic Skip-Gram Model uses a classical Softmax to calculate the conditional probability $p(w_{t+j}|w_t)$: 
    \begin{equation}
    p(w_{t+j}|w_t)=  \frac{exp( \tilde{v}_{w_{t+j}}^Tv_{w_t})}{\sum_{w=1}^v exp(\tilde{v}_w^Tv_{ w_t})}
    \end{equation}
   
-  Here $\tilde{v}_{w_t}$ and $ v_{w_t}$ are the vector representations.  There lies a problem in this approach. As a matter of fact it is unsuitable to compute the softmax. For the computation of $\sum_{w=1}^v exp(v_w^T w_t)$ one has to go over the whole corpus data. As very big data sets are needed to train the model, this is not a solution. But different solutions were proposed by Mikolov et al. \cite{mikolov2}. The first one is to use a Hierarchical soft max introduced by Morin and Bengio \cite{hsoftmax}. In this model the probability distribution of the output nodes is saved in a binary tree which gives one a logarithmic computation time for each of these probabilities, and this makes it feasable to compute the softmax. Another possibility is the use of negative sampling which is used in the original word2vec implementation \cite{mikolov2}, which I shall discuss in the next section. 
+  Here $\tilde{v}_{w_t}$ and $ v_{w_t}$ are the vector representations. The model stores vector representations of each word. One for the input words and another for the context word. Here $\tilde{v}_{w_t}$ is the input vector and  $ v_{w_t}$ the output vector. There lies a problem in the approach with a classical softmax. As a matter of fact it is unsuitable to compute the softmax. For the computation of $\sum_{w=1}^v exp(v_w^T w_t)$ one has to go over the whole corpus data. As very big data sets are needed to train the model, this is not a solution. Consequently different solutions were proposed by Mikolov et al. \cite{mikolov2}. The first one is to use a Hierarchical soft max introduced by Morin and Bengio \cite{hsoftmax}. In this model the probability distribution of the output nodes is saved in a binary tree which gives one a logarithmic computation time for each of these probabilities, and this makes it suitable to compute the softmax. Another possibility is the use of negative sampling which is used in the original word2vec implementation \cite{mikolov2}, which we shall discuss in the next section. 
 
 \section{Negative Sampling}
 An alternative to the Hierarchical Softmax is Noise Contrastive Estimation (NCE) which was introduced by Gutmann and Hyv{\"a}rinen \cite{nce-original},  and first applied to NLP by Mnih and Teh \cite{mnih}. The idea behind NCE is to distinguish targets words from noise. It does so by reducing the problem to a logistic regression task, and does it by maximizing the log probability. The skip-gram Model is only interested in good word representation, hence the probability of the word is not meaningful as long as the quality of the word representations remains high. Mikolov et al. \cite{mikolov2} simplified NCE and called it Negative Sampling. Let's dive into it.\\
@@ -47,7 +45,7 @@ It's quite easily observable that this approach will outperform the classical so
 We now have enough background knowledge about word2vec and the skip gram model to look at how it can be optimized. In the next section we are going to cover what has already be done.
 
 \section{Optimization of the Skip Gram Model}
-Due to the popularity of the skip gram model, a lot of research went into optimizing it. This research can actually be divided into two categories, parallelization, and the optimization of the accuracy of the algorithm by allowing words to have multiple meanings.
+Due to the popularity of the skip gram model, a lot of research went into optimizing it. This research can actually be divided into two categories, parallelization, and the optimization of the accuracy of the algorithm by allowing words to have multiple meanings. This section will first give an overview of parallelization and then present one paper that focused on context sensitive word embeddings. 
 
 \subsection{Parallelization}
 In the original model the optimization is done with Stochastic Gradient Descent (SGD), which is a sequential algorithm. This process does not favor a parallelization. To deal with this specific problem Mikolov et al.\cite{mikolov2} used a Hogwild tree proposed by Recht et al.\cite{hogwild}. The approach is to allow multiple threads to access a shared memory, in this case the single model. Therefore overwriting errors are bound to happen. But according to Recht et al.\cite{hogwild} the overwriting errors won't lead to a significant accuracy loss if the data access isn't too frequent. But in the case of NLP the problem seems to be a bit more significant, and especially for word embedding, as many words share the same context words. There were several attempts at solving this issue, and we are going to cover a few of them in the following subsections. 
@@ -159,7 +157,31 @@ with  $G_{t_{i,i}}$ being the diagonal Matrix of the sum of the squares of the g
 There lies one weakness in this approach: the sum of the squares of the previous gradients grows constantly. This means that after a certain number of epochs the learning rate will be insufficient, to update the model. This issue was addressed by the Adadelta algorithm, that will be covered in the next session. 
 
 \subsection{Adadelta}
-Adadelta not ownly solves the constantly growing sum problem, but also the fact that one does not have to tune the learning rate by not having one. The gist of Adadelta is that instead of taking all the gradients to compute the sum we will only take a fixed number $w$ of gradients.  
+Adadelta \cite{adadelta} not only solves the constantly growing sum problem, but also the fact that one does not have to tune the learning rate by not having one. The gist of Adadelta is that instead of taking all the gradients to compute the sum we will only take a fixed number $w$ of gradients. But instead of inefficiently storing w gradients we will take the exponantially decaying average of the squared gradient, denoted $E[g^{2}]$. The average at time step $t$ will be computed in the following way: 
+\begin{equation}
+E[g^2]_t = \gamma E[g^2]_{t-1} + (1 - \gamma) g^2_t
+\end{equation}
+where $\gamma$ is a hyper parameter similar to the one used in momentum. That decides how much the past is weighted in contrast to the current gradient. Since Adadelta is an extension of Adagrad the square root of $E[g^{2}]$ is need, which become the RMS:
+\begin{equation}
+RMS[g]_t = \sqrt{E[g^2]_t + \epsilon}
+\end{equation}
+Which gives us the following update rule: 
+\begin{equation}
+\theta_t = \theta_{t-1} - \frac{\eta}{RMS[g]_t}g_t
+\end{equation}
+Here we have two problems, first the learning rate is still a hyper parameter. And the units do not match. This is a problem xyz wanted to address. That if the parameters would have units the update parameters would have the same parameters. 
+Therefore they define the exponentially decaying average of squared parameter updates: 
+\begin{equation}
+E[\Delta \theta^2]_t = \gamma E[\Delta \theta^2]_{t-1} + (1 - \gamma) \Delta \theta^2_t
+\end{equation}
+As before we can know us the root mean squared error: 
+\begin{equation}
+RMS[\Delta \theta]_{t} = \sqrt{E[\Delta \theta^2]_t + \epsilon}
+\end{equation}
+As at time step $t$ $RMS[\Delta \theta]_{t} $ is unknown, we approximat it with $ RMS[\Delta \theta]_{t}-1$. Know we replac $\eta$ with  $ RMS[\Delta \theta]_{t}-1$ and get the final update rule: 
+\begin{equation}
+ \theta_{t+1} = \theta_t - \dfrac{RMS[\Delta \theta]_{t-1}}{RMS[g]_{t}} g_{t}
+\end{equation}
 \subsection{Adam}
 Adaptive Moment Estimation (Adam), is a more recent optimization algorithm. It also computes adaptive learning rates. In comparison to Adagrad and Adadelta, it does not only take into considaration the decaying average of the previous squared gradients but also the decay of the past gradients. 
 Let's introduce : \\
