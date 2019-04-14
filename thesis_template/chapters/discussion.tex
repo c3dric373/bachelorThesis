@@ -49,12 +49,14 @@ Parameters:
 \end{itemize}
 
 \subsubsection{Gensim vs. SGD}
-First we have to note that we cannot compare ourselves to gensim in computation time, this woudl not be very smart as our code is written in python and gensim uses advanced cython routines\footnote{link to tutorial thesis}. 
-The first interesting thing to note is that we did not have the same values in convergence time as gensim when using sgd. There are differnet possiblilities why this could be the case. First our batched approach could hinder performance in term of convergence as some overwriting may happen. Another differnce between our implementation is the fact that gensim checks whether negative samples are real negative samples. Thererfore the learning of the input and output context is optimized. 
-The first hypothesis may be confirmed by the fact that our input shuffling reduces the number of overwritings and therefore we achieved conv time of 7 epcohs which is closer to 4 epochs. and the last difference maybe explained by the eg samples thing. 
+First, as said earlier, we are not going to compare ourselves to gensim in runtime. This does not make any sense as our code is written in slow python and gensim is implemented in cython. \footnote{link to tutorial thesis}. 
+There are a few interesting contradictions to note between gensim and our own implementation of SGNS. First of all the convergence time was not the same. There are different possibilities why this could be the case. First our batched approach could hinder performance in term of convergence as some overwriting may happen. Another difference between our implementation is the fact that gensim checks whether negative samples are real negative samples. This means for every negative sample, gensim checks whether or not the sample does appear in the context of the word somewhere in the data set, and if it's the case select a new random sample. Therefore the learning of the input and output context is optimized. 
+The first hypothesis may be confirmed by the fact that when combined with input shuffling sgd does perform closer to gensim, going from 11 to 7 epochs to converge. Input shuffling does reduce the amount of overwriting that happens, as words next to each other will not be in the same batch as often anymore. 
 
 \subsubsection{Gensim vs. Adam}
-The Adam optimizer did outperform the Gensim application in performance (only slighltlly: 0.01 corr coeff advantage) and convergence time. Adam converged in 2 epochs vs. Gensim in 4. The case to be made here is that one would have to look at the computational advantage to calculate the simple sgd vs.  the adam update rule. Another aspect to look at is that we mainly tested our implementation on the text8 dataset. We only experienced once one the enwik9 dataset. Here the argument that can be made is that, some optimizers work better on specific loss functions in comparison to others, hence we need to show that our optimizer words on amultiued on theim and that it is not just a statistical anomaly.
+The Adam optimizer did outperform the Gensim application in performance (only slighltlly: 0.01 correlation coefficient better) and convergence time. Adam converged in 2 epochs while Gensim in 4. The case to be made here is that one would have to look at the computational advantage to calculate the update rule of SGD in comparision to Adam.
+Another aspect of our implementation that can be prejudicial is that we only extensively tested our model with one small dataset. It has been shown that some optimizers perfrom better with specif shapes of loss functions. Hence it's necessary to show that Adam also outperfrom gensim with other data sets, to make a compelling argument. 
+
 
 \begin{figure}[h]
     \centering
