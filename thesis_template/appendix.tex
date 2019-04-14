@@ -57,6 +57,7 @@ class EpochLogger(CallbackAny2Vec):
 
 \chapter{Dataset}
 \begin{itemize}
+   \item \texttt{hashfxn} (function) -- \textit{Hash function to use to randomly initialize weights, for increased training reproducibility. }-- VERIFY 
   \item  \texttt{hs} ({0, 1}) --\textit{ If 1, hierarchical softmax will be used for model training. If 0, and negative is non--zero, negative sampling will be used. }-- 0
  \item  \texttt{ corpus\_file} (str, optional) – None
    \item \texttt{cbow}\_mean ({0, 1}, optional) - Unnecessary since cbow is not used

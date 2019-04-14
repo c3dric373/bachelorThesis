@@ -2022,7 +2022,8 @@
     <bcf:citekey order="27">gensim</bcf:citekey>
     <bcf:citekey order="28">intel</bcf:citekey>
     <bcf:citekey order="29">Mikolov</bcf:citekey>
-    <bcf:citekey order="30">intel</bcf:citekey>
+    <bcf:citekey order="30">gensim</bcf:citekey>
+    <bcf:citekey order="31">intel</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nyt">

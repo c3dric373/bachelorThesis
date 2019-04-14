@@ -38,7 +38,7 @@ We see that to compute our objective function we will only have to compute the s
 
 One question remains: how do we choose our random words? Mikolov et al. \cite{mikolov2} used the following unigram distribution:
  
- \begin{equation}
+ \begin{equation} \label{eq:unigram}
 P(w)=\frac{f(w)^{\frac{3}{4}}}{\sum_{w_k\in W} f(w_k)^{\frac{3}{4}}}
 \end{equation}
 where $f(w)$ is the frequency of $w$ in the Vocabulary $W$. The value of $\frac{3}{4}$ is set empirically.

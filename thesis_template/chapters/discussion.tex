@@ -14,40 +14,38 @@ As shown in figures \ref{fig:results_sgd}, \ref{fig:results_mom} and \ref{fig:re
 As swhon in figures \ref{fig:results_sgd} and \ref{fig:results_nag}, plain SGD and Nesterov Accelerated gradient, greatly differ in their convergence time when using shufflin in to comparison when not. We attribute these results partially to a good random initialization guess and not only input shuffling. Due to a lack of time these results where not replicate more then once. 
 
 \section{Related Work}
-In this section we will compare - our work to related work, we will first compare us to the baseline model, the original c implementation from Mikolov et al \cite{Mikolov}. We will then compare our self to Gensim, we do this because Gensim allowed us to easily and fastly compute the embeddings, while having access to the loss, and being a python implementaion made everything easier. 
+In this section we will compare our work to related work. We will first compare us to the baseline model, the original c implementation from Mikolov et al \cite{Mikolov}. As Mikolov et al. did not use the same datasets as we, this comparison will loose in quality. We therefore compare ourself extensively with Gensim \cite{gensim}, a open source python implementation of the SGNS. Gensim is optimized to have a very high throuhgput which allowed us to, achieve a lot of computaions. Furthermore Gensim gave us access to the loss and the resulting word embedings, which made it easy to compare 
 
 \subsection{word2vec}
 %TODO ask jorg
 
-As mikolov et al. published the original paper about which introduced the SGNS, it is of course releveant to compare ourselves to theim. The first important thing to notice is that Mikolov et al. only trained their model on the very large google news dataset incorporating more than 3 billion words. This makes the comparison of our work more problematic and more of a guessing game. But we will make some assumptions, as they can become interesting. 
-In their original paper, Mikolov et al. reported results from 1 and 3. We accord these good results to the very large dataset  and furthermore as a matter of fact their result are better with 3 than with 1 epochs. We do not have any informtaion about the convergence. Hence it would be intersting to use their dataset for comparison. \\
+As mikolov et al. published the original paper which introduced the SGNS, it is of course relevant to compare ourselves to theim. The first important thing to take under account is that Mikolov et al. only trained their model on a very large google news dataset incorporating more than 3 billion words. This makes the comparison of our work more difficult. But we will make some assumptions, as they can be interesting. 
+In their original paper, Mikolov et al. reported results from computations that took 1 and 3 epochs. We accord these good results to the very large dataset  and furthermore as a matter of fact their result are better with 3 than with 1 epochs. We do not have any informtaion about the convergence. Hence it would be intersting to use their dataset for comparison. \\
 One thing we can compare is the quality of our word embeddings. Mikolov et al. did not report any results on their model with the text8 dataset, but they therefore published their code, and Ji et al \cite{intel} tested the model on the text8 dataset. They reported a similarity of 0.63 on the wordsim task. This is obviously outperformed by all our models. We did not find any explanation on why those results differ as much. \\
-The final assumption is that an advanced optimizer could maybe outperform Sgd in terms of quality on a large embedding. This will be discussed in further work.
+The final assumption is that an advanced optimizer could maybe outperform SGD in terms of quality on a large data set. This will be discussed in further work.
  
 
 
 \subsection{Gensim}
-Gensim does propose the class w2vec with the following possible parameters\footnote{link to gensim params}, we will describe theim, show our setting, and why we chose the following, we will only describe the prametrs we changed from the default value will be explained, the rest can be found in the appendix. 
-They will be presented in the following way: \\
-\texttt{name} (type) -- \textit{Description} -- Value
+Gensim proposes a class \texttt{W2vec}\footnote{param}. The constructor has a lot of possible parameter, an extended list can be found in the appendix. In this section we will only describe the parameters we changed from the default setting.  The description will be presented in the following way: \\
+\texttt{name} (type) -- \textit{Description} -- Value\\
+Parameters:
 \begin{itemize}
-   \item \texttt{sentences} (iterable of iterables) -- \textit{Dataset -- we used the Original text8 document splitted into sentences of length} -- 20
-  \item \texttt{ size }(int) – \textit{Dimensionality of the word vectors }-- 100
-\item    \texttt{window} (int) --\textit {Maximum distance between the current and predicted word within a sentence }-- 100
+   \item \texttt{sentences} (iterable of iterables) -- \textit{Dataset} -- text8 document splitted into sentences of 20 words 
+  \item \texttt{size}(int) – \textit{Dimensionality of the word vectors } -- 5
+\item \texttt{window} (int) --\textit {Maximum distance between the current and predicted word within a sentence }-- 100
   \item  \texttt{min\_count }(int) --\textit{ Ignores all words with total frequency lower than this }-- 5
  \item   \texttt{workers} (int) -- \textit{ Use these many worker threads to train the model (=faster training with multicore machines) }-- 4 
 \item    \texttt{sg} ({0, 1}) --\textit{ Training algorithm: 1 for skip--gram; otherwise CBOW. }--1
-  \item  \texttt{negative} (int) --\textit{ If > 0, negative sampling will be used, the int for negative specifies how many “noise words” should be drawn (usually between 5--20). If set to 0, no negative sampling is used }-- 10 
-\item   \texttt{ ns\_exponent} (float) --\textit{ Exponent in the unigram distribution, when choosing random samples REFERENCE EQUATION. }-- 0.75
+  \item  \texttt{negative} (int) --\textit{Number of negative samples}-- 10 
+\item   \texttt{ ns\_exponent} (float) --\textit{ Exponent in the unigram distribution, when choosing random samples, as shown in Equation \ref{eq:unigram} }-- 0.75
 \item    \texttt{alpha} (float) --\textit{ The initial learning rate. }-- 0.025
  \item   \texttt{min\_alpha} (float) --\textit{ Learning rate will linearly drop to min\_alpha as training progresses. }--0.0001
-
- \item   \texttt{sample} (float) --\textit{ The threshold for configuring which higher--frequency words are randomly downsampled, useful range is (0, 1e--5). }-- 1e--4
-   \item \texttt{hashfxn} (function) --\textit{ Hash function to use to randomly initialize weights, for increased training reproducibility. }-- VERIFY 
+ \item   \texttt{sample} (float) --\textit{ Treshold for subsampling as described in \ref{eq:sampling}. } -- 1e--4
   \item  \texttt{iter} (int) --\textit{ Number of iterations (epochs) over the corpus. }-- 10 
  \
-  \item  \texttt{compute\_loss} (bool) --\textit{ If True, computes and stores loss value which can be retrieved using get\_latest\_training\_loss(). }-- True
- \item   \texttt{callbacks} (iterable of CallbackAny2Vec) --\textit{ Sequence of callbacks to be executed at specific stages during training. }-- see Appendix
+  \item  \texttt{compute\_loss} (bool) --\textit{If True, loss is stored at the end of each batch}-- True
+ \item   \texttt{callbacks} (iterable of CallbackAny2Vec) --\textit{ Set of functions that will be executed at given training times, in order to follow the loss and the progress of the model in word similarity }-- see Appendix
 \end{itemize}
 
 \subsubsection{Gensim vs. SGD}

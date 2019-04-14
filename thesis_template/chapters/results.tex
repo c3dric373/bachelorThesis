@@ -17,7 +17,7 @@ We will know explain the technique called subsampling.
 \subsection{Subsampling}
 Subsampling is a technique introduced by Mikolov et al. in \cite{mikolov} to reduce the dataset size while at the same time increasing the quality of the dataset, i.e getting better word embeddings. Certain words that appear very frequently in the dataset such as: "the, as, it, of" do not give an intrinsic value to the words that appear in it's context. Therefore the idea of subsampling is to delete such words from the dataset. This will decrease the computation time and should in theory increase the accuracy of the model. The increase in accuracy can also be explained by the fact that words that would not have appeared in the context of each other, may know, because words between have been deleted, do.
 Know the question arises, how one chooses to delete a word. Mikolov et al. chose the following equation to compute the deletion of a word $w$ in the data set:
-\begin{equation}
+\begin{equation} \label{eq:sampling}
 P(w) = 1- \sqrt{{\frac{t}{f(w)}}}
 \end{equation}
 where $f(w)$ is the frequency of w, and $t$ is a threshold set empirically. (Mikolov et al.)  recommends a value between $0$ and $10^{-5}$, depending on the size of the dataset. We experimented with different values and $10^{-4}$, seemed the most suited. We did this by simply looking at a random set of sentences and humanly judging the results. Stats about subsampling can be found in table \ref{table:treshold}. Examples in figure \ref{fig:treshold_examples}
