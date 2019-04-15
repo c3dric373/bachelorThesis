@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Arch Linux) (preloaded format=pdflatex 2019.4.14)  15 APR 2019 13:19
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Arch Linux) (preloaded format=pdflatex 2019.4.14)  15 APR 2019 13:26
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -872,20 +872,20 @@ chapter 3.
 
 ]
 
-LaTeX Warning: Command \i invalid in math mode on input line 14.
+LaTeX Warning: Command \i invalid in math mode on input line 13.
 
 [16]
-Underfull \hbox (badness 10000) in paragraph at lines 16--29
+Underfull \hbox (badness 10000) in paragraph at lines 15--28
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 38--51
+Underfull \hbox (badness 10000) in paragraph at lines 37--50
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 52--58
+Underfull \hbox (badness 10000) in paragraph at lines 51--57
 
  []
 
@@ -1098,10 +1098,10 @@ Package logreq Info: Writing requests to 'thesis.run.xml'.
 ### simple group (level 1) entered at line 3 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 16541 strings out of 492616
- 315726 string characters out of 6135177
- 909162 words of memory out of 5000000
- 20213 multiletter control sequences out of 15000+600000
+ 16542 strings out of 492616
+ 315748 string characters out of 6135177
+ 909175 words of memory out of 5000000
+ 20214 multiletter control sequences out of 15000+600000
  15406 words of font info for 55 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  53i,19n,76p,9085b,1994s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1121,7 +1121,7 @@ e1/public/amsfonts/cm/cmssbx10.pfb></usr/share/texmf-dist/fonts/type1/public/am
 sfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy
 8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/sh
 are/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on thesis.pdf (50 pages, 571126 bytes).
+Output written on thesis.pdf (50 pages, 570801 bytes).
 PDF statistics:
  262 PDF objects out of 1000 (max. 8388607)
  171 compressed objects within 2 object streams
