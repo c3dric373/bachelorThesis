@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Arch Linux) (preloaded format=pdflatex 2019.4.14)  14 APR 2019 17:53
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Arch Linux) (preloaded format=pdflatex 2019.4.14)  15 APR 2019 13:09
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -872,20 +872,20 @@ chapter 3.
 
 ]
 
-LaTeX Warning: Command \i invalid in math mode on input line 12.
+LaTeX Warning: Command \i invalid in math mode on input line 13.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 14--27
+Underfull \hbox (badness 10000) in paragraph at lines 15--28
 
  []
 
 [16]
-Underfull \hbox (badness 10000) in paragraph at lines 36--49
+Underfull \hbox (badness 10000) in paragraph at lines 37--50
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 50--56
+Underfull \hbox (badness 10000) in paragraph at lines 51--57
 
  []
 
@@ -1121,7 +1121,7 @@ e1/public/amsfonts/cm/cmssbx10.pfb></usr/share/texmf-dist/fonts/type1/public/am
 sfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy
 8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/sh
 are/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on thesis.pdf (50 pages, 570449 bytes).
+Output written on thesis.pdf (50 pages, 570435 bytes).
 PDF statistics:
  262 PDF objects out of 1000 (max. 8388607)
  171 compressed objects within 2 object streams
