@@ -99,16 +99,18 @@ The skip gram model, has a lot of possible parameters, that can be tuned. We exp
 \end{itemize}
 
 \section{Input Shuffling}
-We used input shuffling as a technique to optimize the skip gram model. We will first describe input shuffling in a general way and then explain why we suppose that input shuffling could work well on the skip gram model. 
+We used input shuffling as a technique to optimize the skip gram model. We will first describe input shuffling in a general way and then explain why we suppose that input shuffling could work well on the skip gram model. \\
 Let $X = {x_1...x_n}$ be our input data set. Input Shuffling describes the process of taking a random permutation of the dataset as an input at each epoch. 
-The idea behind this technique, is the same as the use of mini batches. We want to present our optimizer with different loss surfaces, so that it's able to find the best optimum. But both combined can be a very powerful, there always lies a risk that a mini-batch isn't a good representative of the true gradient. This way, by shuffling the input, one would avoid this bias.
-There are two reasons why we thnik that input shuffling is particulary well suited for the skip gram model. The first one has to do with the fact that when we read our words sequentially that words that only appear very early will not benefit from the context words being already updated from others. The second thing is that we used the special batch technique described in section x.  When using this technique and not using shuffling we will always have words that appear next to each other in a batch and will therefore updat similar words at the same time. We then loose some accuracy. But if instead we would use input shuffling then in one batch the words would likely not be similar and therefore overwriting will be less likely. 
-One thing to consider is that when using input shuffling we cannot use a sliding window size. 
+The idea behind this technique, is  to present our optimizer with different loss surfaces, so that it's able to find the best optimum. Therefore it's easier for the neural network to escape a local minimum. As for example if a network had converged to a local minimum after one epoch it could not escape it as all the parameters are the same. But if we change the shape of the loss function, by input shuffling, then their would be a greater probability for the network to escape the local minimum.
+\\
+There are two reasons why we think that input shuffling is particulary well suited for the skip gram model. The first one has to do with the fact that when we read our words sequentially that words that only appear very early will not benefit from the context words being already updated from others. The second idea is that we used the special batch technique described in Section \ref{ssec:b_SGM}. When using this technique and not using shuffling we will always have words that appear next to each other in a batch and will therefore update the same words at the same time. We therefore loose some quality. But if instead we would use input shuffling then in one batch the words would likely not be similar and therefore only taking the average of a small part of pairs with the same words will be less likely. 
+One thing to consider is that when using input shuffling we cannot use a random window size. 
 
 \section{Convergence time} 
-To optimize convergence time we have to define convergence time first. Therefore we used the already available implementation gensim. we know from \cite{intel}. that a score of $0.66$ in the task of word similarity is the state of the art. We also know after testing Gensim ( more on this process in section discussion), that it takes 4 epochs to converge. Therefore we defined the following criteria for convergence: \\
-$\rho - \rho_{prev} < 0.009 \vee or \rho = 0.66$ \\
-where $\rho$ is the pearson coefficient with the wordsim353 task. 
+To optimize convergence time we have to define it first. Therefore we used the already available implementation Gensim \cite{gensim}, and the knowledge from Ji et al.\cite{intel} that a score of $0.66$ in the task of word similarity is the state of the art. We also know after testing Gensim (more on this process in Chapter \ref{chap:discussion), that it takes 4 epochs to converge. Therefore we defined the following criteria for convergence: \\
+$\rho - \rho_{prev} < 0.009 \vee \rho = 0.66$ \\
+where $\rho$ is the pearson coefficient on the wordsim353 task. 
+We also stopped computation, if it took more then 20 epochs to converge. 
 
 \section{Results by optimizer}
 We ran multiple experiments for each optimizer. This section will only give an overview over the quantified results. 

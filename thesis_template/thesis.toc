@@ -68,17 +68,17 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {4.5}Convergence time}{26}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.6}Results by optimizer}{26}% 
+\contentsline {section}{\numberline {4.6}Results by optimizer}{27}% 
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {4.6.1}SGD}{27}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.6.2}Momentum and Nesterov}{27}% 
+\contentsline {subsection}{\numberline {4.6.2}Momentum and Nesterov}{28}% 
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {4.6.3}Adagrad}{28}% 
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {4.6.4}Adadelta}{29}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.6.5}Adam}{29}% 
+\contentsline {subsection}{\numberline {4.6.5}Adam}{30}% 
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {5}Discussion}{31}% 
 \defcounter {refsection}{0}\relax 
