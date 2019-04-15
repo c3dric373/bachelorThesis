@@ -76,7 +76,7 @@ During our implentation we did make some mistakes, this section has the purpose 
 \subsection{Using the wrong embeddings}
 To start with, we did not chose the same initialization value as gensim in our word embeddings. We initialized the input layer with a normal distribution between (-1,1). We did this because as we first started, we did indeed do the same thing as gensim, initializing the input layer with 0. But then our model did not seem to train well. Retrospectively we accord this to a learning rate too low. But back  then we changed the input layer intitialization. After a few trainings we saw that we did not perform as good as gensim. And as we changed theim back to 0 we performed well again. Therefore this is a recommendation to future work to not set the initialization to (-1,1).
 
-\subsection{Batch size and loss function adjustements}
+\subsection{Batch size and loss function adjustements}\label{ssec:bs_lf}
 During our experiments we faced a moment where we needed to us a very high learning rate (50) to achieve good results. As this is the complete opposite of what is standard we got suspiscous. To remedy the problem we made to changes. 
 Firs we needed to find a good batch size. During the rise of the above training we used a batch size of 5000. We then decided to take a batch size of 2000.\\
  Secondly, at the same time we did experiment with different loss functions. As our batched model does not have exactly the same loss function as introduced by Mikolov et al. \cite{mikolov}. At the beginning of our experiment we took the average of all the scores stored in our final matrix. But then chose to take the sum as the training did not seem optimal.\\ 

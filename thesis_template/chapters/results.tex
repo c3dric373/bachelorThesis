@@ -88,14 +88,14 @@ To measure the quality of our word embedding we will need a dataset to compare o
 \end{figure}
 
 \section{Configuration of the network}
-The skip gram model, has a lot of possible options, that can be tuned. We configured one model and then only changed the learning rate. The explanation of the parameters will be structerd as follow: 
+The skip gram model, has a lot of possible parameters, that can be tuned. We experimented with different models, and finally decided for one that we tried to optimize. This section will give a short overview over each parameter, where we will explain the process in which we chose the value of the given parameter. The explanation of the parameters will be structured as follows: 
 \texttt{Parameter} - Description and tuning -  \textit{Value}
 \begin{itemize}
-\item \texttt{Negative Samples} Here we have to find a trade off between, setting the parameter too high which will result in increased accuracy but a longer computation time. For smaller dataset a higher negative samples is often needed. We experimented early with 5, 10,15 - \textit{10}
-\item \texttt{Context Window:} The bigger the window the more training examples the network will have, but if the window is to big the semantic meaning of the window will be erased. Mikolov et al. proposed a setting between 2-10. - \textit{5}
+\item \texttt{Negative Samples} Here we have to find a trade off between, setting the parameter too high which will result in increased accuracy but a longer computation time. For smaller data sets a higher negative samples is often needed. In their original paper Mikolov et al. recommend a value of 5-20. We tested a few values in the range of 5 to 15, as 10 yielded state of the art results we chose this value. - \textit{10}
+\item \texttt{Context Window:} The bigger the window the more training examples the network will have, but if the window is to big the semantic meaning of the window will be erased. Mikolov et al. proposed a setting between 2-10, as all our sentences are of size 20 we chose 5. - \textit{5}
 \item\texttt{ Dimension of the embedding}: Here the choice is less obvious, the higher the dimension the better the embedding should be.( cite paper dimension vectors talk about gensim ) but when tested on gensim 100 yielded better results than 300 - \textit{100}
-\item \texttt{Batch size}: As described in section FORWARD, there is a trade off to find between accuracy and training time. We first used a batch size of 5000, but then decide after non conclusive results  that 2000 would be better - \textit{2000}
-\item \texttt{Alpha}: learnng rate, this hyper parameter was tuned in every optimizer therefore only the range will be indicated - \textit{(1e-5,1)}
+\item \texttt{Batch size}: As described in section \ref{ssec:b_SGM}, there is a trade off to find between quality and training time. We first used a batch size of 5000, but then decide after non conclusive results (see \ref{ssec:bs_lf}) that 2000 would be better - \textit{2000}
+\item \texttt{Alpha}: learning rate, this hyper parameter was tuned in every optimizer therefore only the range will be indicated - \textit{(1e-5,1)}
 \end{itemize}
 
 \section{Input Shuffling}
