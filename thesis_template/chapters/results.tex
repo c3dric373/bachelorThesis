@@ -71,9 +71,9 @@ Evaluating word embedding is not an easy task. We cannot split our data set into
 \subsection{Cosine distance}
 The cosine similarity, this is not the cosine distance, of vectors $v$ and $w$ is the cosine of the angle between the two vectors It can be calculated by taking the dot product of $v$ and $w$ and dividing it by the magnitude of $v$ and $w$ multiplied with each other. We get:
 \begin{equation}
-cos\_sim(v,w) =1 - \frac{v \cdot w}{|v| |w|} 
+cos\_sim(v,w) = \frac{v \cdot w}{|v| |w|} 
 \end{equation}
-The cosine of 0\textdegree is 1,  0 for two vectors that are orthogonal and vectors that point in the opposite direction will have a cosine of their angle of -1. This is not a good distance measure as -1 is smaller then 0, and therefore two vectors pointing away from each other would be closer then two orthogonal vectors, but by subtracting 1 from the cosine of the angle we can create a good distance measure  between the two vectors. This distance does not take into account any order of magnitude. Hence for our tasks, two vectors will be considered equal if they are of different magnitude but point in the same direction. 
+The cosine of 0\textdegree is 1,  it's 0 for two vectors that are orthogonal to each other and vectors that point in the opposite direction will have a cosine of their angle of -1. This is not a good distance measure as -1 is smaller then 0, and therefore two vectors pointing away from each other would be closer then two orthogonal vectors, but by subtracting 1 from the cosine of the angle we can create a good distance measure  between the two vectors. This distance does not take into account any order of magnitude. Hence for our tasks, two vectors will be considered equal if they are of different magnitude but point in the same direction. 
 This technique a part from being shown empirically to work very well to measure the quality of word embedding has another advantage. By normalizing the vectors the calculation of the cosine angle becomes the dot product of the two vectors. Which can be computed very fast on modern gpu's. 
 Know that we have a measure to compute the similairty of two vectors let us introduce a way to rate the quality of our embedings.
 

@@ -2025,10 +2025,14 @@
     <bcf:citekey order="30">intel</bcf:citekey>
     <bcf:citekey order="31">gensim</bcf:citekey>
     <bcf:citekey order="32">gensim</bcf:citekey>
-    <bcf:citekey order="33">Mikolov</bcf:citekey>
-    <bcf:citekey order="34">gensim</bcf:citekey>
-    <bcf:citekey order="35">intel</bcf:citekey>
-    <bcf:citekey order="36">mikolov</bcf:citekey>
+    <bcf:citekey order="33">momentum</bcf:citekey>
+    <bcf:citekey order="34">nag</bcf:citekey>
+    <bcf:citekey order="35">adagrad</bcf:citekey>
+    <bcf:citekey order="36">adadelta</bcf:citekey>
+    <bcf:citekey order="37">Mikolov</bcf:citekey>
+    <bcf:citekey order="38">gensim</bcf:citekey>
+    <bcf:citekey order="39">intel</bcf:citekey>
+    <bcf:citekey order="40">mikolov</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nyt">

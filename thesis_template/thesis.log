@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Arch Linux) (preloaded format=pdflatex 2019.4.14)  15 APR 2019 21:59
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Arch Linux) (preloaded format=pdflatex 2019.4.14)  15 APR 2019 23:09
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -980,46 +980,46 @@ Class scrbook Warning: \float@addtolists detected!
 (scrbook)              a package that still implements the
 (scrbook)              deprecated \float@addtolist interface .
 
-[2
+) [2
 
 
 
-]) [3]
+]
 \openout2 = `chapters/background.aux'.
 
  (./chapters/background.tex
 chapter 2.
-[4
+[3
 
 
 
 
-] [5] [6] [7]
-<images/cachingEfficiency.png, id=62, 816.04875pt x 649.42625pt>
+] [4] [5] [6]
+<images/cachingEfficiency.png, id=58, 816.04875pt x 649.42625pt>
 File: images/cachingEfficiency.png Graphic file (type png)
 <use images/cachingEfficiency.png>
 Package pdftex.def Info: images/cachingEfficiency.png  used on input line 76.
 (pdftex.def)             Requested size: 244.81651pt x 194.82938pt.
- [8]
-<images/multipleContext.png, id=66, 471.7625pt x 89.33376pt>
+ [7]
+<images/multipleContext.png, id=63, 471.7625pt x 89.33376pt>
 File: images/multipleContext.png Graphic file (type png)
 <use images/multipleContext.png>
 Package pdftex.def Info: images/multipleContext.png  used on input line 101.
 (pdftex.def)             Requested size: 330.23149pt x 62.53319pt.
- [9 <./images/cachingEfficiency.png>] [10 <./images/multipleContext.png>] [11]
+ [8 <./images/cachingEfficiency.png>] [9 <./images/multipleContext.png>] [10]
 
-LaTeX Warning: Citation 'adagrad' on page 12 undefined on input line 144.
+LaTeX Warning: Citation 'adagrad' on page 11 undefined on input line 144.
 
-[12]
+[11]
 
-LaTeX Warning: Citation 'adadelta' on page 13 undefined on input line 160.
+LaTeX Warning: Citation 'adadelta' on page 12 undefined on input line 160.
 
-[13]) [14]
+[12]) [13]
 \openout2 = `chapters/methods.aux'.
 
  (./chapters/methods.tex
 chapter 3.
-[15
+[14
 
 
 
@@ -1029,11 +1029,11 @@ chapter 3.
 LaTeX Warning: Command \i invalid in math mode on input line 14.
 
 
-LaTeX Warning: Reference `eq:obj_neg_samples' on page 16 undefined on input lin
+LaTeX Warning: Reference `eq:obj_neg_samples' on page 15 undefined on input lin
 e 20.
 
 
-LaTeX Warning: Reference `eq:obj_neg_samples' on page 16 undefined on input lin
+LaTeX Warning: Reference `eq:obj_neg_samples' on page 15 undefined on input lin
 e 20.
 
 
@@ -1041,7 +1041,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 13--36
 
  []
 
-[16]
+[15]
 Underfull \hbox (badness 10000) in paragraph at lines 45--58
 
  []
@@ -1051,70 +1051,77 @@ Underfull \hbox (badness 10000) in paragraph at lines 59--65
 
  []
 
-[17] [18]
+[16] [17]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[19]) [20]
+[18]) [19]
 \openout2 = `chapters/results.aux'.
 
  (./chapters/results.tex
 chapter 4.
 
-LaTeX Warning: Citation 'mikolov' on page 21 undefined on input line 15.
+LaTeX Warning: Citation 'mikolov' on page 20 undefined on input line 15.
 
-[21
+[20
 
 
 
 
 ]
-<images/treshold1.png, id=113, 1047.915pt x 51.19125pt>
+<images/treshold1.png, id=110, 1047.915pt x 51.19125pt>
 File: images/treshold1.png Graphic file (type png)
 <use images/treshold1.png>
 Package pdftex.def Info: images/treshold1.png  used on input line 35.
 (pdftex.def)             Requested size: 448.13095pt x 21.89151pt.
-<images/treshold2.png, id=114, 1050.92625pt x 58.2175pt>
+<images/treshold2.png, id=111, 1050.92625pt x 58.2175pt>
 File: images/treshold2.png Graphic file (type png)
 <use images/treshold2.png>
 Package pdftex.def Info: images/treshold2.png  used on input line 42.
 (pdftex.def)             Requested size: 448.13095pt x 24.82515pt.
-<images/treshold3.png, id=115, 1046.91125pt x 45.16875pt>
+<images/treshold3.png, id=112, 1046.91125pt x 45.16875pt>
 File: images/treshold3.png Graphic file (type png)
 <use images/treshold3.png>
 Package pdftex.def Info: images/treshold3.png  used on input line 49.
 (pdftex.def)             Requested size: 448.13095pt x 19.33395pt.
-<images/treshold4.png, id=116, 1039.885pt x 41.15375pt>
+<images/treshold4.png, id=113, 1039.885pt x 41.15375pt>
 File: images/treshold4.png Graphic file (type png)
 <use images/treshold4.png>
 Package pdftex.def Info: images/treshold4.png  used on input line 54.
 (pdftex.def)             Requested size: 448.13095pt x 17.7347pt.
-<images/treshold5.png, id=117, 1034.86626pt x 56.21pt>
+<images/treshold5.png, id=114, 1034.86626pt x 56.21pt>
 File: images/treshold5.png Graphic file (type png)
 <use images/treshold5.png>
 Package pdftex.def Info: images/treshold5.png  used on input line 59.
 (pdftex.def)             Requested size: 448.13095pt x 24.3405pt.
- [22] [23 <./images/treshold1.png> <./images/treshold2.png> <./images/treshold3
+ [21] [22 <./images/treshold1.png> <./images/treshold2.png> <./images/treshold3
 .png> <./images/treshold4.png> <./images/treshold5.png>]
-<images/wordsim353_example.png, id=124, 561.09625pt x 18.0675pt>
+<images/wordsim353_example.png, id=121, 561.09625pt x 18.0675pt>
 File: images/wordsim353_example.png Graphic file (type png)
 <use images/wordsim353_example.png>
 Package pdftex.def Info: images/wordsim353_example.png  used on input line 85.
 (pdftex.def)             Requested size: 392.7647pt x 12.64714pt.
- [24 <./images/wordsim353_example.png>] [25]
+ [23 <./images/wordsim353_example.png>] [24]
 Overfull \hbox (2.83067pt too wide) in paragraph at lines 110--114
 \OT1/cmr/m/n/12 propoe-ses an im-ple-men-ta-tion of the SGNS in python. It is a
 lso writ-ten in cython,therefore
  []
 
-[26]
-<images/results_sgd_shuffle.png, id=135, 803.0pt x 501.875pt>
+[25]
+<images/results_sgd_shuffle.png, id=132, 803.0pt x 501.875pt>
 File: images/results_sgd_shuffle.png Graphic file (type png)
 <use images/results_sgd_shuffle.png>
 Package pdftex.def Info: images/results_sgd_shuffle.png  used on input line 124
 .
 (pdftex.def)             Requested size: 361.34666pt x 225.84166pt.
-<images/results_mom_shuffle.png, id=136, 803.0pt x 501.875pt>
+
+
+LaTeX Warning: Citation 'momentum' on page 26 undefined on input line 129.
+
+
+LaTeX Warning: Citation 'nag' on page 26 undefined on input line 129.
+
+<images/results_mom_shuffle.png, id=133, 803.0pt x 501.875pt>
 File: images/results_mom_shuffle.png Graphic file (type png)
 <use images/results_mom_shuffle.png>
 Package pdftex.def Info: images/results_mom_shuffle.png  used on input line 134
@@ -1125,7 +1132,7 @@ Overfull \hbox (16.83638pt too wide) in paragraph at lines 134--135
  [][] 
  []
 
-<images/results_nag_shuffle.png, id=137, 803.0pt x 501.875pt>
+<images/results_nag_shuffle.png, id=134, 803.0pt x 501.875pt>
 File: images/results_nag_shuffle.png Graphic file (type png)
 <use images/results_nag_shuffle.png>
 Package pdftex.def Info: images/results_nag_shuffle.png  used on input line 141
@@ -1136,54 +1143,60 @@ Overfull \hbox (16.83638pt too wide) in paragraph at lines 141--142
  [][] 
  []
 
-[27 <./images/results_sgd_shuffle.png>]
-<images/results_adagrad_shuffle.png, id=142, 803.0pt x 501.875pt>
+[26 <./images/results_sgd_shuffle.png>]
+
+LaTeX Warning: Citation 'adagrad' on page 27 undefined on input line 147.
+
+<images/results_adagrad_shuffle.png, id=139, 803.0pt x 501.875pt>
 File: images/results_adagrad_shuffle.png Graphic file (type png)
 <use images/results_adagrad_shuffle.png>
 Package pdftex.def Info: images/results_adagrad_shuffle.png  used on input line
  151.
 (pdftex.def)             Requested size: 361.34666pt x 225.84166pt.
- [28 <./images/results_mom_shuffle.png> <./images/results_nag_shuffle.png>]
+[27 <./images/results_mom_shuffle.png> <./images/results_nag_shuffle.png>]
+
+LaTeX Warning: Citation 'adadelta' on page 28 undefined on input line 156.
+
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<images/results_adam_shuffle.png, id=148, 803.0pt x 501.875pt>
+<images/results_adam_shuffle.png, id=145, 803.0pt x 501.875pt>
 File: images/results_adam_shuffle.png Graphic file (type png)
 <use images/results_adam_shuffle.png>
 Package pdftex.def Info: images/results_adam_shuffle.png  used on input line 17
 2.
 (pdftex.def)             Requested size: 361.34666pt x 225.84166pt.
-) [29 <./images/results_adagrad_shuffle.png>] [30 <./images/results_adam_shuffl
+) [28 <./images/results_adagrad_shuffle.png>] [29 <./images/results_adam_shuffl
 e.png>]
 \openout2 = `chapters/discussion.aux'.
 
  (./chapters/discussion.tex
 chapter 5.
-[31
+[30
 
 
 
 
 ]
 
-LaTeX Warning: Citation 'Mikolov' on page 32 undefined on input line 16.
+LaTeX Warning: Citation 'Mikolov' on page 31 undefined on input line 16.
 
-[32] [33]
-<images/gensim_vs_adam.png, id=167, 803.0pt x 501.875pt>
+[31] [32]
+<images/gensim_vs_adam.png, id=164, 803.0pt x 501.875pt>
 File: images/gensim_vs_adam.png Graphic file (type png)
 <use images/gensim_vs_adam.png>
 Package pdftex.def Info: images/gensim_vs_adam.png  used on input line 60.
 (pdftex.def)             Requested size: 361.34666pt x 225.84166pt.
- [34] [35 <./images/gensim_vs_adam.png>]
+ [33] [34 <./images/gensim_vs_adam.png>]
 
-LaTeX Warning: Citation 'mikolov' on page 36 undefined on input line 80.
+LaTeX Warning: Citation 'mikolov' on page 35 undefined on input line 80.
 
-[36]) [37]
+[35]) [36]
 \openout2 = `chapters/conclusion.aux'.
 
  (./chapters/conclusion.tex
 chapter 6.
-) [38
+) [37
 
 
 
@@ -1196,7 +1209,7 @@ File: omlcmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <12> not available
 (Font)              Font shape `OML/cmm/m/it' tried instead on input line 29.
- [39
+ [38
 
 
 
@@ -1223,14 +1236,14 @@ Overfull \hbox (87.66812pt too wide) in paragraph at lines 47--48
 [][][][][][][][][][][][][][][][][][] 
  []
 
-[40]
+[39]
 chapter B.
-[41
+[40
 
 
 ]
 chapter C.
-[42
+[41
 
 
 ]
@@ -1241,12 +1254,12 @@ Overfull \hbox (9.541pt too wide) in paragraph at lines 66--68
 im.utils.RULE[]DISCARD,
  []
 
-[43
+[42
 
 
-]) [44]
+]) [43]
 chapter without number
-[45
+[44
 
 
 
@@ -1257,7 +1270,7 @@ Overfull \hbox (3.71585pt too wide) in paragraph at lines 159--159
 Vetrov Dmitry.
  []
 
-[46] (./thesis.aux (./includes/BA-titlepage.aux) (./includes/abstract.aux)
+[45] (./thesis.aux (./includes/BA-titlepage.aux) (./includes/abstract.aux)
 (./chapters/introduction.aux) (./chapters/background.aux)
 (./chapters/methods.aux) (./chapters/results.aux) (./chapters/discussion.aux)
 (./chapters/conclusion.aux))
@@ -1272,41 +1285,37 @@ Package biblatex Warning: Please (re)run Biber on the file:
 Package logreq Info: Writing requests to 'thesis.run.xml'.
 \openout1 = `thesis.run.xml'.
 
- )
-(\end occurred inside a group at level 1)
-
-### simple group (level 1) entered at line 3 ({)
-### bottom level 
+ ) 
 Here is how much of TeX's memory you used:
  17091 strings out of 492616
  323795 string characters out of 6135177
- 912074 words of memory out of 5000000
+ 912114 words of memory out of 5000000
  20747 multiletter control sequences out of 15000+600000
  15743 words of font info for 56 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 53i,19n,76p,9085b,1996s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.en
-c}</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texmf-dist/fo
-nts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/publ
-ic/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm
-/cmmi6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></us
-r/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-d
-ist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1
-/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmr6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></
-usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-
-dist/fonts/type1/public/amsfonts/cm/cmsl12.pfb></usr/share/texmf-dist/fonts/typ
-e1/public/amsfonts/cm/cmss17.pfb></usr/share/texmf-dist/fonts/type1/public/amsf
-onts/cm/cmssbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy
-10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/sh
-are/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/share/texmf-dist/fonts/type1/p
-ublic/cm-super/sfrm1200.pfb>
-Output written on thesis.pdf (52 pages, 646641 bytes).
+ 53i,19n,76p,9085b,1904s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fon
+ts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></u
+sr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmr17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb>
+</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmsl12.pfb></usr/share/texmf-dist/fonts/type1/public/amsf
+onts/cm/cmss17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx
+10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/s
+hare/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmtt12.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super
+/sfrm1200.pfb>
+Output written on thesis.pdf (51 pages, 645587 bytes).
 PDF statistics:
- 277 PDF objects out of 1000 (max. 8388607)
- 179 compressed objects within 2 object streams
+ 274 PDF objects out of 1000 (max. 8388607)
+ 177 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  76 words of extra memory for PDF output out of 10000 (max. 10000000)
 
