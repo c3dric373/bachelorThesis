@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Arch Linux) (preloaded format=pdflatex 2019.4.14)  15 APR 2019 16:03
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Arch Linux) (preloaded format=pdflatex 2019.4.14)  15 APR 2019 16:11
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1094,60 +1094,62 @@ Package pdftex.def Info: images/treshold1.png  used on input line 59.
 <images/wordsim353_example.png, id=120, 561.09625pt x 18.0675pt>
 File: images/wordsim353_example.png Graphic file (type png)
 <use images/wordsim353_example.png>
-Package pdftex.def Info: images/wordsim353_example.png  used on input line 89.
+Package pdftex.def Info: images/wordsim353_example.png  used on input line 85.
 (pdftex.def)             Requested size: 392.7647pt x 12.64714pt.
  [24 <./images/wordsim353_example.png>]
 [25] [26]
 <images/results_sgd_shuffle.png, id=131, 803.0pt x 501.875pt>
 File: images/results_sgd_shuffle.png Graphic file (type png)
 <use images/results_sgd_shuffle.png>
-Package pdftex.def Info: images/results_sgd_shuffle.png  used on input line 126
+Package pdftex.def Info: images/results_sgd_shuffle.png  used on input line 122
 .
 (pdftex.def)             Requested size: 361.34666pt x 225.84166pt.
 <images/results_mom_shuffle.png, id=132, 803.0pt x 501.875pt>
 File: images/results_mom_shuffle.png Graphic file (type png)
 <use images/results_mom_shuffle.png>
-Package pdftex.def Info: images/results_mom_shuffle.png  used on input line 136
+Package pdftex.def Info: images/results_mom_shuffle.png  used on input line 132
 .
 (pdftex.def)             Requested size: 240.90186pt x 150.56366pt.
 
-Overfull \hbox (16.83638pt too wide) in paragraph at lines 136--137
+Overfull \hbox (16.83638pt too wide) in paragraph at lines 132--133
  [][] 
  []
 
 <images/results_nag_shuffle.png, id=133, 803.0pt x 501.875pt>
 File: images/results_nag_shuffle.png Graphic file (type png)
 <use images/results_nag_shuffle.png>
-Package pdftex.def Info: images/results_nag_shuffle.png  used on input line 143
+Package pdftex.def Info: images/results_nag_shuffle.png  used on input line 139
 .
 (pdftex.def)             Requested size: 240.90186pt x 150.56366pt.
 
-Overfull \hbox (16.83638pt too wide) in paragraph at lines 143--144
+Overfull \hbox (16.83638pt too wide) in paragraph at lines 139--140
  [][] 
  []
+
+[27 <./images/results_sgd_shuffle.png>]
+<images/results_adagrad_shuffle.png, id=138, 803.0pt x 501.875pt>
+File: images/results_adagrad_shuffle.png Graphic file (type png)
+<use images/results_adagrad_shuffle.png>
+Package pdftex.def Info: images/results_adagrad_shuffle.png  used on input line
+ 149.
+(pdftex.def)             Requested size: 361.34666pt x 225.84166pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<images/results_adagrad_shuffle.png, id=134, 803.0pt x 501.875pt>
-File: images/results_adagrad_shuffle.png Graphic file (type png)
-<use images/results_adagrad_shuffle.png>
-Package pdftex.def Info: images/results_adagrad_shuffle.png  used on input line
- 153.
-(pdftex.def)             Requested size: 361.34666pt x 225.84166pt.
-[27 <./images/results_sgd_shuffle.png>] [28 <./images/results_mom_shuffle.png> 
-<./images/results_nag_shuffle.png> <./images/results_adagrad_shuffle.png>]
-<images/results_adam_shuffle.png, id=145, 803.0pt x 501.875pt>
+[28 <./images/results_mom_shuffle.png> <./images/results_nag_shuffle.png>]
+<images/results_adam_shuffle.png, id=144, 803.0pt x 501.875pt>
 File: images/results_adam_shuffle.png Graphic file (type png)
 <use images/results_adam_shuffle.png>
 Package pdftex.def Info: images/results_adam_shuffle.png  used on input line 17
-4.
+0.
 (pdftex.def)             Requested size: 361.34666pt x 225.84166pt.
 )
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[29] [30 <./images/results_adam_shuffle.png>]
+[29 <./images/results_adagrad_shuffle.png>] [30 <./images/results_adam_shuffle.
+png>]
 \openout2 = `chapters/discussion.aux'.
 
  (./chapters/discussion.tex
@@ -1257,6 +1259,9 @@ Vetrov Dmitry.
 LaTeX Warning: There were undefined references.
 
 
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+
 Package biblatex Warning: Please (re)run Biber on the file:
 (biblatex)                thesis
 (biblatex)                and rerun LaTeX afterwards.
@@ -1295,7 +1300,7 @@ onts/cm/cmssbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy
 are/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texmf-dist
 /fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/share/texmf-dist/fonts/type1/p
 ublic/cm-super/sfrm1200.pfb>
-Output written on thesis.pdf (51 pages, 580908 bytes).
+Output written on thesis.pdf (51 pages, 581102 bytes).
 PDF statistics:
  270 PDF objects out of 1000 (max. 8388607)
  177 compressed objects within 2 object streams

@@ -62,7 +62,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {4.2.2}Word similarity and wordsim353}{24}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.3}Configuration of the network}{24}% 
+\contentsline {section}{\numberline {4.3}Configuration of the network}{25}% 
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {4.4}Input Shuffling}{25}% 
 \defcounter {refsection}{0}\relax 
@@ -74,9 +74,9 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {4.6.2}Momentum and Nesterov}{27}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.6.3}Adagrad}{27}% 
+\contentsline {subsection}{\numberline {4.6.3}Adagrad}{28}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.6.4}Adadelta}{29}% 
+\contentsline {subsection}{\numberline {4.6.4}Adadelta}{28}% 
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {4.6.5}Adam}{29}% 
 \defcounter {refsection}{0}\relax 
