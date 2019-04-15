@@ -153,7 +153,7 @@ Here it's interesting to notice that a higher learning rate combined with input 
     \label{fig:results_adagrad_shuffle}
 \end{figure}
 \subsection{Adadelta}
-In theory Adadelta should outperfrom Adagrad as it's its upgrade. But it did not hold up to our excpectations. Because it didn't has any learning rate to tune, we only did 2 experiments, with and without input shuffling. Adadelta did not manage to achieve a word similarity of 0.66. It only converged to a similarity of 0.59. It did this in 20 epochs without input shuffling and in 3 with input shuffling. As seen in table \ref{table:results_adadelta}
+In theory Adadelta should outperform Adagrad as it's an extension of the former. Because it didn't has any learning rate to tune, we only did 2 experiments, with and without input shuffling. We are aware of the fact thta their are additional hyper parameter by did, for simplicity reason, and because their effect is not as high as the learning rate in other optimizers, decide no to tune it. We left it to it's default value $\rho = 0.9$. This parameter defines the percentage taken when calculating the exponantially decaying average of past gradients, as explained in \ref{ssec:adadelta}Adadelta did not manage to achieve a word similarity of 0.66. It only converged to a similarity of 0.59. It did this in 20 epochs without input shuffling and in 3 with input shuffling, as can be seen in Table \ref{table:results_adadelta}
 \begin{table}[h]
 \centering
 \begin{tabular}{|l|l|l|}

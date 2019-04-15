@@ -156,7 +156,7 @@ Therefore we have $ \theta_{t+1,i} = \theta_{t_i} - \eta_{t,i} g_{t,i} $, and we
 with  $G_{t_{i,i}}$ being the diagonal Matrix of the sum of the squares of the graditents ($g_{t,i} $). 
 There lies one weakness in this approach: the sum of the squares of the previous gradients grows constantly. This means that after a certain number of epochs the learning rate will be insufficient, to update the model. This issue was addressed by the Adadelta algorithm, that will be covered in the next session. 
 
-\subsection{Adadelta}
+\subsection{Adadelta}\label{ssec:adadelta}
 Adadelta \cite{adadelta} not only solves the constantly growing sum problem, but also the fact that one does not have to tune the learning rate by not having one. The gist of Adadelta is that instead of taking all the gradients to compute the sum we will only take a fixed number $w$ of gradients. But instead of inefficiently storing w gradients we will take the exponantially decaying average of the squared gradient, denoted $E[g^{2}]$. The average at time step $t$ will be computed in the following way: 
 \begin{equation}
 E[g^2]_t = \gamma E[g^2]_{t-1} + (1 - \gamma) g^2_t
