@@ -107,7 +107,7 @@ There are two reasons why we think that input shuffling is particulary well suit
 One thing to consider is that when using input shuffling we cannot use a random window size. 
 
 \section{Convergence time} 
-To optimize convergence time we have to define it first. Therefore we used the already available implementation Gensim \cite{gensim}, and the knowledge from Ji et al.\cite{intel} that a score of $0.66$ in the task of word similarity is the state of the art. We also know after testing Gensim (more on this process in Chapter \ref{chap:discussion}, that it takes 4 epochs to converge. Therefore we defined the following criteria for convergence: \\
+To optimize convergence time we have to define it first. Therefore we used the already available implementation Gensim \cite{gensim}. Gensim is an open source software that propoeses an implementation of the SGNS in python. It is also written in cython,therefore it has a fast computation time, but can be used inside a python implementation. Together with the knowledge from Ji et al.\cite{intel} that a score of $0.66$ in the task of word similarity, with the text8 dataset is the state of the art, we tested Gensim (more on this process in Chapter \ref{chap:discussion} and found out  that it took 4 epochs to converge. Therefore we defined the following criteria for convergence: \\
 $\rho - \rho_{prev} < 0.009 \vee \rho = 0.66$ \\
 where $\rho$ is the pearson coefficient on the wordsim353 task. 
 We also stopped computation, if it took more then 20 epochs to converge. 
