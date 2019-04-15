@@ -140,7 +140,7 @@ v_t = \gamma v_{t-1} + \eta \nabla J (\theta -  \gamma v_{t-1})
 
 SGD wiht momentum and Nesterov accelerated gradient (NAG) has shown tremendous results in RNN's. But some of the earlier mentioned problems still remains.  NAG, still treats every parameter the same way. Therefore we need a more complex optimization algorithm, that takes the frequency of a feature into account. Adagrad does just that. 
 
-\subsection{Adagrad}
+\subsection{Adagrad}\label{ssec:adagrad}
 Adagrad first introduced by \cite{adagrad} is an optimzer that tries to apply different learning rates to different parameters, according to their frequency. The idea is to give very frequent features a small learning rate, and very sparse features a high learning rate. This can be very important for our task of word embeddings, as rare words in the corpus are more important then very frequent ones. As a matter of fact Pennigton et al. used this algorithm for their training of Glove, another word embedding system. \\
 Each parameter $\theta_i$, at time step $t$ will have it's own learning rate $\eta_{t,i}$
  \begin{equation}

@@ -144,8 +144,8 @@ Momentum and Nesterov accelerated gradient both have an additional hyper paramet
 \end{minipage}
 \end{figure}
 \subsection{Adagrad}
-Adagrad is a very interesting tool for learning word embedding as they decrease the learning rate for very frequent occuring features, and vice versa for low frequent words. Because words that appear very frequently often do not have a real semantic gain to their context words, it's good to have a low learning rate. So in theory Adagrad is particullary well suited for our task. This was confirmed empirically as our model converged in 4 epochs. When combined with shuffling adagrad only took 3 epochs to converge. This shows the tendency of the skip gram model to converge faster with input shuffling and the big impact of having different learning rate for each feature. 
-Here it's interesting to notice that a higher learning rate combined with input shuffling did not yield better results then without shuffling. Both of our best results happened with a learning rate of $0.1$. 
+Adagrad is a very interesting tool for learning word embeddings as it decrease the learning rate for very frequent occuring features, and vice versa (this is explained in detail in Section \ref{ssec:adagrad}). Because words that appear very frequently often do not have a semantic gain that is as important as words that appear less frequently  to their context words, it's good to have a lower learning rate. So in theory Adagrad is particularly well suited for our task. This was confirmed empirically as our model converged in 4 epochs. When combined with shuffling adagrad only took 3 epochs to converge. This shows the tendency of the skip gram model to converge faster with input shuffling and the big impact of having different learning rate for each feature. 
+Here it's interesting to notice that a higher learning rate combined with input shuffling did not yield better results then without shuffling. Both of our best results happened with a learning rate of $0.1$, as can be seen in Figure \ref{fig:results_adagrad_shuffle}.
 \begin{figure}[h]
     \centering
 			\includegraphics[scale=0.45]{images/results_adagrad_shuffle} 
