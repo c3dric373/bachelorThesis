@@ -7,7 +7,7 @@
 This section will give an overview over the used datasets, the used metric to evaluate our models, the configuration of our model and finally the experimental results achieved.
 
 \section{Dataset}\label{sec:dataset}
-In this implementation we mainly used the text8 \footnote{http://mattmahoney.net/dc/enwik8.zip} dataset. We chose this dataset for two reasons. First of all it's a very small dataset, more on exact numbers later, that allowed us to do a lot of computations. Secondly this data set was used in a lot of related work (cite gpu, cpu,caching) hence giving us a very good benchmark. The text8 dataset consists of 1702 lines of 1000 words, there is no punctuation. Therefore we had to choose between building arbitrary sentences and keeping the dataset as it is. We chose the first option because it gives us a faster computation time, and did not show any siginificant loss in quality empirically. We chose a sentences length of 20. Furthermore we applied a technique called subsampling that reduces the data set size. 
+In this implementation we mainly used the text8 \footnote{http://mattmahoney.net/dc/enwik8.zip} dataset. We chose this dataset for two reasons. First of all it's a very small dataset, more on exact numbers later, that allowed us to do a lot of computations. Secondly this data set was used in a lot of related work (cite gpu, cpu,caching) hence giving us a very good benchmark. The text8 dataset consists of 1702 lines of 1000 words, with a vocabulary of roughly 63000 words, there is no punctuation in the dataset. Therefore we had to choose between building arbitrary sentences and keeping the dataset as it is. We chose the first option because it gives us a faster computation time, and did not show any siginificant loss in quality empirically. We chose a sentences length of 20. Furthermore we applied a technique called subsampling that reduces the data set size. 
 We needed a second more larger dataset to confrim our results.  We therefore chose the enwik9 dataset\footnote{http://mattmahoney.net/dc/enwik9.zip}.This dataset needed more preprocessing as it's plain html. We therefore used the a preprocessing script.\footnote{http://mattmahoney.net/dc/textdata.html, Appendix A}. We also splitted this dataset in sentences of length 20, and applied subsampling. The next section will give an exmplanation on the sampling process.
  
  
@@ -39,24 +39,24 @@ Size of Dataset    & 16 mio & 15mio & 11 mio & 8mio & 4 mio \\ \hline
     ~ %add desired spacing between images, e. g. ~, \quad, \qquad, \hfill etc. 
       %(or a blank line to force the subfigure onto a new line)
     \begin{subfigure}[b]{\textwidth}
-        \includegraphics[width=\textwidth]{treshold1}
+        \includegraphics[width=\textwidth]{treshold2}
         \caption{Treshold = $10^{-2}$}
         \label{fig:treshold2}
     \end{subfigure}
     ~ %add desired spacing between images, e. g. ~, \quad, \qquad, \hfill etc. 
     %(or a blank line to force the subfigure onto a new line)
      \begin{subfigure}[b]{\textwidth}
-        \includegraphics[width=\textwidth]{treshold1}
+        \includegraphics[width=\textwidth]{treshold3}
         \caption{Treshold = $10^{-3}$}
         \label{fig:treshold3}
     \end{subfigure}
    \begin{subfigure}[b]{\textwidth}
-        \includegraphics[width=\textwidth]{treshold1}
+        \includegraphics[width=\textwidth]{treshold4}
         \caption{Treshold = $10^{-4}$}
         \label{fig:treshold4}
     \end{subfigure}
      \begin{subfigure}[b]{\textwidth}
-        \includegraphics[width=\textwidth]{treshold1}
+        \includegraphics[width=\textwidth]{treshold5}
         \caption{Treshold = $10^{-5}$}
         \label{fig:treshold5}
     \end{subfigure}
@@ -126,7 +126,7 @@ As seen is figure \ref{fig:results_sgd}, for every learning rate the convergence
     \label{fig:results_sgd}
 \end{figure}
 \subsection{Momentum and Nesterov}
-Momentum and Nesterov accelerated gradient both have an additional hyper parameter $\gamma$, that, as described in Section \ref{optimizers}, defines the percentage of the previous gradient that will be added to the current gradients. We set $\gamma = 0.9$ as this is the typical value and did not alter it during our experiments. Momentum and Nesterov alone respectively only slightly decrease or increase the convergence time. As the first one optimally converges in 9 epochs and the second one in 13. If we combine these optimizers with input shuffling, interestingly the same phenomena as with plain SGD appear. The convergence time gets better, 8 epochs for Momentum  and 3 epochs for NAG. The phenomena that a higher learning rat yields better results also happens with both of the optimizers. As Momentum does not converge in 20 epochs with a learning rate of 0.002 but does in 8 with input shuffling. 
+Momentum\cite{momentum} and NAG \cite{nag} both have an additional hyper parameter $\gamma$, that, as described in Section \ref{optimizers}, defines the percentage of the previous gradient that will be added to the current gradients. We set $\gamma = 0.9$ as this is the typical value and did not alter it during our experiments. Momentum and Nesterov alone respectively only slightly decrease or increase the convergence time. As the first one optimally converges in 9 epochs and the second one in 13. If we combine these optimizers with input shuffling, interestingly the same phenomena as with plain SGD appear. The convergence time gets better, 8 epochs for Momentum  and 3 epochs for NAG. The phenomena that a higher learning rat yields better results also happens with both of the optimizers. As Momentum does not converge in 20 epochs with a learning rate of 0.002 but does in 8 with input shuffling. 
 \begin{figure}[h]
 \centering
 \begin{minipage}{.5\textwidth}
@@ -144,7 +144,7 @@ Momentum and Nesterov accelerated gradient both have an additional hyper paramet
 \end{minipage}
 \end{figure}
 \subsection{Adagrad}
-Adagrad is a very interesting tool for learning word embeddings as it decrease the learning rate for very frequent occuring features, and vice versa (this is explained in detail in Section \ref{ssec:adagrad}). Because words that appear very frequently often do not have a semantic gain that is as important as words that appear less frequently  to their context words, it's good to have a lower learning rate. So in theory Adagrad is particularly well suited for our task. This was confirmed empirically as our model converged in 4 epochs. When combined with shuffling adagrad only took 3 epochs to converge. This shows the tendency of the skip gram model to converge faster with input shuffling and the big impact of having different learning rate for each feature. 
+Adagrad \cite{adagrad} is a very interesting tool for learning word embeddings as it decrease the learning rate for very frequent occuring features, and vice versa (this is explained in detail in Section \ref{ssec:adagrad}). Because words that appear very frequently often do not have a semantic gain that is as important as words that appear less frequently  to their context words, it's good to have a lower learning rate. So in theory Adagrad is particularly well suited for our task. This was confirmed empirically as our model converged in 4 epochs. When combined with shuffling adagrad only took 3 epochs to converge. This shows the tendency of the skip gram model to converge faster with input shuffling and the big impact of having different learning rate for each feature. 
 Here it's interesting to notice that a higher learning rate combined with input shuffling did not yield better results then without shuffling. Both of our best results happened with a learning rate of $0.1$, as can be seen in Figure \ref{fig:results_adagrad_shuffle}.
 \begin{figure}[h]
     \centering
@@ -153,7 +153,7 @@ Here it's interesting to notice that a higher learning rate combined with input 
     \label{fig:results_adagrad_shuffle}
 \end{figure}
 \subsection{Adadelta}
-In theory Adadelta should outperform Adagrad as it's an extension of the former. Because it didn't has any learning rate to tune, we only did 2 experiments, with and without input shuffling. We are aware of the fact thta their are additional hyper parameter by did, for simplicity reason, and because their effect is not as high as the learning rate in other optimizers, decide no to tune it. We left it to it's default value $\rho = 0.9$. This parameter defines the percentage taken when calculating the exponantially decaying average of past gradients, as explained in \ref{ssec:adadelta}Adadelta did not manage to achieve a word similarity of 0.66. It only converged to a similarity of 0.59. It did this in 20 epochs without input shuffling and in 3 with input shuffling, as can be seen in Table \ref{table:results_adadelta}
+In theory Adadelta \cite{adadelta} should outperform Adagrad as it's an extension of the former. Because it didn't has any learning rate to tune, we only did 2 experiments, with and without input shuffling. We are aware of the fact thta their are additional hyper parameter by did, for simplicity reason, and because their effect is not as high as the learning rate in other optimizers, decide no to tune it. We left it to it's default value $\rho = 0.9$. This parameter defines the percentage taken when calculating the exponantially decaying average of past gradients, as explained in \ref{ssec:adadelta}Adadelta did not manage to achieve a word similarity of 0.66. It only converged to a similarity of 0.59. It did this in 20 epochs without input shuffling and in 3 with input shuffling, as can be seen in Table \ref{table:results_adadelta}
 \begin{table}[h]
 \centering
 \begin{tabular}{|l|l|l|}
