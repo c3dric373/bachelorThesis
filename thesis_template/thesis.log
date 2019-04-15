@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Arch Linux) (preloaded format=pdflatex 2019.4.14)  15 APR 2019 14:23
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Arch Linux) (preloaded format=pdflatex 2019.4.14)  15 APR 2019 14:43
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -907,7 +907,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
  (./chapters/results.tex
 chapter 4.
 
-LaTeX Warning: Citation 'mikolov' on page 21 undefined on input line 19.
+LaTeX Warning: Citation 'mikolov' on page 21 undefined on input line 15.
 
 [21
 
@@ -918,36 +918,36 @@ LaTeX Warning: Citation 'mikolov' on page 21 undefined on input line 19.
 <images/treshold1.png, id=112, 1047.915pt x 51.19125pt>
 File: images/treshold1.png Graphic file (type png)
 <use images/treshold1.png>
-Package pdftex.def Info: images/treshold1.png  used on input line 40.
+Package pdftex.def Info: images/treshold1.png  used on input line 36.
 (pdftex.def)             Requested size: 448.13095pt x 21.89151pt.
 File: images/treshold1.png Graphic file (type png)
 <use images/treshold1.png>
-Package pdftex.def Info: images/treshold1.png  used on input line 47.
+Package pdftex.def Info: images/treshold1.png  used on input line 43.
 (pdftex.def)             Requested size: 448.13095pt x 21.89151pt.
 File: images/treshold1.png Graphic file (type png)
 <use images/treshold1.png>
-Package pdftex.def Info: images/treshold1.png  used on input line 54.
+Package pdftex.def Info: images/treshold1.png  used on input line 50.
 (pdftex.def)             Requested size: 448.13095pt x 21.89151pt.
 File: images/treshold1.png Graphic file (type png)
 <use images/treshold1.png>
-Package pdftex.def Info: images/treshold1.png  used on input line 59.
+Package pdftex.def Info: images/treshold1.png  used on input line 55.
 (pdftex.def)             Requested size: 448.13095pt x 21.89151pt.
 File: images/treshold1.png Graphic file (type png)
 <use images/treshold1.png>
-Package pdftex.def Info: images/treshold1.png  used on input line 64.
+Package pdftex.def Info: images/treshold1.png  used on input line 60.
 (pdftex.def)             Requested size: 448.13095pt x 21.89151pt.
- [22 <./images/treshold1.png>] [23]
+ [22] [23 <./images/treshold1.png>]
 <images/wordsim353_example.png, id=119, 561.09625pt x 18.0675pt>
 File: images/wordsim353_example.png Graphic file (type png)
 <use images/wordsim353_example.png>
-Package pdftex.def Info: images/wordsim353_example.png  used on input line 90.
+Package pdftex.def Info: images/wordsim353_example.png  used on input line 86.
 (pdftex.def)             Requested size: 392.7647pt x 12.64714pt.
  [24 <./images/wordsim353_example.png>]
 [25]
 <images/results_sgd_shuffle.png, id=127, 803.0pt x 501.875pt>
 File: images/results_sgd_shuffle.png Graphic file (type png)
 <use images/results_sgd_shuffle.png>
-Package pdftex.def Info: images/results_sgd_shuffle.png  used on input line 127
+Package pdftex.def Info: images/results_sgd_shuffle.png  used on input line 123
 .
 (pdftex.def)             Requested size: 361.34666pt x 225.84166pt.
 
@@ -957,73 +957,76 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 <images/results_mom_shuffle.png, id=128, 803.0pt x 501.875pt>
 File: images/results_mom_shuffle.png Graphic file (type png)
 <use images/results_mom_shuffle.png>
-Package pdftex.def Info: images/results_mom_shuffle.png  used on input line 137
+Package pdftex.def Info: images/results_mom_shuffle.png  used on input line 133
 .
 (pdftex.def)             Requested size: 240.90186pt x 150.56366pt.
 
-Overfull \hbox (16.83638pt too wide) in paragraph at lines 137--138
+Overfull \hbox (16.83638pt too wide) in paragraph at lines 133--134
  [][] 
  []
 
 <images/results_nag_shuffle.png, id=129, 803.0pt x 501.875pt>
 File: images/results_nag_shuffle.png Graphic file (type png)
 <use images/results_nag_shuffle.png>
-Package pdftex.def Info: images/results_nag_shuffle.png  used on input line 144
+Package pdftex.def Info: images/results_nag_shuffle.png  used on input line 140
 .
 (pdftex.def)             Requested size: 240.90186pt x 150.56366pt.
 
-Overfull \hbox (16.83638pt too wide) in paragraph at lines 144--145
+Overfull \hbox (16.83638pt too wide) in paragraph at lines 140--141
  [][] 
  []
 
 [26]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
 <images/results_adagrad_shuffle.png, id=133, 803.0pt x 501.875pt>
 File: images/results_adagrad_shuffle.png Graphic file (type png)
 <use images/results_adagrad_shuffle.png>
 Package pdftex.def Info: images/results_adagrad_shuffle.png  used on input line
- 154.
+ 150.
 (pdftex.def)             Requested size: 361.34666pt x 225.84166pt.
- [27 <./images/results_sgd_shuffle.png> <./images/results_mom_shuffle.png> <./i
-mages/results_nag_shuffle.png>]
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<images/results_adam_shuffle.png, id=140, 803.0pt x 501.875pt>
+[27 <./images/results_sgd_shuffle.png>] [28 <./images/results_mom_shuffle.png> 
+<./images/results_nag_shuffle.png> <./images/results_adagrad_shuffle.png>]
+<images/results_adam_shuffle.png, id=144, 803.0pt x 501.875pt>
 File: images/results_adam_shuffle.png Graphic file (type png)
 <use images/results_adam_shuffle.png>
 Package pdftex.def Info: images/results_adam_shuffle.png  used on input line 17
-5.
+1.
 (pdftex.def)             Requested size: 361.34666pt x 225.84166pt.
-) [28 <./images/results_adagrad_shuffle.png>] [29 <./images/results_adam_shuffl
-e.png>]
+)
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[29] [30 <./images/results_adam_shuffle.png>]
 \openout2 = `chapters/discussion.aux'.
 
  (./chapters/discussion.tex
 chapter 5.
 
-LaTeX Warning: Citation 'Mikolov' on page 30 undefined on input line 17.
+LaTeX Warning: Citation 'Mikolov' on page 31 undefined on input line 17.
 
-[30
-
-
+[31
 
 
-] [31] [32]
-<images/gensim_vs_adam.png, id=159, 803.0pt x 501.875pt>
+
+
+] [32] [33]
+<images/gensim_vs_adam.png, id=162, 803.0pt x 501.875pt>
 File: images/gensim_vs_adam.png Graphic file (type png)
 <use images/gensim_vs_adam.png>
 Package pdftex.def Info: images/gensim_vs_adam.png  used on input line 62.
 (pdftex.def)             Requested size: 361.34666pt x 225.84166pt.
- [33] [34 <./images/gensim_vs_adam.png>]
+ [34] [35 <./images/gensim_vs_adam.png>]
 
-LaTeX Warning: Citation 'mikolov' on page 35 undefined on input line 82.
+LaTeX Warning: Citation 'mikolov' on page 36 undefined on input line 82.
 
-) [35]
+) [36]
 \openout2 = `chapters/conclusion.aux'.
 
  (./chapters/conclusion.tex
 chapter 6.
-) [36
+) [37
 
 
 
@@ -1036,7 +1039,7 @@ File: omlcmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <12> not available
 (Font)              Font shape `OML/cmm/m/it' tried instead on input line 29.
- [37
+ [38
 
 
 
@@ -1055,14 +1058,14 @@ Overfull \hbox (87.66812pt too wide) in paragraph at lines 47--48
 [][][][][][][][][][][][][][][][][][] 
  []
 
-[38]
+[39]
 chapter B.
-[39
+[40
 
 
 ]
 chapter C.
-[40
+[41
 
 
 ]
@@ -1073,12 +1076,12 @@ Overfull \hbox (9.541pt too wide) in paragraph at lines 66--68
 im.utils.RULE[]DISCARD,
  []
 
-[41
+[42
 
 
-]) [42]
+]) [43]
 chapter without number
-[43
+[44
 
 
 
@@ -1089,7 +1092,7 @@ Overfull \hbox (3.71585pt too wide) in paragraph at lines 158--158
 Vetrov Dmitry.
  []
 
-[44] (./thesis.aux (./includes/BA-titlepage.aux) (./includes/abstract.aux)
+[45] (./thesis.aux (./includes/BA-titlepage.aux) (./includes/abstract.aux)
 (./chapters/introduction.aux) (./chapters/background.aux)
 (./chapters/methods.aux) (./chapters/results.aux) (./chapters/discussion.aux)
 (./chapters/conclusion.aux))
@@ -1136,10 +1139,10 @@ e1/public/amsfonts/cm/cmssbx10.pfb></usr/share/texmf-dist/fonts/type1/public/am
 sfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy
 8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/sh
 are/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on thesis.pdf (50 pages, 572685 bytes).
+Output written on thesis.pdf (51 pages, 573800 bytes).
 PDF statistics:
- 262 PDF objects out of 1000 (max. 8388607)
- 171 compressed objects within 2 object streams
+ 265 PDF objects out of 1000 (max. 8388607)
+ 173 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  56 words of extra memory for PDF output out of 10000 (max. 10000000)
 

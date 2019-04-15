@@ -7,12 +7,8 @@
 This section will give an overview over the used datasets, the used metric to evaluate our models, the configuration of our model and finally the experimental results achieved.
 
 \section{Dataset}\label{sec:dataset}
-In this implementation we mainly used the text8 \footnote{matt mahoney.zip} dataset. We chose this dataset for two reasons. First of all it's a very small dataset, more on exact specifics later, that enabled us to do a lot of computations. Secondly this data set was used in a lot of related work (cite gpu, cpu,) hence giving us a very good benchmark. The text8 dataset consists of 1702 lines of 1000 words, there is no punctuation. Know we had to choose between building arbitrary sentences and keeping the dataset as it is. We chose the first option because it gives us a faster computation time, and did not show any loss in accuracy empirically. We chose a sentences length of 20. Furtheremore we applied a technique called subsampling that reduces the data set size. 
-We needed a second more larger dataset to confrim our results.  We therefore chose the enwik9 dataset\footnote{matt enwik9}. This datast neede some more preprocessing as it's plain html. We therefor used the script that can be found at the bottom of this page\footnote{script}. We applied exactly the same preprocessing technique afterwards.
-We will know explain the technique called subsampling. 
-
-
- 
+In this implementation we mainly used the text8 \footnote{http://mattmahoney.net/dc/enwik8.zip} dataset. We chose this dataset for two reasons. First of all it's a very small dataset, more on exact numbers later, that allowed us to do a lot of computations. Secondly this data set was used in a lot of related work (cite gpu, cpu,caching) hence giving us a very good benchmark. The text8 dataset consists of 1702 lines of 1000 words, there is no punctuation. Therefore we had to choose between building arbitrary sentences and keeping the dataset as it is. We chose the first option because it gives us a faster computation time, and did not show any siginificant loss in quality empirically. We chose a sentences length of 20. Furthermore we applied a technique called subsampling that reduces the data set size. 
+We needed a second more larger dataset to confrim our results.  We therefore chose the enwik9 dataset\footnote{http://mattmahoney.net/dc/enwik9.zip}.This dataset needed more preprocessing as it's plain html. We therefore used the a preprocessing script.\footnote{http://mattmahoney.net/dc/textdata.html, Appendix A}. We also splitted this dataset in sentences of length 20, and applied subsampling. The next section will give an exmplanation on the sampling process.
  
  
 \subsection{Subsampling}

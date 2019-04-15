@@ -52,9 +52,9 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {4.1}Dataset}{21}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.1.1}Subsampling}{21}% 
+\contentsline {subsection}{\numberline {4.1.1}Subsampling}{22}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Min count}{23}% 
+\contentsline {subsubsection}{\nonumberline Min count}{22}% 
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {4.2}Word similarity}{23}% 
 \defcounter {refsection}{0}\relax 
@@ -64,56 +64,56 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {4.4}Input Shuffling}{25}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.5}Convergence time}{25}% 
+\contentsline {section}{\numberline {4.5}Convergence time}{26}% 
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {4.6}Results by optimizer}{26}% 
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {4.6.1}SGD}{26}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.6.2}Momentum and Nesterov}{26}% 
+\contentsline {subsection}{\numberline {4.6.2}Momentum and Nesterov}{27}% 
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {4.6.3}Adagrad}{27}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.6.4}Adadelta}{28}% 
+\contentsline {subsection}{\numberline {4.6.4}Adadelta}{29}% 
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {4.6.5}Adam}{29}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {5}Discussion}{30}% 
+\contentsline {chapter}{\numberline {5}Discussion}{31}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.1}Our work}{30}% 
+\contentsline {section}{\numberline {5.1}Our work}{31}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.1.1}Shuffling and learning rate with SGD}{30}% 
+\contentsline {subsection}{\numberline {5.1.1}Shuffling and learning rate with SGD}{31}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Large differences with nag and sgd when using shuffling}{30}% 
+\contentsline {subsubsection}{\nonumberline Large differences with nag and sgd when using shuffling}{31}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.2}Related Work}{31}% 
+\contentsline {section}{\numberline {5.2}Related Work}{32}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.2.1}word2vec}{31}% 
+\contentsline {subsection}{\numberline {5.2.1}word2vec}{32}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.2.2}Gensim}{32}% 
+\contentsline {subsection}{\numberline {5.2.2}Gensim}{33}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Gensim vs. SGD}{33}% 
+\contentsline {subsubsection}{\nonumberline Gensim vs. SGD}{34}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Gensim vs. Adam}{33}% 
+\contentsline {subsubsection}{\nonumberline Gensim vs. Adam}{34}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.3}Further Work}{34}% 
+\contentsline {section}{\numberline {5.3}Further Work}{35}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.4}Challenges faced}{35}% 
+\contentsline {section}{\numberline {5.4}Challenges faced}{36}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.4.1}Using the wrong embeddings}{35}% 
+\contentsline {subsection}{\numberline {5.4.1}Using the wrong embeddings}{36}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.4.2}Batch size and loss function adjustements}{35}% 
+\contentsline {subsection}{\numberline {5.4.2}Batch size and loss function adjustements}{36}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {6}Conclusion}{36}% 
+\contentsline {chapter}{\numberline {6}Conclusion}{37}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Appendix \numberline {A}Code}{37}% 
+\contentsline {chapter}{Appendix \numberline {A}Code}{38}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {A.1}Gensim}{37}% 
+\contentsline {section}{\numberline {A.1}Gensim}{38}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Appendix \numberline {B}Math}{39}% 
+\contentsline {chapter}{Appendix \numberline {B}Math}{40}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Appendix \numberline {C}Parameters}{40}% 
+\contentsline {chapter}{Appendix \numberline {C}Parameters}{41}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Appendix \numberline {D}Dataset}{41}% 
+\contentsline {chapter}{Appendix \numberline {D}Dataset}{42}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\nonumberline Bibliography}{43}% 
+\contentsline {chapter}{\nonumberline Bibliography}{44}% 
