@@ -106,16 +106,16 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {5.4.2}Batch size and loss function adjustements}{36}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {6}Conclusion}{38}% 
+\contentsline {chapter}{\numberline {6}Conclusion}{37}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Appendix \numberline {A}Code}{39}% 
+\contentsline {chapter}{Appendix \numberline {A}Code}{38}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {A.1}Gensim}{39}% 
+\contentsline {section}{\numberline {A.1}Gensim}{38}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Appendix \numberline {B}Math}{41}% 
+\contentsline {chapter}{Appendix \numberline {B}Math}{40}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Appendix \numberline {C}Parameters}{42}% 
+\contentsline {chapter}{Appendix \numberline {C}Parameters}{41}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Appendix \numberline {D}Dataset}{43}% 
+\contentsline {chapter}{Appendix \numberline {D}Dataset}{42}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\nonumberline Bibliography}{45}% 
+\contentsline {chapter}{\nonumberline Bibliography}{44}% 
