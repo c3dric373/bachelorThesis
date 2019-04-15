@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Arch Linux) (preloaded format=pdflatex 2019.4.14)  15 APR 2019 21:18
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Arch Linux) (preloaded format=pdflatex 2019.4.14)  15 APR 2019 21:48
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1168,18 +1168,18 @@ LaTeX Warning: Citation 'Mikolov' on page 32 undefined on input line 16.
 <images/gensim_vs_adam.png, id=163, 803.0pt x 501.875pt>
 File: images/gensim_vs_adam.png Graphic file (type png)
 <use images/gensim_vs_adam.png>
-Package pdftex.def Info: images/gensim_vs_adam.png  used on input line 61.
+Package pdftex.def Info: images/gensim_vs_adam.png  used on input line 60.
 (pdftex.def)             Requested size: 361.34666pt x 225.84166pt.
  [34] [35 <./images/gensim_vs_adam.png>]
 
-LaTeX Warning: Citation 'mikolov' on page 36 undefined on input line 81.
+LaTeX Warning: Citation 'mikolov' on page 36 undefined on input line 80.
 
-) [36]
+[36]) [37]
 \openout2 = `chapters/conclusion.aux'.
 
  (./chapters/conclusion.tex
 chapter 6.
-) [37
+) [38
 
 
 
@@ -1192,7 +1192,7 @@ File: omlcmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <12> not available
 (Font)              Font shape `OML/cmm/m/it' tried instead on input line 29.
- [38
+ [39
 
 
 
@@ -1219,14 +1219,14 @@ Overfull \hbox (87.66812pt too wide) in paragraph at lines 47--48
 [][][][][][][][][][][][][][][][][][] 
  []
 
-[39]
+[40]
 chapter B.
-[40
+[41
 
 
 ]
 chapter C.
-[41
+[42
 
 
 ]
@@ -1237,12 +1237,12 @@ Overfull \hbox (9.541pt too wide) in paragraph at lines 66--68
 im.utils.RULE[]DISCARD,
  []
 
-[42
+[43
 
 
-]) [43]
+]) [44]
 chapter without number
-[44
+[45
 
 
 
@@ -1253,7 +1253,7 @@ Overfull \hbox (3.71585pt too wide) in paragraph at lines 159--159
 Vetrov Dmitry.
  []
 
-[45] (./thesis.aux (./includes/BA-titlepage.aux) (./includes/abstract.aux)
+[46] (./thesis.aux (./includes/BA-titlepage.aux) (./includes/abstract.aux)
 (./chapters/introduction.aux) (./chapters/background.aux)
 (./chapters/methods.aux) (./chapters/results.aux) (./chapters/discussion.aux)
 (./chapters/conclusion.aux))
@@ -1299,10 +1299,10 @@ onts/cm/cmssbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy
 are/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texmf-dist
 /fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/share/texmf-dist/fonts/type1/p
 ublic/cm-super/sfrm1200.pfb>
-Output written on thesis.pdf (51 pages, 583402 bytes).
+Output written on thesis.pdf (52 pages, 583926 bytes).
 PDF statistics:
- 270 PDF objects out of 1000 (max. 8388607)
- 177 compressed objects within 2 object streams
+ 273 PDF objects out of 1000 (max. 8388607)
+ 179 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  56 words of extra memory for PDF output out of 10000 (max. 10000000)
 

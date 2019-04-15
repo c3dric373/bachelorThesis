@@ -55,7 +55,6 @@ The first hypothesis may be confirmed by the fact that when combined with input 
 \subsubsection{Gensim vs. Adam}
 The Adam optimizer did outperform the Gensim application in performance (only slightly: 0.01 correlation coefficient better) and convergence time. Adam converged in 2 epochs while Gensim in 4. To be sure of our results we ran each computation 40 time. The results can be  seen in Figure \ref{fig:gensim_vs_adam}.
 
-
 \begin{figure}[H]
     \centering
 			\includegraphics[scale=0.45]{images/gensim_vs_adam} 
@@ -73,12 +72,12 @@ Furthermore having a better convergence time is not very useful if the runtime i
 \section{Challenges faced}
 During our implentation we did make some mistakes, this section has the purpose of informing the scientific community to not make the same mistakes. 
 \subsection{Using the wrong embeddings}
-To start with, we did not chose the same initialization value as gensim in our word embeddings. We initialized the input layer with a normal distribution between (-1,1). We did this because as we first started, we did indeed do the same thing as gensim, initializing the input layer with 0. But then our model did not seem to train well. Retrospectively we accord this to a learning rate too low. But back  then we changed the input layer intitialization. After a few trainings we saw that we did not perform as good as gensim. And as we changed theim back to 0 we performed well again. Therefore this is a recommendation to future work to not set the initialization to (-1,1).
+To start with, we did not chose the same initialization value as Gensim in our word embeddings. We initialized the input layer with a normal distribution between (-1,1), as opposed to gensim which initialzes all the weights to 0. We did this because as we first started, we did indeed do the same thing as gensim, and initialized the input layer with 0. But then our model did not seem to train well. Retrospectively we accord this to a learning rate that was too low. But back  then we did not have the clarity of mind to see it, and instead changed the input layer initialization. After a few simulations we saw that we did not perform as good as Gensim. And as we changed the initialization of the input layer back to 0, as we already had adjusted the learning rate, we achieved good results. Therefore this is a recommendation to future work to not set the initialization to (-1,1).
 
 \subsection{Batch size and loss function adjustements}\label{ssec:bs_lf}
-During our experiments we faced a moment where we needed to us a very high learning rate (50) to achieve good results. As this is the complete opposite of what is standard we got suspiscous. To remedy the problem we made to changes. 
-Firs we needed to find a good batch size. During the rise of the above training we used a batch size of 5000. We then decided to take a batch size of 2000.\\
- Secondly, at the same time we did experiment with different loss functions. As our batched model does not have exactly the same loss function as introduced by Mikolov et al. \cite{mikolov}. At the beginning of our experiment we took the average of all the scores stored in our final matrix. But then chose to take the sum as the training did not seem optimal.\\ 
+During our experiments we faced a moment where we needed to us a very high learning rate (50) to achieve good results. As this is the complete opposite of what is standard we got suspiscous. To remedy the problem we made a few changes. 
+Firs we needed to find a good batch size. During the above explained raise of the learning rate we used a batch size of 5000. We then decided to take a batch size of 2000.\\
+ Secondly, at the same time we did experiment with different loss functions. As our batched model does not have exactly the same loss function as introduced by Mikolov et al. \cite{mikolov}, we needed to find one that suited  our the best. At the beginning of our experiment we took the average of all the scores stored in our final matrix as explained in \ref{ssec:b_SGM}. But then chose to take the sum as the training did not seem optimal.\\ 
  With these two changes we did increase convergence time and word similarity, and while at the same time having a usual learning rate. \\
- Know the question arises why this happened? Is this because the shape of the loss function better suits our advanced optimizers. Or because the loss function is closer to it's original form?
+ Know the question arises why this happened? Is this because the shape of the loss function better suits our advanced optimizers. Or because the loss function is closer to it's original form? We do not yet have any convincing answer to those questions.
 
