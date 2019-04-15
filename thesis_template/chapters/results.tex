@@ -107,17 +107,17 @@ There are two reasons why we think that input shuffling is particulary well suit
 One thing to consider is that when using input shuffling we cannot use a random window size. 
 
 \section{Convergence time} 
-To optimize convergence time we have to define it first. Therefore we used the already available implementation Gensim \cite{gensim}, and the knowledge from Ji et al.\cite{intel} that a score of $0.66$ in the task of word similarity is the state of the art. We also know after testing Gensim (more on this process in Chapter \ref{chap:discussion), that it takes 4 epochs to converge. Therefore we defined the following criteria for convergence: \\
+To optimize convergence time we have to define it first. Therefore we used the already available implementation Gensim \cite{gensim}, and the knowledge from Ji et al.\cite{intel} that a score of $0.66$ in the task of word similarity is the state of the art. We also know after testing Gensim (more on this process in Chapter \ref{chap:discussion}, that it takes 4 epochs to converge. Therefore we defined the following criteria for convergence: \\
 $\rho - \rho_{prev} < 0.009 \vee \rho = 0.66$ \\
 where $\rho$ is the pearson coefficient on the wordsim353 task. 
 We also stopped computation, if it took more then 20 epochs to converge. 
 
 \section{Results by optimizer}
-We ran multiple experiments for each optimizer. This section will only give an overview over the quantified results. 
+We ran multiple experiments for each optimizer. This section will only give an overview over the achieved results. Each section will give an explanation over the achieved result with a specific optimizer.
 
 \subsection{SGD}
-The first challenge for each optimizer was to find a correct learning rate. We first tried the learning rate suggested by gensim, and then performed a random search to find the best one.As expected a bell curve shape resulted, with a learning rate that is to high our model diverged and with a learning rate that is two low or model would not learn quick enough. The best setting that we found is $0.0075$. We converged in 11 epochs. The second experiment was to add input shuffling. 
-As seen is figure \ref{fig:results_sgd}, for every learning rate the convergence time decreased. Our model know converges in only 7 epochs. Another intersting point to point out of figure \ref{fig:results_sgd} is that with input shuffling we achieved better results with higher learning rates. As for learning rates of $0.01$ and $0.025$ we did converge in 11 epochs with input shuffling but did not converge in 20 epochs without it.
+The first challenge for each optimizer was to find a correct learning rate. As SGD is the optimizer used in Gensim \cite{gensim} we first tried the same learning rate as Gensim \cite{gensim}, and then performed a random search to find a better one. As expected a bell curve shape resulted, a learning rate that is to high leads to diversion and  a learning rate that is two low leads to a training time that is too slow. The best value that we found for the learning rate is $0.0075$. With this setting SGD converged in 11 epochs. The second experiment was to add input shuffling. 
+As seen is figure \ref{fig:results_sgd}, for every learning rate the convergence time decreased. Our model, with it's best setting, know converges in only 7 epochs. Another interesting  fact to point out from Figure \ref{fig:results_sgd} is that with input shuffling we achieved better results with higher learning rates. As for learning rates of $0.01$ and $0.025$ we did converge in 11 epochs with input shuffling but did not converge in 20 epochs without it.
 
 \begin{figure}[h]
     \centering

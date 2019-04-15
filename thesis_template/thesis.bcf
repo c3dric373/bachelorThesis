@@ -2021,11 +2021,14 @@
     <bcf:citekey order="26">adadelta</bcf:citekey>
     <bcf:citekey order="27">mikolov</bcf:citekey>
     <bcf:citekey order="28">gensim</bcf:citekey>
-    <bcf:citekey order="29">intel</bcf:citekey>
-    <bcf:citekey order="30">Mikolov</bcf:citekey>
+    <bcf:citekey order="29">gensim</bcf:citekey>
+    <bcf:citekey order="30">intel</bcf:citekey>
     <bcf:citekey order="31">gensim</bcf:citekey>
-    <bcf:citekey order="32">intel</bcf:citekey>
-    <bcf:citekey order="33">mikolov</bcf:citekey>
+    <bcf:citekey order="32">gensim</bcf:citekey>
+    <bcf:citekey order="33">Mikolov</bcf:citekey>
+    <bcf:citekey order="34">gensim</bcf:citekey>
+    <bcf:citekey order="35">intel</bcf:citekey>
+    <bcf:citekey order="36">mikolov</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nyt">
