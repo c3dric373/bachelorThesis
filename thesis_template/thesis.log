@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Arch Linux) (preloaded format=pdflatex 2019.4.14)  15 APR 2019 18:06
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Arch Linux) (preloaded format=pdflatex 2019.4.14)  15 APR 2019 18:19
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1135,10 +1135,6 @@ Package pdftex.def Info: images/results_adagrad_shuffle.png  used on input line
 (pdftex.def)             Requested size: 361.34666pt x 225.84166pt.
  [28 <./images/results_mom_shuffle.png> <./images/results_nag_shuffle.png>]
 
-LaTeX Warning: Reference `ssec:adadelta' on page 29 undefined on input line 156
-.
-
-
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 <images/results_adam_shuffle.png, id=144, 803.0pt x 501.875pt>
@@ -1153,15 +1149,16 @@ e.png>]
 
  (./chapters/discussion.tex
 chapter 5.
-
-LaTeX Warning: Citation 'Mikolov' on page 31 undefined on input line 17.
-
 [31
 
 
 
 
-] [32] [33]
+]
+
+LaTeX Warning: Citation 'Mikolov' on page 32 undefined on input line 17.
+
+[32] [33]
 <images/gensim_vs_adam.png, id=163, 803.0pt x 501.875pt>
 File: images/gensim_vs_adam.png Graphic file (type png)
 <use images/gensim_vs_adam.png>
@@ -1258,9 +1255,6 @@ Vetrov Dmitry.
 LaTeX Warning: There were undefined references.
 
 
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-
 Package biblatex Warning: Please (re)run Biber on the file:
 (biblatex)                thesis
 (biblatex)                and rerun LaTeX afterwards.
@@ -1276,11 +1270,11 @@ Package logreq Info: Writing requests to 'thesis.run.xml'.
 Here is how much of TeX's memory you used:
  17071 strings out of 492616
  323347 string characters out of 6135177
- 912061 words of memory out of 5000000
+ 912074 words of memory out of 5000000
  20731 multiletter control sequences out of 15000+600000
  15743 words of font info for 56 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 53i,19n,76p,9085b,1997s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 53i,19n,76p,9085b,1996s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.en
 c}</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texmf-dist/fo
@@ -1299,7 +1293,7 @@ onts/cm/cmssbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy
 are/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texmf-dist
 /fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/share/texmf-dist/fonts/type1/p
 ublic/cm-super/sfrm1200.pfb>
-Output written on thesis.pdf (51 pages, 582538 bytes).
+Output written on thesis.pdf (51 pages, 582708 bytes).
 PDF statistics:
  270 PDF objects out of 1000 (max. 8388607)
  177 compressed objects within 2 object streams
