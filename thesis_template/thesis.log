@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Arch Linux) (preloaded format=pdflatex 2019.4.14)  15 APR 2019 14:43
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Arch Linux) (preloaded format=pdflatex 2019.4.14)  15 APR 2019 14:48
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -918,36 +918,36 @@ LaTeX Warning: Citation 'mikolov' on page 21 undefined on input line 15.
 <images/treshold1.png, id=112, 1047.915pt x 51.19125pt>
 File: images/treshold1.png Graphic file (type png)
 <use images/treshold1.png>
-Package pdftex.def Info: images/treshold1.png  used on input line 36.
+Package pdftex.def Info: images/treshold1.png  used on input line 35.
 (pdftex.def)             Requested size: 448.13095pt x 21.89151pt.
 File: images/treshold1.png Graphic file (type png)
 <use images/treshold1.png>
-Package pdftex.def Info: images/treshold1.png  used on input line 43.
+Package pdftex.def Info: images/treshold1.png  used on input line 42.
 (pdftex.def)             Requested size: 448.13095pt x 21.89151pt.
 File: images/treshold1.png Graphic file (type png)
 <use images/treshold1.png>
-Package pdftex.def Info: images/treshold1.png  used on input line 50.
+Package pdftex.def Info: images/treshold1.png  used on input line 49.
 (pdftex.def)             Requested size: 448.13095pt x 21.89151pt.
 File: images/treshold1.png Graphic file (type png)
 <use images/treshold1.png>
-Package pdftex.def Info: images/treshold1.png  used on input line 55.
+Package pdftex.def Info: images/treshold1.png  used on input line 54.
 (pdftex.def)             Requested size: 448.13095pt x 21.89151pt.
 File: images/treshold1.png Graphic file (type png)
 <use images/treshold1.png>
-Package pdftex.def Info: images/treshold1.png  used on input line 60.
+Package pdftex.def Info: images/treshold1.png  used on input line 59.
 (pdftex.def)             Requested size: 448.13095pt x 21.89151pt.
  [22] [23 <./images/treshold1.png>]
 <images/wordsim353_example.png, id=119, 561.09625pt x 18.0675pt>
 File: images/wordsim353_example.png Graphic file (type png)
 <use images/wordsim353_example.png>
-Package pdftex.def Info: images/wordsim353_example.png  used on input line 86.
+Package pdftex.def Info: images/wordsim353_example.png  used on input line 85.
 (pdftex.def)             Requested size: 392.7647pt x 12.64714pt.
  [24 <./images/wordsim353_example.png>]
 [25]
 <images/results_sgd_shuffle.png, id=127, 803.0pt x 501.875pt>
 File: images/results_sgd_shuffle.png Graphic file (type png)
 <use images/results_sgd_shuffle.png>
-Package pdftex.def Info: images/results_sgd_shuffle.png  used on input line 123
+Package pdftex.def Info: images/results_sgd_shuffle.png  used on input line 122
 .
 (pdftex.def)             Requested size: 361.34666pt x 225.84166pt.
 
@@ -957,22 +957,22 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 <images/results_mom_shuffle.png, id=128, 803.0pt x 501.875pt>
 File: images/results_mom_shuffle.png Graphic file (type png)
 <use images/results_mom_shuffle.png>
-Package pdftex.def Info: images/results_mom_shuffle.png  used on input line 133
+Package pdftex.def Info: images/results_mom_shuffle.png  used on input line 132
 .
 (pdftex.def)             Requested size: 240.90186pt x 150.56366pt.
 
-Overfull \hbox (16.83638pt too wide) in paragraph at lines 133--134
+Overfull \hbox (16.83638pt too wide) in paragraph at lines 132--133
  [][] 
  []
 
 <images/results_nag_shuffle.png, id=129, 803.0pt x 501.875pt>
 File: images/results_nag_shuffle.png Graphic file (type png)
 <use images/results_nag_shuffle.png>
-Package pdftex.def Info: images/results_nag_shuffle.png  used on input line 140
+Package pdftex.def Info: images/results_nag_shuffle.png  used on input line 139
 .
 (pdftex.def)             Requested size: 240.90186pt x 150.56366pt.
 
-Overfull \hbox (16.83638pt too wide) in paragraph at lines 140--141
+Overfull \hbox (16.83638pt too wide) in paragraph at lines 139--140
  [][] 
  []
 
@@ -984,7 +984,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 File: images/results_adagrad_shuffle.png Graphic file (type png)
 <use images/results_adagrad_shuffle.png>
 Package pdftex.def Info: images/results_adagrad_shuffle.png  used on input line
- 150.
+ 149.
 (pdftex.def)             Requested size: 361.34666pt x 225.84166pt.
 [27 <./images/results_sgd_shuffle.png>] [28 <./images/results_mom_shuffle.png> 
 <./images/results_nag_shuffle.png> <./images/results_adagrad_shuffle.png>]
@@ -992,7 +992,7 @@ Package pdftex.def Info: images/results_adagrad_shuffle.png  used on input line
 File: images/results_adam_shuffle.png Graphic file (type png)
 <use images/results_adam_shuffle.png>
 Package pdftex.def Info: images/results_adam_shuffle.png  used on input line 17
-1.
+0.
 (pdftex.def)             Requested size: 361.34666pt x 225.84166pt.
 )
 
@@ -1100,9 +1100,6 @@ Vetrov Dmitry.
 LaTeX Warning: There were undefined references.
 
 
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-
 Package biblatex Warning: Please (re)run Biber on the file:
 (biblatex)                thesis
 (biblatex)                and rerun LaTeX afterwards.
@@ -1139,7 +1136,7 @@ e1/public/amsfonts/cm/cmssbx10.pfb></usr/share/texmf-dist/fonts/type1/public/am
 sfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy
 8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/sh
 are/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on thesis.pdf (51 pages, 573800 bytes).
+Output written on thesis.pdf (51 pages, 573889 bytes).
 PDF statistics:
  265 PDF objects out of 1000 (max. 8388607)
  173 compressed objects within 2 object streams
