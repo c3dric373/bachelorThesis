@@ -13,7 +13,7 @@ As shown in figures \ref{fig:results_sgd}, \ref{fig:results_mom} and \ref{fig:re
 As swhon in figures \ref{fig:results_sgd} and \ref{fig:results_nag}, plain SGD and Nesterov Accelerated gradient, greatly differ in their convergence time when using shufflin in to comparison when not. We attribute these results partially to a good random initialization guess and not only input shuffling. Due to a lack of time these results where not replicate more then once. 
 
 \section{Related Work}
-In this section we will compare our work to related work. We will first compare us to the baseline model, the original c implementation from Mikolov et al \cite{Mikolov}. As Mikolov et al. did not use the same datasets as we, this comparison will loose in quality. We therefore compare ourself extensively with Gensim \cite{gensim}, a open source python implementation of the SGNS. Gensim is optimized to have a very high throuhgput which allowed us to, achieve a lot of computaions. Furthermore Gensim gave us access to the loss and the resulting word embedings, which made it easy to compare 
+In this section we will compare our work to related work. We will first compare us to the baseline model, the original C implementation from Mikolov et al \cite{Mikolov}. As they did not use the same datasets as we, this will hinder the quality of the comparison. We therefore compare ourself extensively to Gensim \cite{gensim}. Gensim is optimized to have a very high throuhgput which allowed us to, achieve a lot of computaions. Furthermore Gensim gave us access to the loss and the resulting word embedings, which made it easy  to compare ourselves to theim. 
 
 \subsection{word2vec}
 %TODO ask jorg
