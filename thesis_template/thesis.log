@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2018.9.22)  20 APR 2019 17:44
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2018.9.22)  20 APR 2019 18:22
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -740,11 +740,8 @@ Package csquotes Warning: No multilingual support.
 
 (./thesis.aux (./includes/BA-titlepage.aux) (./includes/abstract.aux)
 (./chapters/introduction.aux) (./chapters/background.aux)
-(./chapters/methods.aux) (./chapters/results.aux
-
-LaTeX Warning: Label `fig:ws353_ex' multiply defined.
-
-) (./chapters/discussion.aux) (./chapters/conclusion.aux))
+(./chapters/methods.aux) (./chapters/results.aux) (./chapters/discussion.aux)
+(./chapters/conclusion.aux))
 \openout1 = `thesis.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 85.
@@ -954,12 +951,12 @@ LaTeX Warning: Citation 'mikolov2' on page 4 undefined on input line 21.
 
 LaTeX Warning: Citation 'mikolov2' on page 5 undefined on input line 38.
 
-[5] <images/frequency_ex.png, id=55, 401.5pt x 252.945pt>
+[5] <images/frequency_ex.png, id=55, 803.0pt x 501.875pt>
 File: images/frequency_ex.png Graphic file (type png)
 
 <use images/frequency_ex.png>
 Package pdftex.def Info: images/frequency_ex.png used on input line 47.
-(pdftex.def)             Requested size: 321.20042pt x 202.35626pt.
+(pdftex.def)             Requested size: 361.34666pt x 225.84166pt.
 
 
 LaTeX Warning: Citation 'mikolov2' on page 6 undefined on input line 52.
@@ -1084,121 +1081,114 @@ LaTeX Warning: Citation 'mikolov' on page 17 undefined on input line 27.
 
 
 
-] <images/sampling_function.png, id=101, 462.97969pt x 238.64156pt>
-File: images/sampling_function.png Graphic file (type png)
-
-<use images/sampling_function.png>
-Package pdftex.def Info: images/sampling_function.png used on input line 34.
-(pdftex.def)             Requested size: 324.08356pt x 167.04794pt.
- [18 <./images/sampling_function.png (PNG copy)>] <images/treshold1.png, id=105
-, 1047.915pt x 51.19125pt>
+] <images/treshold1.png, id=101, 1047.915pt x 51.19125pt>
 File: images/treshold1.png Graphic file (type png)
 
 <use images/treshold1.png>
-Package pdftex.def Info: images/treshold1.png used on input line 53.
+Package pdftex.def Info: images/treshold1.png used on input line 48.
 (pdftex.def)             Requested size: 448.13095pt x 21.89151pt.
 
-<images/treshold2.png, id=106, 1050.92625pt x 58.2175pt>
+<images/treshold2.png, id=102, 1050.92625pt x 58.2175pt>
 File: images/treshold2.png Graphic file (type png)
 
 <use images/treshold2.png>
-Package pdftex.def Info: images/treshold2.png used on input line 60.
+Package pdftex.def Info: images/treshold2.png used on input line 55.
 (pdftex.def)             Requested size: 448.13095pt x 24.82515pt.
 
-<images/treshold3.png, id=107, 1046.91125pt x 45.16875pt>
+<images/treshold3.png, id=103, 1046.91125pt x 45.16875pt>
 File: images/treshold3.png Graphic file (type png)
 
 <use images/treshold3.png>
-Package pdftex.def Info: images/treshold3.png used on input line 67.
+Package pdftex.def Info: images/treshold3.png used on input line 62.
 (pdftex.def)             Requested size: 448.13095pt x 19.33395pt.
 
-<images/treshold4.png, id=108, 1039.885pt x 41.15375pt>
+<images/treshold4.png, id=104, 1039.885pt x 41.15375pt>
 File: images/treshold4.png Graphic file (type png)
 
 <use images/treshold4.png>
-Package pdftex.def Info: images/treshold4.png used on input line 72.
+Package pdftex.def Info: images/treshold4.png used on input line 67.
 (pdftex.def)             Requested size: 448.13095pt x 17.7347pt.
 
-<images/treshold5.png, id=109, 1034.86626pt x 56.21pt>
+<images/treshold5.png, id=105, 1034.86626pt x 56.21pt>
 File: images/treshold5.png Graphic file (type png)
 
 <use images/treshold5.png>
-Package pdftex.def Info: images/treshold5.png used on input line 77.
+Package pdftex.def Info: images/treshold5.png used on input line 72.
 (pdftex.def)             Requested size: 448.13095pt x 24.3405pt.
 
 
-LaTeX Warning: Citation 'gensim' on page 19 undefined on input line 85.
+LaTeX Warning: Citation 'gensim' on page 18 undefined on input line 80.
 
-[19 <./images/treshold1.png> <./images/treshold2.png> <./images/treshold3.png> 
-<./images/treshold4.png> <./images/treshold5.png>]
-<images/wordsim353_example.png, id=114, 561.09625pt x 18.0675pt>
+[18] [19 <./images/treshold1.png> <./images/treshold2.png> <./images/treshold3.
+png> <./images/treshold4.png> <./images/treshold5.png>]
+<images/wordsim353_example.png, id=113, 561.09625pt x 18.0675pt>
 File: images/wordsim353_example.png Graphic file (type png)
 
 <use images/wordsim353_example.png>
-Package pdftex.def Info: images/wordsim353_example.png used on input line 103.
+Package pdftex.def Info: images/wordsim353_example.png used on input line 98.
 (pdftex.def)             Requested size: 392.7647pt x 12.64714pt.
- [20] [21 <./images/wordsim353_example.png>] [22]
+ [20 <./images/wordsim353_example.png>]
+[21]
 
-LaTeX Warning: Citation 'gensim' on page 23 undefined on input line 128.
-
-
-LaTeX Warning: Citation 'intel' on page 23 undefined on input line 128.
+LaTeX Warning: Citation 'gensim' on page 22 undefined on input line 123.
 
 
-LaTeX Warning: Citation 'gensim' on page 23 undefined on input line 137.
+LaTeX Warning: Citation 'intel' on page 22 undefined on input line 123.
+
+[22]
+
+LaTeX Warning: Citation 'gensim' on page 23 undefined on input line 132.
 
 
-LaTeX Warning: Citation 'gensim' on page 23 undefined on input line 137.
+LaTeX Warning: Citation 'gensim' on page 23 undefined on input line 132.
 
-[23] <images/results_sgd_shuffle.png, id=128, 803.0pt x 501.875pt>
+<images/results_sgd_shuffle.png, id=124, 803.0pt x 501.875pt>
 File: images/results_sgd_shuffle.png Graphic file (type png)
 
 <use images/results_sgd_shuffle.png>
-Package pdftex.def Info: images/results_sgd_shuffle.png used on input line 142.
+Package pdftex.def Info: images/results_sgd_shuffle.png used on input line 137.
 
 (pdftex.def)             Requested size: 361.34666pt x 225.84166pt.
 
 
-LaTeX Warning: Citation 'momentum' on page 24 undefined on input line 147.
+LaTeX Warning: Citation 'momentum' on page 23 undefined on input line 142.
 
 
-LaTeX Warning: Citation 'nag' on page 24 undefined on input line 147.
+LaTeX Warning: Citation 'nag' on page 23 undefined on input line 142.
 
 
-LaTeX Warning: Reference `optimizers' on page 24 undefined on input line 147.
+LaTeX Warning: Reference `optimizers' on page 23 undefined on input line 142.
 
-<images/results_mom_shuffle.png, id=129, 803.0pt x 501.875pt>
+<images/results_mom_shuffle.png, id=125, 803.0pt x 501.875pt>
 File: images/results_mom_shuffle.png Graphic file (type png)
 
 <use images/results_mom_shuffle.png>
-Package pdftex.def Info: images/results_mom_shuffle.png used on input line 152.
+Package pdftex.def Info: images/results_mom_shuffle.png used on input line 147.
 
 (pdftex.def)             Requested size: 240.90186pt x 150.56366pt.
 
-Overfull \hbox (16.83638pt too wide) in paragraph at lines 152--153
+Overfull \hbox (16.83638pt too wide) in paragraph at lines 147--148
  [][] 
  []
 
-<images/results_nag_shuffle.png, id=130, 803.0pt x 501.875pt>
+<images/results_nag_shuffle.png, id=126, 803.0pt x 501.875pt>
 File: images/results_nag_shuffle.png Graphic file (type png)
 
 <use images/results_nag_shuffle.png>
-Package pdftex.def Info: images/results_nag_shuffle.png used on input line 159.
+Package pdftex.def Info: images/results_nag_shuffle.png used on input line 154.
 
 (pdftex.def)             Requested size: 240.90186pt x 150.56366pt.
 
-Overfull \hbox (16.83638pt too wide) in paragraph at lines 159--160
+Overfull \hbox (16.83638pt too wide) in paragraph at lines 154--155
  [][] 
  []
 
+[23 <./images/results_sgd_shuffle.png>]
 
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-LaTeX Warning: Citation 'adagrad' on page 24 undefined on input line 165.
+LaTeX Warning: Citation 'adagrad' on page 24 undefined on input line 160.
 
 
-LaTeX Warning: Reference `ssec:adagrad' on page 24 undefined on input line 165.
+LaTeX Warning: Reference `ssec:adagrad' on page 24 undefined on input line 160.
 
 
 <images/results_adagrad_shuffle.png, id=131, 803.0pt x 501.875pt>
@@ -1206,72 +1196,67 @@ File: images/results_adagrad_shuffle.png Graphic file (type png)
 
 <use images/results_adagrad_shuffle.png>
 Package pdftex.def Info: images/results_adagrad_shuffle.png used on input line 
-169.
+164.
 (pdftex.def)             Requested size: 361.34666pt x 225.84166pt.
- [24 <./images/results_sgd_shuffle.png>]
+ [24 <./images/results_mom_shuffle.png> <./images/results_nag_shuffle.png>]
+
+LaTeX Warning: Citation 'adadelta' on page 25 undefined on input line 169.
+
+
+LaTeX Warning: Reference `ssec:adadelta' on page 25 undefined on input line 169
+.
+
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-
-LaTeX Warning: Citation 'adadelta' on page 25 undefined on input line 174.
-
-
-LaTeX Warning: Reference `ssec:adadelta' on page 25 undefined on input line 174
-.
-
-[25 <./images/results_mom_shuffle.png> <./images/results_nag_shuffle.png>]
-<images/results_adam_shuffle.png, id=142, 803.0pt x 501.875pt>
+<images/results_adam_shuffle.png, id=137, 803.0pt x 501.875pt>
 File: images/results_adam_shuffle.png Graphic file (type png)
 
 <use images/results_adam_shuffle.png>
-Package pdftex.def Info: images/results_adam_shuffle.png used on input line 190
+Package pdftex.def Info: images/results_adam_shuffle.png used on input line 185
 .
 (pdftex.def)             Requested size: 361.34666pt x 225.84166pt.
-)
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[26 <./images/results_adagrad_shuffle.png>] [27 <./images/results_adam_shuffle.
-png>]
+) [25 <./images/results_adagrad_shuffle.png>] [26 <./images/results_adam_shuffl
+e.png>]
 \openout2 = `chapters/discussion.aux'.
 
  (./chapters/discussion.tex
 chapter 5.
-[28
+[27
 
 
 
 
 ]
 
-LaTeX Warning: Citation 'Mikolov' on page 29 undefined on input line 16.
+LaTeX Warning: Citation 'Mikolov' on page 28 undefined on input line 16.
 
 
-LaTeX Warning: Citation 'gensim' on page 29 undefined on input line 16.
+LaTeX Warning: Citation 'gensim' on page 28 undefined on input line 16.
 
 
-LaTeX Warning: Citation 'intel' on page 29 undefined on input line 23.
+LaTeX Warning: Citation 'intel' on page 28 undefined on input line 23.
 
-[29]
+[28]
 Missing character: There is no â in font cmr12!
 Missing character: There is no € in font cmr12!
 Missing character: There is no “ in font cmr12!
- [30] <images/gensim_vs_adam.png, id=160, 803.0pt x 501.875pt>
+ [29] <images/gensim_vs_adam.png, id=156, 803.0pt x 501.875pt>
 File: images/gensim_vs_adam.png Graphic file (type png)
 
 <use images/gensim_vs_adam.png>
 Package pdftex.def Info: images/gensim_vs_adam.png used on input line 60.
 (pdftex.def)             Requested size: 361.34666pt x 225.84166pt.
- [31] [32 <./images/gensim_vs_adam.png>]
+ [30] [31 <./images/gensim_vs_adam.png>]
 
-LaTeX Warning: Citation 'mikolov' on page 33 undefined on input line 80.
+LaTeX Warning: Citation 'mikolov' on page 32 undefined on input line 80.
 
-[33]) [34]
+[32]) [33]
 \openout2 = `chapters/conclusion.aux'.
 
  (./chapters/conclusion.tex
 chapter 6.
-) [35
+) [34
 
 
 
@@ -1284,7 +1269,7 @@ File: omlcmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <12> not available
 (Font)              Font shape `OML/cmm/m/it' tried instead on input line 29.
- [36
+ [35
 
 
 
@@ -1311,14 +1296,14 @@ Overfull \hbox (87.66812pt too wide) in paragraph at lines 47--48
 [][][][][][][][][][][][][][][][][][] 
  []
 
-[37]
+[36]
 chapter B.
-[38
+[37
 
 
 ]
 chapter C.
-[39
+[38
 
 
 ]
@@ -1344,7 +1329,7 @@ Overfull \hbox (9.541pt too wide) in paragraph at lines 66--68
 im.utils.RULE[]DISCARD,
  []
 
-[40
+[39
 
 
 ]
@@ -1357,7 +1342,7 @@ Missing character: There is no “ in font cmr12!
 Missing character: There is no â in font cmr12!
 Missing character: There is no € in font cmr12!
 Missing character: There is no “ in font cmr12!
-) [41]
+) [40]
 
 LaTeX Warning: Empty bibliography on input line 142.
 
@@ -1369,9 +1354,6 @@ LaTeX Warning: Empty bibliography on input line 142.
 LaTeX Warning: There were undefined references.
 
 
-LaTeX Warning: There were multiply-defined labels.
-
-
 Package biblatex Warning: Please (re)run Biber on the file:
 (biblatex)                thesis
 (biblatex)                and rerun LaTeX afterwards.
@@ -1381,10 +1363,10 @@ Package logreq Info: Writing requests to 'thesis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 16181 strings out of 493013
- 306205 string characters out of 6135682
- 873766 words of memory out of 5000000
- 19467 multiletter control sequences out of 15000+600000
+ 16176 strings out of 493013
+ 306053 string characters out of 6135682
+ 873727 words of memory out of 5000000
+ 19463 multiletter control sequences out of 15000+600000
  15442 words of font info for 55 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  50i,19n,75p,8817b,1759s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1407,10 +1389,10 @@ onts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/share/texlive/texmf-dist/fonts
 /public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
 /amsfonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
 nts/cm/cmtt12.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on thesis.pdf (47 pages, 653242 bytes).
+Output written on thesis.pdf (46 pages, 657469 bytes).
 PDF statistics:
- 264 PDF objects out of 1000 (max. 8388607)
- 168 compressed objects within 2 object streams
+ 260 PDF objects out of 1000 (max. 8388607)
+ 166 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 86 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 81 words of extra memory for PDF output out of 10000 (max. 10000000)
 
