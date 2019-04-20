@@ -2165,22 +2165,20 @@
     <bcf:citekey order="23">contextWithTensor</bcf:citekey>
     <bcf:citekey order="24">contextWithTensor</bcf:citekey>
     <bcf:citekey order="25">contextWithTensor</bcf:citekey>
-    <bcf:citekey order="26">adagrad</bcf:citekey>
-    <bcf:citekey order="27">adadelta</bcf:citekey>
-    <bcf:citekey order="28">mikolov</bcf:citekey>
-    <bcf:citekey order="29">gensim</bcf:citekey>
+    <bcf:citekey order="26">mikolov</bcf:citekey>
+    <bcf:citekey order="27">gensim</bcf:citekey>
+    <bcf:citekey order="28">gensim</bcf:citekey>
+    <bcf:citekey order="29">intel</bcf:citekey>
     <bcf:citekey order="30">gensim</bcf:citekey>
-    <bcf:citekey order="31">intel</bcf:citekey>
-    <bcf:citekey order="32">gensim</bcf:citekey>
-    <bcf:citekey order="33">gensim</bcf:citekey>
-    <bcf:citekey order="34">momentum</bcf:citekey>
-    <bcf:citekey order="35">nag</bcf:citekey>
-    <bcf:citekey order="36">adagrad</bcf:citekey>
-    <bcf:citekey order="37">adadelta</bcf:citekey>
-    <bcf:citekey order="38">Mikolov</bcf:citekey>
-    <bcf:citekey order="39">gensim</bcf:citekey>
-    <bcf:citekey order="40">intel</bcf:citekey>
-    <bcf:citekey order="41">mikolov</bcf:citekey>
+    <bcf:citekey order="31">gensim</bcf:citekey>
+    <bcf:citekey order="32">momentum</bcf:citekey>
+    <bcf:citekey order="33">nag</bcf:citekey>
+    <bcf:citekey order="34">adagrad</bcf:citekey>
+    <bcf:citekey order="35">adadelta</bcf:citekey>
+    <bcf:citekey order="36">Mikolov</bcf:citekey>
+    <bcf:citekey order="37">gensim</bcf:citekey>
+    <bcf:citekey order="38">intel</bcf:citekey>
+    <bcf:citekey order="39">mikolov</bcf:citekey>
   </bcf:section>
   <bcf:sortlist section="0" name="nyt/global/" type="entry" sortscheme="nyt" sortnamekeyscheme="global" labelprefix="">
   <bcf:sorting>
