@@ -4,11 +4,11 @@
   <bcf:options component="biber" type="global">
     <bcf:option type="singlevalued">
       <bcf:key>output_encoding</bcf:key>
-      <bcf:value>utf8</bcf:value>
+      <bcf:value>ascii</bcf:value>
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>input_encoding</bcf:key>
-      <bcf:value>utf8</bcf:value>
+      <bcf:value>ascii</bcf:value>
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>debug</bcf:key>
@@ -2142,44 +2142,46 @@
     <bcf:datasource type="file" datatype="bibtex">bibliography.bib</bcf:datasource>
   </bcf:bibdata>
   <bcf:section number="0">
-    <bcf:citekey order="3">mikolov2</bcf:citekey>
-    <bcf:citekey order="4">hsoftmax</bcf:citekey>
+    <bcf:citekey order="3">mikolov</bcf:citekey>
+    <bcf:citekey order="4">gensim</bcf:citekey>
     <bcf:citekey order="5">mikolov2</bcf:citekey>
-    <bcf:citekey order="6">nce-original</bcf:citekey>
-    <bcf:citekey order="7">mnih</bcf:citekey>
-    <bcf:citekey order="8">mikolov2</bcf:citekey>
-    <bcf:citekey order="9">mikolov2</bcf:citekey>
+    <bcf:citekey order="6">hsoftmax</bcf:citekey>
+    <bcf:citekey order="7">mikolov2</bcf:citekey>
+    <bcf:citekey order="8">nce-original</bcf:citekey>
+    <bcf:citekey order="9">mnih</bcf:citekey>
     <bcf:citekey order="10">mikolov2</bcf:citekey>
     <bcf:citekey order="11">mikolov2</bcf:citekey>
     <bcf:citekey order="12">mikolov2</bcf:citekey>
-    <bcf:citekey order="13">hogwild</bcf:citekey>
-    <bcf:citekey order="14">hogwild</bcf:citekey>
-    <bcf:citekey order="15">intel</bcf:citekey>
-    <bcf:citekey order="16">efficient</bcf:citekey>
-    <bcf:citekey order="17">efficient</bcf:citekey>
+    <bcf:citekey order="13">mikolov2</bcf:citekey>
+    <bcf:citekey order="14">mikolov2</bcf:citekey>
+    <bcf:citekey order="15">hogwild</bcf:citekey>
+    <bcf:citekey order="16">hogwild</bcf:citekey>
+    <bcf:citekey order="17">intel</bcf:citekey>
     <bcf:citekey order="18">efficient</bcf:citekey>
     <bcf:citekey order="19">efficient</bcf:citekey>
-    <bcf:citekey order="20">topicalWE</bcf:citekey>
-    <bcf:citekey order="21">breaking</bcf:citekey>
-    <bcf:citekey order="22">contextWithTensor</bcf:citekey>
-    <bcf:citekey order="23">contextWithTensor</bcf:citekey>
+    <bcf:citekey order="20">efficient</bcf:citekey>
+    <bcf:citekey order="21">efficient</bcf:citekey>
+    <bcf:citekey order="22">topicalWE</bcf:citekey>
+    <bcf:citekey order="23">breaking</bcf:citekey>
     <bcf:citekey order="24">contextWithTensor</bcf:citekey>
-    <bcf:citekey order="25">adagrad</bcf:citekey>
-    <bcf:citekey order="26">adadelta</bcf:citekey>
-    <bcf:citekey order="27">mikolov</bcf:citekey>
-    <bcf:citekey order="28">gensim</bcf:citekey>
-    <bcf:citekey order="29">gensim</bcf:citekey>
-    <bcf:citekey order="30">intel</bcf:citekey>
+    <bcf:citekey order="25">contextWithTensor</bcf:citekey>
+    <bcf:citekey order="26">contextWithTensor</bcf:citekey>
+    <bcf:citekey order="27">adagrad</bcf:citekey>
+    <bcf:citekey order="28">adadelta</bcf:citekey>
+    <bcf:citekey order="29">mikolov</bcf:citekey>
+    <bcf:citekey order="30">gensim</bcf:citekey>
     <bcf:citekey order="31">gensim</bcf:citekey>
-    <bcf:citekey order="32">gensim</bcf:citekey>
-    <bcf:citekey order="33">momentum</bcf:citekey>
-    <bcf:citekey order="34">nag</bcf:citekey>
-    <bcf:citekey order="35">adagrad</bcf:citekey>
-    <bcf:citekey order="36">adadelta</bcf:citekey>
-    <bcf:citekey order="37">Mikolov</bcf:citekey>
-    <bcf:citekey order="38">gensim</bcf:citekey>
-    <bcf:citekey order="39">intel</bcf:citekey>
-    <bcf:citekey order="40">mikolov</bcf:citekey>
+    <bcf:citekey order="32">intel</bcf:citekey>
+    <bcf:citekey order="33">gensim</bcf:citekey>
+    <bcf:citekey order="34">gensim</bcf:citekey>
+    <bcf:citekey order="35">momentum</bcf:citekey>
+    <bcf:citekey order="36">nag</bcf:citekey>
+    <bcf:citekey order="37">adagrad</bcf:citekey>
+    <bcf:citekey order="38">adadelta</bcf:citekey>
+    <bcf:citekey order="39">Mikolov</bcf:citekey>
+    <bcf:citekey order="40">gensim</bcf:citekey>
+    <bcf:citekey order="41">intel</bcf:citekey>
+    <bcf:citekey order="42">mikolov</bcf:citekey>
   </bcf:section>
   <bcf:sortlist section="0" name="nyt/global/" type="entry" sortscheme="nyt" sortnamekeyscheme="global" labelprefix="">
   <bcf:sorting>
