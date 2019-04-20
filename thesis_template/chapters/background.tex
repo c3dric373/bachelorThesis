@@ -19,7 +19,7 @@ The basic Skip-Gram Model uses a classical Softmax to calculate the conditional 
 
 \section{Negative Sampling}
 An alternative to the Hierarchical Softmax is Noise Contrastive Estimation (NCE) which was introduced by Gutmann and Hyv{\"a}rinen \cite{nce-original},  and first applied to NLP by Mnih and Teh \cite{mnih}. The idea behind NCE is to distinguish targets words from noise. It does so by reducing the problem to a logistic regression task, and does it by maximizing the log probability. The skip-gram Model is only interested in good word representation, hence the probability of the word is not meaningful as long as the quality of the word representations remains high. Mikolov et al. \cite{mikolov2} simplified NCE and called it Negative Sampling. Let's dive into it.\\
-The idea behind negative sampling is to only update the output nodes of certain words. This will obviously save an enormous amount of computation time. The idea is that given a pair $(c,w) \in D$, where $c$ is a word in the context window of $w$ we will set $p(c|w)=1$, here $p$ is the score for our logistic regression. Then select $K$ random words $k_i$ from the corpus data and set $p(k_i|w) = 0$, more one the random distribution later. We will denote the score that the $(c,w)$ wasn't drawn at random the following way: $p(y=1|c,w)$, and if $(k,w) $ is chosen at random this way: $p(y=0|k,w)$.  Now we will use logistic regression to update the weights of the $k$ selected context words and $c$. By doing so we will only have to update $k+1$ nodes.
+The idea behind negative sampling is to only update the output nodes of certain words. This will obviously save an enormous amount of computation time. The idea is that given a pair $(c,w) \in D$, where $c$ is a word in the context window of $w$ and  select $K$ random words $k_i$ from the corpus data, more one the random distribution later. We will assume those words do not appear in the context of $w$. We will denote the score that the $(c,w)$ wasn't drawn at random the following way: $p(y=1|c,w)$, and if $(k,w) $ is chosen at random this way: $p(y=0|k,w)$.  Now we will use logistic regression to update the weights of the $k$ selected context words and $c$. By doing so we will only have to update $k+1$ nodes.
 
 Let's look at how we construct our objective function for a given word $w$ and one of its context words $c$: 
 
@@ -32,6 +32,7 @@ p(c|w) &= p(y=1|c,w) + \prod_{k\in K} p(y=0|k,c)
 \\&= log(\sigma(v_c v_w ) + \sum_{k\in K} \sigma(log(-v_c v_k )) &&\text{$ where, \sigma = \frac{1}{1+e^{-x}}$}
 \end{align*}
 
+The goal is know to maximize this objective function. Another way, a part from logistic regression, too look at this function, and assume why it's working so well, is to assume that two vectors are similar if their dot product is high. And therefore we will maximize the dot product of similar words $(w,c)$ and minimize it for dissimilar words $(w,k_i)$.
 We see that to compute our objective function we will only have to compute the sum over $K$. Which in practice is very small (2-20). Too put things in perspective lets imagine our data set consists of 100000 words, we set $K=2$ and let's say that each output neuron has weight vector $v$ with $|v| = 300$. When updating our weights we would only update  $0.2*10^{-2}$ of the 300 million weights in the output layer. 
 
 One question remains: how do we choose our random words? Mikolov et al. \cite{mikolov2} used the following unigram distribution:
@@ -39,7 +40,14 @@ One question remains: how do we choose our random words? Mikolov et al. \cite{mi
  \begin{equation} \label{eq:unigram}
 P(w)=\frac{f(w)^{\frac{3}{4}}}{\sum_{w_k\in W} f(w_k)^{\frac{3}{4}}}
 \end{equation}
-where $f(w)$ is the frequency of $w$ in the Vocabulary $W$. The value of $\frac{3}{4}$ is set empirically.
+where $f(w)$ is the frequency of $w$ in the Vocabulary $W$. The value of $\frac{3}{4}$ is set empirically. See figure \ref{fig:frequency_ex} for an example.
+
+\begin{figure}[ht]
+    \centering
+			\includegraphics[scale=0.8]{images/frequency_ex} 
+    \caption{Sampling table for frequency of words in text8 dataset}
+    \label{fig:frequency_ex}
+\end{figure}
 
 It's quite easily observable that this approach will outperform the classical softmax in computation time. Now the question arises if the accuracy is good enough enough but according to Mikolov et al. \cite{mikolov2} the negative sampling method "is an extremely simple training method that learns accurate representations". As a matter of fact Mikolov et al. \cite{mikolov2} reported a 6\% accuracy improvement in comparison to a Hierarchical Softmax model.
 We now have enough background knowledge about the SGM to look at how it can be optimized. In the next section we are going to cover what has already be done.
@@ -177,7 +185,7 @@ As before we can know us the root mean squared error:
 \begin{equation}
 RMS[\Delta \theta]_{t} = \sqrt{E[\Delta \theta^2]_t + \epsilon}
 \end{equation}
-As at time step $t$ $RMS[\Delta \theta]_{t} $ is unknown, we approximat it with $ RMS[\Delta \theta]_{t}-1$. Know we replac $\eta$ with  $ RMS[\Delta \theta]_{t}-1$ and get the final update rule: 
+As at time step $t$ $RMS[\Delta \theta]_{t} $ is unknown, we approximate it with $ RMS[\Delta \theta]_{t}-1$. Know we replace $\eta$ with  $ RMS[\Delta \theta]_{t}-1$ and get the final update rule: 
 \begin{equation}
  \theta_{t+1} = \theta_t - \dfrac{RMS[\Delta \theta]_{t-1}}{RMS[g]_{t}} g_{t}
 \end{equation}
