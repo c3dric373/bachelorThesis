@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2018.9.22)  20 APR 2019 14:17
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2018.9.22)  20 APR 2019 14:39
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -927,15 +927,6 @@ LaTeX Warning: Citation 'gensim' on page 3 undefined on input line 13.
 
  (./chapters/background.tex
 chapter 2.
-
-LaTeX Warning: Citation 'mikolov2' on page 4 undefined on input line 19.
-
-
-LaTeX Warning: Citation 'hsoftmax' on page 4 undefined on input line 19.
-
-
-LaTeX Warning: Citation 'mikolov2' on page 4 undefined on input line 19.
-
 [4
 
 
@@ -943,90 +934,96 @@ LaTeX Warning: Citation 'mikolov2' on page 4 undefined on input line 19.
 
 ]
 
-LaTeX Warning: Citation 'nce-original' on page 5 undefined on input line 22.
+LaTeX Warning: Citation 'mikolov2' on page 5 undefined on input line 18.
 
 
-LaTeX Warning: Citation 'mnih' on page 5 undefined on input line 22.
+LaTeX Warning: Citation 'hsoftmax' on page 5 undefined on input line 18.
 
 
-LaTeX Warning: Citation 'mikolov2' on page 5 undefined on input line 22.
+LaTeX Warning: Citation 'nce-original' on page 5 undefined on input line 21.
+
+
+LaTeX Warning: Citation 'mnih' on page 5 undefined on input line 21.
+
+
+LaTeX Warning: Citation 'mikolov2' on page 5 undefined on input line 21.
 
 [5]
 
-LaTeX Warning: Citation 'mikolov2' on page 6 undefined on input line 38.
+LaTeX Warning: Citation 'mikolov2' on page 6 undefined on input line 37.
 
 
-LaTeX Warning: Citation 'mikolov2' on page 6 undefined on input line 45.
+LaTeX Warning: Citation 'mikolov2' on page 6 undefined on input line 44.
 
 
-LaTeX Warning: Citation 'mikolov2' on page 6 undefined on input line 45.
+LaTeX Warning: Citation 'mikolov2' on page 6 undefined on input line 44.
 
 [6]
 
-LaTeX Warning: Citation 'mikolov2' on page 7 undefined on input line 52.
+LaTeX Warning: Citation 'mikolov2' on page 7 undefined on input line 51.
 
 
-LaTeX Warning: Citation 'hogwild' on page 7 undefined on input line 52.
+LaTeX Warning: Citation 'hogwild' on page 7 undefined on input line 51.
 
 
-LaTeX Warning: Citation 'hogwild' on page 7 undefined on input line 52.
+LaTeX Warning: Citation 'hogwild' on page 7 undefined on input line 51.
 
 
-LaTeX Warning: Citation 'intel' on page 7 undefined on input line 55.
+LaTeX Warning: Citation 'intel' on page 7 undefined on input line 54.
 
 [7]
 
-LaTeX Warning: Citation 'efficient' on page 8 undefined on input line 74.
+LaTeX Warning: Citation 'efficient' on page 8 undefined on input line 73.
 
 
-LaTeX Warning: Citation 'efficient' on page 8 undefined on input line 74.
+LaTeX Warning: Citation 'efficient' on page 8 undefined on input line 73.
 
 <images/cachingEfficiency.png, id=62, 816.04875pt x 649.42625pt>
 File: images/cachingEfficiency.png Graphic file (type png)
 
 <use images/cachingEfficiency.png>
-Package pdftex.def Info: images/cachingEfficiency.png used on input line 77.
+Package pdftex.def Info: images/cachingEfficiency.png used on input line 76.
 (pdftex.def)             Requested size: 244.81651pt x 194.82938pt.
 
 
-LaTeX Warning: Citation 'efficient' on page 8 undefined on input line 78.
+LaTeX Warning: Citation 'efficient' on page 8 undefined on input line 77.
 
 
-LaTeX Warning: Citation 'efficient' on page 8 undefined on input line 78.
+LaTeX Warning: Citation 'efficient' on page 8 undefined on input line 77.
 
 
-LaTeX Warning: Citation 'topicalWE' on page 8 undefined on input line 89.
+LaTeX Warning: Citation 'topicalWE' on page 8 undefined on input line 88.
 
 
-LaTeX Warning: Citation 'breaking' on page 8 undefined on input line 89.
+LaTeX Warning: Citation 'breaking' on page 8 undefined on input line 88.
 
 
 LaTeX Warning: Citation 'contextWithTensor' on page 8 undefined on input line 8
-9.
+8.
 
 [8] <images/multipleContext.png, id=66, 471.7625pt x 89.33376pt>
 File: images/multipleContext.png Graphic file (type png)
 
 <use images/multipleContext.png>
-Package pdftex.def Info: images/multipleContext.png used on input line 102.
+Package pdftex.def Info: images/multipleContext.png used on input line 101.
 (pdftex.def)             Requested size: 330.23149pt x 62.53319pt.
 
 
 LaTeX Warning: Citation 'contextWithTensor' on page 9 undefined on input line 1
-05.
+04.
 
 
 LaTeX Warning: Citation 'contextWithTensor' on page 9 undefined on input line 1
-05.
+04.
 
 [9 <./images/cachingEfficiency.png>] [10 <./images/multipleContext.png>]
 [11]
 
-LaTeX Warning: Citation 'adagrad' on page 12 undefined on input line 145.
+LaTeX Warning: Citation 'adagrad' on page 12 undefined on input line 144.
 
 [12]
 
-LaTeX Warning: Citation 'adadelta' on page 13 undefined on input line 161.
+LaTeX Warning: Citation 'adadelta' on page 13 undefined on input line 160.
 
 [13]) [14]
 \openout2 = `chapters/methods.aux'.
@@ -1355,7 +1352,7 @@ Package logreq Info: Writing requests to 'thesis.run.xml'.
 Here is how much of TeX's memory you used:
  16169 strings out of 493013
  305893 string characters out of 6135682
- 873760 words of memory out of 5000000
+ 873759 words of memory out of 5000000
  19457 multiletter control sequences out of 15000+600000
  15442 words of font info for 55 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1379,7 +1376,7 @@ onts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/share/texlive/texmf-dist/fonts
 /public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
 /amsfonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
 nts/cm/cmtt12.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on thesis.pdf (50 pages, 638846 bytes).
+Output written on thesis.pdf (50 pages, 639480 bytes).
 PDF statistics:
  271 PDF objects out of 1000 (max. 8388607)
  175 compressed objects within 2 object streams
