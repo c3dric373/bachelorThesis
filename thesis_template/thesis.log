@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Arch Linux) (preloaded format=pdflatex 2019.4.14)  21 APR 2019 18:08
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Arch Linux) (preloaded format=pdflatex 2019.4.14)  21 APR 2019 18:19
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1018,119 +1018,119 @@ chapter 2.
 
 ]
 
+LaTeX Warning: Citation 'mikolov2' on page 4 undefined on input line 18.
+
+
+LaTeX Warning: Citation 'hsoftmax' on page 4 undefined on input line 18.
+
+
+LaTeX Warning: Citation 'nce-original' on page 4 undefined on input line 21.
+
+
+LaTeX Warning: Citation 'mnih' on page 4 undefined on input line 21.
+
+
 LaTeX Warning: Citation 'mikolov2' on page 4 undefined on input line 21.
-
-
-LaTeX Warning: Citation 'hsoftmax' on page 4 undefined on input line 21.
-
-
-LaTeX Warning: Citation 'nce-original' on page 4 undefined on input line 24.
-
-
-LaTeX Warning: Citation 'mnih' on page 4 undefined on input line 24.
-
-
-LaTeX Warning: Citation 'mikolov2' on page 4 undefined on input line 24.
 
 [4] [5]
 
-LaTeX Warning: Citation 'mikolov2' on page 6 undefined on input line 41.
+LaTeX Warning: Citation 'mikolov2' on page 6 undefined on input line 38.
 
 
 LaTeX Warning: Reference `fig:frequency_ex' on page 6 undefined on input line 4
-6.
+3.
 
 
-LaTeX Warning: Citation 'mikolov2' on page 6 undefined on input line 56.
+LaTeX Warning: Citation 'mikolov2' on page 6 undefined on input line 53.
 
 
-LaTeX Warning: Citation 'mikolov2' on page 6 undefined on input line 56.
+LaTeX Warning: Citation 'mikolov2' on page 6 undefined on input line 53.
 
 
-LaTeX Warning: Citation 'mikolov2' on page 6 undefined on input line 64.
+LaTeX Warning: Citation 'mikolov2' on page 6 undefined on input line 61.
 
 
-LaTeX Warning: Citation 'hogwild' on page 6 undefined on input line 64.
+LaTeX Warning: Citation 'hogwild' on page 6 undefined on input line 61.
 
 
-LaTeX Warning: Citation 'hogwild' on page 6 undefined on input line 64.
+LaTeX Warning: Citation 'hogwild' on page 6 undefined on input line 61.
 
 [6]
 
-LaTeX Warning: Citation 'efficient' on page 7 undefined on input line 67.
+LaTeX Warning: Citation 'efficient' on page 7 undefined on input line 64.
 
 
-LaTeX Warning: Citation 'efficient' on page 7 undefined on input line 67.
+LaTeX Warning: Citation 'efficient' on page 7 undefined on input line 64.
 
 <images/cachingEfficiency.png, id=58, 816.04875pt x 649.42625pt>
 File: images/cachingEfficiency.png Graphic file (type png)
 <use images/cachingEfficiency.png>
-Package pdftex.def Info: images/cachingEfficiency.png  used on input line 70.
+Package pdftex.def Info: images/cachingEfficiency.png  used on input line 67.
 (pdftex.def)             Requested size: 244.81651pt x 194.82938pt.
 
-LaTeX Warning: Citation 'efficient' on page 7 undefined on input line 71.
+LaTeX Warning: Citation 'efficient' on page 7 undefined on input line 68.
 
 
-LaTeX Warning: Citation 'efficient' on page 7 undefined on input line 71.
+LaTeX Warning: Citation 'efficient' on page 7 undefined on input line 68.
 
 
-LaTeX Warning: Citation 'intel' on page 7 undefined on input line 77.
+LaTeX Warning: Citation 'intel' on page 7 undefined on input line 74.
 
 [7]
 
-LaTeX Warning: Citation 'gpu' on page 8 undefined on input line 94.
+LaTeX Warning: Citation 'gpu' on page 8 undefined on input line 91.
 
 
-LaTeX Warning: Citation 'gpu' on page 8 undefined on input line 98.
+LaTeX Warning: Citation 'gpu' on page 8 undefined on input line 95.
 
 
-LaTeX Warning: Citation 'gensim' on page 8 undefined on input line 98.
+LaTeX Warning: Citation 'gensim' on page 8 undefined on input line 95.
 
 [8 <./images/cachingEfficiency.png>]
 
-LaTeX Warning: Citation 'gensim' on page 9 undefined on input line 101.
+LaTeX Warning: Citation 'gensim' on page 9 undefined on input line 98.
 
 
-LaTeX Warning: Citation 'intel' on page 9 undefined on input line 101.
+LaTeX Warning: Citation 'intel' on page 9 undefined on input line 98.
 
 
-LaTeX Warning: Citation 'topicalWE' on page 9 undefined on input line 105.
+LaTeX Warning: Citation 'topicalWE' on page 9 undefined on input line 102.
 
 
-LaTeX Warning: Citation 'breaking' on page 9 undefined on input line 105.
+LaTeX Warning: Citation 'breaking' on page 9 undefined on input line 102.
 
 
 LaTeX Warning: Citation 'contextWithTensor' on page 9 undefined on input line 1
-05.
+02.
 
 [9]
 <images/multipleContext.png, id=69, 471.7625pt x 89.33376pt>
 File: images/multipleContext.png Graphic file (type png)
 <use images/multipleContext.png>
-Package pdftex.def Info: images/multipleContext.png  used on input line 118.
+Package pdftex.def Info: images/multipleContext.png  used on input line 115.
 (pdftex.def)             Requested size: 330.23149pt x 62.53319pt.
 
 
 LaTeX Warning: Citation 'contextWithTensor' on page 10 undefined on input line 
-121.
+118.
 
 
 LaTeX Warning: Citation 'contextWithTensor' on page 10 undefined on input line 
-121.
+118.
 
 [10 <./images/multipleContext.png>] [11] [12]
 
-LaTeX Warning: Citation 'adagrad' on page 13 undefined on input line 169.
+LaTeX Warning: Citation 'adagrad' on page 13 undefined on input line 166.
 
 
-LaTeX Warning: Citation 'Glove' on page 13 undefined on input line 169.
+LaTeX Warning: Citation 'Glove' on page 13 undefined on input line 166.
 
 [13]
 
-LaTeX Warning: Citation 'adadelta' on page 14 undefined on input line 184.
+LaTeX Warning: Citation 'adadelta' on page 14 undefined on input line 181.
 
 [14]
-Underfull \hbox (badness 10000) in paragraph at lines 218--221
+Underfull \hbox (badness 10000) in paragraph at lines 215--218
 
  []
 
@@ -1435,7 +1435,7 @@ hare/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist
 /fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texmf-dist/fonts/type1/p
 ublic/amsfonts/cm/cmtt12.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super
 /sfrm1200.pfb>
-Output written on thesis.pdf (54 pages, 570043 bytes).
+Output written on thesis.pdf (54 pages, 570100 bytes).
 PDF statistics:
  277 PDF objects out of 1000 (max. 8388607)
  183 compressed objects within 2 object streams
