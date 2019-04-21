@@ -60,8 +60,18 @@ We now have enough background knowledge about the SGM to look at how it can be o
 Due to the popularity of the skip gram model, a lot of research went into optimizing it. This research can actually be divided into two categories, optimization of the throughput and the optimization of the accuracy of the algorithm by allowing words to have multiple meanings. For our work the optimization of the throughput is of big interest while the semantic optimization is aimed at given the reader a more holistic comprehension of the possible research directions. 
 This section will first give an overview of the optimization of the throughput and then present one paper that focused on context sensitive word embeddings. 
 
-\subsection{Parallelization}
+\subsection{Optimization of the throughput}
 In the original model the optimization is done with Stochastic Gradient Descent (SGD), which is a sequential algorithm. This process does not favor a parallelization. To deal with this specific problem Mikolov et al.\cite{mikolov2} used a Hogwild tree proposed by Recht et al.\cite{hogwild}. The approach is to allow multiple threads to access a shared memory, in this case the single model. Therefore overwriting errors are bound to happen. But according to Recht et al.\cite{hogwild} the overwriting errors won't lead to a significant accuracy loss if the data access isn't too frequent. But in the case of NLP the problem seems to be a bit more significant, and especially for word embedding, as many words share the same context words. There were several attempts at solving this issue, and we are going to cover a few of them in the following subsections. 
+
+\subsubsection{Parallelization by the use of caching}
+This idea was proposed by Vuurens et al. \cite{efficient}. The architecture used here is the basic skip gram model with a hierarchical soft max.  The general idea is to cache the most frequent used nodes of the binary tree used to memorize the probability distribution, and update them on the shared single model after a certain amounts of seen words (the paper used the number 10). The paper produced interesting results as they managed to increase execution time by increasing the number of cores used for the calculation. This is very powerful because in the original implementation the exectution time regressed after 8 cores, this seems to indicate that too much overwriting was happening, as the number of concurrent threads surpasses a certain threshold. This can be seen in Figure \ref{fig:efficient}, where c31 is the model proposed by Vuurens et al.\cite{efficient}. The model did not suffer any accuracy loss in comparison to the original SGM model. 
+\begin{figure}[ht]
+    \centering
+			\includegraphics[scale=0.3]{images/cachingEfficiency.png} 
+    \caption{Comparasion of the execution time in relation with the number of used cores \cite{efficient}}
+    \label{fig:efficient}
+\end{figure}
+This work propose a very good way too paralelize the SGM, as in partiuclar it allows to use more cores during the computation. While this is very interesting, this model focuses on the hierarchichal softmax approach. As we implemented the approach using negative sampling this is of less use. Therefore we will look at what have been done with negative sampling in the next section.
 
 \subsubsection{Parallization in shared and Distributed Memory}
 The first parallization solution which was proposed by Ji et al. \cite{intel}, is to try to reduce the cost of our vector multiplication. The main idea in this paper is to convert the level 1-BLAS vector to vector operations to a level-3 BLAS matrix multiplication operation. This is achieved, by using the same negative samples for each context word of a given word $w$. Instead of using for each context word a vector to vector multiplication we can transform this, under the assumption that we will not loose accuracy by sharing the same negative samples,  into a matrix multiplication. The matrix multiplication can be represented the following way.
@@ -81,21 +91,14 @@ w_{c_{2m}}\\
 \]
 
 where $w$ is our given word, $w_{n_1}...w_{n_k}$ are the shared negative samples, with $k \in [5,20]$, and $w_{c_1}...w_{c_2m}$ are the words inside of the context window $m$ of $w$, with $m \in [10,20]$, also called a batch of input context words. After each batch the model updates the weights of the used vectors. 
-This model achieves a 3.6 fold increase in throughput, by only losing 1\% of accuracy. 
-\subsubsection{Parallelization by the use of caching}
-This idea was proposed by Vuurens et al. \cite{efficient}. The architecture used here is the basic skip gram model with a hierarchical soft max.  The general idea is to cache the most frequent used nodes of the binary tree used to memorize the probability distribution, and update them on the shared single model after a certain amounts of seen words (the paper used the number 10). The paper produced interesting results as they managed to increase execution time by increasing the number of cores used for the calculation. This is very powerful because in the original implementation the exectution time regressed after 8 cores, this seems to indicate that too much overwriting was happening, as the number of concurrent threads surpasses a certain threshold. This can be seen in Figure \ref{fig:efficient}, where c31 is the model proposed by Vuurens et al.\cite{efficient}. The model did not suffer any accuracy loss in comparison to the original SGM model. 
-\begin{figure}[ht]
-    \centering
-			\includegraphics[scale=0.3]{images/cachingEfficiency.png} 
-    \caption{Comparasion of the execution time in relation with the number of used cores \cite{efficient}}
-    \label{fig:efficient}
-\end{figure}
+This model achieves a 3.6 fold increase in throughput, by only losing 1\% of accuracy.  Those results are interesting but cannot be considered earth shattering. Another aspect that is not as useful to us is that the experiments we're done on Cpu, as modern Gpu's are often used in many machine learning libraries, as with Cuda for example, there still need work to be done to optimize it with gpu's. This was attempted by Seulki and Youngmin 2016 \cite{gpu}, which will be described in the next section.
 
-\subsection{Accelleration of word2vec by Using Gpu's}
-This work \cite{gpu} focused on getting a better throughput on the SGM when using Gpu's. As the skip gram model is a sequential algorithm, one cannot parallize a lot, there is as explained in the next section the possibility to split the dataset. But we cannot paralize those splits. Therefore the idea of Seulki and Youngmin was to parallelize the update of feature. Each Cuda block will be used for one split. And each thread of this block will be used to update one dimension of the word. We therefore have a parallelization on the level of dimension of the embedings. They achieved very good results as achieved a 20x speed up compared to a single threaded cpu execution.
+
+\subsubsection{Accelleration of word2vec by Using Gpu's}
+This work \cite{gpu} focused on getting a better throughput on the SGM when using Gpu's. As the skip gram model is a sequential algorithm, one cannot parallize a lot, there is as explained in the next section the possibility to split the dataset. But we cannot paralize those splits. Therefore the idea of Seulki and Youngmin was to parallelize the update of feature. Each Cuda block will be used for one split. And each thread of this block will be used to update one dimension of the word. We therefore have a parallelization on the level of dimension of the embedings. They achieved very good results as achieved a 20x speed up compared to a single threaded cpu execution. The problem with this and all the above optimization, is that the code is not easily available and of use for us. Therefore we need an optimized implementation of the SGM, which Gensim \cite{gensim} provides. 
 %%%%%%%%%%%
 \subsection{Gensim}
-Gensim \cite{gensim} is a pure Python library that holds a state of the art implementation of the SGM. As it was written in Cython, it shows an interesting speed up. Furthermore with the use of BLAS and precomputed sigmoid tables, it achieves a 3 fold speed increase in comparison to the original w2vec code. Gensim is an importatnt tool as it allows us to compare our data rather easily. It was also used in related work \cite{intel}, and is therefore of value.
+Gensim \cite{gensim} is a pure Python library that holds a state of the art implementation of the SGM. As it was written in Cython, it shows an interesting speed up. Furthermore with the use of BLAS and precomputed sigmoid tables, it achieves a 3 fold speed increase in comparison to the original w2vec code. Gensim is an importatnt tool as it allows us to compare our data rather easily. It was also used in related work \cite{intel}, and is therefore of value. This will conclude our overview of the optimizations of the throughput of the SGM. In the next section we will give a quick outlook of what has been done, when trying to improve the semantics of the SGM.
 
 
 \subsection{Context sensitive word embedding}
@@ -121,13 +124,21 @@ and the rest lines are the results of our model" \cite{contextWithTensor}}
 
 %TODO EXPLAIN SGD GD VANILLA VERY GOOD UNDERSTAND IT REALLY AND ADADELTA AND ADAM ARE TWO IMPROVE
 \section{Optimizers in Machine learning} \label{optimizers}
-The goeal of learning in machine learning is to minimze an objectiv function  $J(\theta)$, where $\theta$ is the set of all parameters in our model. This happens by updating the parameters $\theta$ at every training time step $t$. We will denote $\theta_{t}$ as the parameters of our model at the $t^{th}$ time step. In this work we only examined stochastic gradient descent algorithms.
-\subsection{Stochastic Gradient Descent}
-The idea in stochastic gradient descent optimization is to follow the path of steepest descent in the shape of our cost function. To get information about the shape of the objective function, one has to compute the gradients of all our parameters $  \nabla J(\theta_{t-1})$, denoted as$g_{t-1}$ . To follow the path of steepest descent we will have to subtract a portion of this term from our parameter. The magnitude of the portion is often referred to as the learning rate, denoted $\eta$. For illustration, this means that the gradients will give the direction of the optimization step, whereas the learning rate will give the amplitude of that step. An update at time step $t$ will result in the following equation:
+The goal of learning in machine learning is to minimize an objective function  $J(\theta)$, where $\theta$ is the set of all parameters in our model. This happens by updating the parameters $\theta$ at every training time step $t$. We will denote $\theta_{t}$ as the parameters of our model at the $t^{th}$ time step. In this work we only examined stochastic gradient descent algorithms.
+\subsection{Gradient Descent}
+The idea in gradient descent optimization is to follow the path of steepest descent in the shape of our cost function. To get information about the shape of the objective function, one has to compute the gradients of all our parameters $  \nabla J(\theta_{t-1})$, denoted as$g_{t-1}$ . To follow the path of steepest descent we will have to subtract a portion of this term from our parameter. The magnitude of the portion is often referred to as the learning rate, denoted $\eta$. For illustration, this means that the gradients will give the direction of the optimization step, whereas the learning rate will give the amplitude of that step. An update at time step $t$ will result in the following equation:
 \begin{equation}
 \theta_t = \theta_{t-1} - \eta \nabla g_{t-1}
 \end{equation}
+There are three main variations of Gradient Descent, they differ in the moment they chose to update the parameters.
+\subsubsection{Stochastic Gradient Descent (SGD)} 
+Update the model after each training sample. The model is updated at each sample which will be a very poor approximation of the true gradients. 
+\subsubsection{Batch Gradient Descent} 
+Update the model after having gone through the entire dataset. The problem with this approach is that one updates the model way to unfreaquently which will lead too a high convergence time. 
+\subsubsection{Mini-Batch Gradient Descent} 
+Update the model after having gone through a specific number of training samples. This is an approximation of Batch Gradient Descent that is very often used in practice. 
 
+\subsubsection{Problems with Gradient Descent Algorithms}
 SGD, through it's simplicity, is very limited, therefore some issues appear:
 
 \begin{itemize}

@@ -8,19 +8,19 @@
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {\relax 4.1}{\ignorespaces Training and Convergence time according to choice of the length of sentences in text8 dataset\relax }}{22}% 
+\contentsline {table}{\numberline {\relax 4.1}{\ignorespaces Training and Convergence time according to choice of the length of sentences in text8 dataset\relax }}{23}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {\relax 4.2}{\ignorespaces Comparison of the text8 and enwik9 dataset\relax }}{22}% 
+\contentsline {table}{\numberline {\relax 4.2}{\ignorespaces Comparison of the text8 and enwik9 dataset\relax }}{23}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {\relax 4.3}{\ignorespaces Size of preproccessed text8 dataset according to sampling treshold\relax }}{23}% 
+\contentsline {table}{\numberline {\relax 4.3}{\ignorespaces Size of preproccessed text8 dataset according to sampling treshold\relax }}{24}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {\relax 4.4}{\ignorespaces Example of a sentence with different sampling tresholds\relax }}{23}% 
+\contentsline {table}{\numberline {\relax 4.4}{\ignorespaces Example of a sentence with different sampling tresholds\relax }}{24}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {\relax 4.5}{\ignorespaces Example of pairs and their rating in wordsim353\relax }}{25}% 
+\contentsline {table}{\numberline {\relax 4.5}{\ignorespaces Example of pairs and their rating in wordsim353\relax }}{26}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {\relax 4.6}{\ignorespaces Word similarity in relation to the size of the embedding\relax }}{26}% 
+\contentsline {table}{\numberline {\relax 4.6}{\ignorespaces Word similarity in relation to the size of the embedding\relax }}{27}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {\relax 4.7}{\ignorespaces Convergence Time and Quality with Adadelta\relax }}{30}% 
+\contentsline {table}{\numberline {\relax 4.7}{\ignorespaces Convergence Time and Quality with Adadelta\relax }}{31}% 
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
