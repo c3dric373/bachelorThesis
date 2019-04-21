@@ -23,14 +23,14 @@ The idea behind negative sampling is to only update the output nodes of certain 
 
 Let's look at how we construct our objective function for a given word $w$ and one of its context words $c$: 
 
-\begin{align*} \label{eq:obj_neg_samples}
+\begin{align*}
 p(c|w) &= p(y=1|c,w) + \prod_{k\in K} p(y=0|k,c) 
 \\&= p(y=1|c,w) + \prod_{k\in K} 1- p(y=1|k,c) 
 \\&= log((p(y=1|c,w)) + \sum_{k\in K} log(1- p(y=1|k,c)) 
 \\&=  log(\frac{1}{1+e^{-v_c v_w }})  + \sum_{k\in K} log(1-\frac{1}{1+e^{-v_c v_k}}) 
 \\&=  log(\frac{1}{1+e^{-v_c v_w }})  + \sum_{k\in K} log(\frac{1}{1+e^{v_c v_k }})
 \\&= log(\sigma(v_c v_w ) + \sum_{k\in K} \sigma(log(-v_c v_k )) &&\text{$ where, \sigma = \frac{1}{1+e^{-x}}$}
-\end{align*}
+\end{align*}\label{eq:obj_neg_samples}
 
 The goal is know to maximize this objective function. Another way, a part from logistic regression, too look at this function, and assume why it's working so well, is to assume that two vectors are similar if their dot product is high. And therefore we will maximize the dot product of similar words $(w,c)$ and minimize it for dissimilar words $(w,k_i)$.
 We see that to compute our objective function we will only have to compute the sum over $K$. Which in practice is very small (2-20). Too put things in perspective lets imagine our data set consists of 100000 words, we set $K=2$ and let's say that each output neuron has weight vector $v$ with $|v| = 300$. When updating our weights we would only update  $0.2*10^{-2}$ of the 300 million weights in the output layer. 
@@ -41,14 +41,15 @@ One question remains: how do we choose our random words? Mikolov et al. \cite{mi
 P(w)=\frac{f(w)^{\frac{3}{4}}}{\sum_{w_k\in W} f(w_k)^{\frac{3}{4}}}
 \end{equation}
 where $f(w)$ is the frequency of $w$ in the Vocabulary $W$. The value of $\frac{3}{4}$ is set empirically. See figure \ref{fig:frequency_ex} for an example.
-
+%TODO
+\iffalse
 \begin{figure}[ht]
     \centering
 			\includegraphics[scale=0.45]{images/frequency_ex} 
     \caption{Probabililty of a word, of the text8 dataset,  to be chosen at random according to it's frequency and the power to which the unigram distribution is raised}
     \label{fig:frequency_ex}
 \end{figure}
-
+\fi
 It's quite easily observable that this approach will outperform the classical softmax in computation time. Now the question arises if the accuracy is good enough enough but according to Mikolov et al. \cite{mikolov2} the negative sampling method "is an extremely simple training method that learns accurate representations". As a matter of fact Mikolov et al. \cite{mikolov2} reported a 6\% accuracy improvement in comparison to a Hierarchical Softmax model.
 We now have enough background knowledge about the SGM to look at how it can be optimized. In the next section we are going to cover what has already be done.
 
@@ -78,7 +79,7 @@ w_{c_{2m}}\\
 where $w$ is our given word, $w_{n_1}...w_{n_k}$ are the shared negative samples, with $k \in [5,20]$, and $w_{c_1}...w_{c_2m}$ are the words inside of the context window $m$ of $w$, with $m \in [10,20]$, also called a batch of input context words. After each batch the model updates the weights of the used vectors. 
 This model achieves a 3.6 fold increase in throughput, by only losing 1\% of accuracy. 
 \subsubsection{Parallelization by the use of caching}
-This idea was proposed by Vuurens et al. \cite{efficient}. The architecture used here is the basic skip gram model with a hierarchical soft max.  The general idea is to cache the most frequent used nodes of the binary tree used to memorize the probability distribution, and update them on the shared single model after a certain amounts of seen words (the paper used the number 10). The paper produced interesting results as they managed to increase execution time by increasing the number of cores used for the calculation. This is very powerful because in the original implementation the exectution time regressed after 8 cores, this seems to indicate that too much overwriting was happening, as the number of concurrent threads surpasses a certain threshold. This can be seen in \ref{fig:efficient}, where c31 is the model proposed by Vuurens et al.\cite{efficient}. The model did not suffer any accuracy loss in comparison to the original SGM model. 
+This idea was proposed by Vuurens et al. \cite{efficient}. The architecture used here is the basic skip gram model with a hierarchical soft max.  The general idea is to cache the most frequent used nodes of the binary tree used to memorize the probability distribution, and update them on the shared single model after a certain amounts of seen words (the paper used the number 10). The paper produced interesting results as they managed to increase execution time by increasing the number of cores used for the calculation. This is very powerful because in the original implementation the exectution time regressed after 8 cores, this seems to indicate that too much overwriting was happening, as the number of concurrent threads surpasses a certain threshold. This can be seen in Figure \ref{fig:efficient}, where c31 is the model proposed by Vuurens et al.\cite{efficient}. The model did not suffer any accuracy loss in comparison to the original SGM model. 
 \begin{figure}[ht]
     \centering
 			\includegraphics[scale=0.3]{images/cachingEfficiency.png} 
@@ -148,7 +149,7 @@ v_t = \gamma v_{t-1} + \eta \nabla J (\theta -  \gamma v_{t-1})
 SGD wiht momentum and Nesterov accelerated gradient (NAG) has shown tremendous results in RNN's. But some of the earlier mentioned problems still remains.  NAG, still treats every parameter the same way. Therefore we need a more complex optimization algorithm, that takes the frequency of a feature into account. Adagrad does just that. 
 
 \subsection{Adagrad}\label{ssec:adagrad}
-Adagrad first introduced by \cite{adagrad} is an optimzer that tries to apply different learning rates to different parameters, according to their frequency. The idea is to give very frequent features a small learning rate, and very sparse features a high learning rate. This can be very important for our task of word embeddings, as rare words in the corpus are more important then very frequent ones. As a matter of fact Pennigton et al. used this algorithm for their training of Glove, another word embedding system. \\
+Adagrad first introduced by \cite{adagrad} is an optimzer that tries to apply different learning rates to different parameters, according to their frequency. The idea is to give very frequent features a small learning rate, and very sparse features a high learning rate. This can be very important for our task of word embeddings, as rare words in the corpus are more important then very frequent ones. As a matter of fact Pennigton et al. used this algorithm for their training of Glove \cite{Glove}, another word embedding system. \\
 Each parameter $\theta_i$, at time step $t$ will have it's own learning rate $\eta_{t,i}$
  \begin{equation}
 \eta_{t,i} = \frac{\eta_0}{\sqrt{\sum^{t}_{i=1} g^{2}_{t,i}} \epsilon}
