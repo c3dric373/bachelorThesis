@@ -121,13 +121,13 @@ Given an item index $idx$ we need to find in which sentence the pair is. Because
 \FOR{$j=0$ \TO $window$}
 \IF{$i+j < len\_sen $}
 \IF{counter == pair\_id\_sen}
-\RETURN (word2idx[word], word2idx[sen[i+j]])
+\RETURN (word2idx[sen[i]], word2idx[sen[i+j]])
 \ENDIF
 \STATE counter += 1
 \ENDIF
 \IF{$i-j \geq 0$}
 \IF{counter == pair\_id\_sen}
-\RETURN (word2idx[word], word2idx[sen[i-j]])
+\RETURN (word2idx[sen[i]], word2idx[sen[i-j]])
 \ENDIF
 \STATE counter += 1
 \ENDIF
