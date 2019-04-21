@@ -2043,6 +2043,7 @@
     <bcf:citekey order="48">gensim</bcf:citekey>
     <bcf:citekey order="49">intel</bcf:citekey>
     <bcf:citekey order="50">mikolov</bcf:citekey>
+    <bcf:citekey order="51">fb</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nyt">
