@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Arch Linux) (preloaded format=pdflatex 2019.4.14)  21 APR 2019 09:56
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Arch Linux) (preloaded format=pdflatex 2019.4.14)  21 APR 2019 10:32
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1022,103 +1022,111 @@ chapter 2.
 
 ]
 
-LaTeX Warning: Citation 'mikolov2' on page 4 undefined on input line 20.
+LaTeX Warning: Citation 'mikolov2' on page 4 undefined on input line 21.
 
 
-LaTeX Warning: Citation 'hsoftmax' on page 4 undefined on input line 20.
+LaTeX Warning: Citation 'hsoftmax' on page 4 undefined on input line 21.
 
 
-LaTeX Warning: Citation 'nce-original' on page 4 undefined on input line 23.
+LaTeX Warning: Citation 'nce-original' on page 4 undefined on input line 24.
 
 
-LaTeX Warning: Citation 'mnih' on page 4 undefined on input line 23.
+LaTeX Warning: Citation 'mnih' on page 4 undefined on input line 24.
 
 
-LaTeX Warning: Citation 'mikolov2' on page 4 undefined on input line 23.
+LaTeX Warning: Citation 'mikolov2' on page 4 undefined on input line 24.
 
 [4]
 
-LaTeX Warning: Citation 'mikolov2' on page 5 undefined on input line 40.
+LaTeX Warning: Citation 'mikolov2' on page 5 undefined on input line 41.
 
 [5]
 
 LaTeX Warning: Reference `fig:frequency_ex' on page 6 undefined on input line 4
-5.
+6.
 
 
-LaTeX Warning: Citation 'mikolov2' on page 6 undefined on input line 55.
+LaTeX Warning: Citation 'mikolov2' on page 6 undefined on input line 56.
 
 
-LaTeX Warning: Citation 'mikolov2' on page 6 undefined on input line 55.
+LaTeX Warning: Citation 'mikolov2' on page 6 undefined on input line 56.
 
 
-LaTeX Warning: Citation 'mikolov2' on page 6 undefined on input line 62.
+LaTeX Warning: Citation 'mikolov2' on page 6 undefined on input line 64.
 
 
-LaTeX Warning: Citation 'hogwild' on page 6 undefined on input line 62.
+LaTeX Warning: Citation 'hogwild' on page 6 undefined on input line 64.
 
 
-LaTeX Warning: Citation 'hogwild' on page 6 undefined on input line 62.
+LaTeX Warning: Citation 'hogwild' on page 6 undefined on input line 64.
 
 [6]
 
-LaTeX Warning: Citation 'intel' on page 7 undefined on input line 65.
+LaTeX Warning: Citation 'intel' on page 7 undefined on input line 67.
 
 
-LaTeX Warning: Citation 'efficient' on page 7 undefined on input line 84.
+LaTeX Warning: Citation 'efficient' on page 7 undefined on input line 86.
 
 
-LaTeX Warning: Citation 'efficient' on page 7 undefined on input line 84.
+LaTeX Warning: Citation 'efficient' on page 7 undefined on input line 86.
 
 <images/cachingEfficiency.png, id=58, 816.04875pt x 649.42625pt>
 File: images/cachingEfficiency.png Graphic file (type png)
 <use images/cachingEfficiency.png>
-Package pdftex.def Info: images/cachingEfficiency.png  used on input line 87.
+Package pdftex.def Info: images/cachingEfficiency.png  used on input line 89.
 (pdftex.def)             Requested size: 244.81651pt x 194.82938pt.
 
-LaTeX Warning: Citation 'efficient' on page 7 undefined on input line 88.
+LaTeX Warning: Citation 'efficient' on page 7 undefined on input line 90.
 
 
-LaTeX Warning: Citation 'efficient' on page 7 undefined on input line 88.
+LaTeX Warning: Citation 'efficient' on page 7 undefined on input line 90.
 
 [7]
 
-LaTeX Warning: Citation 'topicalWE' on page 8 undefined on input line 96.
+LaTeX Warning: Citation 'gpu' on page 8 undefined on input line 95.
 
 
-LaTeX Warning: Citation 'breaking' on page 8 undefined on input line 96.
+LaTeX Warning: Citation 'gensim' on page 8 undefined on input line 98.
 
 
-LaTeX Warning: Citation 'contextWithTensor' on page 8 undefined on input line 9
-6.
+LaTeX Warning: Citation 'intel' on page 8 undefined on input line 98.
 
 [8 <./images/cachingEfficiency.png>]
+
+LaTeX Warning: Citation 'topicalWE' on page 9 undefined on input line 102.
+
+
+LaTeX Warning: Citation 'breaking' on page 9 undefined on input line 102.
+
+
+LaTeX Warning: Citation 'contextWithTensor' on page 9 undefined on input line 1
+02.
+
 <images/multipleContext.png, id=66, 471.7625pt x 89.33376pt>
 File: images/multipleContext.png Graphic file (type png)
 <use images/multipleContext.png>
-Package pdftex.def Info: images/multipleContext.png  used on input line 109.
+Package pdftex.def Info: images/multipleContext.png  used on input line 115.
 (pdftex.def)             Requested size: 330.23149pt x 62.53319pt.
 
+LaTeX Warning: Citation 'contextWithTensor' on page 9 undefined on input line 1
+18.
+
 
 LaTeX Warning: Citation 'contextWithTensor' on page 9 undefined on input line 1
-12.
+18.
+
+[9] [10 <./images/multipleContext.png>] [11]
+
+LaTeX Warning: Citation 'adagrad' on page 12 undefined on input line 159.
 
 
-LaTeX Warning: Citation 'contextWithTensor' on page 9 undefined on input line 1
-12.
+LaTeX Warning: Citation 'Glove' on page 12 undefined on input line 159.
 
-[9 <./images/multipleContext.png>] [10]
+[12]
 
-LaTeX Warning: Citation 'adagrad' on page 11 undefined on input line 153.
+LaTeX Warning: Citation 'adadelta' on page 13 undefined on input line 175.
 
-
-LaTeX Warning: Citation 'Glove' on page 11 undefined on input line 153.
-
-[11]
-
-LaTeX Warning: Citation 'adadelta' on page 12 undefined on input line 169.
-
-[12] [13]) [14]
+[13]) [14]
 \openout2 = `chapters/methods.aux'.
 
  (./chapters/methods.tex
@@ -1419,7 +1427,7 @@ hare/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist
 /fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texmf-dist/fonts/type1/p
 ublic/amsfonts/cm/cmtt12.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super
 /sfrm1200.pfb>
-Output written on thesis.pdf (51 pages, 563098 bytes).
+Output written on thesis.pdf (51 pages, 564450 bytes).
 PDF statistics:
  268 PDF objects out of 1000 (max. 8388607)
  177 compressed objects within 2 object streams
