@@ -103,10 +103,24 @@ The skip gram model, has a lot of possible parameters, that can be tuned. We exp
 \begin{itemize}
 \item \texttt{Negative Samples} Here we have to find a trade off between, setting the parameter too high which will result in increased accuracy but a longer computation time. For smaller data sets a higher negative samples is often needed. In their original paper Mikolov et al. recommend a value of 5-20. We tested a few values in the range of 5 to 15, as 10 yielded state of the art results we chose this value. - \textit{10}
 \item \texttt{Context Window:} The bigger the window the more training examples the network will have, but if the window is to big the semantic meaning of the window will be erased. Mikolov et al. proposed a setting between 2-10, as all our sentences are of size 20 we chose 5. - \textit{5}
-\item\texttt{ Dimension of the embedding}: Here the choice is less obvious, the higher the dimension the better the embedding should be.( cite paper dimension vectors talk about gensim ) but when tested on gensim 100 yielded better results than 300 - \textit{100}
+\item\texttt{ Dimension of the embedding}: Here the choice is less obvious, as the dimension needs to be high enough to capture the meaning, but cannot be too high as this leads to a decrease in performance as shown in Yin and Shen 2018 \cite{dimensions_size}. We therefore did used Gensim to find the best embedding possible, as can be seen in \ref{table:gensim_emb_size}- \textit{100}
 \item \texttt{Batch size}: As described in section \ref{ssec:b_SGM}, there is a trade off to find between quality and training time. We first used a batch size of 5000, but then decide after non conclusive results (see \ref{ssec:bs_lf}) that 2000 would be better - \textit{2000}
 \item \texttt{Alpha}: learning rate, this hyper parameter was tuned in every optimizer therefore only the range will be indicated - \textit{(1e-5,1)}
 \end{itemize}
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|l|l|}
+\hline
+Embedding Size & Word Similarity on Gensim \\ \hline
+50 & 0.65 \\ \hline
+100 & 0.67 \\ \hline
+200 & 0.65 \\ \hline
+300 & 0.63 \\ \hline
+\end{tabular}
+\caption{Word similarity in relation to the size of the embedding}
+\label{table:gensim_emb_size}
+\end{table}
 
 \section{Input Shuffling}
 We used input shuffling as a technique to optimize the skip gram model. We will first describe input shuffling in a general way and then explain why we suppose that input shuffling could work well on the skip gram model. \\

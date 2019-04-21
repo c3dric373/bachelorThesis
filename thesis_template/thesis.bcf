@@ -2023,18 +2023,19 @@
     <bcf:citekey order="28">adadelta</bcf:citekey>
     <bcf:citekey order="29">mikolov</bcf:citekey>
     <bcf:citekey order="30">gensim</bcf:citekey>
-    <bcf:citekey order="31">gensim</bcf:citekey>
-    <bcf:citekey order="32">intel</bcf:citekey>
-    <bcf:citekey order="33">gensim</bcf:citekey>
+    <bcf:citekey order="31">dimensions_size</bcf:citekey>
+    <bcf:citekey order="32">gensim</bcf:citekey>
+    <bcf:citekey order="33">intel</bcf:citekey>
     <bcf:citekey order="34">gensim</bcf:citekey>
-    <bcf:citekey order="35">momentum</bcf:citekey>
-    <bcf:citekey order="36">nag</bcf:citekey>
-    <bcf:citekey order="37">adagrad</bcf:citekey>
-    <bcf:citekey order="38">adadelta</bcf:citekey>
-    <bcf:citekey order="39">Mikolov</bcf:citekey>
-    <bcf:citekey order="40">gensim</bcf:citekey>
-    <bcf:citekey order="41">intel</bcf:citekey>
-    <bcf:citekey order="42">mikolov</bcf:citekey>
+    <bcf:citekey order="35">gensim</bcf:citekey>
+    <bcf:citekey order="36">momentum</bcf:citekey>
+    <bcf:citekey order="37">nag</bcf:citekey>
+    <bcf:citekey order="38">adagrad</bcf:citekey>
+    <bcf:citekey order="39">adadelta</bcf:citekey>
+    <bcf:citekey order="40">Mikolov</bcf:citekey>
+    <bcf:citekey order="41">gensim</bcf:citekey>
+    <bcf:citekey order="42">intel</bcf:citekey>
+    <bcf:citekey order="43">mikolov</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nyt">
