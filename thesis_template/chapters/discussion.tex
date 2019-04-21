@@ -31,8 +31,8 @@ The training with Gensim has a lot of possible parameters an extended list can b
 Parameters:
 \begin{itemize}
    \item \texttt{sentences} (iterable of iterables) -- \textit{Dataset} -- text8 document splitted into sentences of 20 words 
-  \item \texttt{size}(int) – \textit{Dimensionality of the word vectors } -- 5
-\item \texttt{window} (int) --\textit {Maximum distance between the current and predicted word within a sentence }-- 100
+  \item \texttt{size}(int) – \textit{Dimensionality of the word vectors } -- 100
+\item \texttt{window} (int) --\textit {Maximum distance between the current and predicted word within a sentence }-- 5
   \item  \texttt{min\_count }(int) --\textit{ Ignores all words with total frequency lower than this }-- 5
  \item   \texttt{workers} (int) -- \textit{ Use these many worker threads to train the model (=faster training with multicore machines) }-- 4 
 \item    \texttt{sg} ({0, 1}) --\textit{ Training algorithm: 1 for skip--gram}--1
