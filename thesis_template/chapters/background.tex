@@ -1,23 +1,29 @@
 \chapter{Background}\label{chap:background}
-
-\section{The Skip-Gram Model} 
-The Skip Gram Model is a model used to embed words into vectors, by analyzing the context in which the words happens. It's achieving this by maximizing the following equation:\begin{equation} \label{basicSkip} \prod_{t=1}^T \prod_{-m<j<m}  p(w_{t+j}|w_t) \end{equation} Where T is the number of words in the corpus data, $w_t$ the $t-th$ word in the corpus data and $m$ is the context window. This means that the $m$ nearest words to $w$ are considered as context words.
-This equation can be transformed quite easily into sums by using log probabilities: 
+\iffalse
+Es muss ein Absatz unter jeden {berpunkt, auch ywischen Background und 2.1. Ich kann dir wenn du magst die Folien von meinem Seminar nachher schicken, das hatte ich ja beim Granityer und da hat er ein bisschen drauf geschrieben, was er bei Scientific Writing wichtig findet, ich wei- aber nicht mehr, wie hilfreich die Folien sind. Aber das steht auf alle F'lle drin.
+\fi
+This section will give an overview about the SGM and related work that was done to optimize it. It will also give an understanding over the used optimizers in our experiments. 
+\section{The Skip-Gram Model}
+The SGM is a very simple model used to learn WE. The idea is to train the model, a neural network, on a fake task and then use the weights as embeddings. The network consists of one input and one output layer. Each of these layers will act as a lookup table for our words, i.e the matrices representing the layers will store word embeddings. The input layer will be a $T \times d$ matrix, whereas the output layer will have dimension $T \times d$, where $T$ is the number of words in our vocabulary and $d$ will be the dimension of our WE. Each row of the input Matrix will store the WE of one word. The same holds for each column of the output layer. Know the question arises, on which task the network is trained? Well, the goal of the SGM is to predict for a given word $w$ the probability of an arbitrary word $c$ to appear next to $w$ in a given window. This is done by maximizing the following equation:
+\begin{equation} \label{basicSkip} \prod_{t=1}^T \prod_{-m<j<m}  p(w_{t+j}|w_t) \end{equation} Where T is the number of words in the corpus data, $w_t$ the $t-th$ word in the corpus data and $m$ is the context window. This means that the $m$ nearest words to $w$ are considered as context words.
+Equation \ref{basicSkip} can be transformed into sums by using log probabilities: 
 \begin{equation} \sum _{t=1}^T \sum_{-m<j<m} log( p(w_{t+j}|w_t) )\end{equation} 
-    where the parameters are the same as in \ref{basicSkip}. The basic Skip-Gram Model uses a classical Softmax to calculate the conditional probability $p(w_{t+j}|w_t)$: 
+    where the parameters are the same as in Equation \ref{basicSkip}.
+
+The basic Skip-Gram Model uses a classical Softmax to calculate the conditional probability $p(w_{t+j}|w_t)$: 
    \begin{equation}
    p(w_{t+j}|w_t)=  \frac{exp( \tilde{v}_{w_{t+j}}^Tv_{w_t})}{\sum_{w=1}^v exp(\tilde{v}_w^Tv_{ w_t})}
    \end{equation}
   
-  Here $\tilde{v}_{w_t}$ and $ v_{w_t}$ are the vector representations.  There lies a problem in this approach. As a matter of fact it is unsuitable to compute the softmax. For the computation of $\sum_{w=1}^v exp(v_w^T w_t)$ one has to go over the whole corpus data. As very big data sets are needed to train the model, this is not a solution. But different solutions were proposed by Mikolov et al. \cite{mikolov2}. The first one is to use a Hierarchical soft max introduced by Morin and Bengio \cite{hsoftmax}. In this model the probability distribution of the output nodes is saved in a binary tree which gives one a logarithmic computation time for each of these probabilities, and this makes it feasable to compute the softmax. Another possibility is the use of negative sampling which is used in the original word2vec implementation \cite{mikolov2}, which I shall discuss in the next section. 
+  Here $\tilde{v}_{w_t}$ and $ v_{w_t}$ are the vector representations. The model stores vector representations of each word. One for the input words and another for the context word. Here $\tilde{v}_{w_t}$ is the input vector and  $ v_{w_t}$ the output vector. There lies a problem in the approach with a classical softmax. As a matter of fact it is unsuitable to compute the softmax. For the computation of $\sum_{w=1}^v exp(v_w^T w_t)$ one has to go over the whole corpus data. As very big data sets are needed to train the model, this is not a solution. Consequently different solutions were proposed by Mikolov et al. \cite{mikolov2}. The first one is to use a Hierarchical soft max introduced by Morin and Bengio \cite{hsoftmax}. In this model the probability distribution of the output nodes is saved in a binary tree which gives one a logarithmic computation time for each of these probabilities, and makes it suitable to compute the softmax. Another possibility is the use of negative sampling which which we shall discuss in the next section. 
 
 \section{Negative Sampling}
 An alternative to the Hierarchical Softmax is Noise Contrastive Estimation (NCE) which was introduced by Gutmann and Hyv{\"a}rinen \cite{nce-original},  and first applied to NLP by Mnih and Teh \cite{mnih}. The idea behind NCE is to distinguish targets words from noise. It does so by reducing the problem to a logistic regression task, and does it by maximizing the log probability. The skip-gram Model is only interested in good word representation, hence the probability of the word is not meaningful as long as the quality of the word representations remains high. Mikolov et al. \cite{mikolov2} simplified NCE and called it Negative Sampling. Let's dive into it.\\
-The idea behind negative sampling is to only update the output nodes of certain words. This will obviously save an enormous amount of computation time. The idea is that given a pair $(c,w) \in D$, where $c$ is a word in the context window of $w$ we will set $p(c|w) =1$, here $p$ is the score for our logistic regression. Then select $K$ random words $k_i$ from the corpus data and set $p(k_i|w) = 0$, more one the random distribution later. We will denote the score that the $(c,w)$ wasn't drawn at random the following way: $p(y=1|c,w)$, and if $(k,w) $ is chosen at random this way: $p(y=0|k,w)$.  Now we will use logistic regression to update the weights of the $k$ selected context words and $c$. By doing so we will only have to update $k+1$ output nodes.
+The idea behind negative sampling is to only update the output nodes of certain words. This will obviously save an enormous amount of computation time. The idea is that given a pair $(c,w) \in D$, where $c$ is a word in the context window of $w$ and  select $K$ random words $k_i$ from the corpus data, more one the random distribution later. We will assume those words do not appear in the context of $w$. We will denote the score that the $(c,w)$ wasn't drawn at random the following way: $p(y=1|c,w)$, and if $(k,w) $ is chosen at random this way: $p(y=0|k,w)$.  Now we will use logistic regression to update the weights of the $k$ selected context words and $c$. By doing so we will only have to update $k+1$ nodes.
 
 Let's look at how we construct our objective function for a given word $w$ and one of its context words $c$: 
 
-\begin{align*}
+\begin{align*} \label{eq:obj_neg_samples}
 p(c|w) &= p(y=1|c,w) + \prod_{k\in K} p(y=0|k,c) 
 \\&= p(y=1|c,w) + \prod_{k\in K} 1- p(y=1|k,c) 
 \\&= log((p(y=1|c,w)) + \sum_{k\in K} log(1- p(y=1|k,c)) 
@@ -26,26 +32,34 @@ p(c|w) &= p(y=1|c,w) + \prod_{k\in K} p(y=0|k,c)
 \\&= log(\sigma(v_c v_w ) + \sum_{k\in K} \sigma(log(-v_c v_k )) &&\text{$ where, \sigma = \frac{1}{1+e^{-x}}$}
 \end{align*}
 
+The goal is know to maximize this objective function. Another way, a part from logistic regression, too look at this function, and assume why it's working so well, is to assume that two vectors are similar if their dot product is high. And therefore we will maximize the dot product of similar words $(w,c)$ and minimize it for dissimilar words $(w,k_i)$.
 We see that to compute our objective function we will only have to compute the sum over $K$. Which in practice is very small (2-20). Too put things in perspective lets imagine our data set consists of 100000 words, we set $K=2$ and let's say that each output neuron has weight vector $v$ with $|v| = 300$. When updating our weights we would only update  $0.2*10^{-2}$ of the 300 million weights in the output layer. 
 
 One question remains: how do we choose our random words? Mikolov et al. \cite{mikolov2} used the following unigram distribution:
  
- \begin{equation}
+ \begin{equation} \label{eq:unigram}
 P(w)=\frac{f(w)^{\frac{3}{4}}}{\sum_{w_k\in W} f(w_k)^{\frac{3}{4}}}
 \end{equation}
-where $f(w)$ is the frequency of $w$ in the Vocabulary $W$. The value of $\frac{3}{4}$ is set empirically.
+where $f(w)$ is the frequency of $w$ in the Vocabulary $W$. The value of $\frac{3}{4}$ is set empirically. See figure \ref{fig:frequency_ex} for an example.
+
+\begin{figure}[ht]
+    \centering
+			\includegraphics[scale=0.45]{images/frequency_ex} 
+    \caption{Probabililty of a word, of the text8 dataset,  to be chosen at random according to it's frequency and the power to which the unigram distribution is raised}
+    \label{fig:frequency_ex}
+\end{figure}
 
 It's quite easily observable that this approach will outperform the classical softmax in computation time. Now the question arises if the accuracy is good enough enough but according to Mikolov et al. \cite{mikolov2} the negative sampling method "is an extremely simple training method that learns accurate representations". As a matter of fact Mikolov et al. \cite{mikolov2} reported a 6\% accuracy improvement in comparison to a Hierarchical Softmax model.
-We now have enough background knowledge about word2vec and the skip gram model to look at how it can be optimized. In the next section we are going to cover what has already be done.
+We now have enough background knowledge about the SGM to look at how it can be optimized. In the next section we are going to cover what has already be done.
 
 \section{Optimization of the Skip Gram Model}
-Due to the popularity of the skip gram model, a lot of research went into optimizing it. This research can actually be divided into two categories, parallelization, and the optimization of the accuracy of the algorithm by allowing words to have multiple meanings.
+Due to the popularity of the skip gram model, a lot of research went into optimizing it. This research can actually be divided into two categories, parallelization and the optimization of the accuracy of the algorithm by allowing words to have multiple meanings. This section will first give an overview of parallelization and then present one paper that focused on context sensitive word embeddings. 
 
 \subsection{Parallelization}
 In the original model the optimization is done with Stochastic Gradient Descent (SGD), which is a sequential algorithm. This process does not favor a parallelization. To deal with this specific problem Mikolov et al.\cite{mikolov2} used a Hogwild tree proposed by Recht et al.\cite{hogwild}. The approach is to allow multiple threads to access a shared memory, in this case the single model. Therefore overwriting errors are bound to happen. But according to Recht et al.\cite{hogwild} the overwriting errors won't lead to a significant accuracy loss if the data access isn't too frequent. But in the case of NLP the problem seems to be a bit more significant, and especially for word embedding, as many words share the same context words. There were several attempts at solving this issue, and we are going to cover a few of them in the following subsections. 
 
 \subsubsection{Parallization in shared and Distributed Memory}
-The first parallization solution which was proposed by Ji et al. \cite{intel}, is to try to reduce the cost of our vector multiplication. The main idea in this paper is to convert the level 1-BLAS vector to vector operations to a level-3 BLAS matrix multiplication operation. This is achieved, buy using the same negative samples for each context word of a given word $w$. Instead of using for each context word a vector to vector multiplication we can transform this, under the assumption that we will not loose accuracy by sharing the same negative samples,  into a matrix multiplication. The matrix multiplication can be represented the following way.
+The first parallization solution which was proposed by Ji et al. \cite{intel}, is to try to reduce the cost of our vector multiplication. The main idea in this paper is to convert the level 1-BLAS vector to vector operations to a level-3 BLAS matrix multiplication operation. This is achieved, by using the same negative samples for each context word of a given word $w$. Instead of using for each context word a vector to vector multiplication we can transform this, under the assumption that we will not loose accuracy by sharing the same negative samples,  into a matrix multiplication. The matrix multiplication can be represented the following way.
 \[
 \begin{bmatrix}
 w \\
@@ -64,7 +78,7 @@ w_{c_{2m}}\\
 where $w$ is our given word, $w_{n_1}...w_{n_k}$ are the shared negative samples, with $k \in [5,20]$, and $w_{c_1}...w_{c_2m}$ are the words inside of the context window $m$ of $w$, with $m \in [10,20]$, also called a batch of input context words. After each batch the model updates the weights of the used vectors. 
 This model achieves a 3.6 fold increase in throughput, by only losing 1\% of accuracy. 
 \subsubsection{Parallelization by the use of caching}
-This idea was proposed by Vuurens et al. \cite{efficient}. The architecture used here is the basic skip gram model with an hierarchical soft max.  The general idea is to cache the most frequent used nodes of the binary tree used to memorize the probability distribution, and update them on the shared single model after a certain amounts of seen words (the paper used the number 10). The paper produced interesting results as they managed to increase execution time by increasing the number of cores used for the calculation. This is very powerful because in the original implementation the exectution time regressed after 8 cores, this seems to indicate that too much overwriting was happening, as the number of concurrent threads surpasses a certain threshold. This can be seen in \ref{fig:efficient}, where c31 is the model proposed by Vuurens et al.\cite{efficient}. The model did not suffer any accuracy loss in comparison to the original Word2vec model. 
+This idea was proposed by Vuurens et al. \cite{efficient}. The architecture used here is the basic skip gram model with a hierarchical soft max.  The general idea is to cache the most frequent used nodes of the binary tree used to memorize the probability distribution, and update them on the shared single model after a certain amounts of seen words (the paper used the number 10). The paper produced interesting results as they managed to increase execution time by increasing the number of cores used for the calculation. This is very powerful because in the original implementation the exectution time regressed after 8 cores, this seems to indicate that too much overwriting was happening, as the number of concurrent threads surpasses a certain threshold. This can be seen in \ref{fig:efficient}, where c31 is the model proposed by Vuurens et al.\cite{efficient}. The model did not suffer any accuracy loss in comparison to the original SGM model. 
 \begin{figure}[ht]
     \centering
 			\includegraphics[scale=0.3]{images/cachingEfficiency.png} 
@@ -72,14 +86,11 @@ This idea was proposed by Vuurens et al. \cite{efficient}. The architecture used
     \label{fig:efficient}
 \end{figure}
 %%%%%%%%%%%
-\iffalse
-\subsection{Restating the problem as Matrix factorization}
-It was also shown in \cite{goldenberger} that the optimization problem solved by the sgd can alos be restated as a matrix factorization. In fact the partial derivative Matrix W*C where w is the word embedding matrix and C the context matrix, is nothing else then PPMI - log k. which states the optimizing problem as a pure matrix factorization problem. Also this first step showed similar results to the original word2vec. Then this was picked up by, to do it with riemman  optimization and outperformed the original word2vec in accuracy. 
-\fi
-%%%%%%%%%%%
+
+
 
 \subsection{Context sensitive word embedding}
-A word does not always have the same meaning according to it's context. This is a problem that is not addressed by word2vec and the general skipGram model. Some new models, that have taken this issue into consideration, were proposed. A lot of work has be done in this direction, Liu et al.\cite{topicalWE},  Bartunov et al.\cite{breaking} for example, but the the one reporting the best results is Liu et al. \cite{contextWithTensor}. The main idea is to change the way we compute the and variables we use in our conditional probability. The idea is to look if a word given a certain context word matches to a topic. Bank would match too finance given the context word money. Bank would also match too nature if river was the given context word. But bank would not match too nature with the context word money. Now one could ask himself how to achieve such a context sensitive word embedding, first we have to introduce new variables, therefore let's look at the objective function used: 
+A word does not always have the same meaning according to it's context. This is a problem that is not addressed by the SGM. Some new models, that have taken this issue into consideration, were proposed. A lot of work has be done in this direction, Liu et al.\cite{topicalWE},  Bartunov et al.\cite{breaking} for example, but the one reporting the best results is Liu et al. \cite{contextWithTensor}. The main idea is to change the way we compute the objective function and variables we use in our conditional probability. The idea is to look if a word given a certain context word matches to a topic. Bank would match too finance given the context word money. Bank would also match too nature if river was the given context word. But bank would not match too nature with the context word money. Now one could ask himself how to achieve such a context sensitive word embedding, first we have to introduce new variables, therefore let's look at the objective function used: 
 First let's take a look at the objective function:
 \begin{equation}
 J(\Omega) = \sum_{(w,t,c)\in D} \sum_{(w,\tilde{t},\tilde{c} \in{\tilde{D}})} max(0,1- g(w,t,c) + g(w,\tilde{t},\tilde{c})) \lambda||\Omega||_{2}^2
@@ -99,27 +110,27 @@ and the rest lines are the results of our model" \cite{contextWithTensor}}
     \label{fig:multipleContext}
 \end{figure}
 
-\section{Optimizers in Machine learning}
-This section will give a quick overview about a few optimizers existing in machine learning. First of all let's define a few notation: 
-$\eta$ will be the learning rate, $\theta$ all the parameters of our model, $J(\theta)$ our objective function. The goal of an optimizer is to find values for $\theta$ such that $J(\theta)$ can either be minimized or maximized depending on the task. Stochastic gradient descent is the most common optimization technique used in machine learning.  We will address it in it's original form and the existing extensions. 
+\iffalse
+%TODO EXPLAIN SGD GD VANILLA VERY GOOD UNDERSTAND IT REALLY AND ADADELTA AND ADAM ARE TWO IMPROVE
+\section{Optimizers in Machine learning} \label{optimizers}
+The goeal of learning in machine learning is to minimze an objectiv function  $J(\theta)$, where $\theta$ is the set of all parameters in our model. This happens by updating the parameters $\theta$ at every training time step $t$. We will denote $\theta_{t}$ as the parameters of our model at the $t^{th}$ time step. In this work we only examined stochastic gradient descent algorithms.
 \subsection{Stochastic Gradient Descent}
-In this work we will address stochastic gradient as mini-batach gradient descent. At each optimiation time step $t$, Stochastic gradient descent will compute the gradient of all our parameters. Denoted as $  \nabla J(\theta_{t-1})$. We will then substract this term, multiplied by our learning rate, from our weights $\theta$. The gradients will give the direction of the optimization step, whereas the learning rate will give the amplitude of that step.
+The idea in stochastic gradient descent optimization is to follow the path of steepest descent in the shape of our cost function. To get information about the shape of the objective function, one has to compute the gradients of all our parameters $  \nabla J(\theta_{t-1})$, denoted as$g_{t-1}$ . To follow the path of steepest descent we will have to subtract a portion of this term from our parameter. The magnitude of the portion is often referred to as the learning rate, denoted $\eta$. For illustration, this means that the gradients will give the direction of the optimization step, whereas the learning rate will give the amplitude of that step. An update at time step $t$ will result in the following equation:
 \begin{equation}
-\theta_t = \theta_{t-1} - \eta \nabla J(\theta_{t-1})
+\theta_t = \theta_{t-1} - \eta \nabla g_{t-1}
 \end{equation}
 
-SGD, through it's simplicity, is very limited, therefore somme issues appear:
+SGD, through it's simplicity, is very limited, therefore some issues appear:
 
 \begin{itemize}
-\item The learning rate needs to be tuned, it's is often necessacary to try out a set of learning rate to find the optimal one for the given network. 
-\item Learning rate schedules, that are very often needed, as one gets closer to the optimal a smaller learning rate is often needed, must be set before the training starts and hence cannot adapt to the learning set
-\item SGD does not take the parameters into account, every parameter will be following the same update rule
+\item The learning parameter is yet another hyper parameter to tune, as the optimum setting will largely vary depending on the training task and architecture of the network
+\item Learning rate schedules, that diminish the learning rate as the training progresses, are commonly accepted technique to improve accuracy. This schedule is most often set at the beginning of the training, and will be completely independent of the training set. 
+\item Every parameter has the same learning rate
 \end{itemize}
-
-Thererfore there exists numerous advanced optimizers that take those issues into consideration. Let's look into theim. 
+To tackle those issues numerous advanced optimizers were developed. They will be covered in the next sections. 
 
 \subsection{Momentum}
-Momentum is a technique used to adress one of SGD weak points. As a matter of fact because SGD can have trouble computing the optimum of objective function that are only steep in one directions. The problem here is that SGD often osciliates in the direction that is not very steep, and only takes small steps in the steep direction. This issue is addressed by SGD with momentum. 
+Momentum is a technique used to address one of SGD weak points. As a matter of fact because SGD can have trouble computing the optimum of objective function that are only steep in one directions. The problem here is that SGD often oscillates in the direction that is not very steep, and only takes small steps in the steep direction. This issue is addressed by SGD with momentum. 
 
 It does so by adding a percentage of the last gradient vector  to the update vector. By doing so the gradient that go in the same direction will get bigger (building momentum) and gradients that go in different directions will anhill themselves. 
  At the update $t$ we will comppute our update vector $v_t$ the following way:
@@ -136,7 +147,7 @@ v_t = \gamma v_{t-1} + \eta \nabla J (\theta -  \gamma v_{t-1})
 
 SGD wiht momentum and Nesterov accelerated gradient (NAG) has shown tremendous results in RNN's. But some of the earlier mentioned problems still remains.  NAG, still treats every parameter the same way. Therefore we need a more complex optimization algorithm, that takes the frequency of a feature into account. Adagrad does just that. 
 
-\subsection{Adagrad}
+\subsection{Adagrad}\label{ssec:adagrad}
 Adagrad first introduced by \cite{adagrad} is an optimzer that tries to apply different learning rates to different parameters, according to their frequency. The idea is to give very frequent features a small learning rate, and very sparse features a high learning rate. This can be very important for our task of word embeddings, as rare words in the corpus are more important then very frequent ones. As a matter of fact Pennigton et al. used this algorithm for their training of Glove, another word embedding system. \\
 Each parameter $\theta_i$, at time step $t$ will have it's own learning rate $\eta_{t,i}$
  \begin{equation}
@@ -152,8 +163,32 @@ Therefore we have $ \theta_{t+1,i} = \theta_{t_i} - \eta_{t,i} g_{t,i} $, and we
 with  $G_{t_{i,i}}$ being the diagonal Matrix of the sum of the squares of the graditents ($g_{t,i} $). 
 There lies one weakness in this approach: the sum of the squares of the previous gradients grows constantly. This means that after a certain number of epochs the learning rate will be insufficient, to update the model. This issue was addressed by the Adadelta algorithm, that will be covered in the next session. 
 
-\subsection{Adadelta}
-Adadelta not ownly solves the constantly growing sum problem, but also the fact that one does not have to tune the learning rate by not having one. The gist of Adadelta is that instead of taking all the gradients to compute the sum we will only take a fixed number $w$ of gradients.  
+\subsection{Adadelta}\label{ssec:adadelta}
+Adadelta \cite{adadelta} not only solves the constantly growing sum problem, but also the fact that one does not have to tune the learning rate by not having one. The gist of Adadelta is that instead of taking all the gradients to compute the sum we will only take a fixed number $w$ of gradients. But instead of inefficiently storing w gradients we will take the exponantially decaying average of the squared gradient, denoted $E[g^{2}]$. The average at time step $t$ will be computed in the following way: 
+\begin{equation}
+E[g^2]_t = \gamma E[g^2]_{t-1} + (1 - \gamma) g^2_t
+\end{equation}
+where $\gamma$ is a hyper parameter similar to the one used in momentum. That decides how much the past is weighted in contrast to the current gradient. Since Adadelta is an extension of Adagrad the square root of $E[g^{2}]$ is need, which become the RMS:
+\begin{equation}
+RMS[g]_t = \sqrt{E[g^2]_t + \epsilon}
+\end{equation}
+Which gives us the following update rule: 
+\begin{equation}
+\theta_t = \theta_{t-1} - \frac{\eta}{RMS[g]_t}g_t
+\end{equation}
+Here we have two problems, first the learning rate is still a hyper parameter. And the units do not match. This is a problem xyz wanted to address. That if the parameters would have units the update parameters would have the same parameters. 
+Therefore they define the exponentially decaying average of squared parameter updates: 
+\begin{equation}
+E[\Delta \theta^2]_t = \gamma E[\Delta \theta^2]_{t-1} + (1 - \gamma) \Delta \theta^2_t
+\end{equation}
+As before we can know us the root mean squared error: 
+\begin{equation}
+RMS[\Delta \theta]_{t} = \sqrt{E[\Delta \theta^2]_t + \epsilon}
+\end{equation}
+As at time step $t$ $RMS[\Delta \theta]_{t} $ is unknown, we approximate it with $ RMS[\Delta \theta]_{t}-1$. Know we replace $\eta$ with  $ RMS[\Delta \theta]_{t}-1$ and get the final update rule: 
+\begin{equation}
+ \theta_{t+1} = \theta_t - \dfrac{RMS[\Delta \theta]_{t-1}}{RMS[g]_{t}} g_{t}
+\end{equation}
 \subsection{Adam}
 Adaptive Moment Estimation (Adam), is a more recent optimization algorithm. It also computes adaptive learning rates. In comparison to Adagrad and Adadelta, it does not only take into considaration the decaying average of the previous squared gradients but also the decay of the past gradients. 
 Let's introduce : \\
@@ -166,7 +201,5 @@ The general update is done exactly in the same way as in Adadelta:
 \begin{equation}
 \theta_{t+1} = \theta_t - \frac{\eta}{\tilde{v_t}+ \epsilon} \tilde{m_t}
 \end{equation}
+\fi
 
-\section{Input Shuffling}
-Let $X = {x_1...x_n}$ be our input data set. Input Shuffling describes the process of taking a random permutation of the dataset as an input at each epoch. 
-The idea behind this technique, is the same as the use of mini batches. We want to present our optimizer with different loss surfaces, so that it's able to find the best optimum. But both combined can be a very powerful, there always lies a risk that a mini-batch isn't a good representative of the true gradient. This way, by shuffling the input, one would avoid this bias.

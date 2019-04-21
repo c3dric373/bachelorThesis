@@ -1,4 +1,29 @@
 \chapter{Introduction}\label{chap:introduction}
 
-Insert a short introduction to word2vec. and quickly talk about machine learning blablbablah. 
+%Insert a short introduction to word2vec. and quickly talk about machine learning blablbablah. 
+
+Machine learning (ML) is a subpart of Artifficial Intelligence (AI), in which models poses the ability to learn the solving of a task without having been explicitly programmed to do it. Supervised learning is on of the many different ways ML can achieve it's goal. The task of supervised learning is to learn a prediction function from labeled training data. We suppose from the training data that it's representative of a larger sample population, this would mean that our trained model generalizes well, i.e the predictive function will give accurate results on unseen data. \\
+
+Neural networks are models used in Supervised learning to learn the solving of a task. Neural networks will take a vector as an input an return a vector as an output. In between their are the so called hidden layers. What will happen is that given in input each layer will react in a different way with each other. Each layer consists of a given number of neurons. Each of these neuron will interact with neurons of the next layer. The parameters that influences each neurons are called weights. The goal of ML is to find a way such that the output vector will be closer to the labeled training data. Here their are lot of ways to learn, but gradient learning has imposed itself as the go to optimization technique. The network can be seen as a function with a lot of parameters, at each time step the optimizer will compute the gradient, and update the parameters in the opposite direction of the gradient, if the goal is to minimize the function. \\
+
+An example of a task where this technique is used are Word Embeddings (WE). Word embeddings are the vector representation of words. They can be created in two ways, arbitrarly or with the purpose of capturing the semantic meaning of the word in the vector. To create arbitrary WE there the most common way is to use the so called one-hot encoding that is constructed as follows: each word vector will have the numbers of words in the vocabulary as dimension, and every dimension of the vector will be 0 except one that will hold the value 1. Therefore each vector will have one specific dimension where it will be unequal to one. As this representation does not capture any meaning, because each vector has the same distance to each other, a lot of effort went into  creating better word embeddings. Those efforts have shown to facilitate a lot of tasks in natural language processing (NLP), such as machine translation or sentence classification. The main problem with creating WE is that there is no real task to learn as there is with more classical ML learning problems. Therefore the approach is to create a fake task, train a neural network on it and then use some weights of the network as WE. \\
+
+This was also the technique used by Mikolov et al. \cite{mikolov} who  introduced the Skip Gram Model(SGM), an algorithm to create word embeddings. The SGM used the task of predicting the probability of a word appearing in the context of another word, i.e appearing in a certain window next to the word in a sentence. The SGM gained a lot of attention, as it achieved very good results for a very simplistic model. Therefore a lot of effort went into optimizing it. Most of the optimizing work went into improving the throughput of the model. As this is very interesting, not much work went into improving the convergence time of the model. Therefore our work focused on this task.\\
+
+This work will first give a short introduction to the Skip-Gram model, then discuss related work and the numerous successful attempts that went into optimizing the throughput of the model. Then we will describe our implementation of the SGM followed by the description of our results. In the Section Results we will first describe our dataset, the measure we used to compare the quality of word embeddings. And finally we will discuss our work by comparing it to the state of the art implementation gensim \cite{gensim}. 
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
 
