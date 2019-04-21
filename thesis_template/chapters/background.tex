@@ -90,7 +90,8 @@ This idea was proposed by Vuurens et al. \cite{efficient}. The architecture used
     \label{fig:efficient}
 \end{figure}
 %%%%%%%%%%%
-
+\subsection{Gensim}
+Gensim \cite{gensim} is a pure Python library that holds a state of the art implementation of the SGM. As it was written in Cython, it shows an interesting speed up. Furthermore with the use of BLAS and precomputed sigmoid tables, it achieves a 3 fold speed increase in comparison to the original w2vec code. Gensim is an importatnt tool as it allows us to compare our data rather easily. It was also used in related work \cite{intel}, and is therefore of value.
 
 
 \subsection{Context sensitive word embedding}
