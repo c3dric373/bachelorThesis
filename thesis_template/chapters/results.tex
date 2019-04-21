@@ -141,7 +141,7 @@ We ran multiple experiments for each optimizer. This section will only give an o
 
 \subsection{SGD}
 The first challenge for each optimizer was to find a correct learning rate. As SGD is the optimizer used in Gensim \cite{gensim} we first tried the same learning rate as Gensim \cite{gensim}, and then performed a random search to find a better one. As expected a bell curve shape resulted, a learning rate that is to high leads to diversion and  a learning rate that is two low leads to a training time that is too slow. The best value that we found for the learning rate is $0.0075$. With this setting SGD converged in 11 epochs. The second experiment was to add input shuffling. 
-As seen is figure \ref{fig:results_sgd}, for every learning rate the convergence time decreased. Our model, with it's best setting, know converges in only 7 epochs. Another interesting  fact to point out from Figure \ref{fig:results_sgd} is that with input shuffling we achieved better results with higher learning rates. As for learning rates of $0.01$ and $0.025$ we did converge in 11 epochs with input shuffling but did not converge in 20 epochs without it.
+As seen is figure \ref{fig:results_sgd}, for almost every learning rate the convergence time decreased. Our model, with it's best setting, know converges in only 7 epochs. Another interesting  fact to point out from Figure \ref{fig:results_sgd} is that with input shuffling we achieved better results with higher learning rates. As for learning rates of $0.01$ and $0.025$ we did converge in 11 epochs with input shuffling but did not converge in 20 epochs without it.
 
 \begin{figure}[h]
     \centering
