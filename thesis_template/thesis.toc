@@ -18,88 +18,102 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.3.2}Context sensitive word embedding}{8}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {3}Methods}{10}% 
+\contentsline {section}{\numberline {2.4}Optimizers in Machine learning}{9}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.1}PyTorch}{10}% 
+\contentsline {subsection}{\numberline {2.4.1}Stochastic Gradient Descent}{9}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.2}Implementation}{11}% 
+\contentsline {subsection}{\numberline {2.4.2}Momentum}{10}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.2.1}Batched SkipGramModel}{11}% 
+\contentsline {subsection}{\numberline {2.4.3}Nesterov}{11}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Forwarding}{11}% 
+\contentsline {subsection}{\numberline {2.4.4}Adagrad}{11}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.2.2}Creating the context pairs}{13}% 
+\contentsline {subsection}{\numberline {2.4.5}Adadelta}{12}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Number of pairs in the dataset}{13}% 
+\contentsline {subsection}{\numberline {2.4.6}Adam}{13}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Accessing each pair individually}{14}% 
+\contentsline {chapter}{\numberline {3}Methods}{14}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {4}Results}{16}% 
+\contentsline {section}{\numberline {3.1}PyTorch}{14}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.1}Dataset}{16}% 
+\contentsline {section}{\numberline {3.2}Implementation}{15}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.1.1}Subsampling}{17}% 
+\contentsline {subsection}{\numberline {3.2.1}Batched SkipGramModel}{15}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Min count}{18}% 
+\contentsline {subsubsection}{\nonumberline Forwarding}{15}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.2}Evaluating word embedings}{18}% 
+\contentsline {subsection}{\numberline {3.2.2}Creating the context pairs}{17}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.2.1}Cosine distance}{19}% 
+\contentsline {subsubsection}{\nonumberline Number of pairs in the dataset}{17}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.2.2}Word similarity and wordsim353}{19}% 
+\contentsline {subsubsection}{\nonumberline Accessing each pair individually}{18}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.3}Configuration of the network}{20}% 
+\contentsline {chapter}{\numberline {4}Results}{20}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.4}Input Shuffling}{20}% 
+\contentsline {section}{\numberline {4.1}Dataset}{20}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.5}Convergence time}{21}% 
+\contentsline {subsection}{\numberline {4.1.1}Subsampling}{21}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.6}Results by optimizer}{22}% 
+\contentsline {subsubsection}{\nonumberline Min count}{22}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.6.1}SGD}{22}% 
+\contentsline {section}{\numberline {4.2}Evaluating word embedings}{22}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.6.2}Momentum and Nesterov}{23}% 
+\contentsline {subsection}{\numberline {4.2.1}Cosine distance}{22}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.6.3}Adagrad}{23}% 
+\contentsline {subsection}{\numberline {4.2.2}Word similarity and wordsim353}{23}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.6.4}Adadelta}{24}% 
+\contentsline {section}{\numberline {4.3}Configuration of the network}{23}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.6.5}Adam}{25}% 
+\contentsline {section}{\numberline {4.4}Input Shuffling}{24}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {5}Discussion}{26}% 
+\contentsline {section}{\numberline {4.5}Convergence time}{25}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.1}Our work}{26}% 
+\contentsline {section}{\numberline {4.6}Results by optimizer}{25}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.1.1}Shuffling and learning rate with SGD}{26}% 
+\contentsline {subsection}{\numberline {4.6.1}SGD}{26}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Large differences with nag and sgd when using shuffling}{27}% 
+\contentsline {subsection}{\numberline {4.6.2}Momentum and Nesterov}{26}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.2}Related Work}{27}% 
+\contentsline {subsection}{\numberline {4.6.3}Adagrad}{27}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.2.1}word2vec}{27}% 
+\contentsline {subsection}{\numberline {4.6.4}Adadelta}{28}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.2.2}Gensim}{28}% 
+\contentsline {subsection}{\numberline {4.6.5}Adam}{29}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Gensim vs. SGD}{29}% 
+\contentsline {chapter}{\numberline {5}Discussion}{30}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Gensim vs. Adam}{29}% 
+\contentsline {section}{\numberline {5.1}Our work}{30}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.3}Further Work}{30}% 
+\contentsline {subsection}{\numberline {5.1.1}Shuffling and learning rate with SGD}{30}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.4}Challenges faced}{31}% 
+\contentsline {subsubsection}{\nonumberline Large differences with nag and sgd when using shuffling}{31}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.4.1}Using the wrong embeddings}{31}% 
+\contentsline {section}{\numberline {5.2}Related Work}{31}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.4.2}Batch size and loss function adjustements}{31}% 
+\contentsline {subsection}{\numberline {5.2.1}word2vec}{31}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {6}Conclusion}{33}% 
+\contentsline {subsection}{\numberline {5.2.2}Gensim}{32}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Appendix \numberline {A}Code}{34}% 
+\contentsline {subsubsection}{\nonumberline Gensim vs. SGD}{33}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {A.1}Gensim}{34}% 
+\contentsline {subsubsection}{\nonumberline Gensim vs. Adam}{33}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Appendix \numberline {B}Math}{36}% 
+\contentsline {section}{\numberline {5.3}Further Work}{34}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Appendix \numberline {C}Parameters}{37}% 
+\contentsline {section}{\numberline {5.4}Challenges faced}{35}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Appendix \numberline {D}Dataset}{38}% 
+\contentsline {subsection}{\numberline {5.4.1}Using the wrong embeddings}{35}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.4.2}Batch size and loss function adjustements}{35}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {6}Conclusion}{37}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Appendix \numberline {A}Code}{38}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {A.1}Gensim}{38}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Appendix \numberline {B}Math}{40}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Appendix \numberline {C}Parameters}{41}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Appendix \numberline {D}Dataset}{42}% 

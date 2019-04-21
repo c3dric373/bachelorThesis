@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Arch Linux) (preloaded format=pdflatex 2019.4.14)  21 APR 2019 07:15
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Arch Linux) (preloaded format=pdflatex 2019.4.14)  21 APR 2019 08:33
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -584,32 +584,6 @@ Package: algorithmic 2009/08/24 v0.1 Document Style `algorithmic'
 \ALC@tlm=\skip83
 \algorithmicindent=\skip84
 )
-(/usr/share/texmf-dist/tex/latex/caption/subcaption.sty
-Package: subcaption 2018/05/01 v1.1-162 Sub-captions (AR)
-
-(/usr/share/texmf-dist/tex/latex/caption/caption.sty
-Package: caption 2018/10/06 v3.3-154 Customizing captions (AR)
-
-(/usr/share/texmf-dist/tex/latex/caption/caption3.sty
-Package: caption3 2018/09/12 v1.8c caption3 kernel (AR)
-Package caption3 Info: TeX engine: e-TeX on input line 64.
-\captionmargin=\dimen131
-\captionmargin@=\dimen132
-\captionwidth=\dimen133
-\caption@tempdima=\dimen134
-\caption@indent=\dimen135
-\caption@parindent=\dimen136
-\caption@hangindent=\dimen137
-)
-Package caption Info: KOMA-Script document class.
-\c@caption@flags=\count318
-\c@ContinuedFloat=\count319
-Package caption Info: float package is loaded.
-Package caption Info: listings package is loaded.
-)
-\c@subfigure=\count320
-\c@subtable=\count321
-)
 (/usr/share/texmf-dist/tex/latex/base/textcomp.sty
 Package: textcomp 2018/08/11 v2.0j Standard LaTeX package
 Package textcomp Info: Sub-encoding information:
@@ -769,23 +743,23 @@ Package textcomp Info: Setting ptmj sub-encoding to TS1/4 on input line 409.
 )
 (/usr/share/texmf-dist/tex/latex/tools/multicol.sty
 Package: multicol 2018/12/27 v1.8v multicolumn formatting (FMi)
-\c@tracingmulticols=\count322
+\c@tracingmulticols=\count318
 \mult@box=\box35
-\multicol@leftmargin=\dimen138
-\c@unbalance=\count323
-\c@collectmore=\count324
-\doublecol@number=\count325
-\multicoltolerance=\count326
-\multicolpretolerance=\count327
-\full@width=\dimen139
-\page@free=\dimen140
-\premulticols=\dimen141
-\postmulticols=\dimen142
+\multicol@leftmargin=\dimen131
+\c@unbalance=\count319
+\c@collectmore=\count320
+\doublecol@number=\count321
+\multicoltolerance=\count322
+\multicolpretolerance=\count323
+\full@width=\dimen132
+\page@free=\dimen133
+\premulticols=\dimen134
+\postmulticols=\dimen135
 \multicolsep=\skip85
 \multicolbaselineskip=\skip86
 \partial@page=\box36
 \last@line=\box37
-\maxbalancingoverflow=\dimen143
+\maxbalancingoverflow=\dimen136
 \mult@rightbox=\box38
 \mult@grightbox=\box39
 \mult@gfirstbox=\box40
@@ -807,21 +781,58 @@ Package: multicol 2018/12/27 v1.8v multicolumn formatting (FMi)
 \@tempa=\box56
 \@tempa=\box57
 \@tempa=\box58
-\c@columnbadness=\count328
-\c@finalcolumnbadness=\count329
-\last@try=\dimen144
-\multicolovershoot=\dimen145
-\multicolundershoot=\dimen146
+\c@columnbadness=\count324
+\c@finalcolumnbadness=\count325
+\last@try=\dimen137
+\multicolovershoot=\dimen138
+\multicolundershoot=\dimen139
 \mult@nat@firstbox=\box59
 \colbreak@box=\box60
-\mc@col@check@num=\count330
+\mc@col@check@num=\count326
 )
 (/usr/share/texmf-dist/tex/latex/multirow/multirow.sty
 Package: multirow 2019/01/01 v2.4 Span multiple rows of a table
 \multirow@colwidth=\skip87
-\multirow@cntb=\count331
+\multirow@cntb=\count327
 \multirow@dima=\skip88
-\bigstrutjot=\dimen147
+\bigstrutjot=\dimen140
+)
+(/usr/share/texmf-dist/tex/latex/subfig/subfig.sty
+Package: subfig 2005/06/28 ver: 1.3 subfig package
+
+(/usr/share/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2018/10/06 v3.3-154 Customizing captions (AR)
+
+(/usr/share/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2018/09/12 v1.8c caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 64.
+\captionmargin=\dimen141
+\captionmargin@=\dimen142
+\captionwidth=\dimen143
+\caption@tempdima=\dimen144
+\caption@indent=\dimen145
+\caption@parindent=\dimen146
+\caption@hangindent=\dimen147
+)
+Package caption Info: KOMA-Script document class.
+\c@caption@flags=\count328
+\c@ContinuedFloat=\count329
+Package caption Info: float package is loaded.
+Package caption Info: listings package is loaded.
+)
+\c@KVtest=\count330
+\sf@farskip=\skip89
+\sf@captopadj=\dimen148
+\sf@capskip=\skip90
+\sf@nearskip=\skip91
+\c@subfigure=\count331
+\c@subfigure@save=\count332
+\c@lofdepth=\count333
+\c@subtable=\count334
+\c@subtable@save=\count335
+\c@lotdepth=\count336
+\sf@top=\skip92
+\sf@bottom=\skip93
 )
 Package biblatex Info: Trying to load language 'english'...
 Package biblatex Info: ... file 'english.lbx' found.
@@ -863,16 +874,16 @@ LaTeX Font Info:    ... okay on input line 85.
 
 (/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count332
-\scratchdimen=\dimen148
+\scratchcounter=\count337
+\scratchdimen=\dimen149
 \scratchbox=\box61
-\nofMPsegments=\count333
-\nofMParguments=\count334
+\nofMPsegments=\count338
+\nofMParguments=\count339
 \everyMPshowfont=\toks25
-\MPscratchCnt=\count335
-\MPscratchDim=\dimen149
-\MPnumerator=\count336
-\makeMPintoPDFobject=\count337
+\MPscratchCnt=\count340
+\MPscratchDim=\dimen150
+\MPnumerator=\count341
+\makeMPintoPDFobject=\count342
 \everyMPtoPDFconversion=\toks26
 ) (/usr/share/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
@@ -894,7 +905,7 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-\c@lstlisting=\count338
+\c@lstlisting=\count343
 Package biblatex Info: Input encoding 'utf8' detected.
 Package biblatex Info: Automatic encoding selection.
 (biblatex)             Assuming data encoding 'utf8'.
@@ -907,6 +918,7 @@ No file thesis.bbl.
 Package biblatex Info: Reference section=0 on input line 85.
 Package biblatex Info: Reference segment=0 on input line 85.
 Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: subfig package v1.3 is loaded.
 Package caption Info: End \AtBeginDocument code.
 \openout2 = `includes/BA-titlepage.aux'.
 
@@ -1106,12 +1118,23 @@ LaTeX Warning: Citation 'contextWithTensor' on page 9 undefined on input line 1
 LaTeX Warning: Citation 'contextWithTensor' on page 9 undefined on input line 1
 10.
 
-) [9 <./images/multipleContext.png>]
+[9 <./images/multipleContext.png>] [10]
+
+LaTeX Warning: Citation 'adagrad' on page 11 undefined on input line 151.
+
+
+LaTeX Warning: Citation 'Glove' on page 11 undefined on input line 151.
+
+[11]
+
+LaTeX Warning: Citation 'adadelta' on page 12 undefined on input line 167.
+
+[12]) [13]
 \openout2 = `chapters/methods.aux'.
 
  (./chapters/methods.tex
 chapter 3.
-[10
+[14
 
 
 
@@ -1125,7 +1148,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 13--36
 
  []
 
-[11]
+[15]
 Underfull \hbox (badness 10000) in paragraph at lines 45--58
 
  []
@@ -1135,11 +1158,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 59--65
 
  []
 
-[12] [13]
+[16] [17]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[14]) [15]
+[18]) [19]
 \openout2 = `chapters/results.aux'.
 
  (./chapters/results.tex
@@ -1149,169 +1172,145 @@ LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 12.
 
 
-LaTeX Warning: Citation 'mikolov' on page 16 undefined on input line 27.
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 25.
 
-[16
+
+LaTeX Warning: Citation 'mikolov' on page 20 undefined on input line 39.
+
+[20
 
 
 
 
 ]
-<images/treshold1.png, id=96, 1047.915pt x 51.19125pt>
-File: images/treshold1.png Graphic file (type png)
-<use images/treshold1.png>
-Package pdftex.def Info: images/treshold1.png  used on input line 48.
-(pdftex.def)             Requested size: 448.13095pt x 21.89151pt.
-<images/treshold2.png, id=97, 1050.92625pt x 58.2175pt>
-File: images/treshold2.png Graphic file (type png)
-<use images/treshold2.png>
-Package pdftex.def Info: images/treshold2.png  used on input line 55.
-(pdftex.def)             Requested size: 448.13095pt x 24.82515pt.
-<images/treshold3.png, id=98, 1046.91125pt x 45.16875pt>
-File: images/treshold3.png Graphic file (type png)
-<use images/treshold3.png>
-Package pdftex.def Info: images/treshold3.png  used on input line 62.
-(pdftex.def)             Requested size: 448.13095pt x 19.33395pt.
-<images/treshold4.png, id=99, 1039.885pt x 41.15375pt>
-File: images/treshold4.png Graphic file (type png)
-<use images/treshold4.png>
-Package pdftex.def Info: images/treshold4.png  used on input line 67.
-(pdftex.def)             Requested size: 448.13095pt x 17.7347pt.
-<images/treshold5.png, id=100, 1034.86626pt x 56.21pt>
-File: images/treshold5.png Graphic file (type png)
-<use images/treshold5.png>
-Package pdftex.def Info: images/treshold5.png  used on input line 72.
-(pdftex.def)             Requested size: 448.13095pt x 24.3405pt.
 
-
-LaTeX Warning: Citation 'gensim' on page 17 undefined on input line 80.
-
-[17] [18 <./images/treshold1.png> <./images/treshold2.png> <./images/treshold3.
-png> <./images/treshold4.png> <./images/treshold5.png>]
-<images/wordsim353_example.png, id=107, 561.09625pt x 18.0675pt>
-File: images/wordsim353_example.png Graphic file (type png)
-<use images/wordsim353_example.png>
-Package pdftex.def Info: images/wordsim353_example.png  used on input line 98.
-(pdftex.def)             Requested size: 392.7647pt x 12.64714pt.
- [19 <./images/wordsim353_example.png>] [20]
-
-LaTeX Warning: Citation 'gensim' on page 21 undefined on input line 123.
-
-
-LaTeX Warning: Citation 'intel' on page 21 undefined on input line 123.
-
-[21]
-
-LaTeX Warning: Citation 'gensim' on page 22 undefined on input line 132.
-
-
-LaTeX Warning: Citation 'gensim' on page 22 undefined on input line 132.
-
-<images/results_sgd_shuffle.png, id=119, 803.0pt x 501.875pt>
-File: images/results_sgd_shuffle.png Graphic file (type png)
-<use images/results_sgd_shuffle.png>
-Package pdftex.def Info: images/results_sgd_shuffle.png  used on input line 137
-.
-(pdftex.def)             Requested size: 361.34666pt x 225.84166pt.
-
-LaTeX Warning: Citation 'momentum' on page 22 undefined on input line 142.
-
-
-LaTeX Warning: Citation 'nag' on page 22 undefined on input line 142.
-
-
-LaTeX Warning: Reference `optimizers' on page 22 undefined on input line 142.
-
-<images/results_mom_shuffle.png, id=120, 803.0pt x 501.875pt>
-File: images/results_mom_shuffle.png Graphic file (type png)
-<use images/results_mom_shuffle.png>
-Package pdftex.def Info: images/results_mom_shuffle.png  used on input line 147
-.
-(pdftex.def)             Requested size: 240.90186pt x 150.56366pt.
-
-Overfull \hbox (16.83638pt too wide) in paragraph at lines 147--148
- [][] 
- []
-
-<images/results_nag_shuffle.png, id=121, 803.0pt x 501.875pt>
-File: images/results_nag_shuffle.png Graphic file (type png)
-<use images/results_nag_shuffle.png>
-Package pdftex.def Info: images/results_nag_shuffle.png  used on input line 154
-.
-(pdftex.def)             Requested size: 240.90186pt x 150.56366pt.
-
-Overfull \hbox (16.83638pt too wide) in paragraph at lines 154--155
- [][] 
- []
-
-[22 <./images/results_sgd_shuffle.png>]
-
-LaTeX Warning: Citation 'adagrad' on page 23 undefined on input line 160.
-
-
-LaTeX Warning: Reference `ssec:adagrad' on page 23 undefined on input line 160.
-
-
-<images/results_adagrad_shuffle.png, id=126, 803.0pt x 501.875pt>
-File: images/results_adagrad_shuffle.png Graphic file (type png)
-<use images/results_adagrad_shuffle.png>
-Package pdftex.def Info: images/results_adagrad_shuffle.png  used on input line
- 164.
-(pdftex.def)             Requested size: 361.34666pt x 225.84166pt.
-[23 <./images/results_mom_shuffle.png> <./images/results_nag_shuffle.png>]
-
-LaTeX Warning: Citation 'adadelta' on page 24 undefined on input line 169.
-
-
-LaTeX Warning: Reference `ssec:adadelta' on page 24 undefined on input line 169
-.
+LaTeX Warning: Reference `fig:treshold_examples' on page 21 undefined on input 
+line 45.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<images/results_adam_shuffle.png, id=132, 803.0pt x 501.875pt>
+
+LaTeX Warning: Citation 'gensim' on page 21 undefined on input line 93.
+
+[21] [22]
+<images/wordsim353_example.png, id=116, 561.09625pt x 18.0675pt>
+File: images/wordsim353_example.png Graphic file (type png)
+<use images/wordsim353_example.png>
+Package pdftex.def Info: images/wordsim353_example.png  used on input line 111.
+
+(pdftex.def)             Requested size: 392.7647pt x 12.64714pt.
+ [23 <./images/wordsim353_example.png>] [24]
+
+LaTeX Warning: Citation 'gensim' on page 25 undefined on input line 136.
+
+
+LaTeX Warning: Citation 'intel' on page 25 undefined on input line 136.
+
+
+LaTeX Warning: Citation 'gensim' on page 25 undefined on input line 145.
+
+
+LaTeX Warning: Citation 'gensim' on page 25 undefined on input line 145.
+
+[25]
+<images/results_sgd_shuffle.png, id=127, 803.0pt x 501.875pt>
+File: images/results_sgd_shuffle.png Graphic file (type png)
+<use images/results_sgd_shuffle.png>
+Package pdftex.def Info: images/results_sgd_shuffle.png  used on input line 150
+.
+(pdftex.def)             Requested size: 361.34666pt x 225.84166pt.
+
+
+LaTeX Warning: Citation 'momentum' on page 26 undefined on input line 155.
+
+
+LaTeX Warning: Citation 'nag' on page 26 undefined on input line 155.
+
+<images/results_mom_shuffle.png, id=128, 803.0pt x 501.875pt>
+File: images/results_mom_shuffle.png Graphic file (type png)
+<use images/results_mom_shuffle.png>
+Package pdftex.def Info: images/results_mom_shuffle.png  used on input line 160
+.
+(pdftex.def)             Requested size: 240.90186pt x 150.56366pt.
+
+Overfull \hbox (16.83638pt too wide) in paragraph at lines 160--161
+ [][] 
+ []
+
+<images/results_nag_shuffle.png, id=129, 803.0pt x 501.875pt>
+File: images/results_nag_shuffle.png Graphic file (type png)
+<use images/results_nag_shuffle.png>
+Package pdftex.def Info: images/results_nag_shuffle.png  used on input line 167
+.
+(pdftex.def)             Requested size: 240.90186pt x 150.56366pt.
+
+Overfull \hbox (16.83638pt too wide) in paragraph at lines 167--168
+ [][] 
+ []
+
+[26 <./images/results_sgd_shuffle.png>]
+
+LaTeX Warning: Citation 'adagrad' on page 27 undefined on input line 173.
+
+<images/results_adagrad_shuffle.png, id=134, 803.0pt x 501.875pt>
+File: images/results_adagrad_shuffle.png Graphic file (type png)
+<use images/results_adagrad_shuffle.png>
+Package pdftex.def Info: images/results_adagrad_shuffle.png  used on input line
+ 177.
+(pdftex.def)             Requested size: 361.34666pt x 225.84166pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: Citation 'adadelta' on page 27 undefined on input line 182.
+
+[27 <./images/results_mom_shuffle.png> <./images/results_nag_shuffle.png>]
+<images/results_adam_shuffle.png, id=140, 803.0pt x 501.875pt>
 File: images/results_adam_shuffle.png Graphic file (type png)
 <use images/results_adam_shuffle.png>
-Package pdftex.def Info: images/results_adam_shuffle.png  used on input line 18
-5.
+Package pdftex.def Info: images/results_adam_shuffle.png  used on input line 19
+8.
 (pdftex.def)             Requested size: 361.34666pt x 225.84166pt.
-) [24 <./images/results_adagrad_shuffle.png>] [25 <./images/results_adam_shuffl
-e.png>]
+)
+[28 <./images/results_adagrad_shuffle.png>] [29 <./images/results_adam_shuffle.
+png>]
 \openout2 = `chapters/discussion.aux'.
 
  (./chapters/discussion.tex
 chapter 5.
-[26
+[30
 
 
 
 
 ]
 
-LaTeX Warning: Citation 'Mikolov' on page 27 undefined on input line 16.
+LaTeX Warning: Citation 'Mikolov' on page 31 undefined on input line 16.
 
 
-LaTeX Warning: Citation 'gensim' on page 27 undefined on input line 16.
+LaTeX Warning: Citation 'gensim' on page 31 undefined on input line 16.
 
 
-LaTeX Warning: Citation 'intel' on page 27 undefined on input line 23.
+LaTeX Warning: Citation 'intel' on page 31 undefined on input line 23.
 
-[27] [28]
-<images/gensim_vs_adam.png, id=151, 803.0pt x 501.875pt>
+[31] [32]
+<images/gensim_vs_adam.png, id=159, 803.0pt x 501.875pt>
 File: images/gensim_vs_adam.png Graphic file (type png)
 <use images/gensim_vs_adam.png>
 Package pdftex.def Info: images/gensim_vs_adam.png  used on input line 60.
 (pdftex.def)             Requested size: 361.34666pt x 225.84166pt.
- [29] [30 <./images/gensim_vs_adam.png>]
+ [33] [34 <./images/gensim_vs_adam.png>]
 
-LaTeX Warning: Citation 'mikolov' on page 31 undefined on input line 80.
+LaTeX Warning: Citation 'mikolov' on page 35 undefined on input line 80.
 
-[31]) [32]
+[35]) [36]
 \openout2 = `chapters/conclusion.aux'.
 
  (./chapters/conclusion.tex
 chapter 6.
-) [33
+) [37
 
 
 
@@ -1324,7 +1323,7 @@ File: omlcmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <12> not available
 (Font)              Font shape `OML/cmm/m/it' tried instead on input line 29.
- [34
+ [38
 
 
 
@@ -1351,14 +1350,14 @@ Overfull \hbox (87.66812pt too wide) in paragraph at lines 47--48
 [][][][][][][][][][][][][][][][][][] 
  []
 
-[35]
+[39]
 chapter B.
-[36
+[40
 
 
 ]
 chapter C.
-[37
+[41
 
 
 ]
@@ -1369,10 +1368,10 @@ Overfull \hbox (9.541pt too wide) in paragraph at lines 66--68
 im.utils.RULE[]DISCARD,
  []
 
-[38
+[42
 
 
-]) [39]
+]) [43]
 
 LaTeX Warning: Empty bibliography on input line 142.
 
@@ -1384,6 +1383,9 @@ LaTeX Warning: Empty bibliography on input line 142.
 LaTeX Warning: There were undefined references.
 
 
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+
 Package biblatex Warning: Please (re)run Biber on the file:
 (biblatex)                thesis
 (biblatex)                and rerun LaTeX afterwards.
@@ -1393,11 +1395,11 @@ Package logreq Info: Writing requests to 'thesis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 17026 strings out of 492616
- 321934 string characters out of 6135177
- 911821 words of memory out of 5000000
- 20684 multiletter control sequences out of 15000+600000
- 15442 words of font info for 55 fonts, out of 8000000 for 9000
+ 17076 strings out of 492616
+ 322559 string characters out of 6135177
+ 914887 words of memory out of 5000000
+ 20738 multiletter control sequences out of 15000+600000
+ 14302 words of font info for 51 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  53i,19n,76p,9085b,1904s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/
@@ -1418,10 +1420,10 @@ hare/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist
 /fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texmf-dist/fonts/type1/p
 ublic/amsfonts/cm/cmtt12.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super
 /sfrm1200.pfb>
-Output written on thesis.pdf (45 pages, 626821 bytes).
+Output written on thesis.pdf (49 pages, 562766 bytes).
 PDF statistics:
- 255 PDF objects out of 1000 (max. 8388607)
- 164 compressed objects within 2 object streams
+ 263 PDF objects out of 1000 (max. 8388607)
+ 173 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 76 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 51 words of extra memory for PDF output out of 10000 (max. 10000000)
 

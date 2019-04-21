@@ -111,7 +111,6 @@ and the rest lines are the results of our model" \cite{contextWithTensor}}
     \label{fig:multipleContext}
 \end{figure}
 
-\iffalse
 %TODO EXPLAIN SGD GD VANILLA VERY GOOD UNDERSTAND IT REALLY AND ADADELTA AND ADAM ARE TWO IMPROVE
 \section{Optimizers in Machine learning} \label{optimizers}
 The goeal of learning in machine learning is to minimze an objectiv function  $J(\theta)$, where $\theta$ is the set of all parameters in our model. This happens by updating the parameters $\theta$ at every training time step $t$. We will denote $\theta_{t}$ as the parameters of our model at the $t^{th}$ time step. In this work we only examined stochastic gradient descent algorithms.
@@ -202,5 +201,4 @@ The general update is done exactly in the same way as in Adadelta:
 \begin{equation}
 \theta_{t+1} = \theta_t - \frac{\eta}{\tilde{v_t}+ \epsilon} \tilde{m_t}
 \end{equation}
-\fi
 
