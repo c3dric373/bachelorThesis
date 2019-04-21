@@ -8,7 +8,7 @@ The SGM is a very simple model used to learn WE. The idea is to train the model,
 The training samples will be all the pairs of words with their context words. 
 $m$ is a hyper parameter of the model. An important thing to notice is that instead of always using the same $m$, each word will randomly have a number $r$ that is in the range $(1,m)$ as it's window size.
 The task of the skip gram model is done by maximizing the following equation:
-\begin{equation} \label{basicSkip} \prod_{t=1}^T \prod_{-m<j<m}  p(w_{t+j}|w_t) \end{equation} Where T is the number of words in the corpus data, $w_t$ the $t-th$ word in the corpus data and $m$ is the context window. This means that the $m$ nearest words to $w$ are considered as context words.
+\begin{equation} \label{basicSkip} \prod_{t=1}^T \prod_{-m<j<m}  p(w_{t+j}|w_t) \end{equation} Where T is the number of words in the corpus data, $w_t$ the $t^{th}$ word in the corpus data and $m$ is the context window. This means that the $m$ nearest words to $w$ are considered as context words.
 Equation \ref{basicSkip} can be transformed into sums by using log probabilities: 
 \begin{equation} \sum _{t=1}^T \sum_{-m<j<m} log( p(w_{t+j}|w_t) )\end{equation} 
     where the parameters are the same as in Equation \ref{basicSkip}.
@@ -16,9 +16,9 @@ Equation \ref{basicSkip} can be transformed into sums by using log probabilities
 The basic Skip-Gram Model uses a classical Softmax to calculate the conditional probability $p(w_{t+j}|w_t)$: 
    \begin{equation}
    p(w_{t+j}|w_t)=  \frac{exp( \tilde{v}_{w_{t+j}}^Tv_{w_t})}{\sum_{w=1}^v exp(\tilde{v}_w^Tv_{ w_t})}
-   \end{equation}
+   \end{equation}\label{eq:softmax}
   
-  Here $\tilde{v}_{w_t}$ and $ v_{w_t}$ are the vector representations. The model stores vector representations of each word. One for the input words and another for the context word. Here $\tilde{v}_{w_t}$ is the input vector and  $ v_{w_t}$ the output vector. There lies a problem in the approach with a classical softmax. As a matter of fact it is unsuitable to compute the softmax. For the computation of $\sum_{w=1}^v exp(v_w^T w_t)$ one has to go over the whole corpus data. As very big data sets are needed to train the model, this is not a solution. Consequently different solutions were proposed by Mikolov et al. \cite{mikolov2}. The first one is to use a Hierarchical soft max introduced by Morin and Bengio \cite{hsoftmax}. In this model the probability distribution of the output nodes is saved in a binary tree which gives one a logarithmic computation time for each of these probabilities, and makes it suitable to compute the softmax. Another possibility is the use of negative sampling which which we shall discuss in the next section. 
+  Here $\tilde{v}_{w_t}$ and $ v_{w_t}$ are the vector representations. The model stores vector representations of each word. One for the input words and another for the context word. Here $\tilde{v}_{w_t}$ is the output vector and  $ v_{w_t}$ the projection layer. There lies a problem in the approach with a classical softmax. As a matter of fact it is unsuitable to compute the softmax. For the computation of $\sum_{w=1}^v exp(\tilde{v_w}^T w_t)$, the denominater in Equation \ref{eq:softmax} one has to go over the whole corpus data. As very big data sets are needed to train the model, this is not a solution. Consequently different solutions were proposed by Mikolov et al. \cite{mikolov2}. The first one is to use a Hierarchical soft max introduced by Morin and Bengio \cite{hsoftmax}. In this model the probability distribution of the output nodes is saved in a binary tree which gives one a logarithmic computation time for each of these probabilities, and makes it suitable to compute the softmax. Another possibility is the use of negative sampling which which we shall discuss in the next section. 
 
 \section{Negative Sampling}
 An alternative to the Hierarchical Softmax is Noise Contrastive Estimation (NCE) which was introduced by Gutmann and Hyv{\"a}rinen \cite{nce-original},  and first applied to NLP by Mnih and Teh \cite{mnih}. The idea behind NCE is to distinguish targets words from noise. It does so by reducing the problem to a logistic regression task, and does it by maximizing the log probability. The skip-gram Model is only interested in good word representation, hence the probability of the word is not meaningful as long as the quality of the word representations remains high. Mikolov et al. \cite{mikolov2} simplified NCE and called it Negative Sampling. Let's dive into it.\\
@@ -30,20 +30,20 @@ Let's look at how we construct our objective function for a given word $w$ and o
 p(c|w) &= p(y=1|c,w) + \prod_{k\in K} p(y=0|k,c) 
 \\&= p(y=1|c,w) + \prod_{k\in K} 1- p(y=1|k,c) 
 \\&= log((p(y=1|c,w)) + \sum_{k\in K} log(1- p(y=1|k,c)) 
-\\&=  log(\frac{1}{1+e^{-v_c v_w }})  + \sum_{k\in K} log(1-\frac{1}{1+e^{-v_c v_k}}) 
-\\&=  log(\frac{1}{1+e^{-v_c v_w }})  + \sum_{k\in K} log(\frac{1}{1+e^{v_c v_k }})
-\\&= log(\sigma(v_c v_w ) + \sum_{k\in K} \sigma(log(-v_c v_k )) &&\text{$ where, \sigma = \frac{1}{1+e^{-x}}$}
+\\&=  log(\frac{1}{1+e^{-v_c \tilde{v_w }}})  + \sum_{k\in K} log(1-\frac{1}{1+e^{-v_c \tilde{v_k}}}) 
+\\&=  log(\frac{1}{1+e^{-v_c \tilde{v_w } }})  + \sum_{k\in K} log(\frac{1}{1+e^{v_c \tilde{v_k} }})
+\\&= log(\sigma(v_c \tilde{v_w } ) + \sum_{k\in K} \sigma(log(-v_c \tilde{v_k} )) &&\text{where, $\sigma(x) = \frac{1}{1+e^{-x}}$}
 \end{align*}\label{eq:obj_neg_samples}
 
-The goal is know to maximize this objective function. Another way, a part from logistic regression, too look at this function, and assume why it's working so well, is to assume that two vectors are similar if their dot product is high. And therefore we will maximize the dot product of similar words $(w,c)$ and minimize it for dissimilar words $(w,k_i)$.
+Where $v_c$ and $\tilde{v_w }$, can be interpreted as before in Equation \ref{eq:softmax} The goal is know to maximize this objective function. Another way, a part from logistic regression, too look at this function, and assume why it's working so well, is to assume that two vectors are similar if their dot product is high. And therefore we will maximize the dot product of similar words $(w,c)$ and minimize it for dissimilar words $(w,k_i)$.
 We see that to compute our objective function we will only have to compute the sum over $K$. Which in practice is very small (2-20). Too put things in perspective lets imagine our data set consists of 100000 words, we set $K=2$ and let's say that each output neuron has weight vector $v$ with $|v| = 300$. When updating our weights we would only update  $0.2*10^{-2}$ of the 300 million weights in the output layer. 
 
 One question remains: how do we choose our random words? Mikolov et al. \cite{mikolov2} used the following unigram distribution:
  
  \begin{equation} \label{eq:unigram}
-P(w)=\frac{f(w)^{\frac{3}{4}}}{\sum_{w_k\in W} f(w_k)^{\frac{3}{4}}}
+P(w)=\frac{f(w)^{\frac{3}{4}}}{\sum_{t=0}^{T} f(w_t)^{\frac{3}{4}}}
 \end{equation}
-where $f(w)$ is the frequency of $w$ in the Vocabulary $W$. The value of $\frac{3}{4}$ is set empirically. See figure \ref{fig:frequency_ex} for an example.
+where $f(w)$ is the frequency of $w_t$. The value of $\frac{3}{4}$ is set empirically. See figure \ref{fig:frequency_ex} for an example.
 %TODO
 \iffalse
 \begin{figure}[ht]
@@ -150,12 +150,12 @@ To tackle those issues numerous advanced optimizers were developed. They will be
 \subsection{Momentum}
 Momentum is a technique used to address one of SGD weak points. As a matter of fact because SGD can have trouble computing the optimum of objective function that are only steep in one directions. The problem here is that SGD often oscillates in the direction that is not very steep, and only takes small steps in the steep direction. This issue is addressed by SGD with momentum. 
 
-It does so by adding a percentage of the last gradient vector  to the update vector. By doing so the gradient that go in the same direction will get bigger (building momentum) and gradients that go in different directions will anhill themselves. 
+It does so by adding a percentage of the last update vector  to the current update vector. By doing so the gradient that go in the same direction will get bigger (building momentum) and gradients that go in different directions will anhill themselves. 
  At the update $t$ we will comppute our update vector $v_t$ the following way:
 \begin{equation}
 v_t = \gamma v_{t-1} + \eta \nabla J (\theta)
-\end{equation}
-The value $0.9$ for $\gamma$ has shown great results, but this, same as a learning rate, another hyper parameter that need to be tuned according to the specific task. 
+\end{equation}\label{eq:momentum}
+Where $v_t$ and $v_{t-1}$, respectively are the current and the last update vector. The value $0.9$ for $\gamma$ has shown great results, but this, same as a learning rate, another hyper parameter that need to be tuned according to the specific task. 
 And then we update our weights as usual: $\theta = \theta - v_t$ 
 \subsection{Nesterov}
 Momentum can be a powerful tool, but sometimes be it's own enemy. With momentum the learning algorithm often overshoots, and blows by the  optima. Hence it will never converge. This problem was addressed by Nesterov. The idea behind his algorithm is to incorporate the momentum in the computation of our gradients. We will subtract the momentum vector, or just a fraction,  from our parameters before computing the gradients. Therefore we will compute the gradients of the position where we would be with momentum, which will allow us to make a step in a better direction. The computation of the update vector will look the following way:
@@ -163,7 +163,7 @@ Momentum can be a powerful tool, but sometimes be it's own enemy. With momentum 
 v_t = \gamma v_{t-1} + \eta \nabla J (\theta -  \gamma v_{t-1})
 \end{equation}
 
-SGD wiht momentum and Nesterov accelerated gradient (NAG) has shown tremendous results in RNN's. But some of the earlier mentioned problems still remains.  NAG, still treats every parameter the same way. Therefore we need a more complex optimization algorithm, that takes the frequency of a feature into account. Adagrad does just that. 
+Where the parameters as the same used with momentum in equation \ref{eq:momentum}. SGD wiht momentum and Nesterov accelerated gradient (NAG) has shown tremendous results in RNN's. But some of the earlier mentioned problems still remains.  NAG, still treats every parameter the same way. Therefore we need a more complex optimization algorithm, that takes the frequency of a feature into account. Adagrad does just that. 
 
 \subsection{Adagrad}\label{ssec:adagrad}
 Adagrad first introduced by \cite{adagrad} is an optimzer that tries to apply different learning rates to different parameters, according to their frequency. The idea is to give very frequent features a small learning rate, and very sparse features a high learning rate. This can be very important for our task of word embeddings, as rare words in the corpus are more important then very frequent ones. As a matter of fact Pennigton et al. used this algorithm for their training of Glove \cite{Glove}, another word embedding system. \\
@@ -171,8 +171,7 @@ Each parameter $\theta_i$, at time step $t$ will have it's own learning rate $\e
  \begin{equation}
 \eta_{t,i} = \frac{\eta_0}{\sqrt{\sum^{t}_{i=1} g^{2}_{t,i}} \epsilon}
 \end{equation}
-where
-$g_{t,i} = \nabla J(\theta_{t,i})$  is the partial derivative of the loss function with respect to the parameter $\theta_i$ at time step $t$. \\ We see that each parameter $\theta_{i}$ has it's one learning rate. For a very frequent feature the sum of the previous gradients will be very high, hence the learning rate low. This is how Adagrad acheives a different learning rate for each feature. 
+where$g_{t,i} = \nabla J(\theta_{t,i})$  is the partial derivative of the loss function with respect to the parameter $\theta_i$ at time step $t$, and $\epsilon$ is a place holder, so that one does not divide by $0$, at the beginning of the computation.\\ We see that each parameter $\theta_{i}$ has it's one learning rate. For a very frequent feature the sum of the previous gradients will be very high, hence the learning rate low. This is how Adagrad acheives a different learning rate for each feature. 
 Therefore we have $ \theta_{t+1,i} = \theta_{t_i} - \eta_{t,i} g_{t,i} $, and we can now construct our global parameter update as follows: 
 \begin{equation}
 \theta_{t+1,i} = \theta_{t_i}- \frac{\eta}{\sqrt{G_{t_{i,i}}} + \epsilon} g_{t,i}, 
@@ -186,7 +185,7 @@ Adadelta \cite{adadelta} not only solves the constantly growing sum problem, but
 \begin{equation}
 E[g^2]_t = \gamma E[g^2]_{t-1} + (1 - \gamma) g^2_t
 \end{equation}
-where $\gamma$ is a hyper parameter similar to the one used in momentum. That decides how much the past is weighted in contrast to the current gradient. Since Adadelta is an extension of Adagrad the square root of $E[g^{2}]$ is need, which become the RMS:
+where $\gamma$ is a hyper parameter similar to the one used in momentum, that decides how much the past is weighted in contrast to the current gradient. Since Adadelta is an extension of Adagrad the square root of $E[g^{2}]$ is needed which become the Roote Mean Squarred Error (RMS):
 \begin{equation}
 RMS[g]_t = \sqrt{E[g^2]_t + \epsilon}
 \end{equation}
@@ -217,7 +216,7 @@ as the decaying average of the previous gradients, and
 \begin{equation}
 v_t = \beta_2 v_{t-1} + (1- \beta_2) g^2_t 
 \end{equation}
- as the decaying average of the previous squared gradients. \\
+ as the decaying average of the previous squared gradients. Where $\beta$ is a hyper parameter similar to $\gamma$ used in the previous optimizers. \\
 One problem arises when using this formula, $m_t$  and $tv_t$ are initialized as vectors of zero. Therefore they are biased towards zero. therofore et al. advised to use a bias corrected version:\\
 \begin{equation}
 \tilde{m_t} = \frac{m_t}{1-\beta^t_1}
