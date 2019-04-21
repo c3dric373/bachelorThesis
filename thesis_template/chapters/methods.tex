@@ -1,4 +1,4 @@
-\chapter{Methods}\label{chap:methods}
+\chapter{Implementation}\label{chap:impl}
 %Describe the method/software/tool/algorithm you have developed here
 
 In this work our goal is to optimize the skip-gram model, we therefore implemented our own version of it. As we implemented it in python, computation is slow, we therefore altered the original implementation. 
@@ -135,4 +135,7 @@ Given an item index $idx$ we need to find in which sentence the pair is. Because
 \ENDFOR
 \end{algorithmic}
 \end{algorithm}
+
+\subsubsection{Adaptability to other datasets}
+This implementation is limited to datesets formatted as ours, namely having all sentences except the last of the same length. But our model can be quickly modified to achieve the same results on any given dataset. To compute the length of the dataset one would have to use Algorithm \ref{alg1} for all the sentences in the dataset and sum the result over all sentences. To access the context pairs the challenge lies in getting the id of the sentences. Therefore one would have to go over the dataset and compute the numbers of pairs for each sentence, sum theim up, and wait until the sum is greater then searched pair. Once this is done the algorithm stays the same. 
 
