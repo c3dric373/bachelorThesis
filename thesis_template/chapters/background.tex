@@ -122,7 +122,6 @@ and the rest lines are the results of our model" \cite{contextWithTensor}}
     \label{fig:multipleContext}
 \end{figure}
 
-%TODO EXPLAIN SGD GD VANILLA VERY GOOD UNDERSTAND IT REALLY AND ADADELTA AND ADAM ARE TWO IMPROVE
 \section{Gradient Descent Optimizers} \label{optimizers}
 The goal of learning in machine learning is to minimize an objective function  $J(\theta)$, where $\theta$ is the set of all parameters in our model. This happens by updating the parameters $\theta$ at every training time step $t$. We will denote $\theta_{t}$ as the parameters of our model at the $t^{th}$ time step. In this work we only examine gradient descent algorithms.
 \subsection{Gradient Descent}
@@ -210,12 +209,22 @@ As at time step $t$ $RMS[\Delta \theta]_{t} $ is unknown, we approximate it with
 \end{equation}
 \subsection{Adam}
 Adaptive Moment Estimation (Adam), is a more recent optimization algorithm. It also computes adaptive learning rates. In comparison to Adagrad and Adadelta, it does not only take into considaration the decaying average of the previous squared gradients but also the decay of the past gradients. 
-Let's introduce : \\
-$m_t = \beta_1 m_{t-1} + (1- \beta_1) g_t $ as the decaying average of the previous gradients  \\
-and $v_t = \beta_2 v_{t-1} + (1- \beta_2) g^2_t $, as the decaying average of the previous squared gradients . \\
+Let's introduce : 
+\begin{equation}
+m_t = \beta_1 m_{t-1} + (1- \beta_1) g_t 
+\end{equation}
+as the decaying average of the previous gradients, and 
+\begin{equation}
+v_t = \beta_2 v_{t-1} + (1- \beta_2) g^2_t 
+\end{equation}
+ as the decaying average of the previous squared gradients. \\
 One problem arises when using this formula, $m_t$  and $tv_t$ are initialized as vectors of zero. Therefore they are biased towards zero. therofore et al. advised to use a bias corrected version:\\
-$ \tilde{m_t} = \frac{m_t}{1-\beta^t_1}$\\
-$ \tilde{v_t} = \frac{v_t}{1-\beta^t_2}$\\
+\begin{equation}
+\tilde{m_t} = \frac{m_t}{1-\beta^t_1}
+\end{equation}
+\begin{equation}
+\tilde{v_t} = \frac{v_t}{1-\beta^t_2}
+\end{equation}
 The general update is done exactly in the same way as in Adadelta:
 \begin{equation}
 \theta_{t+1} = \theta_t - \frac{\eta}{\tilde{v_t}+ \epsilon} \tilde{m_t}
