@@ -53,42 +53,19 @@ Number of words in Dataset    & 16 mio & 15mio & 11 mio & 8mio & 4 mio \\ \hline
 \caption{Size of preproccessed text8 dataset according to sampling treshold}
 \label{table:treshold}
 \end{table}
-\iffalse
-\begin{figure}
-    \centering
-    \begin{subfigure}[b]{\textwidth}
-        \includegraphics[width=\textwidth]{treshold1}
-        \caption{Treshold = $10^{-1}$}
-        \label{fig:treshold1}
-    \end{subfigure}
-    ~ %add desired spacing between images, e. g. ~, \quad, \qquad, \hfill etc. 
-      %(or a blank line to force the subfigure onto a new line)
-    \begin{subfigure}[b]{\textwidth}
-        \includegraphics[width=\textwidth]{treshold2}
-        \caption{Treshold = $10^{-2}$}
-        \label{fig:treshold2}
-    \end{subfigure}
-    ~ %add desired spacing between images, e. g. ~, \quad, \qquad, \hfill etc. 
-    %(or a blank line to force the subfigure onto a new line)
-     \begin{subfigure}[b]{\textwidth}
-        \includegraphics[width=\textwidth]{treshold3}
-        \caption{Treshold = $10^{-3}$}
-        \label{fig:treshold3}
-    \end{subfigure}
-   \begin{subfigure}[b]{\textwidth}
-        \includegraphics[width=\textwidth]{treshold4}
-        \caption{Treshold = $10^{-4}$}
-        \label{fig:treshold4}
-    \end{subfigure}
-     \begin{subfigure}[b]{\textwidth}
-        \includegraphics[width=\textwidth]{treshold5}
-        \caption{Treshold = $10^{-5}$}
-        \label{fig:treshold5}
-    \end{subfigure}
-    \caption{Example of a sentence with different sampling tresholds}\label{fig:treshold_examples}
-\end{figure}
-\fi
 
+\begin{table}[]
+\begin{tabular}{|l|l|}
+\hline
+Sampling Treshold & First sentence of Dataset                                                                                                                                               \\ \hline
+$10^-1$           & \begin{tabular}[c]{@{}l@{}}Anarchism originated as a term of abuse first used against early\\  working class radicals including the diggers of the english\end{tabular} \\ \hline
+$10^-2$           & \begin{tabular}[c]{@{}l@{}}Anarchism originated as a term of abuse first used against early \\ working class radicals including diggers of english\end{tabular}         \\ \hline
+$10^-3$           & \begin{tabular}[c]{@{}l@{}}Anarchism originated  a term  abuse first used against early \\ working class radicals including  diggers the english\end{tabular}           \\ \hline
+$10^-4$           & \begin{tabular}[c]{@{}l@{}}Anarchism originated abuse used against working class radicals\\ diggers english\end{tabular}                                                \\ \hline
+$10^-5$           & against radicals diggers                                                                                                                                                \\ \hline
+\end{tabular}
+    \caption{Example of a sentence with different sampling tresholds}\label{table:treshold_examples}
+\end{table}
 \subsubsection{Min count}
 We also deleted every word that did not appear more than 5 times in our dataset. We got this tecnique from gensim \cite{gensim}, that introduced this parameter into their training. This is a good technique because of two reasons: first certain words of our data sets do not appear in a common lexicon (twigleg, melqu), or come from a foreign language (Volksvereinigung), or are names and acronyms. Furthermore each document often has spelling mistakes, those (as long as the same spelling mistake does not appear too often, what should be voided in practice) would be deleted by sampling too, as the words do not have any meaning. Secondly a word that only appears one time in our dataset will be very dependent on it's original initialization as it will only be updated with it's context pairs, which is only a dozen times. Therefore we applied this technique. It should, such as subsampling, in theory improve the quality of the word embeddings and  will decrease computation time. 
 

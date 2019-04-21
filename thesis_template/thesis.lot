@@ -14,7 +14,9 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {table}{\numberline {\relax 4.3}{\ignorespaces Size of preproccessed text8 dataset according to sampling treshold\relax }}{22}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {\relax 4.4}{\ignorespaces Convergence Time and Quality with Adadelta\relax }}{28}% 
+\contentsline {table}{\numberline {\relax 4.4}{\ignorespaces Example of a sentence with different sampling tresholds\relax }}{22}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {table}{\numberline {\relax 4.5}{\ignorespaces Convergence Time and Quality with Adadelta\relax }}{29}% 
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
