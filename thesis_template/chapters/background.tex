@@ -89,6 +89,9 @@ This idea was proposed by Vuurens et al. \cite{efficient}. The architecture used
     \caption{Comparasion of the execution time in relation with the number of used cores \cite{efficient}}
     \label{fig:efficient}
 \end{figure}
+
+\subsection{Accelleration of word2vec by Using Gpu's}
+This work \cite{gpu} focused on getting a better throughput on the SGM when using Gpu's. As the skip gram model is a sequential algorithm, one cannot parallize a lot, there is as explained in the next section the possibility to split the dataset. But we cannot paralize those splits. Therefore the idea of Seulki and Youngmin was to parallelize the update of feature. Each Cuda block will be used for one split. And each thread of this block will be used to update one dimension of the word. We therefore have a parallelization on the level of dimension of the embedings. They achieved very good results as achieved a 20x speed up compared to a single threaded cpu execution.
 %%%%%%%%%%%
 \subsection{Gensim}
 Gensim \cite{gensim} is a pure Python library that holds a state of the art implementation of the SGM. As it was written in Cython, it shows an interesting speed up. Furthermore with the use of BLAS and precomputed sigmoid tables, it achieves a 3 fold speed increase in comparison to the original w2vec code. Gensim is an importatnt tool as it allows us to compare our data rather easily. It was also used in related work \cite{intel}, and is therefore of value.
