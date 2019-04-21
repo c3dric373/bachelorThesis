@@ -123,8 +123,8 @@ and the rest lines are the results of our model" \cite{contextWithTensor}}
 \end{figure}
 
 %TODO EXPLAIN SGD GD VANILLA VERY GOOD UNDERSTAND IT REALLY AND ADADELTA AND ADAM ARE TWO IMPROVE
-\section{Optimizers in Machine learning} \label{optimizers}
-The goal of learning in machine learning is to minimize an objective function  $J(\theta)$, where $\theta$ is the set of all parameters in our model. This happens by updating the parameters $\theta$ at every training time step $t$. We will denote $\theta_{t}$ as the parameters of our model at the $t^{th}$ time step. In this work we only examined stochastic gradient descent algorithms.
+\section{Gradient Descent Optimizers} \label{optimizers}
+The goal of learning in machine learning is to minimize an objective function  $J(\theta)$, where $\theta$ is the set of all parameters in our model. This happens by updating the parameters $\theta$ at every training time step $t$. We will denote $\theta_{t}$ as the parameters of our model at the $t^{th}$ time step. In this work we only examine gradient descent algorithms.
 \subsection{Gradient Descent}
 The idea in gradient descent optimization is to follow the path of steepest descent in the shape of our cost function. To get information about the shape of the objective function, one has to compute the gradients of all our parameters $  \nabla J(\theta_{t-1})$, denoted as$g_{t-1}$ . To follow the path of steepest descent we will have to subtract a portion of this term from our parameter. The magnitude of the portion is often referred to as the learning rate, denoted $\eta$. For illustration, this means that the gradients will give the direction of the optimization step, whereas the learning rate will give the amplitude of that step. An update at time step $t$ will result in the following equation:
 \begin{equation}
