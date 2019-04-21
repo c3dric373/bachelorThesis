@@ -83,12 +83,19 @@ Know that we have a measure to compute the similairty of two vectors let us intr
 
 \subsection{Word similarity and wordsim353}
 To measure the quality of our word embedding we will need a dataset to compare our results too. We chose  wordsim353\footnote{http://www.cs.technion.ac.il/~gabr/resources/data/wordsim353/wordsim353.zip} for this task, as it's the most used in the related literature. The data set consits of 353 pairs of words rated by humans on their similarity. The similarity score is in the range of 1 and 10, an example for two of such pairs can be found in Figure \ref{fig:ws353_ex}. We will rank our embeddings on the pearson corelation coefficient between the cosine distance and the scores attributed by humans, as again this is what is done in the literature. 
-\begin{figure}[ht]
-    \centering
-			\includegraphics[scale=0.7]{images/wordsim353_example} 
-    \caption{Example of pairs and their rating in wordsim353}
+
+\begin{table}[]
+\centering
+\begin{tabular}{|l|l|l|}
+\hline
+Word1 & Word2 & Score \\ \hline
+\textquote{FBI} & \textquote{Investigation} & \textquote{8.31} \\ \hline
+\textquote{Mars} & \textquote{scientist} & \textquote{5.63} \\ \hline
+\end{tabular}
+   \caption{Example of pairs and their rating in wordsim353}
     \label{fig:ws353_ex}
-\end{figure}
+\end{table}
+
 
 \section{Configuration of the network}
 The skip gram model, has a lot of possible parameters, that can be tuned. We experimented with different models, and finally decided for one that we tried to optimize. This section will give a short overview over each parameter, where we will explain the process in which we chose the value of the given parameter. The explanation of the parameters will be structured as follows: 
