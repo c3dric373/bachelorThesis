@@ -66,7 +66,7 @@ This idea was proposed by Vuurens et al. \cite{efficient}. The architecture used
     \caption{Comparasion of the execution time in relation to the number of used cores \cite{efficient}}
     \label{fig:efficient}
 \end{figure}
-This work proposes a very good way to parallelize the SGM, as in particular, it allows to use more cores during the computation. While this is very interesting, this model focuses on the hierarchical softmax approach. As we implemented the approach using negative sampling this is of less use. Therefore we will look at what has been done with negative sampling in the next section.
+This work proposes a very good way to parallelize the SGM, as in particular, it allows to use more cores during the computation. While this is very interesting, this model focuses on the hierarchical softmax approach. As this approached focused on the Hierarchichal softmax, in contrast to our work which used negative sampling, the next section will cover optimizatios of the SGNS. 
 
 \subsubsection{Parallization in shared and Distributed Memory}
 The first parallelized solution which was proposed by Ji et al. \cite{intel}, is to try to reduce the cost of our vector multiplication. The main idea in this paper is to convert the level 1-BLAS vector to vector operations to a level-3 BLAS matrix multiplication operation. This is achieved, by using the same negative samples for each context word of a given word $w$. Instead of using for each context word a vector to vector multiplication we can transform this, under the assumption that we will not lose accuracy by sharing the same negative samples,  into a matrix multiplication. The matrix multiplication can be represented in the following way.
