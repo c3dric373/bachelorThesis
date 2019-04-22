@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Arch Linux) (preloaded format=pdflatex 2019.4.14)  22 APR 2019 13:33
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Arch Linux) (preloaded format=pdflatex 2019.4.14)  22 APR 2019 13:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -837,11 +837,8 @@ Package csquotes Warning: No multilingual support.
 (csquotes)                Cannot enable multilingual quotes on input line 87.
 
 (./thesis.aux (./includes/BA-titlepage.aux) (./includes/abstract.aux)
-(./chapters/introduction.aux) (./chapters/background.aux
-
-LaTeX Warning: Label `fig:frequency_ex' multiply defined.
-
-) (./chapters/methods.aux) (./chapters/results.aux) (./chapters/discussion.aux)
+(./chapters/introduction.aux) (./chapters/background.aux)
+(./chapters/methods.aux) (./chapters/results.aux) (./chapters/discussion.aux)
 (./chapters/conclusion.aux))
 \openout1 = `thesis.aux'.
 
@@ -1014,9 +1011,6 @@ LaTeX Warning: Citation 'gensim' on page 2 undefined on input line 13.
 
  (./chapters/background.tex
 chapter 2.
-
-LaTeX Warning: Reference `window_ex' on page 3 undefined on input line 4.
-
 <images/window_ex.pdf, id=38, 1217.54875pt x 467.7475pt>
 File: images/window_ex.pdf Graphic file (type pdf)
 <use images/window_ex.pdf>
@@ -1426,9 +1420,6 @@ LaTeX Warning: Empty bibliography on input line 144.
 LaTeX Warning: There were undefined references.
 
 
-LaTeX Warning: There were multiply-defined labels.
-
-
 Package biblatex Warning: Please (re)run Biber on the file:
 (biblatex)                thesis
 (biblatex)                and rerun LaTeX afterwards.
@@ -1439,8 +1430,8 @@ Package logreq Info: Writing requests to 'thesis.run.xml'.
  ) 
 Here is how much of TeX's memory you used:
  16989 strings out of 492616
- 321162 string characters out of 6135177
- 911753 words of memory out of 5000000
+ 321166 string characters out of 6135177
+ 911725 words of memory out of 5000000
  20651 multiletter control sequences out of 15000+600000
  14302 words of font info for 51 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1463,7 +1454,7 @@ hare/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist
 /fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texmf-dist/fonts/type1/p
 ublic/amsfonts/cm/cmtt12.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super
 /sfrm1200.pfb>
-Output written on thesis.pdf (56 pages, 701978 bytes).
+Output written on thesis.pdf (56 pages, 701745 bytes).
 PDF statistics:
  287 PDF objects out of 1000 (max. 8388607)
  188 compressed objects within 2 object streams
