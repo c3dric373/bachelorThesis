@@ -12,9 +12,9 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.3.1}Optimization of the throughput}{7}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Parallelization by the use of caching}{7}% 
+\contentsline {subsubsection}{\nonumberline Parallelization by the use of caching}{8}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Parallization in shared and Distributed Memory}{8}% 
+\contentsline {subsubsection}{\nonumberline Parallization in shared and Distributed Memory}{9}% 
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{\nonumberline Accelleration of word2vec by Using GPU's}{9}% 
 \defcounter {refsection}{0}\relax 
@@ -22,27 +22,27 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.3.2}Context sensitive word embedding}{10}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.4}Gradient Descent Optimizers}{11}% 
+\contentsline {section}{\numberline {2.4}Gradient Descent Optimizers}{12}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.4.1}Gradient Descent}{11}% 
+\contentsline {subsection}{\numberline {2.4.1}Gradient Descent}{12}% 
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{\nonumberline Stochastic Gradient Descent (SGD)}{12}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Batch Gradient Descent}{12}% 
+\contentsline {subsubsection}{\nonumberline Batch Gradient Descent}{13}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Mini-Batch Gradient Descent}{12}% 
+\contentsline {subsubsection}{\nonumberline Mini-Batch Gradient Descent}{13}% 
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{\nonumberline Problems with Gradient Descent Algorithms}{13}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.4.2}Momentum}{13}% 
+\contentsline {subsection}{\numberline {2.4.2}Momentum}{14}% 
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.4.3}Nesterov}{14}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.4.4}Adagrad}{14}% 
+\contentsline {subsection}{\numberline {2.4.4}Adagrad}{15}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.4.5}Adadelta}{15}% 
+\contentsline {subsection}{\numberline {2.4.5}Adadelta}{16}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.4.6}Adam}{16}% 
+\contentsline {subsection}{\numberline {2.4.6}Adam}{17}% 
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {3}Implementation}{18}% 
 \defcounter {refsection}{0}\relax 
