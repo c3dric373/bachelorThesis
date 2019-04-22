@@ -122,17 +122,18 @@ and the rest lines are the results of our model" \cite{contextWithTensor}}
 \section{Gradient Descent Optimizers} \label{optimizers}
 The goal of learning in machine learning is to minimize an objective function  $J(\theta)$, where $\theta$ is the set of all parameters in our model. This happens by updating the parameters $\theta$ at every training time step $t$. We will denote $\theta_{t}$ as the parameters of our model at the $t^{th}$ time step. In this work, we only examine gradient descent algorithms.
 \subsection{Gradient Descent}
-The idea in gradient descent optimization is to follow the path of steepest descent in the shape of our cost function. To get information about the shape of the objective function, one has to compute the gradients of all our parameters $  \nabla J(\theta_{t-1})$, denoted as$g_{t-1}$ . To follow the path of steepest descent we will have to subtract a portion of this term from our parameter. The magnitude of the portion is often referred to as the learning rate, denoted $\eta$. For illustration, this means that the gradients will give the direction of the optimization step, whereas the learning rate will give the amplitude of that step. An update at time step $t$ will result in the following equation:
+The idea in gradient descent optimization is to follow the path of steepest descent in the shape of the objective function. To get information about the shape of the objective function, one has to compute the gradients of all our parameters   $\nabla J(\theta_{t})$, where $J$ is our objective function, and $\theta$ all of our parameters, $t$ denotes the time step at which the parameters are taken. We will define $g_{t}$ as the gradients of our parameters $\theta_t$ according to our objective function $J$. To follow the path of steepest descent we will have to subtract a portion of this term from our parameter. The magnitude of the portion is often referred to as the learning rate, denoted as $\eta$. For illustration, this means that the gradients will give the direction of the optimization step, whereas the learning rate will give the amplitude of that step. An update at time step $t$ will result in the following equation:
 \begin{equation}
 \theta_t = \theta_{t-1} - \eta \nabla g_{t-1}
 \end{equation}
+Where all the variables can be interpreted as above. This will also be the case for further Equations. 
 There are three main variations of Gradient Descent, they differ at the moment they chose to update the parameters.
 \subsubsection{Stochastic Gradient Descent (SGD)} 
-Update the model after each training sample. The model is updated at each sample which will be a very poor approximation of the true gradients. 
+In this variant the the model will update the parameters after each training sample. The problem with this approach, is that the variance of the direction of the training step will be very high, as each sample will influence the step individually.
 \subsubsection{Batch Gradient Descent} 
-Update the model after having gone through the entire dataset. The problem with this approach is that one updates the model way to infrequently which will lead to a high convergence time. 
+Here the update of the model happens after having gone through the entire dataset. The problem with this approach is that one updates the model way to infrequently which will lead to a high convergence time.
 \subsubsection{Mini-Batch Gradient Descent} 
-Update the model after having gone through a specific number of training samples. This is an approximation of Batch Gradient Descent that is very often used in practice. 
+Update the model after having gone through a specific number of training samples. The idea is that the batch will be representative of the entire dataset. Which will allow the model to learn quickier, as the updates are more frequent (in comparison to batch gradient descent) and less variant (in comparison to SGD).
 
 \subsubsection{Problems with Gradient Descent Algorithms}
 SGD, though it's simplicity, is very limited, therefore some issues appear:
