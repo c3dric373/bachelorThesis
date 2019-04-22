@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Arch Linux) (preloaded format=pdflatex 2019.4.14)  22 APR 2019 10:00
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Arch Linux) (preloaded format=pdflatex 2019.4.14)  22 APR 2019 10:28
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1088,13 +1088,13 @@ LaTeX Warning: Citation 'gpu' on page 9 undefined on input line 92.
 
 LaTeX Warning: Citation 'gensim' on page 9 undefined on input line 92.
 
-
-LaTeX Warning: Citation 'gensim' on page 9 undefined on input line 95.
-
-
-LaTeX Warning: Citation 'intel' on page 9 undefined on input line 95.
-
 [9]
+
+LaTeX Warning: Citation 'gensim' on page 10 undefined on input line 95.
+
+
+LaTeX Warning: Citation 'intel' on page 10 undefined on input line 95.
+
 
 LaTeX Warning: Citation 'topicalWE' on page 10 undefined on input line 100.
 
@@ -1442,7 +1442,7 @@ hare/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist
 /fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texmf-dist/fonts/type1/p
 ublic/amsfonts/cm/cmtt12.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super
 /sfrm1200.pfb>
-Output written on thesis.pdf (55 pages, 598735 bytes).
+Output written on thesis.pdf (55 pages, 599237 bytes).
 PDF statistics:
  283 PDF objects out of 1000 (max. 8388607)
  186 compressed objects within 2 object streams
