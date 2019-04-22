@@ -108,7 +108,7 @@ This approach uses the same negative sample technique as described in the previo
 \begin{equation}
 g(w,c,t) = u^T \sigma(w^TM^{[1:k]}t+V_c^T(w \oplus t) + b_c)
 \end{equation}
-where, $u, V_c, b_c$ are standard parameters for a neural network, $\oplus$ is the vector concatenation, while the most important parameter is $M^{[1:k]}$, which a tensor layer, the tensor layer is used because of its ability to model multiple interactions in the data, as this will be useful for multiple contexts. They used SGD for the optimization of this objective function.  They achieved really interesting results as shown in \ref{fig:multipleContext}.
+where, $u, V_c, b_c$ are standard parameters for a neural network, $\oplus$ is the vector concatenation, while the most important parameter is $M^{[1:k]}$, which a tensor layer, the tensor layer is used because of its ability to model multiple interactions in the data, as this will be useful for multiple contexts. They used SGD for the optimization of this objective function.  They achieved really interesting results as shown in \ref{fig:multipleContext}. This will conclude our overview of the related work. We will know give the reader an outline of the different Gradient Descent Optimizer used in our experiments.
 \begin{figure}[ht]
     \centering
             \includegraphics[scale=0.7]{images/multipleContext.png} 
