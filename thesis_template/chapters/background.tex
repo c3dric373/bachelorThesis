@@ -40,16 +40,13 @@ One question remains: how do we choose our random words? Mikolov et al. \cite{mi
  \begin{equation} \label{eq:unigram}
 P(w)=\frac{f(w)^{\frac{3}{4}}}{\sum_{t=0}^{T} f(w_t)^{\frac{3}{4}}}
 \end{equation}
-where $f(w)$ is the frequency of $w_t$. The value of $\frac{3}{4}$ is set empirically. See figure \ref{fig:frequency_ex} for an example.
-%TODO
-\iffalse
+where $f(w)$ is the frequency of $w_t$. The value of $\frac{3}{4}$ is set empirically. By raising the unigram distribution to power of $\frac{3}{4}$ it makes it less likelier for a word to be drawn if it appears often in the dataset in comparison to the basic unigram distribution.  See figure \ref{fig:frequency_ex} for an example.
 \begin{figure}[ht]
     \centering
             \includegraphics[scale=0.45]{images/frequency_ex} 
-    \caption{Probabililty of a word, of the text8 dataset,  to be chosen at random according to its frequency and the power to which the unigram distribution is raised}
+    \caption{Probabililty of a word, of the text8 dataset (sampled),  to be chosen at random according to its frequency and the power to which the unigram distribution is raised}
     \label{fig:frequency_ex}
 \end{figure}
-\fi
 It's quite easily observable that this approach will outperform the classical softmax in computation time. Now the question arises if the accuracy is good enough but according to Mikolov et al. \cite{mikolov2} the negative sampling method "is an extremely simple training method that learns accurate representations". As a matter of fact, Mikolov et al. \cite{mikolov2} reported a 6\% accuracy improvement in comparison to a Hierarchical Softmax model.
 We now have enough background knowledge about the SGM to look at how it can be optimized. In the next section, we are going to cover what has already be done.
 
@@ -130,6 +127,7 @@ Where all the variables can be interpreted as above. This will also be the case 
 There are three main variations of Gradient Descent, they differ at the moment they chose to update the parameters.
 \subsubsection{Stochastic Gradient Descent (SGD)} 
 In this variant the the model will update the parameters after each training sample. The problem with this approach, is that the variance of the direction of the training step will be very high, as each sample will influence the step individually.
+
 \subsubsection{Batch Gradient Descent} 
 Here the update of the model happens after having gone through the entire dataset. The problem with this approach is that one updates the model way to infrequently which will lead to a high convergence time.
 \subsubsection{Mini-Batch Gradient Descent} 
