@@ -4,29 +4,31 @@
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax 2.1}{\ignorespaces Probabililty of a word, of the text8 dataset (sampled), to be chosen at random according to its frequency and the power to which the unigram distribution is raised\relax }}{6}% 
+\contentsline {figure}{\numberline {\relax 2.1}{\ignorespaces Example of a center word and it's context words\relax }}{3}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax 2.2}{\ignorespaces Comparasion of the execution time in relation to the number of used cores \cite {efficient}\relax }}{8}% 
+\contentsline {figure}{\numberline {\relax 2.2}{\ignorespaces Probabililty of a word, of the text8 dataset (sampled), to be chosen at random according to its frequency and the power to which the unigram distribution is raised\relax }}{7}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax 2.3}{\ignorespaces "Nearest neighbor words model and Skip- Gram. The first line in each block is the results of Skip-Gram; and the rest lines are the results of our model" \cite {contextWithTensor}\relax }}{11}% 
+\contentsline {figure}{\numberline {\relax 2.3}{\ignorespaces Comparasion of the execution time in relation to the number of used cores \cite {efficient}\relax }}{9}% 
 \defcounter {refsection}{0}\relax 
-\addvspace {10\p@ }
-\defcounter {refsection}{0}\relax 
-\addvspace {10\p@ }
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax 4.1}{\ignorespaces Training time Stochastic Gradient Descent with input Shuffling\relax }}{32}% 
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax 4.2}{\ignorespaces Training time Momentum with input Shuffling\relax }}{33}% 
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax 4.3}{\ignorespaces Training time Nesterov with input Shuffling\relax }}{33}% 
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax 4.4}{\ignorespaces Training time Adagrad with input Shuffling\relax }}{34}% 
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax 4.5}{\ignorespaces Training time Adam with input Shuffling\relax }}{35}% 
+\contentsline {figure}{\numberline {\relax 2.4}{\ignorespaces "Nearest neighbor words model and Skip- Gram. The first line in each block is the results of Skip-Gram; and the rest lines are the results of our model" \cite {contextWithTensor}\relax }}{12}% 
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax 5.1}{\ignorespaces Training time Stochastic Gradient Descent with input Shuffling\relax }}{40}% 
+\addvspace {10\p@ }
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {\relax 4.1}{\ignorespaces Training time Stochastic Gradient Descent with input Shuffling\relax }}{33}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {\relax 4.2}{\ignorespaces Training time Momentum with input Shuffling\relax }}{34}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {\relax 4.3}{\ignorespaces Training time Nesterov with input Shuffling\relax }}{34}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {\relax 4.4}{\ignorespaces Training time Adagrad with input Shuffling\relax }}{35}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {\relax 4.5}{\ignorespaces Training time Adam with input Shuffling\relax }}{36}% 
+\defcounter {refsection}{0}\relax 
+\addvspace {10\p@ }
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {\relax 5.1}{\ignorespaces Training time Stochastic Gradient Descent with input Shuffling\relax }}{41}% 
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 

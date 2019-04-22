@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Arch Linux) (preloaded format=pdflatex 2019.4.14)  22 APR 2019 11:41
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Arch Linux) (preloaded format=pdflatex 2019.4.14)  22 APR 2019 13:33
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -834,32 +834,35 @@ Package csquotes Info: ... none found.
 
 
 Package csquotes Warning: No multilingual support.
-(csquotes)                Cannot enable multilingual quotes on input line 86.
+(csquotes)                Cannot enable multilingual quotes on input line 87.
 
 (./thesis.aux (./includes/BA-titlepage.aux) (./includes/abstract.aux)
-(./chapters/introduction.aux) (./chapters/background.aux)
-(./chapters/methods.aux) (./chapters/results.aux) (./chapters/discussion.aux)
+(./chapters/introduction.aux) (./chapters/background.aux
+
+LaTeX Warning: Label `fig:frequency_ex' multiply defined.
+
+) (./chapters/methods.aux) (./chapters/results.aux) (./chapters/discussion.aux)
 (./chapters/conclusion.aux))
 \openout1 = `thesis.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 86.
-LaTeX Font Info:    ... okay on input line 86.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 86.
-LaTeX Font Info:    ... okay on input line 86.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 86.
-LaTeX Font Info:    ... okay on input line 86.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 86.
-LaTeX Font Info:    ... okay on input line 86.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 86.
-LaTeX Font Info:    ... okay on input line 86.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 86.
-LaTeX Font Info:    ... okay on input line 86.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 86.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 86.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 87.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 87.
  (/usr/share/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 86.
+LaTeX Font Info:    ... okay on input line 87.
 
 (/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -904,8 +907,8 @@ Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'thesis.bbl' not found.
 
 No file thesis.bbl.
-Package biblatex Info: Reference section=0 on input line 86.
-Package biblatex Info: Reference segment=0 on input line 86.
+Package biblatex Info: Reference section=0 on input line 87.
+Package biblatex Info: Reference segment=0 on input line 87.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
 \openout2 = `includes/BA-titlepage.aux'.
@@ -1014,139 +1017,149 @@ chapter 2.
 
 LaTeX Warning: Reference `window_ex' on page 3 undefined on input line 4.
 
+<images/window_ex.pdf, id=38, 1217.54875pt x 467.7475pt>
+File: images/window_ex.pdf Graphic file (type pdf)
+<use images/window_ex.pdf>
+Package pdftex.def Info: images/window_ex.pdf  used on input line 8.
+(pdftex.def)             Requested size: 365.26744pt x 140.32532pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 13--14
+
+ []
+
 [3
 
 
 
 
-]
+ <./images/window_ex.pdf>]
 
-LaTeX Warning: Citation 'mikolov2' on page 4 undefined on input line 16.
-
-
-LaTeX Warning: Citation 'hsoftmax' on page 4 undefined on input line 16.
+LaTeX Warning: Citation 'mikolov2' on page 4 undefined on input line 27.
 
 
-LaTeX Warning: Citation 'nce-original' on page 4 undefined on input line 19.
+LaTeX Warning: Citation 'hsoftmax' on page 4 undefined on input line 27.
+
+[4]
+
+LaTeX Warning: Citation 'nce-original' on page 5 undefined on input line 30.
 
 
-LaTeX Warning: Citation 'mnih' on page 4 undefined on input line 19.
+LaTeX Warning: Citation 'mnih' on page 5 undefined on input line 30.
 
 
-LaTeX Warning: Citation 'mikolov2' on page 4 undefined on input line 19.
+LaTeX Warning: Citation 'mikolov2' on page 5 undefined on input line 30.
 
-[4] [5]
+[5]
 
-LaTeX Warning: Citation 'mikolov2' on page 6 undefined on input line 36.
+LaTeX Warning: Citation 'mikolov2' on page 6 undefined on input line 47.
 
-<images/frequency_ex.png, id=55, 803.0pt x 501.875pt>
+<images/frequency_ex.png, id=56, 803.0pt x 501.875pt>
 File: images/frequency_ex.png Graphic file (type png)
 <use images/frequency_ex.png>
-Package pdftex.def Info: images/frequency_ex.png  used on input line 44.
+Package pdftex.def Info: images/frequency_ex.png  used on input line 55.
 (pdftex.def)             Requested size: 361.34666pt x 225.84166pt.
 
-LaTeX Warning: Citation 'mikolov2' on page 6 undefined on input line 48.
+LaTeX Warning: Citation 'mikolov2' on page 6 undefined on input line 59.
 
 
-LaTeX Warning: Citation 'mikolov2' on page 6 undefined on input line 48.
+LaTeX Warning: Citation 'mikolov2' on page 6 undefined on input line 59.
 
-[6 <./images/frequency_ex.png>]
+[6] [7 <./images/frequency_ex.png>]
 
-LaTeX Warning: Citation 'mikolov2' on page 7 undefined on input line 57.
-
-
-LaTeX Warning: Citation 'hogwild' on page 7 undefined on input line 57.
+LaTeX Warning: Citation 'mikolov2' on page 8 undefined on input line 68.
 
 
-LaTeX Warning: Citation 'hogwild' on page 7 undefined on input line 57.
+LaTeX Warning: Citation 'hogwild' on page 8 undefined on input line 68.
 
 
-LaTeX Warning: Citation 'efficient' on page 7 undefined on input line 60.
+LaTeX Warning: Citation 'hogwild' on page 8 undefined on input line 68.
 
 
-LaTeX Warning: Citation 'efficient' on page 7 undefined on input line 60.
+LaTeX Warning: Citation 'efficient' on page 8 undefined on input line 71.
 
-<images/cachingEfficiency.png, id=60, 816.04875pt x 649.42625pt>
+
+LaTeX Warning: Citation 'efficient' on page 8 undefined on input line 71.
+
+<images/cachingEfficiency.png, id=65, 816.04875pt x 649.42625pt>
 File: images/cachingEfficiency.png Graphic file (type png)
 <use images/cachingEfficiency.png>
-Package pdftex.def Info: images/cachingEfficiency.png  used on input line 63.
+Package pdftex.def Info: images/cachingEfficiency.png  used on input line 74.
 (pdftex.def)             Requested size: 244.81651pt x 194.82938pt.
 
-LaTeX Warning: Citation 'efficient' on page 7 undefined on input line 64.
+LaTeX Warning: Citation 'efficient' on page 8 undefined on input line 75.
 
 
-LaTeX Warning: Citation 'efficient' on page 7 undefined on input line 64.
+LaTeX Warning: Citation 'efficient' on page 8 undefined on input line 75.
 
-[7]
+[8]
 
-LaTeX Warning: Citation 'intel' on page 8 undefined on input line 70.
-
-[8 <./images/cachingEfficiency.png>]
-
-LaTeX Warning: Citation 'gpu' on page 9 undefined on input line 87.
+LaTeX Warning: Citation 'intel' on page 9 undefined on input line 81.
 
 
-LaTeX Warning: Citation 'gpu' on page 9 undefined on input line 91.
+LaTeX Warning: Citation 'gpu' on page 9 undefined on input line 98.
+
+[9 <./images/cachingEfficiency.png>]
+
+LaTeX Warning: Citation 'gpu' on page 10 undefined on input line 102.
 
 
-LaTeX Warning: Citation 'gpu' on page 9 undefined on input line 91.
+LaTeX Warning: Citation 'gpu' on page 10 undefined on input line 102.
 
 
-LaTeX Warning: Citation 'gensim' on page 9 undefined on input line 91.
-
-[9]
-
-LaTeX Warning: Citation 'gensim' on page 10 undefined on input line 94.
+LaTeX Warning: Citation 'gensim' on page 10 undefined on input line 102.
 
 
-LaTeX Warning: Citation 'intel' on page 10 undefined on input line 94.
+LaTeX Warning: Citation 'gensim' on page 10 undefined on input line 105.
 
 
-LaTeX Warning: Citation 'topicalWE' on page 10 undefined on input line 99.
-
-
-LaTeX Warning: Citation 'breaking' on page 10 undefined on input line 99.
-
-
-LaTeX Warning: Citation 'contextWithTensor' on page 10 undefined on input line 
-99.
+LaTeX Warning: Citation 'intel' on page 10 undefined on input line 105.
 
 [10]
-<images/multipleContext.png, id=74, 471.7625pt x 89.33376pt>
+
+LaTeX Warning: Citation 'topicalWE' on page 11 undefined on input line 110.
+
+
+LaTeX Warning: Citation 'breaking' on page 11 undefined on input line 110.
+
+
+LaTeX Warning: Citation 'contextWithTensor' on page 11 undefined on input line 
+110.
+
+<images/multipleContext.png, id=75, 471.7625pt x 89.33376pt>
 File: images/multipleContext.png Graphic file (type png)
 <use images/multipleContext.png>
-Package pdftex.def Info: images/multipleContext.png  used on input line 112.
+Package pdftex.def Info: images/multipleContext.png  used on input line 123.
 (pdftex.def)             Requested size: 330.23149pt x 62.53319pt.
 
+LaTeX Warning: Citation 'contextWithTensor' on page 11 undefined on input line 
+126.
+
 
 LaTeX Warning: Citation 'contextWithTensor' on page 11 undefined on input line 
-115.
+126.
+
+[11] [12 <./images/multipleContext.png>] [13] [14]
+
+LaTeX Warning: Citation 'adagrad' on page 15 undefined on input line 176.
 
 
-LaTeX Warning: Citation 'contextWithTensor' on page 11 undefined on input line 
-115.
+LaTeX Warning: Citation 'Glove' on page 15 undefined on input line 176.
 
-[11 <./images/multipleContext.png>] [12] [13] [14]
+[15]
 
-LaTeX Warning: Citation 'adagrad' on page 15 undefined on input line 165.
+LaTeX Warning: Citation 'adadelta' on page 16 undefined on input line 191.
 
-
-LaTeX Warning: Citation 'Glove' on page 15 undefined on input line 165.
-
-
-LaTeX Warning: Citation 'adadelta' on page 15 undefined on input line 180.
-
-[15] [16]
-Underfull \hbox (badness 10000) in paragraph at lines 214--217
+[16]
+Underfull \hbox (badness 10000) in paragraph at lines 225--228
 
  []
 
-) [17]
+[17]) [18]
 \openout2 = `chapters/methods.aux'.
 
  (./chapters/methods.tex
 chapter 3.
-[18
+[19
 
 
 
@@ -1160,7 +1173,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 13--36
 
  []
 
-[19]
+[20]
 Underfull \hbox (badness 10000) in paragraph at lines 45--58
 
  []
@@ -1170,11 +1183,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 59--65
 
  []
 
-[20] [21]
+[21] [22]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[22] [23]) [24]
+[23] [24]) [25]
 \openout2 = `chapters/results.aux'.
 
  (./chapters/results.tex
@@ -1193,14 +1206,14 @@ Overfull \hbox (51.78574pt too wide) in paragraph at lines 27--33
  []
 
 
-LaTeX Warning: Citation 'mikolov' on page 25 undefined on input line 39.
+LaTeX Warning: Citation 'mikolov' on page 26 undefined on input line 39.
 
-[25
-
-
+[26
 
 
-] [26]
+
+
+] [27]
 
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 57.
@@ -1211,45 +1224,45 @@ Overfull \hbox (0.9494pt too wide) in paragraph at lines 58--67
  []
 
 
-LaTeX Warning: Citation 'gensim' on page 27 undefined on input line 70.
+LaTeX Warning: Citation 'gensim' on page 28 undefined on input line 70.
 
-[27] [28]
+[28] [29]
 
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 87.
 
 
-LaTeX Warning: Citation 'dimensions_size' on page 29 undefined on input line 10
+LaTeX Warning: Citation 'dimensions_size' on page 30 undefined on input line 10
 6.
-
-[29]
-
-LaTeX Warning: Citation 'gensim' on page 30 undefined on input line 135.
-
-
-LaTeX Warning: Citation 'intel' on page 30 undefined on input line 135.
 
 [30]
 
-LaTeX Warning: Citation 'gensim' on page 31 undefined on input line 144.
+LaTeX Warning: Citation 'gensim' on page 31 undefined on input line 135.
 
 
-LaTeX Warning: Citation 'gensim' on page 31 undefined on input line 144.
+LaTeX Warning: Citation 'intel' on page 31 undefined on input line 135.
 
-<images/results_sgd_shuffle.png, id=143, 803.0pt x 501.875pt>
+[31]
+
+LaTeX Warning: Citation 'gensim' on page 32 undefined on input line 144.
+
+
+LaTeX Warning: Citation 'gensim' on page 32 undefined on input line 144.
+
+<images/results_sgd_shuffle.png, id=148, 803.0pt x 501.875pt>
 File: images/results_sgd_shuffle.png Graphic file (type png)
 <use images/results_sgd_shuffle.png>
 Package pdftex.def Info: images/results_sgd_shuffle.png  used on input line 149
 .
 (pdftex.def)             Requested size: 361.34666pt x 225.84166pt.
-[31]
+[32]
 
-LaTeX Warning: Citation 'momentum' on page 32 undefined on input line 154.
+LaTeX Warning: Citation 'momentum' on page 33 undefined on input line 154.
 
 
-LaTeX Warning: Citation 'nag' on page 32 undefined on input line 154.
+LaTeX Warning: Citation 'nag' on page 33 undefined on input line 154.
 
-<images/results_mom_shuffle.png, id=148, 803.0pt x 501.875pt>
+<images/results_mom_shuffle.png, id=152, 803.0pt x 501.875pt>
 File: images/results_mom_shuffle.png Graphic file (type png)
 <use images/results_mom_shuffle.png>
 Package pdftex.def Info: images/results_mom_shuffle.png  used on input line 159
@@ -1260,7 +1273,7 @@ Overfull \hbox (16.83638pt too wide) in paragraph at lines 159--160
  [][] 
  []
 
-<images/results_nag_shuffle.png, id=149, 803.0pt x 501.875pt>
+<images/results_nag_shuffle.png, id=153, 803.0pt x 501.875pt>
 File: images/results_nag_shuffle.png Graphic file (type png)
 <use images/results_nag_shuffle.png>
 Package pdftex.def Info: images/results_nag_shuffle.png  used on input line 166
@@ -1275,23 +1288,23 @@ Overfull \hbox (16.83638pt too wide) in paragraph at lines 166--167
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-LaTeX Warning: Citation 'adagrad' on page 32 undefined on input line 172.
+LaTeX Warning: Citation 'adagrad' on page 33 undefined on input line 172.
 
-<images/results_adagrad_shuffle.png, id=150, 803.0pt x 501.875pt>
+<images/results_adagrad_shuffle.png, id=154, 803.0pt x 501.875pt>
 File: images/results_adagrad_shuffle.png Graphic file (type png)
 <use images/results_adagrad_shuffle.png>
 Package pdftex.def Info: images/results_adagrad_shuffle.png  used on input line
  176.
 (pdftex.def)             Requested size: 361.34666pt x 225.84166pt.
-[32 <./images/results_sgd_shuffle.png>]
+[33 <./images/results_sgd_shuffle.png>]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-LaTeX Warning: Citation 'adadelta' on page 33 undefined on input line 181.
+LaTeX Warning: Citation 'adadelta' on page 34 undefined on input line 181.
 
-[33 <./images/results_mom_shuffle.png> <./images/results_nag_shuffle.png>]
-<images/results_adam_shuffle.png, id=160, 803.0pt x 501.875pt>
+[34 <./images/results_mom_shuffle.png> <./images/results_nag_shuffle.png>]
+<images/results_adam_shuffle.png, id=164, 803.0pt x 501.875pt>
 File: images/results_adam_shuffle.png Graphic file (type png)
 <use images/results_adam_shuffle.png>
 Package pdftex.def Info: images/results_adam_shuffle.png  used on input line 19
@@ -1301,46 +1314,46 @@ Package pdftex.def Info: images/results_adam_shuffle.png  used on input line 19
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[34 <./images/results_adagrad_shuffle.png>] [35 <./images/results_adam_shuffle.
+[35 <./images/results_adagrad_shuffle.png>] [36 <./images/results_adam_shuffle.
 png>]
 \openout2 = `chapters/discussion.aux'.
 
  (./chapters/discussion.tex
 chapter 5.
-[36
+[37
 
 
 
 
 ]
 
-LaTeX Warning: Citation 'Mikolov' on page 37 undefined on input line 16.
+LaTeX Warning: Citation 'Mikolov' on page 38 undefined on input line 16.
 
 
-LaTeX Warning: Citation 'gensim' on page 37 undefined on input line 16.
+LaTeX Warning: Citation 'gensim' on page 38 undefined on input line 16.
 
 
-LaTeX Warning: Citation 'intel' on page 37 undefined on input line 22.
+LaTeX Warning: Citation 'intel' on page 38 undefined on input line 22.
 
-[37] [38] [39]
-<images/gensim_vs_adam.png, id=182, 803.0pt x 501.875pt>
+[38] [39] [40]
+<images/gensim_vs_adam.png, id=186, 803.0pt x 501.875pt>
 File: images/gensim_vs_adam.png Graphic file (type png)
 <use images/gensim_vs_adam.png>
 Package pdftex.def Info: images/gensim_vs_adam.png  used on input line 60.
 (pdftex.def)             Requested size: 361.34666pt x 225.84166pt.
- [40 <./images/gensim_vs_adam.png>]
+ [41 <./images/gensim_vs_adam.png>]
 
-LaTeX Warning: Citation 'mikolov' on page 41 undefined on input line 74.
+LaTeX Warning: Citation 'mikolov' on page 42 undefined on input line 74.
 
 
-LaTeX Warning: Citation 'fb' on page 41 undefined on input line 82.
+LaTeX Warning: Citation 'fb' on page 42 undefined on input line 82.
 
-[41]) [42]
+[42]) [43]
 \openout2 = `chapters/conclusion.aux'.
 
  (./chapters/conclusion.tex
 chapter 6.
-) [43
+) [44
 
 
 
@@ -1353,7 +1366,7 @@ File: omlcmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <12> not available
 (Font)              Font shape `OML/cmm/m/it' tried instead on input line 29.
- [44
+ [45
 
 
 
@@ -1380,14 +1393,14 @@ Overfull \hbox (87.66812pt too wide) in paragraph at lines 47--48
 [][][][][][][][][][][][][][][][][][] 
  []
 
-[45]
+[46]
 chapter B.
-[46
+[47
 
 
 ]
 chapter C.
-[47
+[48
 
 
 ]
@@ -1398,12 +1411,12 @@ Overfull \hbox (9.541pt too wide) in paragraph at lines 66--68
 im.utils.RULE[]DISCARD,
  []
 
-[48
+[49
 
 
-]) [49]
+]) [50]
 
-LaTeX Warning: Empty bibliography on input line 143.
+LaTeX Warning: Empty bibliography on input line 144.
 
 (./thesis.aux (./includes/BA-titlepage.aux) (./includes/abstract.aux)
 (./chapters/introduction.aux) (./chapters/background.aux)
@@ -1413,7 +1426,7 @@ LaTeX Warning: Empty bibliography on input line 143.
 LaTeX Warning: There were undefined references.
 
 
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+LaTeX Warning: There were multiply-defined labels.
 
 
 Package biblatex Warning: Please (re)run Biber on the file:
@@ -1425,10 +1438,10 @@ Package logreq Info: Writing requests to 'thesis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 16984 strings out of 492616
- 321026 string characters out of 6135177
- 911714 words of memory out of 5000000
- 20647 multiletter control sequences out of 15000+600000
+ 16989 strings out of 492616
+ 321162 string characters out of 6135177
+ 911753 words of memory out of 5000000
+ 20651 multiletter control sequences out of 15000+600000
  14302 words of font info for 51 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  53i,19n,76p,9085b,1902s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1450,10 +1463,10 @@ hare/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist
 /fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texmf-dist/fonts/type1/p
 ublic/amsfonts/cm/cmtt12.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super
 /sfrm1200.pfb>
-Output written on thesis.pdf (55 pages, 599838 bytes).
+Output written on thesis.pdf (56 pages, 701978 bytes).
 PDF statistics:
- 283 PDF objects out of 1000 (max. 8388607)
- 186 compressed objects within 2 object streams
+ 287 PDF objects out of 1000 (max. 8388607)
+ 188 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 51 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 56 words of extra memory for PDF output out of 10000 (max. 10000000)
 
