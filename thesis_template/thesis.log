@@ -1,4 +1,4 @@
-This is LuaTeX, Version 1.07.0 (TeX Live 2018/Arch Linux)  (format=lualatex 2019.4.14)  23 APR 2019 23:47
+This is LuaTeX, Version 1.07.0 (TeX Live 2018/Arch Linux)  (format=lualatex 2019.4.14)  23 APR 2019 23:49
  restricted system commands enabled.
 **thesis.tex
 (./thesis.tex
@@ -48,7 +48,7 @@ Inserting `luaotfload.aux.set_capheight' at position 3 in `luaotfload.patch_font
 '.
 Inserting `luaotfload.rewrite_fontname' at position 4 in `luaotfload.patch_font'
 .
-luaotfload | main : initialization completed in 0.120 seconds
+luaotfload | main : initialization completed in 0.113 seconds
 (/usr/share/texmf-dist/tex/latex/koma-script/scrbook.cls
 Document Class: scrbook 2019/02/01 v3.26b KOMA-Script document class (book)
 (/usr/share/texmf-dist/tex/latex/koma-script/scrkbase.sty
@@ -1243,7 +1243,7 @@ Here is how much of LuaTeX's memory you used:
  903 words of node memory still in use:
    6 hlist, 2 vlist, 2 rule, 11 glue, 4 kern, 1 sub_mlist, 1 glyph, 71 attribute
 , 71 glue_spec, 71 attribute_list, 1 write nodes
-   avail lists: 1:2,2:1913,3:220,4:1375,5:1342,6:120,7:4716,8:1112,9:2908,10:26,
+   avail lists: 1:2,2:1913,3:220,4:1375,5:1342,6:120,7:4722,8:1112,9:2908,10:26,
 11:258,12:1
  21018 multiletter control sequences out of 65536+600000
  68 fonts using 5468647 bytes
@@ -1266,7 +1266,7 @@ nts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public
 /amsfonts/cm/cmr6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8
 .pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/shar
 e/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on thesis.pdf (55 pages, 640020 bytes).
+Output written on thesis.pdf (55 pages, 640029 bytes).
 
 PDF statistics: 316 PDF objects out of 1000 (max. 8388607)
  193 compressed objects within 2 object streams
