@@ -10,7 +10,7 @@ This section discusses our findings, first we will analyze how input shuffling c
 When the model used SGD as an optimizer it was able to use higher learning rates when input shuffling was used, as shown in figures \ref{fig:results_sgd}, \ref{fig:results_mom} and \ref{fig:results_nag} Therefore arises the questions why these phenomena happen, especially as it did not happen with advanced optimizers. One possibility is the use of the batched version of the SGNS. In consequence, when the input is not shuffled the same word will often appear in one batch, hence the optimizer is presented with an average value of the gradient, which can be imprecise. This is counter-attacked by advanced optimizers as they have adaptive learning rates, i.e a frequent appearing feature will have a low learning rate.
 
 \subsection{Large differences with NAG and SGD when using shuffling}
-SGD and NAG both have very different values when using shuffling in comparison to unshuffled input, as shown in figures \ref{fig:results_sgd} and \ref{fig:results_nag}, plain SGD. We do not only attribute those resultst to input shuffling but partially also to a good random initialization guess. Due to a lack of time these results where not replicate more than once.
+SGD and NAG both have very different values when using shuffling in comparison to unshuffled input, as shown in figures \ref{fig:results_sgd} and \ref{fig:results_nag}, plain SGD. We do not only attribute those results to input shuffling but partially also to a good random initialization guess. Due to a lack of time these results were not replicate more than once.
 
 \section{Comparison to Gensim}
 This section will compare our finding extensively to Gensim \cite{gensim}. As explained in Section \ref{sec:gensim}, Gensim is optimized to have a very high throughput, this made it possible to achieve a lot of computations. Furthermore, Gensim provides access to the loss and the resulting word embeddings, which facilitated the comparison process.
@@ -57,25 +57,23 @@ The Adam optimizer did outperform the Gensim application in quality of word embe
 \includegraphics[scale=0.45]{images/gensim_vs_adam}
 \caption{Convergence time of SGD and Adam compared to Gensim}
 \label{fig:gensim_vs_adam}
-\end{figure}
-
-\section{Challenges faced}
+\end{figure}\section{Challenges faced}
 During our implementation we did encounter some problems, this section has the purpose of preventing the scientific community from making the same mistakes.
 \subsection{Using the wrong embeddings}
-To start with, we did not choose the same initialization value as Gensim in our word embeddings. We initialized the projection layer with a normal distribution between (-1,1), as opposed to Gensim which initializes all the weights to 0. The reason for this, is that at the begining of our experiments we did not achieve good results with the same initialization as Gensim. Retrospectively we accord this to a learning rate that was too low. After a few simulations, we saw that we did not perform as good as Gensim. And as we changed the initialization of the projection layer back to 0, and already had adjusted the learning rate, we achieved good results. Therefore, this is a recommendation to future work to not set the initialization to (-1,1).
+To start with, we did not choose the same initialization value as Gensim in our word embeddings. We initialized the projection layer with a normal distribution between (-1,1), as opposed to Gensim which initializes all the weights to 0. The reason for this, is that at the beginning of our experiments we did not achieve good results with the same initialization as Gensim. Retrospectively we accord this to a learning rate that was too low. After a few simulations, we saw that we did not perform as good as Gensim. And as we changed the initialization of the projection layer back to 0, and already had adjusted the learning rate, we achieved good results. Therefore, this is a recommendation to future work to not set the initialization to (-1,1).
 
 \subsection{Batch size and loss function adjustements}\label{ssec:bs_lf}
 During our experiments, we faced a moment where we needed to us a very high learning rate (50) to achieve good results. As this is the complete opposite of what is standard we made a few changes to remedy the problem.\\
 First, we needed to find a good batch size. During the above-explained raise of the learning rate, we used a batch size of 5000. We then decided to take a batch size of 2000.\\
- Secondly, at the same time, we did experiment with different loss functions. As our batched model does not have exactly the same loss function as introduced by Mikolov et al. \cite{mikolov}, we needed to find one that suited our goals the best. At the beginning of our experiment, we took the average of all the scores stored in our final matrix, as explained in \ref{ssec:b_SGM}. But then chose to take the sum as the training did not seem optimal.\\ 
- With these two changes, we did increase convergence time and word similarity, while at the same time having a usual learning rate. \\
- Know the question arises why this happened? Is this because of the shape of the loss function better suits our advanced optimizers? Or because the loss function is closer to its original form? Our hypothesis looks the following way: 
- When taking the average, our loss function is represented as follows:
- \begin{equation}
- \frac{-1}{b }* \sum_{x\in X} loss(x)
- \end{equation}
-where $X$ is our batch and $b = |X|$. 
-When taking the partial derivative of each parameter, the constant $ \frac{-1}{b }$ will remain the same. Therefore it's the same as taking the sum as the loss function and multiplying each gradient with $\frac{-1}{b }$. As our batch size was really high, i.e 2000 and 5000, this could highly influence the learning rate. This is also the conclusion of Goyal et al. \cite{fb}, that worked with very high batch sizes, i.e 8000: "When the minibatch size is multiplied by k, multiply the learning rate by k". This makes a little argument for our explanation.
+Secondly, at the same time, we did experiment with different loss functions. As our batched model does not have exactly the same loss function as introduced by Mikolov et al. \cite{mikolov}, we needed to find one that suited our goals the best. At the beginning of our experiment, we took the average of all the scores stored in our final matrix, as explained in \ref{ssec:b_SGM}. But then chose to take the sum as the training did not seem optimal.\\
+With these two changes, we did increase convergence time and word similarity, while at the same time having a usual learning rate. \\
+Know the question arises why this happened? Is this because of the shape of the loss function better suits our advanced optimizers? Or because the loss function is closer to its original form? Our hypothesis looks the following way:
+When taking the average, our loss function is represented as follows:
+\begin{equation}
+\frac{-1}{b }* \sum_{x\in X} loss(x)
+\end{equation}
+where $X$ is our batch and $b = |X|$.
+When taking the partial derivative of each parameter, the constant $ \frac{-1}{b }$ will remain the same. Therefore, it's the same as taking the sum as the loss function and multiplying each gradient with $\frac{-1}{b }$. As our batch size was really high, i.e 2000 and 5000, this could highly influence the learning rate. This is also the conclusion of Goyal et al. \cite{fb}, that worked with very high batch sizes, i.e 8000: "When the minibatch size is multiplied by k, multiply the learning rate by k". This makes a little argument for our explanation.
 
 \section{Future Work}
 This work shows that the convergence time of the SGNS could be improved by using input shuffling and advanced optimizers. As with every work, there still exists possible extensions. First and foremost an aspect of our implementation that can be prejudicial is that we only extensively tested our model with one small dataset. The fact that we only used one dataset as well that it's a small one is problematic. By using a very small dataset we do not use the model in the condition it is most needed for, as the dataset used in practice usually consists of more than 1 billion words. There is a small argument that can be made for machine translation as the use of small parallel corpus is not unusual in this field. But the main issue with using only one data set it that it has been shown that some optimizers perform better with specific shapes of loss functions. To make a compelling argument it's, therefore, necessary to show that our model with the use of Input shuffling and Adam as its optimizer also outperform Gensim with other data sets, so that the claim can hold consistently, it needs to be confirmed with other datasets as well.
