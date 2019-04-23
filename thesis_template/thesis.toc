@@ -48,19 +48,17 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {3.1}PyTorch}{19}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.2}Implementation}{20}% 
+\contentsline {section}{\numberline {3.2}Batched SkipGramModel}{20}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.2.1}Batched SkipGramModel}{20}% 
-\defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Forwarding}{20}% 
+\contentsline {subsection}{\numberline {3.2.1}Forwarding}{20}% 
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {3.2.2}Creating the context pairs}{22}% 
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{\nonumberline Number of pairs in the dataset}{22}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Accessing each pair individually}{23}% 
+\contentsline {subsubsection}{\nonumberline Accessing each pair individually}{24}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Adaptability to other datasets}{25}% 
+\contentsline {subsubsection}{\nonumberline Adaptability to other datasets}{24}% 
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {4}Results}{26}% 
 \defcounter {refsection}{0}\relax 
