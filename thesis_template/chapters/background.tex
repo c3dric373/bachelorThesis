@@ -162,8 +162,7 @@ It does so by adding a percentage of the last update vector to the current updat
 \begin{equation}
 v_t = \gamma v_{t-1} + \eta \nabla J (\theta)
 \end{equation}\label{eq:momentum}
-Where $v_t$ and $v_{t-1}$, respectively are the current and the last update vector. The value $0.9$ for $\gamma$ has shown great results, but this, same as a learning rate, another hyper parameter that need to be tuned according to the specific task. 
-And then we update our weights as usual: $\theta = \theta - v_t$ 
+Where $v_t$ and $v_{t-1}$, respectively are the current and the last update vector, and $\gamma$ a hyper parameter, usually set to $0.9$, that defines the importance of the momentum term. We then update our weights as usual: $\theta = \theta - v_t$ 
 \subsection{Nesterov}
 Momentum can be a powerful tool, but sometimes be its own enemy. With Momentum, the learning algorithm often overshoots and blows by the  Optima. Hence it will never converge. This problem was addressed by Nesterov. The idea behind his algorithm is to incorporate the momentum in the computation of our gradients. We will subtract the momentum vector, or just a fraction,  from our parameters before computing the gradients. Therefore we will compute the gradients of the position where we would be with momentum, which will allow us to make a step in a better direction. The computation of the update vector will look the following way:
 \begin{equation}
