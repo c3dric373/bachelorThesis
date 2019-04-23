@@ -2,14 +2,14 @@
 %Describe the method/software/tool/algorithm you have developed here
 
 In this work our goal is to optimize the skip-gram model with negative sampling (SGNS), we did implemented a very slightly different version compared to the original w2vec implementation \cite{mikolov}.
-This chapter will illustrate our proceeding. First, it will give a short introduction to PyTorch, and then cover our implementation. In the latter part, we will talk about the modified version of the skip gram model that we used and the challenging parts of our implementation.
+This chapter will illustrate our proceeding. First, it will give a short introduction to PyTorch, and then cover our implementation. The latter part explained the altered version of the SGM, and its challenges.
 \section{PyTorch}
-For our implementation, we chose the open source library PyTorch.\footnote{https://pytorch.org/}. Through it's the simplicity of use it's one of the most used libraries for machine learning. One of the most important features is the calculation of gradients by Pytroch. All gradients are calculated online, therefore there is no need for us to implement the calculation of those gradients. The second important feature that we used, is the large variety of optimizes already implemented in pyTorch. They are proposed in the package \texttt{torch.optim}\footnote{https://pytorch.org/docs/stable/optim.html}. The last important feature of Pytorch that we used are the classes \texttt{Dataset}\footnote{\label{note_data}https://pytorch.org/docs/stable/data.html} and \texttt{Dataloader}\footnotemark[\ref{note_data}]. Both of these classes are meant to work closely together.   The Dataset interface has two functions to offer namely: "\texttt{\_\_len\_\_}" and "\texttt{\_\_getitem\_\_}". Those are then used by a data loader object, that will construct a batch based on those two functions. The loader object will facilitate the training process, as we can simply iterate over it, and get the batches. Furthermore, the data loader can shuffle our dataset before each epoch. 
+The implementation was done with the open source library PyTorch.\footnote{https://pytorch.org/}. Through it's the simplicity of use it's one of the most used libraries for machine learning. One of the most important features is the calculation of gradients by Pytroch. All gradients are calculated online, therefore there is no need for us to implement the calculation of those gradients. The second important feature that was used, is the large variety of optimizes already implemented in pyTorch. They are proposed in the package \texttt{torch.optim}\footnote{https://pytorch.org/docs/stable/optim.html}. Two important features of PyTorch are the classes \texttt{Dataset}\footnote{\label{note_data}https://pytorch.org/docs/stable/data.html} and \texttt{Dataloader}\footnotemark[\ref{note_data}]. Both of these classes are meant to work closely together.   The Dataset interface has two functions to offer namely: "\texttt{\_\_len\_\_}" and "\texttt{\_\_getitem\_\_}". Those are then used by a data loader object, that will construct a batch based on those two functions. The loader object will facilitate the training process, as it facilitates the iteration over the dataset and the creation of batches. Furthermore, the data loader can shuffle the dataset before each epoch. 
 
 \section{Batched SkipGramModel} \label{ssec:b_SGM}
 This section will give an overview of our implementation. First, it will give a broad overview of the implementation idea and process. Then it will go into detail, explaining the forward process of our model and the construction of our dataset, by the use of the \texttt{Dataset} class. The proposed implementation is a slighlty altered version of the original SGNS. The ideas behind this altering, is to to compute the loss for multiple words and context pairs at the same time. The exact process will be described in the following paragraph. 
 \subsection{Forwarding}
-As this represents the challenging part of our Implementation we will explain the forwarding method step by step. At each time step we will illustrate our words to make it more clearer.\\
+As this represents the challenging part of our Implementation the the forwarding method is explained step by step. Each time step is illustrated to make the explanation clearer.\\
 Let $X = {(v_1,c_1),(v_2,c_2),(v_3,c_3)}$, be the training batch, where $(v_i,c_i)$ is a training sample constituted by a word and on of its context words. 
 \textit{Input:}\\
 The forwarding method will accepts two vectors $v$ and $c$, and a matrix $A$ as an input. The first vector represents all the center words in a batch, the second one the context words. The Matrix represents the negative samples. The two vectors are of the same length, defined as $n$. Our training batch $X$ can be seen as in the following way:  $X = \{(v_i, c_i)\|\i \in \{1, ..., n\}, n = |v| \}$. Where $(v_i,c_i)$ is a context pair. The matrix must be of dimension $n \times k$, with $k$ being the number of negative samples per pair. This means the $i^{th}$ row will store the negative samples for the $i^{th}$ word context pair.\\
@@ -28,7 +28,7 @@ k_{1,3} & k_{2,3} & k_{3,3}\\
 \end{bmatrix}$\\
 
 \textit{Concatenation of samples:}\\
-First, we will concatenate the vector $c$ and the Matrix $A$. This will result in a Matrix $\tilde{A}$, with:\\
+The concatenation of  the vector $c$ and the Matrix $A$ will result in a Matrix $\tilde{A}$, with:\\
 $\tilde{A} = \begin{bmatrix}
 c_1 & k_{1,1} & k_{2,1} & k_{3,1}\\
 c_2 & k_{1,2} & k_{2,2} & k_{3,2}\\
@@ -36,7 +36,7 @@ c_3 & k_{1,3} & k_{2,3}& k_{3,3}\\
 \end{bmatrix}$\\
 
 \textit{Embeddings:}\\
- Know we need to get our Embeddings. Therefore we create a Matrix $E_v$ of dimensionality $n \times d$ where $d$ is the dimension of our word embedding. $E_v$ will store the word embedding of the $i^{th}$ word from our input vector $v$ in it's $i^{th}$ row. We will do the same for the our Matrix $\tilde{A}$. This will result in a $n \times k+1 \times d$ Array $E_c$. \\
+Know it's necessary to access the word embeddings. For this purpose a Matrix $E_v$ of dimensionality $n \times d$ where $d$ is the dimension of our word embedding is created. $E_v$ stores the word embedding of the $i^{th}$ word from our input vector $v$ in it's $i^{th}$ row. The same is done for the our Matrix $\tilde{A}$. This will result in a $n \times k+1 \times d$ Array $E_c$. \\
  $E_v = \begin{bmatrix}
 \tilde{v_1}_1 & \ldots & \tilde{v_1}_d\\
 \tilde{v_2}_1 & \ldots & \tilde{v_2}_d\\
