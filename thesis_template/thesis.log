@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Arch Linux) (preloaded format=pdflatex 2019.4.14)  23 APR 2019 16:23
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Arch Linux) (preloaded format=pdflatex 2019.4.14)  23 APR 2019 17:02
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1003,11 +1003,11 @@ Class scrbook Warning: \float@addtolists detected!
 
  (./chapters/background.tex
 chapter 2.
-<images/window_ex.pdf, id=38, 722.7pt x 542.025pt>
-File: images/window_ex.pdf Graphic file (type pdf)
-<use images/window_ex.pdf>
-Package pdftex.def Info: images/window_ex.pdf  used on input line 8.
-(pdftex.def)             Requested size: 216.81166pt x 162.60875pt.
+<images/window_ex.png, id=38, 1414.28375pt x 357.335pt>
+File: images/window_ex.png Graphic file (type png)
+<use images/window_ex.png>
+Package pdftex.def Info: images/window_ex.png  used on input line 8.
+(pdftex.def)             Requested size: 424.2884pt x 107.20132pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 13--14
 
@@ -1018,21 +1018,21 @@ Underfull \hbox (badness 10000) in paragraph at lines 13--14
 
 
 
- <./images/window_ex.pdf>] [4] [5]
-<images/frequency_ex.png, id=66, 803.0pt x 501.875pt>
+ <./images/window_ex.png>] [4] [5]
+<images/frequency_ex.png, id=56, 803.0pt x 501.875pt>
 File: images/frequency_ex.png Graphic file (type png)
 <use images/frequency_ex.png>
 Package pdftex.def Info: images/frequency_ex.png  used on input line 57.
 (pdftex.def)             Requested size: 361.34666pt x 225.84166pt.
  [6] [7 <./images/frequency_ex.png>]
-<images/cachingEfficiency.png, id=75, 816.04875pt x 649.42625pt>
+<images/cachingEfficiency.png, id=65, 816.04875pt x 649.42625pt>
 File: images/cachingEfficiency.png Graphic file (type png)
 <use images/cachingEfficiency.png>
 Package pdftex.def Info: images/cachingEfficiency.png  used on input line 76.
 (pdftex.def)             Requested size: 244.81651pt x 194.82938pt.
 
 [8] [9 <./images/cachingEfficiency.png>] [10] [11]
-<images/multipleContext.png, id=89, 471.7625pt x 89.33376pt>
+<images/multipleContext.png, id=79, 471.7625pt x 89.33376pt>
 File: images/multipleContext.png Graphic file (type png)
 <use images/multipleContext.png>
 Package pdftex.def Info: images/multipleContext.png  used on input line 124.
@@ -1113,91 +1113,79 @@ chapter 4.
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 11.
 
-
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 24.
-
-
-Overfull \hbox (51.78574pt too wide) in paragraph at lines 26--32
- [][] 
- []
-
 [26
 
 
 
 
-] [27]
+]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 56.
+               Default added (so using `tbp') on input line 45.
 
 
-Overfull \hbox (0.9494pt too wide) in paragraph at lines 57--66
+Overfull \hbox (0.9494pt too wide) in paragraph at lines 46--55
 [][] 
  []
 
-[28] [29]
+[27] [28]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 86.
+               Default added (so using `tbp') on input line 75.
 
-[30] [31]
-<images/results_sgd_shuffle.png, id=158, 803.0pt x 501.875pt>
+[29] [30] [31]
+<images/results_sgd_shuffle.png, id=148, 803.0pt x 501.875pt>
 File: images/results_sgd_shuffle.png Graphic file (type png)
 <use images/results_sgd_shuffle.png>
-Package pdftex.def Info: images/results_sgd_shuffle.png  used on input line 148
+Package pdftex.def Info: images/results_sgd_shuffle.png  used on input line 137
 .
 (pdftex.def)             Requested size: 361.34666pt x 225.84166pt.
- [32]
-<images/results_mom_shuffle.png, id=162, 803.0pt x 501.875pt>
-File: images/results_mom_shuffle.png Graphic file (type png)
-<use images/results_mom_shuffle.png>
-Package pdftex.def Info: images/results_mom_shuffle.png  used on input line 158
-.
-(pdftex.def)             Requested size: 240.90186pt x 150.56366pt.
-
-Overfull \hbox (16.83638pt too wide) in paragraph at lines 158--159
- [][] 
- []
-
-<images/results_nag_shuffle.png, id=163, 803.0pt x 501.875pt>
-File: images/results_nag_shuffle.png Graphic file (type png)
-<use images/results_nag_shuffle.png>
-Package pdftex.def Info: images/results_nag_shuffle.png  used on input line 165
-.
-(pdftex.def)             Requested size: 240.90186pt x 150.56366pt.
-
-Overfull \hbox (16.83638pt too wide) in paragraph at lines 165--166
- [][] 
- []
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<images/results_adagrad_shuffle.png, id=164, 803.0pt x 501.875pt>
+<images/results_mom_shuffle.png, id=149, 803.0pt x 501.875pt>
+File: images/results_mom_shuffle.png Graphic file (type png)
+<use images/results_mom_shuffle.png>
+Package pdftex.def Info: images/results_mom_shuffle.png  used on input line 147
+.
+(pdftex.def)             Requested size: 240.90186pt x 150.56366pt.
+
+Overfull \hbox (16.83638pt too wide) in paragraph at lines 147--148
+ [][] 
+ []
+
+<images/results_nag_shuffle.png, id=150, 803.0pt x 501.875pt>
+File: images/results_nag_shuffle.png Graphic file (type png)
+<use images/results_nag_shuffle.png>
+Package pdftex.def Info: images/results_nag_shuffle.png  used on input line 154
+.
+(pdftex.def)             Requested size: 240.90186pt x 150.56366pt.
+
+Overfull \hbox (16.83638pt too wide) in paragraph at lines 154--155
+ [][] 
+ []
+
+[32]
+<images/results_adagrad_shuffle.png, id=154, 803.0pt x 501.875pt>
 File: images/results_adagrad_shuffle.png Graphic file (type png)
 <use images/results_adagrad_shuffle.png>
 Package pdftex.def Info: images/results_adagrad_shuffle.png  used on input line
- 175.
+ 164.
 (pdftex.def)             Requested size: 361.34666pt x 225.84166pt.
-[33 <./images/results_sgd_shuffle.png>]
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[34 <./images/results_mom_shuffle.png> <./images/results_nag_shuffle.png>]
-<images/results_adam_shuffle.png, id=174, 803.0pt x 501.875pt>
+ [33 <./images/results_sgd_shuffle.png> <./images/results_mom_shuffle.png> <./i
+mages/results_nag_shuffle.png>] [34 <./images/results_adagrad_shuffle.png>]
+<images/results_adam_shuffle.png, id=165, 803.0pt x 501.875pt>
 File: images/results_adam_shuffle.png Graphic file (type png)
 <use images/results_adam_shuffle.png>
-Package pdftex.def Info: images/results_adam_shuffle.png  used on input line 19
-6.
+Package pdftex.def Info: images/results_adam_shuffle.png  used on input line 18
+5.
 (pdftex.def)             Requested size: 361.34666pt x 225.84166pt.
 )
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[35 <./images/results_adagrad_shuffle.png>] [36 <./images/results_adam_shuffle.
-png>]
+[35] [36 <./images/results_adam_shuffle.png>]
 \openout2 = `chapters/discussion.aux'.
 
  (./chapters/discussion.tex
@@ -1208,18 +1196,18 @@ chapter 5.
 
 
 ] [38] [39]
-<images/gensim_vs_adam.png, id=193, 803.0pt x 501.875pt>
+<images/gensim_vs_adam.png, id=183, 803.0pt x 501.875pt>
 File: images/gensim_vs_adam.png Graphic file (type png)
 <use images/gensim_vs_adam.png>
 Package pdftex.def Info: images/gensim_vs_adam.png  used on input line 60.
 (pdftex.def)             Requested size: 361.34666pt x 225.84166pt.
- [40 <./images/gensim_vs_adam.png>] [41]) [42] [43]
+ [40 <./images/gensim_vs_adam.png>] [41]) [42]
 \openout2 = `chapters/conclusion.aux'.
 
 
 (./chapters/conclusion.tex
 chapter 6.
-) [44
+) [43
 
 
 
@@ -1243,18 +1231,18 @@ File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 27.
- [45
+ [44
 
 
 
-]) [46]
+]) [45]
 chapter B.
-[47
+[46
 
 
 ]
 chapter C.
-[48
+[47
 
 
 ]
@@ -1265,10 +1253,10 @@ Overfull \hbox (9.541pt too wide) in paragraph at lines 25--27
 im.utils.RULE[]DISCARD,
  []
 
-[49
+[48
 
 
-]) [50]
+]) [49]
 chapter without number
 
 Overfull \hbox (26.88382pt too wide) in paragraph at lines 162--162
@@ -1282,7 +1270,7 @@ Overfull \hbox (18.1134pt too wide) in paragraph at lines 162--162
 /cmr/m/it/12 CoRR \OT1/cmr/m/n/12 abs/1706.02677
  []
 
-[51
+[50
 
 
 
@@ -1305,12 +1293,15 @@ Overfull \hbox (3.71585pt too wide) in paragraph at lines 162--162
 Vetrov Dmitry.
  []
 
-[52] [53] (./thesis.aux (./includes/BA-titlepage.aux) (./includes/abstract.aux)
+[51] [52] (./thesis.aux (./includes/BA-titlepage.aux) (./includes/abstract.aux)
 (./chapters/introduction.aux) (./chapters/background.aux)
 (./chapters/methods.aux) (./chapters/results.aux) (./chapters/discussion.aux)
 (./chapters/conclusion.aux))
 
 LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
 
 Package biblatex Warning: Please (re)run Biber on the file:
@@ -1323,8 +1314,8 @@ Package logreq Info: Writing requests to 'thesis.run.xml'.
  ) 
 Here is how much of TeX's memory you used:
  17337 strings out of 492616
- 327042 string characters out of 6135177
- 965750 words of memory out of 5000000
+ 327018 string characters out of 6135177
+ 965755 words of memory out of 5000000
  20984 multiletter control sequences out of 15000+600000
  14938 words of font info for 53 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1348,10 +1339,10 @@ t/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/p
 ublic/amsfonts/cm/cmti12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts
 /cm/cmtt12.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
 </usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on thesis.pdf (59 pages, 669317 bytes).
+Output written on thesis.pdf (58 pages, 722295 bytes).
 PDF statistics:
- 315 PDF objects out of 1000 (max. 8388607)
- 207 compressed objects within 3 object streams
+ 301 PDF objects out of 1000 (max. 8388607)
+ 198 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  56 words of extra memory for PDF output out of 10000 (max. 10000000)
 

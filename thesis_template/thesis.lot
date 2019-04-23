@@ -8,17 +8,15 @@
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {\relax 4.1}{\ignorespaces Training and Convergence time according to choice of the length of sentences in text8 dataset\relax }}{27}% 
+\contentsline {table}{\numberline {\relax 4.1}{\ignorespaces Training and Convergence time according to choice of the length of sentences in text8 dataset\relax }}{26}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {\relax 4.2}{\ignorespaces Comparison of the text8 and enwik9 dataset\relax }}{27}% 
+\contentsline {table}{\numberline {\relax 4.2}{\ignorespaces Size of the preprocessed text8 dataset according to sampling treshold\relax }}{27}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {\relax 4.3}{\ignorespaces Size of the preprocessed text8 dataset according to sampling treshold\relax }}{28}% 
+\contentsline {table}{\numberline {\relax 4.3}{\ignorespaces Example of a sentence with different sampling tresholds\relax }}{28}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {\relax 4.4}{\ignorespaces Example of a sentence with different sampling tresholds\relax }}{28}% 
+\contentsline {table}{\numberline {\relax 4.4}{\ignorespaces Example of pairs and their rating in wordsim353\relax }}{30}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {\relax 4.5}{\ignorespaces Example of pairs and their rating in wordsim353\relax }}{30}% 
-\defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {\relax 4.6}{\ignorespaces Convergence Time and Quality with Adadelta\relax }}{35}% 
+\contentsline {table}{\numberline {\relax 4.5}{\ignorespaces Convergence Time and Quality with Adadelta\relax }}{35}% 
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 

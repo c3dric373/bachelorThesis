@@ -70,23 +70,23 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{\nonumberline Min count}{28}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.2}Evaluating word embedings}{29}% 
+\contentsline {section}{\numberline {4.2}Evaluating word embedings}{28}% 
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {4.2.1}Cosine distance}{29}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.2.2}Word similarity and wordsim353}{30}% 
+\contentsline {subsection}{\numberline {4.2.2}Word similarity and wordsim353}{29}% 
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {4.3}Configuration of the network}{30}% 
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {4.4}Input Shuffling}{31}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.5}Convergence time}{32}% 
+\contentsline {section}{\numberline {4.5}Convergence time}{31}% 
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {4.6}Results by optimizer}{32}% 
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {4.6.1}SGD}{32}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.6.2}Momentum and Nesterov}{33}% 
+\contentsline {subsection}{\numberline {4.6.2}Momentum and Nesterov}{32}% 
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {4.6.3}Adagrad}{34}% 
 \defcounter {refsection}{0}\relax 
@@ -118,16 +118,16 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {5.4}Future Work}{42}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {6}Conclusion}{44}% 
+\contentsline {chapter}{\numberline {6}Conclusion}{43}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Appendix \numberline {A}Code}{45}% 
+\contentsline {chapter}{Appendix \numberline {A}Code}{44}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {A.1}Gensim}{45}% 
+\contentsline {section}{\numberline {A.1}Gensim}{44}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Appendix \numberline {B}Math}{47}% 
+\contentsline {chapter}{Appendix \numberline {B}Math}{46}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Appendix \numberline {C}Parameters}{48}% 
+\contentsline {chapter}{Appendix \numberline {C}Parameters}{47}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Appendix \numberline {D}Dataset}{49}% 
+\contentsline {chapter}{Appendix \numberline {D}Dataset}{48}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\nonumberline Bibliography}{51}% 
+\contentsline {chapter}{\nonumberline Bibliography}{50}% 
