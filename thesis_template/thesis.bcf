@@ -2032,20 +2032,17 @@
     <bcf:citekey order="37">adadelta</bcf:citekey>
     <bcf:citekey order="38">mikolov</bcf:citekey>
     <bcf:citekey order="39">gensim</bcf:citekey>
-    <bcf:citekey order="40">dimensions_size</bcf:citekey>
+    <bcf:citekey order="40">dimension_size</bcf:citekey>
     <bcf:citekey order="41">gensim</bcf:citekey>
     <bcf:citekey order="42">intel</bcf:citekey>
     <bcf:citekey order="43">gensim</bcf:citekey>
     <bcf:citekey order="44">gensim</bcf:citekey>
-    <bcf:citekey order="45">momentum</bcf:citekey>
-    <bcf:citekey order="46">nag</bcf:citekey>
-    <bcf:citekey order="47">adagrad</bcf:citekey>
-    <bcf:citekey order="48">adadelta</bcf:citekey>
-    <bcf:citekey order="49">Mikolov</bcf:citekey>
-    <bcf:citekey order="50">gensim</bcf:citekey>
-    <bcf:citekey order="51">intel</bcf:citekey>
-    <bcf:citekey order="52">mikolov</bcf:citekey>
-    <bcf:citekey order="53">fb</bcf:citekey>
+    <bcf:citekey order="45">nag</bcf:citekey>
+    <bcf:citekey order="46">adagrad</bcf:citekey>
+    <bcf:citekey order="47">adadelta</bcf:citekey>
+    <bcf:citekey order="48">gensim</bcf:citekey>
+    <bcf:citekey order="49">mikolov</bcf:citekey>
+    <bcf:citekey order="50">fb</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nyt">

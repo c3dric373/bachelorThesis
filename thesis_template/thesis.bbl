@@ -501,6 +501,32 @@
       \field{pages}{246\bibrangedash 252}
       \range{pages}{7}
     \endentry
+    \entry{nag}{inproceedings}{}
+      \name{author}{1}{}{%
+        {{hash=6b63e7d6be60b3f3876dab7be8db3c17}{%
+           family={Nesterov},
+           familyi={N\bibinitperiod},
+           given={Yurii\bibnamedelima E},
+           giveni={Y\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+      }
+      \strng{namehash}{6b63e7d6be60b3f3876dab7be8db3c17}
+      \strng{fullhash}{6b63e7d6be60b3f3876dab7be8db3c17}
+      \strng{bibnamehash}{6b63e7d6be60b3f3876dab7be8db3c17}
+      \strng{authorbibnamehash}{6b63e7d6be60b3f3876dab7be8db3c17}
+      \strng{authornamehash}{6b63e7d6be60b3f3876dab7be8db3c17}
+      \strng{authorfullhash}{6b63e7d6be60b3f3876dab7be8db3c17}
+      \field{labelalpha}{Nes83}
+      \field{sortinit}{N}
+      \field{sortinithash}{f7242c3ed3dc50029fca1be76c497c7c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Dokl. akad. nauk Sssr}
+      \field{title}{A method for solving the convex programming problem with convergence rate O (1/k\^{} 2)}
+      \field{volume}{269}
+      \field{year}{1983}
+      \field{pages}{543\bibrangedash 547}
+      \range{pages}{5}
+    \endentry
     \entry{glove}{inproceedings}{}
       \name{author}{3}{}{%
         {{hash=ab47b497d1b0cdaddd8594e4bd501ee5}{%
@@ -755,6 +781,80 @@
       \field{title}{Efficient Parallel Learning of Word2Vec}
       \field{year}{2016}
     \endentry
+    \entry{dimension_size}{incollection}{}
+      \name{author}{2}{}{%
+        {{hash=372824dd96c6970994b4ab00d5648024}{%
+           family={Yin},
+           familyi={Y\bibinitperiod},
+           given={Zi},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=9f5a3112b19215f45927adabda8a68d4}{%
+           family={Shen},
+           familyi={S\bibinitperiod},
+           given={Yuanyuan},
+           giveni={Y\bibinitperiod}}}%
+      }
+      \name{editor}{6}{}{%
+        {{hash=9b411b6c9cefdde16ffea77ecf612142}{%
+           family={Bengio},
+           familyi={B\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+        {{hash=1444141e07dd9549dbb4b8530fe4ec15}{%
+           family={Wallach},
+           familyi={W\bibinitperiod},
+           given={H.},
+           giveni={H\bibinitperiod}}}%
+        {{hash=6c15b92d4ebdbfae091f6548dc7543ae}{%
+           family={Larochelle},
+           familyi={L\bibinitperiod},
+           given={H.},
+           giveni={H\bibinitperiod}}}%
+        {{hash=4f2317ca7fb46f798c6c220e39e332a0}{%
+           family={Grauman},
+           familyi={G\bibinitperiod},
+           given={K.},
+           giveni={K\bibinitperiod}}}%
+        {{hash=9bc86e7523b9aaf7183c5f7e7634048f}{%
+           family={Cesa-Bianchi},
+           familyi={C\bibinithyphendelim B\bibinitperiod},
+           given={N.},
+           giveni={N\bibinitperiod}}}%
+        {{hash=36b98b7ab533936cf1b5716148de704f}{%
+           family={Garnett},
+           familyi={G\bibinitperiod},
+           given={R.},
+           giveni={R\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Curran Associates, Inc.}%
+      }
+      \strng{namehash}{86f4fd342321f4e73f10070d41e57acf}
+      \strng{fullhash}{86f4fd342321f4e73f10070d41e57acf}
+      \strng{bibnamehash}{86f4fd342321f4e73f10070d41e57acf}
+      \strng{authorbibnamehash}{86f4fd342321f4e73f10070d41e57acf}
+      \strng{authornamehash}{86f4fd342321f4e73f10070d41e57acf}
+      \strng{authorfullhash}{86f4fd342321f4e73f10070d41e57acf}
+      \strng{editorbibnamehash}{f08403ac24c2e0a0ae72822c0c0afda6}
+      \strng{editornamehash}{233f4c9ba2f85af3db1eed171136508c}
+      \strng{editorfullhash}{f08403ac24c2e0a0ae72822c0c0afda6}
+      \field{labelalpha}{YS18}
+      \field{sortinit}{Y}
+      \field{sortinithash}{b8d711a035f7be9840c721c82920477e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Advances in Neural Information Processing Systems 31}
+      \field{title}{On the Dimensionality of Word Embedding}
+      \field{year}{2018}
+      \field{pages}{887\bibrangedash 898}
+      \range{pages}{12}
+      \verb{urlraw}
+      \verb http://papers.nips.cc/paper/7368-on-the-dimensionality-of-word-embedding.pdf
+      \endverb
+      \verb{url}
+      \verb http://papers.nips.cc/paper/7368-on-the-dimensionality-of-word-embedding.pdf
+      \endverb
+    \endentry
     \entry{adadelta}{article}{}
       \name{author}{1}{}{%
         {{hash=90d345b65e166a9cfc0c6ddec4ddc3d6}{%
@@ -791,9 +891,6 @@
     \endentry
   \enddatalist
   \missing{Mikolov}
-  \missing{dimensions_size}
-  \missing{momentum}
-  \missing{nag}
 \endrefsection
 \endinput
 

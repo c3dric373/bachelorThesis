@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Arch Linux) (preloaded format=pdflatex 2019.4.14)  23 APR 2019 07:17
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Arch Linux) (preloaded format=pdflatex 2019.4.14)  23 APR 2019 07:33
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -906,42 +906,7 @@ Package biblatex Info: ... file 'thesis.bbl' found.
 
 Package biblatex Warning: The following entry could not be found
 (biblatex)                in the database:
-(biblatex)                Glove
-(biblatex)                Please verify the spelling and rerun
-(biblatex)                LaTeX afterwards.
-
-
-Package biblatex Warning: The following entry could not be found
-(biblatex)                in the database:
 (biblatex)                Mikolov
-(biblatex)                Please verify the spelling and rerun
-(biblatex)                LaTeX afterwards.
-
-
-Package biblatex Warning: The following entry could not be found
-(biblatex)                in the database:
-(biblatex)                bengio
-(biblatex)                Please verify the spelling and rerun
-(biblatex)                LaTeX afterwards.
-
-
-Package biblatex Warning: The following entry could not be found
-(biblatex)                in the database:
-(biblatex)                dimensions_size
-(biblatex)                Please verify the spelling and rerun
-(biblatex)                LaTeX afterwards.
-
-
-Package biblatex Warning: The following entry could not be found
-(biblatex)                in the database:
-(biblatex)                momentum
-(biblatex)                Please verify the spelling and rerun
-(biblatex)                LaTeX afterwards.
-
-
-Package biblatex Warning: The following entry could not be found
-(biblatex)                in the database:
-(biblatex)                nag
 (biblatex)                Please verify the spelling and rerun
 (biblatex)                LaTeX afterwards.
 
@@ -1063,11 +1028,7 @@ File: images/multipleContext.png Graphic file (type png)
 <use images/multipleContext.png>
 Package pdftex.def Info: images/multipleContext.png  used on input line 123.
 (pdftex.def)             Requested size: 330.23149pt x 62.53319pt.
- [11] [12 <./images/multipleContext.png>] [13] [14]
-
-LaTeX Warning: Citation 'glove' on page 15 undefined on input line 176.
-
-[15] [16]
+ [11] [12 <./images/multipleContext.png>] [13] [14] [15] [16]
 Underfull \hbox (badness 10000) in paragraph at lines 225--228
 
  []
@@ -1208,13 +1169,13 @@ chapter 5.
 
 
 
-] [37] [38] [39]
-<images/gensim_vs_adam.png, id=183, 803.0pt x 501.875pt>
+] [37] [38]
+<images/gensim_vs_adam.png, id=180, 803.0pt x 501.875pt>
 File: images/gensim_vs_adam.png Graphic file (type png)
 <use images/gensim_vs_adam.png>
 Package pdftex.def Info: images/gensim_vs_adam.png  used on input line 60.
 (pdftex.def)             Requested size: 361.34666pt x 225.84166pt.
- [40 <./images/gensim_vs_adam.png>] [41]) [42]
+ [39 <./images/gensim_vs_adam.png>] [40]) [41] [42]
 \openout2 = `chapters/conclusion.aux'.
 
 
@@ -1295,29 +1256,38 @@ Overfull \hbox (18.1134pt too wide) in paragraph at lines 145--145
 /cmr/m/it/12 CoRR \OT1/cmr/m/n/12 abs/1706.02677
  []
 
-
-Overfull \hbox (34.21617pt too wide) in paragraph at lines 145--145
-\OT1/cmr/m/n/12 ma-tion of word rep-re-sen-ta-tions in vec-tor space". In: \OT1
-/cmr/m/it/12 arXiv preprint arXiv:1301.3781
- []
-
 [50
 
 
 
 
 ]
+Overfull \hbox (34.21617pt too wide) in paragraph at lines 145--145
+\OT1/cmr/m/n/12 ma-tion of word rep-re-sen-ta-tions in vec-tor space". In: \OT1
+/cmr/m/it/12 arXiv preprint arXiv:1301.3781
+ []
+
+
+Overfull \hbox (9.21007pt too wide) in paragraph at lines 145--145
+[]\OT1/cmr/m/n/12 Jeffrey Pen-ning-ton, Richard Socher, and Christo-pher Man-ni
+ng. \  Glove: Global
+ []
+
+
 Overfull \hbox (3.71585pt too wide) in paragraph at lines 145--145
 []\OT1/cmr/m/n/12 Bartunov Sergey, Kon-drashkin Dmitry, Os-okin An-ton, and P. 
 Vetrov Dmitry.
  []
 
-[51] (./thesis.aux (./includes/BA-titlepage.aux) (./includes/abstract.aux)
+[51] [52] (./thesis.aux (./includes/BA-titlepage.aux) (./includes/abstract.aux)
 (./chapters/introduction.aux) (./chapters/background.aux)
 (./chapters/methods.aux) (./chapters/results.aux) (./chapters/discussion.aux)
 (./chapters/conclusion.aux))
 
 LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
 
 Package biblatex Warning: Please (re)run Biber on the file:
@@ -1329,10 +1299,10 @@ Package logreq Info: Writing requests to 'thesis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 17070 strings out of 492616
- 323413 string characters out of 6135177
- 912375 words of memory out of 5000000
- 20730 multiletter control sequences out of 15000+600000
+ 17083 strings out of 492616
+ 323813 string characters out of 6135177
+ 912459 words of memory out of 5000000
+ 20743 multiletter control sequences out of 15000+600000
  14603 words of font info for 52 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  53i,19n,76p,9085b,1902s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1354,10 +1324,10 @@ hare/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist
 /fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texmf-dist/fonts/type1/p
 ublic/amsfonts/cm/cmtt12.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super
 /sfrm1200.pfb>
-Output written on thesis.pdf (57 pages, 710326 bytes).
+Output written on thesis.pdf (58 pages, 709590 bytes).
 PDF statistics:
- 290 PDF objects out of 1000 (max. 8388607)
- 190 compressed objects within 2 object streams
+ 293 PDF objects out of 1000 (max. 8388607)
+ 192 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  56 words of extra memory for PDF output out of 10000 (max. 10000000)
 

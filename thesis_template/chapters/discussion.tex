@@ -9,20 +9,20 @@ In this section, we will shortly discuss our results then extensively compare ou
 In this section, we will quickly discuss our findings, and try to give some explanation to it.  
 \subsection{Shuffling and learning rate with SGD}
 As shown in figures \ref{fig:results_sgd}, \ref{fig:results_mom} and \ref{fig:results_nag}, the model, when using SGD as an optimizer,  was able to use a higher learning rate when the input was shuffled as when not. Therefore arises the questions why those this phenomena happen. One possibility is that the model is presented with a slightly different loss function every time, which is closer to the optimal loss function, therefore the steps taken by the optimizer are closer to the optimum and can, therefore, be bigger. Another explanation to why this did not happen to advanced optimizers is that we used a batched version of SGNS. Theretofore when not shuffled the optimizer often has the average value for some words, so that the gradient will be a rough estimation of the true gradient, and can, therefore, be imprecise. This is counter-attacked by advanced optimizers as they have adaptive learning rates.
-\subsubsection{Large differences with NAG and SGD when using shuffling}
+\subsection{Large differences with NAG and SGD when using shuffling}
 As shown in figures \ref{fig:results_sgd} and \ref{fig:results_nag}, plain SGD, and Nesterov Accelerated gradient, greatly differ in their convergence time when using shuffling into comparison when not. We attribute these results partially to a good random initialization guess and not only input shuffling. Due to a lack of time these results where not replicate more than once. 
 
 \section{Related Work}
-In this section, we will compare our work to related work. We will first compare us to the baseline model, the original C implementation from Mikolov et al \cite{Mikolov}. As they did not use the same datasets as we, this will hinder the quality of the comparison. We, therefore, compare ourself extensively to Gensim \cite{gensim}. Gensim is optimized to have a very high throughput which allowed us to, achieve a lot of computations. Furthermore, Gensim gave us access to the loss and the resulting word embeddings, which facilitated the comparison process. 
+In this section, we will compare our work to related work.  We,  compare ourself extensively to Gensim \cite{gensim}. Gensim is optimized to have a very high throughput which allowed us to, achieve a lot of computations. Furthermore, Gensim gave us access to the loss and the resulting word embeddings, which facilitated the comparison process. 
 
+\iffalse
 \subsection{word2vec}
-
 As Mikolov et al. published the original paper which introduced the SGNS, it is, of course, relevant to compare ourselves to their work. The first important thing to take under account is that Mikolov et al. only trained their model on a very large google news dataset incorporating more than 3 billion words. This makes the comparison of our work more difficult. But we will make some assumptions, as they could be of value if true. 
 In their original paper, Mikolov et al. reported results from computations that took 1 and 3 epochs. We accord these good results, which clearly outperformed our SGD model and Gensim, to the very large dataset and furthermore, as a matter of fact, their results are better with 3 than with 1 epoch. We do not have any information about the convergence time or criterion. Hence it would be interesting to use their dataset for comparison. \\
 One thing we can compare is the quality of our word embeddings. Mikolov et al. did not report any results on their model with the text8 dataset, but they, therefore, published their code. Which was then used by Ji et al \cite{intel} and they tested the model on the text8 dataset. They reported a word similarity of 0.63 on the word similarity task. This is obviously outperformed by all our models. We did not find any explanation on why those results differ as much. \\
 The final assumption is that an advanced optimizer could maybe outperform SGD in terms of quality on a large data set. This will be discussed in further work.
  
-
+\fi
 
 \subsection{Gensim}
 The training with Gensim has a lot of possible parameters an extended list can be found in the appendix. This section we will only describe the parameters we changed from the default setting.  The description of each parameter will be done in the following way: \\
