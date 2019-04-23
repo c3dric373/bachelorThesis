@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Arch Linux) (preloaded format=pdflatex 2019.4.14)  22 APR 2019 15:26
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Arch Linux) (preloaded format=pdflatex 2019.4.14)  23 APR 2019 07:13
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -901,16 +901,65 @@ Package biblatex Info: Automatic encoding selection.
 \openout3 = `thesis.bcf'.
 
 Package biblatex Info: Trying to load bibliographic data...
-Package biblatex Info: ... file 'thesis.bbl' not found.
+Package biblatex Info: ... file 'thesis.bbl' found.
+ (./thesis.bbl
 
-No file thesis.bbl.
+Package biblatex Warning: The following entry could not be found
+(biblatex)                in the database:
+(biblatex)                Glove
+(biblatex)                Please verify the spelling and rerun
+(biblatex)                LaTeX afterwards.
+
+
+Package biblatex Warning: The following entry could not be found
+(biblatex)                in the database:
+(biblatex)                Mikolov
+(biblatex)                Please verify the spelling and rerun
+(biblatex)                LaTeX afterwards.
+
+
+Package biblatex Warning: The following entry could not be found
+(biblatex)                in the database:
+(biblatex)                adadelta
+(biblatex)                Please verify the spelling and rerun
+(biblatex)                LaTeX afterwards.
+
+
+Package biblatex Warning: The following entry could not be found
+(biblatex)                in the database:
+(biblatex)                bengio
+(biblatex)                Please verify the spelling and rerun
+(biblatex)                LaTeX afterwards.
+
+
+Package biblatex Warning: The following entry could not be found
+(biblatex)                in the database:
+(biblatex)                dimensions_size
+(biblatex)                Please verify the spelling and rerun
+(biblatex)                LaTeX afterwards.
+
+
+Package biblatex Warning: The following entry could not be found
+(biblatex)                in the database:
+(biblatex)                momentum
+(biblatex)                Please verify the spelling and rerun
+(biblatex)                LaTeX afterwards.
+
+
+Package biblatex Warning: The following entry could not be found
+(biblatex)                in the database:
+(biblatex)                nag
+(biblatex)                Please verify the spelling and rerun
+(biblatex)                LaTeX afterwards.
+
+)
 Package biblatex Info: Reference section=0 on input line 87.
 Package biblatex Info: Reference segment=0 on input line 87.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
 \openout2 = `includes/BA-titlepage.aux'.
 
-(./includes/BA-titlepage.tex
+ (./includes/BA-titlepage.tex
 <images/uni-logo.png, id=1, 501.875pt x 133.49875pt>
 File: images/uni-logo.png Graphic file (type png)
 <use images/uni-logo.png>
@@ -934,8 +983,7 @@ Package pdftex.def Info: images/uni-logo.png  used on input line 7.
  [3]
 \openout2 = `includes/abstract.aux'.
 
- (./includes/abstract.tex)
-[4
+ (./includes/abstract.tex) [4
 
 
 
@@ -978,21 +1026,6 @@ Class scrbook Warning: \float@addtolists detected!
 (scrbook)              a package that still implements the
 (scrbook)              deprecated \float@addtolist interface .
 
-
-LaTeX Warning: Citation 'bengio' on page 1 undefined on input line 3.
-
-
-LaTeX Warning: Citation 'mikolov' on page 1 undefined on input line 3.
-
-
-LaTeX Warning: Citation 'hogwild' on page 1 undefined on input line 5.
-
-
-LaTeX Warning: Citation 'intel' on page 1 undefined on input line 5.
-
-
-LaTeX Warning: Citation 'gpu' on page 1 undefined on input line 5.
-
 [1
 
 
@@ -1018,134 +1051,36 @@ Underfull \hbox (badness 10000) in paragraph at lines 13--14
 
 
 
- <./images/window_ex.pdf>]
-
-LaTeX Warning: Citation 'mikolov2' on page 4 undefined on input line 27.
-
-
-LaTeX Warning: Citation 'hsoftmax' on page 4 undefined on input line 27.
-
-[4]
-
-LaTeX Warning: Citation 'nce-original' on page 5 undefined on input line 30.
-
-
-LaTeX Warning: Citation 'mnih' on page 5 undefined on input line 30.
-
-
-LaTeX Warning: Citation 'mikolov2' on page 5 undefined on input line 30.
-
-[5]
-
-LaTeX Warning: Citation 'mikolov2' on page 6 undefined on input line 47.
-
+ <./images/window_ex.pdf>] [4] [5]
 <images/frequency_ex.png, id=56, 803.0pt x 501.875pt>
 File: images/frequency_ex.png Graphic file (type png)
 <use images/frequency_ex.png>
 Package pdftex.def Info: images/frequency_ex.png  used on input line 55.
 (pdftex.def)             Requested size: 361.34666pt x 225.84166pt.
-
-LaTeX Warning: Citation 'mikolov2' on page 6 undefined on input line 59.
-
-
-LaTeX Warning: Citation 'mikolov2' on page 6 undefined on input line 59.
-
-[6] [7 <./images/frequency_ex.png>]
-
-LaTeX Warning: Citation 'mikolov2' on page 8 undefined on input line 68.
-
-
-LaTeX Warning: Citation 'hogwild' on page 8 undefined on input line 68.
-
-
-LaTeX Warning: Citation 'hogwild' on page 8 undefined on input line 68.
-
-
-LaTeX Warning: Citation 'efficient' on page 8 undefined on input line 71.
-
-
-LaTeX Warning: Citation 'efficient' on page 8 undefined on input line 71.
-
+ [6] [7 <./images/frequency_ex.png>]
 <images/cachingEfficiency.png, id=65, 816.04875pt x 649.42625pt>
 File: images/cachingEfficiency.png Graphic file (type png)
 <use images/cachingEfficiency.png>
 Package pdftex.def Info: images/cachingEfficiency.png  used on input line 74.
 (pdftex.def)             Requested size: 244.81651pt x 194.82938pt.
 
-LaTeX Warning: Citation 'efficient' on page 8 undefined on input line 75.
-
-
-LaTeX Warning: Citation 'efficient' on page 8 undefined on input line 75.
-
-[8]
-
-LaTeX Warning: Citation 'intel' on page 9 undefined on input line 81.
-
-
-LaTeX Warning: Citation 'gpu' on page 9 undefined on input line 98.
-
-[9 <./images/cachingEfficiency.png>]
-
-LaTeX Warning: Citation 'gpu' on page 10 undefined on input line 102.
-
-
-LaTeX Warning: Citation 'gpu' on page 10 undefined on input line 102.
-
-
-LaTeX Warning: Citation 'gensim' on page 10 undefined on input line 102.
-
-
-LaTeX Warning: Citation 'gensim' on page 10 undefined on input line 105.
-
-
-LaTeX Warning: Citation 'intel' on page 10 undefined on input line 105.
-
-[10]
-
-LaTeX Warning: Citation 'topicalWE' on page 11 undefined on input line 110.
-
-
-LaTeX Warning: Citation 'breaking' on page 11 undefined on input line 110.
-
-
-LaTeX Warning: Citation 'contextWithTensor' on page 11 undefined on input line 
-110.
-
+[8] [9 <./images/cachingEfficiency.png>] [10]
 <images/multipleContext.png, id=75, 471.7625pt x 89.33376pt>
 File: images/multipleContext.png Graphic file (type png)
 <use images/multipleContext.png>
 Package pdftex.def Info: images/multipleContext.png  used on input line 123.
 (pdftex.def)             Requested size: 330.23149pt x 62.53319pt.
-
-LaTeX Warning: Citation 'contextWithTensor' on page 11 undefined on input line 
-126.
-
-
-LaTeX Warning: Citation 'contextWithTensor' on page 11 undefined on input line 
-126.
-
-[11] [12 <./images/multipleContext.png>] [13] [14]
-
-LaTeX Warning: Citation 'adagrad' on page 15 undefined on input line 176.
-
-
-LaTeX Warning: Citation 'Glove' on page 15 undefined on input line 176.
-
-[15]
-
-LaTeX Warning: Citation 'adadelta' on page 16 undefined on input line 191.
-
-[16]
+ [11] [12 <./images/multipleContext.png>] [13] [14] [15] [16]
 Underfull \hbox (badness 10000) in paragraph at lines 225--228
 
  []
 
-[17]) [18]
+) [17]
 \openout2 = `chapters/methods.aux'.
 
  (./chapters/methods.tex
 chapter 3.
-[19
+[18
 
 
 
@@ -1159,7 +1094,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 13--36
 
  []
 
-[20]
+[19]
 Underfull \hbox (badness 10000) in paragraph at lines 45--58
 
  []
@@ -1169,11 +1104,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 59--65
 
  []
 
-[21] [22]
+[20] [21]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[23] [24]) [25]
+[22] [23]) [24]
 \openout2 = `chapters/results.aux'.
 
  (./chapters/results.tex
@@ -1191,15 +1126,12 @@ Overfull \hbox (51.78574pt too wide) in paragraph at lines 26--32
  [][] 
  []
 
-
-LaTeX Warning: Citation 'mikolov' on page 26 undefined on input line 38.
-
-[26
+[25
 
 
 
 
-] [27]
+] [26]
 
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 56.
@@ -1209,46 +1141,20 @@ Overfull \hbox (0.9494pt too wide) in paragraph at lines 57--66
 [][] 
  []
 
-
-LaTeX Warning: Citation 'gensim' on page 28 undefined on input line 69.
-
-[28] [29]
+[27] [28]
 
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 86.
 
-
-LaTeX Warning: Citation 'dimensions_size' on page 30 undefined on input line 10
-5.
-
-[30]
-
-LaTeX Warning: Citation 'gensim' on page 31 undefined on input line 134.
-
-
-LaTeX Warning: Citation 'intel' on page 31 undefined on input line 134.
-
-[31]
-
-LaTeX Warning: Citation 'gensim' on page 32 undefined on input line 143.
-
-
-LaTeX Warning: Citation 'gensim' on page 32 undefined on input line 143.
-
-<images/results_sgd_shuffle.png, id=148, 803.0pt x 501.875pt>
+[29] [30]
+<images/results_sgd_shuffle.png, id=144, 803.0pt x 501.875pt>
 File: images/results_sgd_shuffle.png Graphic file (type png)
 <use images/results_sgd_shuffle.png>
 Package pdftex.def Info: images/results_sgd_shuffle.png  used on input line 148
 .
 (pdftex.def)             Requested size: 361.34666pt x 225.84166pt.
-[32]
-
-LaTeX Warning: Citation 'momentum' on page 33 undefined on input line 153.
-
-
-LaTeX Warning: Citation 'nag' on page 33 undefined on input line 153.
-
-<images/results_mom_shuffle.png, id=152, 803.0pt x 501.875pt>
+ [31]
+<images/results_mom_shuffle.png, id=149, 803.0pt x 501.875pt>
 File: images/results_mom_shuffle.png Graphic file (type png)
 <use images/results_mom_shuffle.png>
 Package pdftex.def Info: images/results_mom_shuffle.png  used on input line 158
@@ -1259,7 +1165,7 @@ Overfull \hbox (16.83638pt too wide) in paragraph at lines 158--159
  [][] 
  []
 
-<images/results_nag_shuffle.png, id=153, 803.0pt x 501.875pt>
+<images/results_nag_shuffle.png, id=150, 803.0pt x 501.875pt>
 File: images/results_nag_shuffle.png Graphic file (type png)
 <use images/results_nag_shuffle.png>
 Package pdftex.def Info: images/results_nag_shuffle.png  used on input line 165
@@ -1273,24 +1179,18 @@ Overfull \hbox (16.83638pt too wide) in paragraph at lines 165--166
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-
-LaTeX Warning: Citation 'adagrad' on page 33 undefined on input line 171.
-
-<images/results_adagrad_shuffle.png, id=154, 803.0pt x 501.875pt>
+<images/results_adagrad_shuffle.png, id=151, 803.0pt x 501.875pt>
 File: images/results_adagrad_shuffle.png Graphic file (type png)
 <use images/results_adagrad_shuffle.png>
 Package pdftex.def Info: images/results_adagrad_shuffle.png  used on input line
  175.
 (pdftex.def)             Requested size: 361.34666pt x 225.84166pt.
-[33 <./images/results_sgd_shuffle.png>]
+[32 <./images/results_sgd_shuffle.png>]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-
-LaTeX Warning: Citation 'adadelta' on page 34 undefined on input line 180.
-
-[34 <./images/results_mom_shuffle.png> <./images/results_nag_shuffle.png>]
-<images/results_adam_shuffle.png, id=164, 803.0pt x 501.875pt>
+[33 <./images/results_mom_shuffle.png> <./images/results_nag_shuffle.png>]
+<images/results_adam_shuffle.png, id=161, 803.0pt x 501.875pt>
 File: images/results_adam_shuffle.png Graphic file (type png)
 <use images/results_adam_shuffle.png>
 Package pdftex.def Info: images/results_adam_shuffle.png  used on input line 19
@@ -1300,46 +1200,30 @@ Package pdftex.def Info: images/results_adam_shuffle.png  used on input line 19
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[35 <./images/results_adagrad_shuffle.png>] [36 <./images/results_adam_shuffle.
+[34 <./images/results_adagrad_shuffle.png>] [35 <./images/results_adam_shuffle.
 png>]
 \openout2 = `chapters/discussion.aux'.
 
  (./chapters/discussion.tex
 chapter 5.
-[37
+[36
 
 
 
 
-]
-
-LaTeX Warning: Citation 'Mikolov' on page 38 undefined on input line 16.
-
-
-LaTeX Warning: Citation 'gensim' on page 38 undefined on input line 16.
-
-
-LaTeX Warning: Citation 'intel' on page 38 undefined on input line 22.
-
-[38] [39] [40]
-<images/gensim_vs_adam.png, id=186, 803.0pt x 501.875pt>
+] [37] [38] [39]
+<images/gensim_vs_adam.png, id=183, 803.0pt x 501.875pt>
 File: images/gensim_vs_adam.png Graphic file (type png)
 <use images/gensim_vs_adam.png>
 Package pdftex.def Info: images/gensim_vs_adam.png  used on input line 60.
 (pdftex.def)             Requested size: 361.34666pt x 225.84166pt.
- [41 <./images/gensim_vs_adam.png>]
-
-LaTeX Warning: Citation 'mikolov' on page 42 undefined on input line 74.
-
-
-LaTeX Warning: Citation 'fb' on page 42 undefined on input line 82.
-
-[42]) [43]
+ [40 <./images/gensim_vs_adam.png>] [41]) [42]
 \openout2 = `chapters/conclusion.aux'.
 
- (./chapters/conclusion.tex
+
+(./chapters/conclusion.tex
 chapter 6.
-) [44
+) [43
 
 
 
@@ -1352,7 +1236,7 @@ File: omlcmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <12> not available
 (Font)              Font shape `OML/cmm/m/it' tried instead on input line 29.
- [45
+ [44
 
 
 
@@ -1379,14 +1263,14 @@ Overfull \hbox (87.66812pt too wide) in paragraph at lines 47--48
 [][][][][][][][][][][][][][][][][][] 
  []
 
-[46]
+[45]
 chapter B.
-[47
+[46
 
 
 ]
 chapter C.
-[48
+[47
 
 
 ]
@@ -1397,35 +1281,54 @@ Overfull \hbox (9.541pt too wide) in paragraph at lines 66--68
 im.utils.RULE[]DISCARD,
  []
 
-[49
+[48
 
 
-]) [50]
+]) [49]
+chapter without number
 
-LaTeX Warning: Empty bibliography on input line 144.
+Overfull \hbox (26.88382pt too wide) in paragraph at lines 145--145
+[]\OT1/cmr/m/n/12 Priya Goyal, Pi-otr Doll^^Sar, Ross B. Gir-shick, Pieter No-o
+rd-huis, Lukasz Wesolowski,
+ []
 
-(./thesis.aux (./includes/BA-titlepage.aux) (./includes/abstract.aux)
+
+Overfull \hbox (18.1134pt too wide) in paragraph at lines 145--145
+\OT1/cmr/m/n/12 Large Mini-batch SGD: Train-ing Im-a-geNet in 1 Hour". In: \OT1
+/cmr/m/it/12 CoRR \OT1/cmr/m/n/12 abs/1706.02677
+ []
+
+
+Overfull \hbox (34.21617pt too wide) in paragraph at lines 145--145
+\OT1/cmr/m/n/12 ma-tion of word rep-re-sen-ta-tions in vec-tor space". In: \OT1
+/cmr/m/it/12 arXiv preprint arXiv:1301.3781
+ []
+
+[50
+
+
+
+
+]
+Overfull \hbox (3.71585pt too wide) in paragraph at lines 145--145
+[]\OT1/cmr/m/n/12 Bartunov Sergey, Kon-drashkin Dmitry, Os-okin An-ton, and P. 
+Vetrov Dmitry.
+ []
+
+[51] (./thesis.aux (./includes/BA-titlepage.aux) (./includes/abstract.aux)
 (./chapters/introduction.aux) (./chapters/background.aux)
 (./chapters/methods.aux) (./chapters/results.aux) (./chapters/discussion.aux)
 (./chapters/conclusion.aux))
-
-LaTeX Warning: There were undefined references.
-
-
-Package biblatex Warning: Please (re)run Biber on the file:
-(biblatex)                thesis
-(biblatex)                and rerun LaTeX afterwards.
-
 Package logreq Info: Writing requests to 'thesis.run.xml'.
 \openout1 = `thesis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 16989 strings out of 492616
- 321176 string characters out of 6135177
- 911740 words of memory out of 5000000
- 20651 multiletter control sequences out of 15000+600000
- 14302 words of font info for 51 fonts, out of 8000000 for 9000
+ 17067 strings out of 492616
+ 323313 string characters out of 6135177
+ 912336 words of memory out of 5000000
+ 20727 multiletter control sequences out of 15000+600000
+ 14603 words of font info for 52 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  53i,19n,76p,9085b,1902s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/
@@ -1446,10 +1349,10 @@ hare/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist
 /fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texmf-dist/fonts/type1/p
 ublic/amsfonts/cm/cmtt12.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super
 /sfrm1200.pfb>
-Output written on thesis.pdf (56 pages, 702006 bytes).
+Output written on thesis.pdf (57 pages, 710451 bytes).
 PDF statistics:
- 287 PDF objects out of 1000 (max. 8388607)
- 188 compressed objects within 2 object streams
+ 290 PDF objects out of 1000 (max. 8388607)
+ 190 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  56 words of extra memory for PDF output out of 10000 (max. 10000000)
 
