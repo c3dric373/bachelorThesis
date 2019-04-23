@@ -9,24 +9,13 @@ For our implementation, we chose the open source library PyTorch.\footnote{pytor
 \section{Implementation}
 This section will give an overview of our implementation. First, it will give a broad overview of the implementation idea and process. Then it will go into detail, explaining the forward process of our model and the construction of our dataset, by the use of the \texttt{Dataset} class. 
 \subsection{Batched SkipGramModel}\label{ssec:b_SGM}
-As we implemented the SGNS in python, computation time was slow. We, therefore, altered the original implementation to get a faster computation, while taking the risk to have slightly less good quality. Our idea was, to compute the loss for multiple words and context pairs at the same time. Therefore some overwriting may happen at the backpropagation. The exact process will be described in the following paragraph. 
+As we implemented the SGNS in python, computation time was slow. We, therefore, altered the original implementation to get a faster computation, while taking the risk to have slightly less good quality. Our idea was to compute the loss for multiple words and context pairs at the same time. Therefore some overwriting may happen at the backpropagation. The exact process will be described in the following paragraph. 
 \subsubsection{Forwarding}
+As this represents the challenging part of our Implementation we will explain the forwarding method step by step. At each time step we will illustrate our words to make it more clearer. 
 \textit{Input:}\\
-The forwarding method will accepts two vectors $v$ and $c$, and a matrix $A$ as an input. The first vector represents all the center words in a batch, the second one the context words. The Matrix represents the negative samples. The two vectors need to have the same length, defined as $n$. Our training batch $X$ can be seen as in the following way:  $X = \{(v_i, c_i)\|\i \in \{1, ..., n\}, n = |v| \}$. Where $(v_i,c_i)$ is a context pair. The matrix must be of dimension $n \times k$, with $k$, being the number of negative samples per pair. This means the $i^{th}$ row will store the negative samples for the $i^{th}$ word context pair.\\
-\textit{Concatenation of samples:}\\
-First, we will concatenate the vetor $c$ and our Matrix $A$. This will result in a Matrix $\tilde{A}$.\\
-\textit{Embeddings:}\\
- Know we need to get our Embeddings. Therefore we create a Matrix $E_v$ of dimensionality $n \times d$ where $d$ is the dimension of our word embedding. Ev will store the word embedding of the $i^{th}$ word from our input vector $v$ in it's $i^{th}$ row. We will do the same for the our Matrix $\tilde{A}$. This will result in a $n \times k+1 \times d$ Array $E_v$. \\
- \textit{Batch multiplication and negation of samples:}\\ 
- To compute the dot product of each word vector with its pair and the negative samples, exactly as done as in the original loss function of Mikolov et al. shown in Equation \ref{eq:obj_neg_samples}. We will need some definitions: let $A_j$ be the $j^th$ row of the matrix A, let $E_c(i,j)$ be the $d$ dimensional embedding of the word stored in $\tilde{A}(i,j)$. To compute the dot product we will do a so-called batch multiplication\footnote{Documentationo of bmm can be found https://pytorch.org/docs/stable/torch.html\#torch.bmm} which will result in a matrix $S$ where $S(i,j) = E_c(i,j) \cdot A_j$. This will result in a $n\times k+1$ Matrix $S$. Now we only have to negate the last $k$ rows with minus one. The sum of each row represents the loss computed in Equation \ref{eq:obj_neg_samples}, for each word context pair.
-%since computation time is too long 
-  But this is not what we are wishing to do as the computation time would be too long, therefore we construct our own loss function. \\
-\textit{Loss function:}\\
-%by summing the resulting 
-We sum the resulting matrix and multiply it with $-1$  hence we get a loss for our entire batch. As some words may appear more then once in the batch this will more be an average of it then as with Mikolov et al the exact update per pair. \\
-% think about putting it above. 
-The process can be best understood with an example, let our training batch be:\\ $X = {(v_1,c_1),(v_2,c_2),(v_3,c_3)}$
-Input:\\
+The forwarding method will accepts two vectors $v$ and $c$, and a matrix $A$ as an input. The first vector represents all the center words in a batch, the second one the context words. The Matrix represents the negative samples. The two vectors are of the same length, defined as $n$. Our training batch $X$ can be seen as in the following way:  $X = \{(v_i, c_i)\|\i \in \{1, ..., n\}, n = |v| \}$. Where $(v_i,c_i)$ is a context pair. The matrix must be of dimension $n \times k$, with $k$ being the number of negative samples per pair. This means the $i^{th}$ row will store the negative samples for the $i^{th}$ word context pair.\\
+The input can be illustrated as follows: \\
+
  $v = \begin{bmatrix}
 v_1 & v_2 & v_3
 \end{bmatrix}, c = \begin{bmatrix}
@@ -39,37 +28,49 @@ k_{1,2} & k_{2,2} & k_{3,2}\\
 k_{1,3} & k_{2,3} & k_{3,3}\\
 \end{bmatrix}$\\
 
- We then concatenate $c$ and $A$, 
-resulting in: \\
+\textit{Concatenation of samples:}\\
+First, we will concatenate the vector $c$ and the Matrix $A$. This will result in a Matrix $\tilde{A}$, with:\\
 $\tilde{A} = \begin{bmatrix}
 c_1 & k_{1,1} & k_{2,1} & k_{3,1}\\
 c_2 & k_{1,2} & k_{2,2} & k_{3,2}\\
 c_3 & k_{1,3} & k_{2,3}& k_{3,3}\\
-\end{bmatrix}$
+\end{bmatrix}$\\
 
-Embeddings:\\
-$E_v = \begin{bmatrix}
+\textit{Embeddings:}\\
+ Know we need to get our Embeddings. Therefore we create a Matrix $E_v$ of dimensionality $n \times d$ where $d$ is the dimension of our word embedding. $E_v$ will store the word embedding of the $i^{th}$ word from our input vector $v$ in it's $i^{th}$ row. We will do the same for the our Matrix $\tilde{A}$. This will result in a $n \times k+1 \times d$ Array $E_c$. \\
+ $E_v = \begin{bmatrix}
 \tilde{v_1}_1 & \ldots & \tilde{v_1}_d\\
 \tilde{v_2}_1 & \ldots & \tilde{v_2}_d\\
 \tilde{v_3}_1 & \ldots & \tilde{v_3}_d\\
 \end{bmatrix}
 $, where $\tilde{v_i} = \begin{bmatrix}
-\tilde{v_i}_1 & \ldots & \tilde{v_i}_d \end{bmatrix}$ is the embedding of $v_i$.  \\$E_c = \begin{bmatrix}
+\tilde{v_i}_1 & \ldots & \tilde{v_i}_d \end{bmatrix}$ is the embedding of $v_i$.  \\
+
+$E_c = \begin{bmatrix}
 \tilde{c_1 }& \tilde{k_{1,1}} & \tilde{k_{2,1}} \\
 \tilde{c_2 }& \tilde{k_{1,2}}& \tilde{k_{2,2}} \\
 \tilde{c_3 }&\tilde{ k_{1,3} }& \tilde{k_{2,3}}\\
 \end{bmatrix}$,
 where each entry of the matrix is a vector of dimension $d$\\
 
-Batch multiplication and negation of samples:\\
-$S = \begin{bmatrix}
+ \textit{Batch multiplication and negation of samples:}\\ 
+ To compute the dot product of each word vector with its pair and the negative samples, exactly as done as in the original loss function of Mikolov et al. shown in Equation \ref{eq:obj_neg_samples}. We will need some definitions: let $A_j$ be the $j^th$ row of the matrix A, let $E_c(i,j)$ be the $d$ dimensional embedding of the word stored in $\tilde{A}(i,j)$. To compute the dot product we will do a so-called batch multiplication\footnote{Documentation of the batch multiplication  can be found at https://pytorch.org/docs/stable/torch.html\#torch.bmm} which will result in a matrix $S$ where $S(i,j) = E_c(i,j) \cdot A_j$. This will result in a $n\times k+1$ Matrix $S$. Now we only have to negate the last $k$ rows with minus one. The sum of each row represents the loss computed in Equation \ref{eq:obj_neg_samples}, for each word context pair.
+%since computation time is too long 
+  But this is not what we are wishing to do as the computation time would be too long, therefore we construct our own loss function. \\
+  $S = \begin{bmatrix}
 \tilde{v_1} \cdot  \tilde{c_1} & -\tilde{v_1} \cdot \tilde{k_{1,1}} & -\tilde{v_1} \cdot  \tilde{k_{2,1}}& -\tilde{v_1} \cdot  \tilde{k_{3,1}}\\
 \tilde{v_2} \cdot \tilde{c_2} & -\tilde{v_2} \cdot \tilde{k_{1,2}} & -\tilde{v_2} \cdot \tilde{k_{2,2}} & -\tilde{v_2} \cdot \tilde{k_{3,2}}\\
 \tilde{v_3} \cdot \tilde{c_3} &-\tilde{v_3} \cdot c_3  \tilde{k_{1,3}} & -\tilde{v_3} \cdot c_3 \tilde{k_{2,3}}&-\tilde{v_3} \cdot \tilde{k_{3,3}}\\
 \end{bmatrix}$\\
 
-Loss computation: \\
+\textit{Loss function:}\\
+%by summing the resulting 
+We sum the resulting matrix and multiply it with $-1$  hence we get a loss for our entire batch. As some words may appear more then once in the batch this will more be an average of it then as with Mikolov et al the exact update per pair. \\
  L = $- \sum_{(i,j) \in k \times n} S(i,j) $
+
+% think about putting it above. 
+The process can be best understood with an example, let our training batch be:\\ $X = {(v_1,c_1),(v_2,c_2),(v_3,c_3)}$
+
  
 As we now have a way to compute our loss, we need to access the context-pairs, therefore we also had to create our own way of doing it. We will explain the process in the next paragraph.
 
