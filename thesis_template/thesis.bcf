@@ -2028,7 +2028,7 @@
     <bcf:citekey order="33">contextWithTensor</bcf:citekey>
     <bcf:citekey order="34">contextWithTensor</bcf:citekey>
     <bcf:citekey order="35">adagrad</bcf:citekey>
-    <bcf:citekey order="36">Glove</bcf:citekey>
+    <bcf:citekey order="36">glove</bcf:citekey>
     <bcf:citekey order="37">adadelta</bcf:citekey>
     <bcf:citekey order="38">mikolov</bcf:citekey>
     <bcf:citekey order="39">gensim</bcf:citekey>
