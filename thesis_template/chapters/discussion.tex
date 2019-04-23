@@ -3,19 +3,23 @@
 
 %Discuss the results. What is the outcome of your experimetns?
 
-This section shortly discusses our results and then extensively compares our work to the existing literature while trying to explain some of the differences. It will follow a section describing the limitations and possible extensions of our work. This chapter is concluded by the problems we encountered during the implementation so others can avoid them in the future.
+This section shortly discusses the empirical results and then extensively compares the findings of this work to the existing literature while trying to explain some of the differences.
+
+
+
+ It is followed by a section describing the limitations and possible extensions of this work. This chapter is concluded by the problems we encountered during the implementation so others can avoid them in the future.
 
 \section{Our work}
 This section discusses our findings, first we will analyze how input shuffling could influence the learning rate and conclude with the discussion of unexpected results.
 
 \subsection{Shuffling and learning rate with SGD}
-When the model used SGD as an optimizer it was able to use higher learning rates when input shuffling was used, as shown in figures \ref{fig:results_sgd}, \ref{fig:results_mom} and \ref{fig:results_nag} Therefore arises the questions why this phenomena happen, especially as it did not happen with advanced optimizers.  One possibility is the use of our batched version of the SGNS. In consequence, when the input is not shuffled the same word will often appear in one batch, hence the optimizer is presented with an average value of the gradient, which can be imprecise. This is counter-attacked by advanced optimizers as they have adaptaive learning rates, i.e a frequent appearing feature will have a low learning rate.  
+When the model used SGD as an optimizer it was able to use higher learning rates when input shuffling was used, as shown in figures \ref{fig:results_sgd}, \ref{fig:results_mom} and \ref{fig:results_nag} Therefore arises the questions why this phenomena happen, especially as it did not happen with advanced optimizers.  One possibility is the use of the batched version of the SGNS. In consequence, when the input is not shuffled the same word will often appear in one batch, hence the optimizer is presented with an average value of the gradient, which can be imprecise. This is counter-attacked by advanced optimizers as they have adaptaive learning rates, i.e a frequent appearing feature will have a low learning rate.  
 
 \subsection{Large differences with NAG and SGD when using shuffling}
 SGD and NAG both have very different values when using shuffling in comparison to unshuffled input, as shown in figures \ref{fig:results_sgd} and \ref{fig:results_nag}, plain SGD. We do not only attribute those resultst to input shuffling but partially also to a good random initialization guess. Due to a lack of time these results where not replicate more than once. 
 
 \section{Related Work}
-This section will compar our findings to related work, by comparing  the empirical results extensively to Gensim \cite{gensim}.  As explained in Section \ref{sec:gensim}, Gensim is optimized to have a very high throughput, this made it possible to achieve a lot of computations. Furthermore, Gensim provides access to the loss and the resulting word embeddings, which facilitated the comparison process. 
+This section will compare our findings to related work, by comparing  the empirical results extensively to Gensim \cite{gensim}.  As explained in Section \ref{sec:gensim}, Gensim is optimized to have a very high throughput, this made it possible to achieve a lot of computations. Furthermore, Gensim provides access to the loss and the resulting word embeddings, which facilitated the comparison process. 
 
 \iffalse
 \subsection{word2vec}
