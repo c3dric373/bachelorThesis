@@ -11,7 +11,8 @@ This section will give an overview of our implementation. First, it will give a 
 \subsection{Batched SkipGramModel}\label{ssec:b_SGM}
 As we implemented the SGNS in python, computation time was slow. We, therefore, altered the original implementation to get a faster computation, while taking the risk to have slightly less good quality. Our idea was to compute the loss for multiple words and context pairs at the same time. Therefore some overwriting may happen at the backpropagation. The exact process will be described in the following paragraph. 
 \subsubsection{Forwarding}
-As this represents the challenging part of our Implementation we will explain the forwarding method step by step. At each time step we will illustrate our words to make it more clearer. 
+As this represents the challenging part of our Implementation we will explain the forwarding method step by step. At each time step we will illustrate our words to make it more clearer.\\
+Let $X = {(v_1,c_1),(v_2,c_2),(v_3,c_3)}$, be the training batch, where $(v_i,c_i)$ is a training sample constituted by a word and on of its context words. 
 \textit{Input:}\\
 The forwarding method will accepts two vectors $v$ and $c$, and a matrix $A$ as an input. The first vector represents all the center words in a batch, the second one the context words. The Matrix represents the negative samples. The two vectors are of the same length, defined as $n$. Our training batch $X$ can be seen as in the following way:  $X = \{(v_i, c_i)\|\i \in \{1, ..., n\}, n = |v| \}$. Where $(v_i,c_i)$ is a context pair. The matrix must be of dimension $n \times k$, with $k$ being the number of negative samples per pair. This means the $i^{th}$ row will store the negative samples for the $i^{th}$ word context pair.\\
 The input can be illustrated as follows: \\
@@ -46,6 +47,7 @@ c_3 & k_{1,3} & k_{2,3}& k_{3,3}\\
 $, where $\tilde{v_i} = \begin{bmatrix}
 \tilde{v_i}_1 & \ldots & \tilde{v_i}_d \end{bmatrix}$ is the embedding of $v_i$.  \\
 
+
 $E_c = \begin{bmatrix}
 \tilde{c_1 }& \tilde{k_{1,1}} & \tilde{k_{2,1}} \\
 \tilde{c_2 }& \tilde{k_{1,2}}& \tilde{k_{2,2}} \\
@@ -64,20 +66,14 @@ where each entry of the matrix is a vector of dimension $d$\\
 \end{bmatrix}$\\
 
 \textit{Loss function:}\\
-%by summing the resulting 
-We sum the resulting matrix and multiply it with $-1$  hence we get a loss for our entire batch. As some words may appear more then once in the batch this will more be an average of it then as with Mikolov et al the exact update per pair. \\
+By summing the resulting matrix and multiplying it with $-1$ (to make the problem a minimizing problem) we get a loss for our entire batch. As some words may appear more then once in the batch this will more be an average of it then as with Mikolov et al the exact update per pair. \\
  L = $- \sum_{(i,j) \in k \times n} S(i,j) $
-
-% think about putting it above. 
-The process can be best understood with an example, let our training batch be:\\ $X = {(v_1,c_1),(v_2,c_2),(v_3,c_3)}$
 
  
 As we now have a way to compute our loss, we need to access the context-pairs, therefore we also had to create our own way of doing it. We will explain the process in the next paragraph.
 
 \subsection{Creating the context pairs}
-We needed to provide a way for the \texttt{dataloader} to access each word context pair. The straight forward way would be to go  over the whole dataset once and create a list that stores all those pairs. The Problem with this approach is that it would not be possible to do so for a very large dataset. The amount of space  needed to store a list of all the possible pairs for a small
-%250k words 
-dataset,(text8 dataset, more on the dataset in Section \ref{sec:dataset}) is roughly 4GB.  As some used datasets are 100x bigger in practice, this is not a suitable solution. Therefore we propose a way to compute the $i^{th}$ word-context pair of the dataset, by only storing the dataset in the RAM. Here we had two tasks, compute the number of possible pairs in our dataset, and given an index $i$ return the according pair. These task were done in the methods \texttt{\_\_len\_\_} and \texttt{\_\_getitem\_\_}.
+We need to provide a way for the \texttt{dataloader} to access each word context pair. The straight forward way would be to go  over the whole dataset once and create a list that stores all those pairs. This approach is not suitable for very large datasets. The amount of RAM  needed to store a list of all the possible pairs for a small dataset (~250k words, more on the dataset in Section \ref{sec:dataset}) is roughly 4GB.  As some used datasets are 100x bigger in practice, this is not a suitable solution. Therefore we propose a way to compute the $i^{th}$ word-context pair of the dataset, by only storing the dataset in the RAM. Here we had two tasks, compute the number of possible pairs in our dataset, and given an index $i$ return the according pair. These task were done in the methods \texttt{\_\_len\_\_} and \texttt{\_\_getitem\_\_}.
 
 \subsubsection{Number of pairs in the dataset}
 For the first task, calculating the number of pairs in the dataset, we knew that every sentence except the last one had a length of 20 words (more on this in Section \ref{sec:dataset}). As the number was fixed we only needed to compute the number of pairs once in a sentence of length 20. This was done in the following way. We will distinguish two types of words in a sentence: first center words, those have the maximum amount of possible context words, and the border words that do not have this property because they are too close to the start or end of the sentence.
