@@ -104,7 +104,7 @@ Know we can simply add the number of pairs in our last sentence to the previousl
 \end{algorithm}
 
  \subsubsection{Accessing each pair individually}
-We need to provide a way for the dataloader to access each pair individually, a pseudo code description can be found in \ref{alg1}. 
+The dataloader needs a way to access each pair individually, a pseudo code description can be found in \ref{alg1}. 
 Given an item index $idx$ we need to find the corresponding sentence. Because we know how many pairs  are in each sentence, except the last sentence, we only have to divide $idx$ by the number of pairs that can be built within one sentence (line 2). This division also holds for the last sentence, as it's the only one with a different number of words is positioned at the end of the dataset. Once this is done we have access to the sentence where our pair is located. (line3). We have to find the index of the pair within the sentence. We know the number of pairs in all sentence before our sentence (this also holds if our sentence is the last one), therefore we can subtract the number of pairs that are in all the sentences before the sentence from $idx$, and will get the index of our pair within it's sentence (line4). Once this is done we only have to iterate over all the possible pairs in our sentence, keep count and return when we find the correct pair (line 6-15).
 \begin{algorithm}
 \caption{Getting the context pair from the id}
