@@ -118,14 +118,10 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {6}Conclusion}{43}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Appendix \numberline {A}Code}{44}% 
+\contentsline {chapter}{Appendix \numberline {A}Gensim}{44}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {A.1}Gensim}{44}% 
+\contentsline {section}{\numberline {A.1}Code}{44}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Appendix \numberline {B}Math}{46}% 
+\contentsline {section}{\numberline {A.2}Parameters}{45}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Appendix \numberline {C}Parameters}{47}% 
-\defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Appendix \numberline {D}Dataset}{48}% 
-\defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\nonumberline Bibliography}{50}% 
+\contentsline {chapter}{\nonumberline Bibliography}{47}% 
