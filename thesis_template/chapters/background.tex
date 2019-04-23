@@ -132,7 +132,7 @@ The goal of learning in machine learning is to minimize an objective function  $
 \subsection{Gradient Descent}
 The idea in gradient descent optimization is to follow the path of steepest descent in the shape of the objective function. To get information about the shape of the objective function, one has to compute the gradients of all our parameters   $\nabla J(\theta_{t})$, where $J$ is our objective function, and $\theta$ all of our parameters, $t$ denotes the time step at which the parameters are taken. We will define $g_{t}$ as the gradients of our parameters $\theta_t$ according to our objective function $J$. To follow the path of steepest descent we will have to subtract a portion of this term from our parameter. The magnitude of the portion is often referred to as the learning rate, denoted as $\eta$. For illustration, this means that the gradients will give the direction of the optimization step, whereas the learning rate will give the amplitude of that step. An update at time step $t$ will result in the following equation:
 \begin{equation}
-\theta_t = \theta_{t-1} - \eta \nabla g_{t-1}
+\theta_t = \theta_{t-1} - \eta g_{t-1}
 \end{equation}
 Where all the variables can be interpreted as above. This will also be the case for further Equations. 
 There are three main variations of Gradient Descent, they differ at the moment they chose to update the parameters.
@@ -162,9 +162,9 @@ It does so by adding a percentage of the last update vector to the current updat
 \begin{equation}
 v_t = \gamma v_{t-1} + \eta \nabla J (\theta)
 \end{equation}\label{eq:momentum}
-Where $v_t$ and $v_{t-1}$, respectively are the current and the last update vector, and $\gamma$ a hyper parameter, usually set to $0.9$, that defines the importance of the momentum term. We then update our weights as usual: $\theta = \theta - v_t$ 
+Where $v_t$ and $v_{t-1}$, respectively are the current and the last update vector, and $\gamma$ a hyper parameter, usually set to $0.9$, that defines the importance of the momentum term. We then update our weights as usual: $\theta_t = \theta_{t-1} - v_t$ 
 \subsection{Nesterov}
-Momentum can be a powerful tool, but sometimes be its own enemy. With Momentum, the learning algorithm often overshoots and blows by the  Optima. Hence it will never converge. This problem was addressed by Nesterov. The idea behind his algorithm is to incorporate the momentum in the computation of our gradients. We will subtract the momentum vector, or just a fraction,  from our parameters before computing the gradients. Therefore we will compute the gradients of the position where we would be with momentum, which will allow us to make a step in a better direction. The computation of the update vector will look the following way:
+Momentum can be a powerful tool, but sometimes be its own enemy. With Momentum, the learning algorithm often overshoots and blows by the  Optima. Hence it will never converge. This problem was addressed by Yurii Nesterov \cite{nesterov}. The idea behind his algorithm is to incorporate the momentum in the computation of our gradients. We will subtract the previous update vector, or just a fraction,  from our parameters before computing the gradients. Therefore we will compute the gradients of the position where we would be with momentum, which will allow us to make a step in a better direction. The computation of the update vector will look the following way:
 \begin{equation}
 v_t = \gamma v_{t-1} + \eta \nabla J (\theta -  \gamma v_{t-1})
 \end{equation}
@@ -172,18 +172,18 @@ v_t = \gamma v_{t-1} + \eta \nabla J (\theta -  \gamma v_{t-1})
 Where the parameters as the same used with momentum in equation \ref{eq:momentum}. SGD with momentum and Nesterov accelerated gradient (NAG) has shown tremendous results in RNN's. But some of the earlier mentioned problems still remain.  NAG, still treats every parameter the same way. Therefore we need a more complex optimization algorithm, that takes the frequency of a feature into account. Adagrad does just that. 
 
 \subsection{Adagrad}\label{ssec:adagrad}
-Adagrad first introduced by \cite{adagrad} is an optimizer that tries to apply different learning rates to different parameters, according to their frequency. The idea is to give very frequent features a small learning rate, and very sparse features a high learning rate. This can be very important for our task of word embeddings, as rare words in the corpus are more important than very frequent ones. As a matter of fact, Pennigton et al. used this algorithm for their training of Glove \cite{glove}, another word embedding system. \\
+Adagrad \cite{adagrad} is an optimizer that tries to apply different learning rates to different parameters, according to their frequency. The idea is to give very frequent features a small learning rate, and very sparse features a high learning rate. This can be very important for our task of word embeddings, as rare words in the corpus are more important than very frequent ones. As a matter of fact, Pennigton et al. used this algorithm for their training of Glove  \cite{glove}, another word embedding system. \\
 Each parameter $\theta_i$, at time step $t$ will have it's own learning rate $\eta_{t,i}$
  \begin{equation}
 \eta_{t,i} = \frac{\eta_0}{\sqrt{\sum^{t}_{i=1} g^{2}_{t,i}} \epsilon}
 \end{equation}
-where$g_{t,i} = \nabla J(\theta_{t,i})$  is the partial derivative of the loss function with respect to the parameter $\theta_i$ at time step $t$, and $\epsilon$ is a place holder, so that one does not divide by $0$, at the beginning of the computation.\\ We see that each parameter $\theta_{i}$ has it's one learning rate. For a very frequent feature the sum of the previous gradients will be very high, hence the learning rate low. This is how Adagrad achieves a different learning rate for each feature. 
-Therefore we have $ \theta_{t+1,i} = \theta_{t_i} - \eta_{t,i} g_{t,i} $, and we can now construct our global parameter update as follows: 
+where$g_{t,i} = \nabla J(\theta_{t,i})$  is the partial derivative of the loss function with respect to the parameter $\theta_i$ at time step $t$, and $\epsilon$ is a smoothing factor, so that one does not divide by $0$, at the beginning of the computation and $\eta_0$ is the global learning rate.\\ We see that each parameter $\theta_{i}$ has it's one learning rate. For a very frequent feature the sum of the previous square gradients will be very high, hence the learning rate low. This is how Adagrad achieves a different learning rate for each feature. 
+Therefore we have $ \theta_{t,i} = \theta_{t-1,i} - \eta_{t-1,i} g_{t-1,i} $, and we can now construct our global parameter update as follows: 
 \begin{equation}
-\theta_{t+1,i} = \theta_{t_i}- \frac{\eta}{\sqrt{G_{t_{i,i}}} + \epsilon} g_{t,i}, 
+\theta_{t,i} = \theta_{t-1,i}- \frac{\eta}{\sqrt{G_{{t-1}_{i,i}}} + \epsilon} g_{t-1,i}, 
 \end{equation} 
 
-with  $G_{t_{i,i}}$ being the diagonal Matrix of the sum of the squares of the graditents ($g_{t,i} $). 
+with  $G_{t_{i,i}}$ being the diagonal Matrix of the sum of the squares of the graditents ($g_{t,i}^2 $). 
 There lies one weakness in this approach: the sum of the squares of the previous gradients grows constantly. This means that after a certain number of epochs the learning rate will be insufficient, to update the model. This issue was addressed by the Adadelta algorithm, that will be covered in the next session. 
 
 \subsection{Adadelta}\label{ssec:adadelta}
