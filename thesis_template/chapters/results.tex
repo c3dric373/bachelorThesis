@@ -10,12 +10,12 @@ In this implementation we mainly used the text8 \footnote{http://mattmahoney.net
 We needed a second larger dataset to confirm our results.  We, therefore, chose the enwik9 dataset\footnote{http://mattmahoney.net/dc/enwik9.zip}.This dataset needed more preprocessing as it's plain HTML. We, therefore, used a preprocessing script.\footnote{http://mattmahoney.net/dc/textdata.html, Appendix A}. We also split this dataset into sentences of length 20 and applied subsampling. The next section will give an explanation on the sampling process. A comparison of the two used datasets can be found in Table \ref{table:t8_e9_comp}.
 \begin{table}[]
 \centering
-\begin{tabular}{|l|l|l|}
+\begin{tabular}{|l|l|l|l|l|}
 \hline
-Length of Sentences            & 20       & 1 Document \\ \hline
-Training Time for one batch  & 10min    & 18min      \\ \hline
-Convergence Time & 3 epochs & 3 epochs   \\ \hline
-Word Similarity  & 0.66     & 0.66       \\ \hline
+Length of Sentences        &  10  & 20   & 40    & 1 Document \\ \hline
+Training Time for one batch  &8min & 10min  &  11min  & 18min      \\ \hline
+Convergence Time &4 epochs & 3 epochs & 3 epochs & 3 epochs   \\ \hline
+Word Similarity& 0.65  & 0.66 & 0.66    & 0.66       \\ \hline
 \end{tabular}
 \caption{Training and Convergence time according to choice of the length of sentences in text8 dataset}
     \label{table:with_20}
