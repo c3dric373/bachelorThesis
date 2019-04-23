@@ -213,17 +213,17 @@ As at time step $t$ $RMS[\Delta \theta]_{t} $ is unknown, we approximate it with
  \theta_{t+1} = \theta_t - \dfrac{RMS[\Delta \theta]_{t-1}}{RMS[g]_{t}} g_{t}
 \end{equation}
 \subsection{Adam}
-Adaptive Moment Estimation (Adam), is a more recent optimization algorithm. It also computes adaptive learning rates. In comparison to Adagrad and Adadelta, it does not only take into considaration the decaying average of the previous squared gradients but also the decay of the past gradients. 
+Adaptive Moment Estimation (Adam) \cite{adam}, is a more recent optimization algorithm. It also computes adaptive learning rates. In comparison to Adagrad and Adadelta, it does not only take into considaration the decaying average of the previous squared gradients but also the decaying average of the past gradients. 
 Let's introduce : 
 \begin{equation}
 m_t = \beta_1 m_{t-1} + (1- \beta_1) g_t 
 \end{equation}
-as the decaying average of the previous gradients, and 
+as the decaying average of the previous gradients, with $\beta_1$ being a hyperparameter similar to $\gamma$ in the previous optimizers,  and 
 \begin{equation}
 v_t = \beta_2 v_{t-1} + (1- \beta_2) g^2_t 
 \end{equation}
- as the decaying average of the previous squared gradients. Where $\beta$ is a hyper parameter similar to $\gamma$ used in the previous optimizers. \\
-One problem arises when using this formula, $m_t$  and $tv_t$ are initialized as vectors of zero. Therefore they are biased towards zero. therofore et al. advised to use a bias corrected version:\\
+ as the decaying average of the previous squared gradients, with $\beta_2$ having the same role as $\beta_1$ \\
+One problem arises when using this formula, $m_t$  and $tv_t$ are initialized as vectors of zero. Therefore they are biased towards zero. Therefore a bias corrected version was introduced:\\
 \begin{equation}
 \tilde{m_t} = \frac{m_t}{1-\beta^t_1}
 \end{equation}
@@ -232,5 +232,6 @@ One problem arises when using this formula, $m_t$  and $tv_t$ are initialized as
 \end{equation}
 The general update is done exactly in the same way as in Adadelta:
 \begin{equation}
-\theta_{t+1} = \theta_t - \frac{\eta}{\tilde{v_t}+ \epsilon} \tilde{m_t}
+\theta_{t} = \theta_{t-1} - \frac{\eta}{\tilde{v_{-1}}+ \epsilon} \tilde{m_{t-1}}
 \end{equation}
+with $\epsilon$ as a smoothing factor and $\eta$ as the global learning rate.  This concludes our overview of gradient descent optimizers, and more generally our background chapter. In the next chapter the reader will be given an outline of our implementation of the Skip-Gram Model.
