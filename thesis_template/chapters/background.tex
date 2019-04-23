@@ -191,7 +191,7 @@ Adadelta \cite{adadelta} not only solves the constantly growing sum problem, but
 \begin{equation}
 E[g^2]_t = \gamma E[g^2]_{t-1} + (1 - \gamma) g^2_t
 \end{equation}
-where $\gamma$ is a hyperparameter similar to the one used in momentum, that decides how much the past is weighted in contrast to the current gradient. Since Adadelta is an extension of Adagrad the square root of $E[g^{2}]$ is needed which become the Root Mean Squared Error (RMS):
+where $\gamma$ is a hyperparameter similar to the one used in momentum, that decides how much the past is weighted in contrast to the current gradient. Since Adadelta is an extension of Adagrad the square root of $E[g^{2}]$ is needed which become the Root Mean Squared (RMS) Error:
 \begin{equation}
 RMS[g]_t = \sqrt{E[g^2]_t + \epsilon}
 \end{equation}
@@ -199,10 +199,10 @@ Which gives us the following update rule:
 \begin{equation}
 \theta_t = \theta_{t-1} - \frac{\eta}{RMS[g]_t}g_t
 \end{equation}
-Here we have two problems, first, the learning rate is still a hyperparameter. And the units do not match. This is a problem xyz wanted to address. That if the parameters would have units the update parameters would have the same parameters. 
+Here we have two problems, first, the learning rate is still a hyperparameter. And the units do not match. This is a problem Mathew Zeiler wanted to address. That if the parameters would have units the update parameters units would match. 
 Therefore they define the exponentially decaying average of squared parameter updates: 
 \begin{equation}
-E[\Delta \theta^2]_t = \gamma E[\Delta \theta^2]_{t-1} + (1 - \gamma) \Delta \theta^2_t
+E[\Delta \theta^2]_t = \gamma E[\Delta \theta^2]_{t-1} + (1 - \gamma) \Delta \theta^2_t \ \ \ \ \ \ \hfill \text{,where } \Delta \theta = - \frac{\eta}{RMS[g]_t}g_t
 \end{equation}
 As before we can know us the root mean squared error: 
 \begin{equation}
