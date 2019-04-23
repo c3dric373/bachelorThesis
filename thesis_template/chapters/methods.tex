@@ -1,25 +1,25 @@
 \chapter{Implementation}\label{chap:implementation}
 %Describe the method/software/tool/algorithm you have developed here
 
-In this work our goal is to optimize the Skip-Gram Model with negative sampling (SGNS), we did implemented a very slightly different version compared to the original w2vec implementation \cite{mikolov}.
+In this work our goal is to optimize the Skip-Gram Model with negative sampling (SGNS), we did implement a very slightly different version compared to the original w2vec implementation \cite{mikolov}.
 This chapter will illustrate our proceeding. First, it will give a short introduction to PyTorch, and then cover our implementation. The latter part explained the altered version of the SGNS, and its challenges.
 \section{PyTorch}
-The implementation was done with the open source library PyTorch.\footnote{https://pytorch.org/}. Through its simplicity of use it's one of the most used libraries for machine learning. One of the most important features is the calculation of gradients by Pytroch. All gradients are calculated online, therefore there is no need for us to implement the calculation of those gradients. The second important feature that was used, is the large variety of optimizes already implemented in PyTorch. They are proposed in the package \texttt{torch.optim}\footnote{https://pytorch.org/docs/stable/optim.html}. Two important features of PyTorch are the classes \texttt{Dataset}\footnote{\label{note_data}https://pytorch.org/docs/stable/data.html} and \texttt{Dataloader}\footnotemark[\ref{note_data}]. Both of these classes are meant to work closely together.   The \texttt{Dataset} interface has two functions to offer namely: "\texttt{\_\_len\_\_}" and "\texttt{\_\_getitem\_\_}". Those are then used by a data loader object, that will construct a batch based on those two functions. The loader object will facilitate the training process, as it facilitates the iteration over the dataset and the creation of batches. Furthermore, the data loader can shuffle the dataset before each epoch. 
+The implementation was done with the open source library PyTorch.\footnote{https://pytorch.org/}. Through its simplicity of use it's one of the most used libraries for machine learning. One of the most important features is the calculation of gradients by Pytroch. All gradients are calculated online, therefore there is no need for us to implement the calculation of those gradients. The second important feature that was used, is the large variety of optimizes already implemented in PyTorch. They are proposed in the package \texttt{torch.optim}\footnote{https://pytorch.org/docs/stable/optim.html}. Two important features of PyTorch are the classes \texttt{Dataset}\footnote{\label{note_data}https://pytorch.org/docs/stable/data.html} and \texttt{Dataloader}\footnotemark[\ref{note_data}]. Both of these classes are meant to work closely together. The \texttt{Dataset} interface has two functions to offer namely: "\texttt{\_\_len\_\_}" and "\texttt{\_\_getitem\_\_}". Those are then used by a data loader object, that will construct a batch based on those two functions. The loader object will facilitate the training process, as it facilitates the iteration over the dataset and the creation of batches. Furthermore, the data loader can shuffle the dataset before each epoch.
 
 \section{Batched SkipGramModel} \label{ssec:b_SGM}
-This section will give an overview of our implementation. First, it will give a broad overview of the implementation idea and process. Then it will go into detail, explaining the forward process of our model and the construction of our dataset, by the use of the \texttt{Dataset} class. The proposed implementation is a slighlty altered version of the original SGNS. The idea behind this altering, is to to compute the loss for multiple words and context pairs at the same time. The exact process will be described in the following paragraph. 
+This section will give an overview of our implementation. First, it will give a broad overview of the implementation idea and process. Then it will go into detail, explaining the forward process of our model and the construction of our dataset, by the use of the \texttt{Dataset} class. The proposed implementation is a slighlty altered version of the original SGNS. The idea behind this altering, is to compute the loss for multiple words and context pairs at the same time. The exact process will be described in the following paragraph.
 \subsection{Forwarding}
-As this represents the challenging part of our Implementation  the forwarding method is explained step by step. Each time step is illustrated to make the explanation clearer.\\
+As this represents the challenging part of our Implementation the forwarding method is explained step by step. Each time step is illustrated to make the explanation clearer.\\
 Let $X = {(v_1,c_1),(v_2,c_2),(v_3,c_3)}$, be the training batch, where $(v_i,c_i)$ is a training sample constituted by a word and on of its context words. \\
 \textit{Input:}\\
-The forwarding method will accepts two vectors $v$ and $c$, and a matrix $A$ as an input. The first vector represents all the center words in a batch, the second one the context words. The Matrix represents the negative samples. The two vectors are of the same length, defined as $n$. The matrix must be of dimension $n \times k$, with $k$ being the number of negative samples per pair. This means the $i^{th}$ row will store the negative samples for the $i^{th}$ word context pair.\\
+The forwarding method will accept two vectors $v$ and $c$, and a matrix $A$ as an input. The first vector represents all the center words in a batch, the second one the context words. The Matrix represents the negative samples. The two vectors are of the same length, defined as $n$. The matrix must be of dimension $n \times k$, with $k$ being the number of negative samples per pair. This means the $i^{th}$ row will store the negative samples for the $i^{th}$ word context pair.\\
 The input can be illustrated as follows: \\
- $v = \begin{bmatrix}
+$v = \begin{bmatrix}
 v_1 & v_2 & v_3
 \end{bmatrix}, c = \begin{bmatrix}
 c1\\
 c2\\
-c3\end{bmatrix}$ and $A = 
+c3\end{bmatrix}$ and $A =
 \begin{bmatrix}
 k_{1,1} & k_{2,1} & k_{3,1}\\
 k_{1,2} & k_{2,2} & k_{3,2}\\
@@ -27,7 +27,7 @@ k_{1,3} & k_{2,3} & k_{3,3}\\
 \end{bmatrix}$\\
 
 \textit{Concatenation of samples:}\\
-The concatenation of  the vector $c$ and the Matrix $A$ will result in a Matrix $\tilde{A}$, with:\\
+The concatenation of the vector $c$ and the Matrix $A$ will result in a Matrix $\tilde{A}$, with:\\
 $\tilde{A} = \begin{bmatrix}
 c_1 & k_{1,1} & k_{2,1} & k_{3,1}\\
 c_2 & k_{1,2} & k_{2,2} & k_{3,2}\\
@@ -35,15 +35,14 @@ c_3 & k_{1,3} & k_{2,3}& k_{3,3}\\
 \end{bmatrix}$\\
 
 \textit{Embeddings:}\\
-Know it's necessary to access the word embeddings. For this purpose a Matrix $E_v$ of dimensionality $n \times d$ where $d$ is the dimension of our word embedding is created. $E_v$ stores the word embedding of the $i^{th}$ word from our input vector $v$ in it's $i^{th}$ row. The same is done for the our Matrix $\tilde{A}$. This will result in a $n \times k+1 \times d$ Array $E_c$. \\
- $E_v = \begin{bmatrix}
+Now it's necessary to access the word embeddings. For this purpose a Matrix $E_v$ of dimensionality $n \times d$ where $d$ is the dimension of our word embedding is created. $E_v$ stores the word embedding of the $i^{th}$ word from our input vector $v$ in it's $i^{th}$ row. The same is done for the other Matrix $\tilde{A}$. This will result in a $n \times k+1 \times d$ Array $E_c$. \\
+$E_v = \begin{bmatrix}
 \tilde{v_1}_1 & \ldots & \tilde{v_1}_d\\
 \tilde{v_2}_1 & \ldots & \tilde{v_2}_d\\
 \tilde{v_3}_1 & \ldots & \tilde{v_3}_d\\
 \end{bmatrix}
 $, where $\tilde{v_i} = \begin{bmatrix}
-\tilde{v_i}_1 & \ldots & \tilde{v_i}_d \end{bmatrix}$ is the embedding of $v_i$.  \\
-
+\tilde{v_i}_1 & \ldots & \tilde{v_i}_d \end{bmatrix}$ is the embedding of $v_i$. \\
 
 $E_c = \begin{bmatrix}
 \tilde{c_1 }& \tilde{k_{1,1}} & \tilde{k_{2,1}} \\
@@ -52,33 +51,33 @@ $E_c = \begin{bmatrix}
 \end{bmatrix}$,
 where each entry of the matrix is a vector of dimension $d$\\
 
- \textit{Batch multiplication and negation of samples:}\\ 
- Now we need to compute the dot product of each word vector with its pair and the negative samples, exactly as done as in the original loss function of Mikolov et al. shown in Equation \ref{eq:obj_neg_samples}. For this task some definitions are necessary: let $A_j$ be the $j^th$ row of the matrix A, let $E_c(i,j)$ be the $d$ dimensional embedding of the word stored in $\tilde{A}(i,j)$. The dot product is computed with a do a so-called batch multiplication\footnote{Documentation of the batch multiplication  can be found at https://pytorch.org/docs/stable/torch.html\#torch.bmm} which will result in a matrix $S$ where $S(i,j) = E_c(i,j) \cdot A_j$. This will result in a $n\times k+1$ Matrix $S$. Now we only have to negate the last $k$ rows with minus one. The sum of each row represents the loss computed in Equation \ref{eq:obj_neg_samples}, for each word context pair.
- Since computation time is too long with this approach the loss function is altered\\
-  $S = \begin{bmatrix}
-\tilde{v_1} \cdot  \tilde{c_1} & -\tilde{v_1} \cdot \tilde{k_{1,1}} & -\tilde{v_1} \cdot  \tilde{k_{2,1}}& -\tilde{v_1} \cdot  \tilde{k_{3,1}}\\
+\textit{Batch multiplication and negation of samples:}\\
+Now we need to compute the dot product of each word vector with its pair and the negative samples, exactly as done as in the original loss function of Mikolov et al. shown in Equation \ref{eq:obj_neg_samples}. For this task some definitions are necessary: let $A_j$ be the $j^th$ row of the matrix A, let $E_c(i,j)$ be the $d$ dimensional embedding of the word stored in $\tilde{A}(i,j)$. The dot product is computed with a so-called batch multiplication\footnote{Documentation of the batch multiplication can be found at https://pytorch.org/docs/stable/torch.html\#torch.bmm} which will result in a matrix $S$ where $S(i,j) = E_c(i,j) \cdot A_j$. This will result in a $n\times k+1$ Matrix $S$. Now we only have to negate the last $k$ rows with minus one. The sum of each row represents the loss computed in Equation \ref{eq:obj_neg_samples}, for each word context pair.
+Since computation time is too long with this approach the loss function is altered\\
+$S = \begin{bmatrix}
+\tilde{v_1} \cdot \tilde{c_1} & -\tilde{v_1} \cdot \tilde{k_{1,1}} & -\tilde{v_1} \cdot \tilde{k_{2,1}}& -\tilde{v_1} \cdot \tilde{k_{3,1}}\\
 \tilde{v_2} \cdot \tilde{c_2} & -\tilde{v_2} \cdot \tilde{k_{1,2}} & -\tilde{v_2} \cdot \tilde{k_{2,2}} & -\tilde{v_2} \cdot \tilde{k_{3,2}}\\
-\tilde{v_3} \cdot \tilde{c_3} &-\tilde{v_3} \cdot c_3  \tilde{k_{1,3}} & -\tilde{v_3} \cdot c_3 \tilde{k_{2,3}}&-\tilde{v_3} \cdot \tilde{k_{3,3}}\\
+\tilde{v_3} \cdot \tilde{c_3} &-\tilde{v_3} \cdot c_3 \tilde{k_{1,3}} & -\tilde{v_3} \cdot c_3 \tilde{k_{2,3}}&-\tilde{v_3} \cdot \tilde{k_{3,3}}\\
 \end{bmatrix}$\\
 
 \textit{Loss function:}\\
-Summing the matrix $S$ and multiplying it with $-1$ (to make the problem a minimizing problem) results in the loss for our entire batch. As some words may appear more then once in the batch this will more be an average of it then as with Mikolov et al. \cite{mikolov2} the exact update per pair. \\
- L = $- \sum_{(i,j) \in k \times n} S(i,j) $\\
+Summing the matrix $S$ and multiplying it with $-1$ (to make the problem a minimizing problem) results in the loss for our entire batch. As some words may appear more than once in the batch this will more be an average of it than as with Mikolov et al. \cite{mikolov2} the exact update per pair. \\
+L = $- \sum_{(i,j) \in k \times n} S(i,j) $\\
 
-This algorithm provides a way to compute the loss, to make the implementation successfull, one still needs to access the context-pairs. The process of doing so is described in the next paragraph.
+This algorithm provides a way to compute the loss, to make the implementation successful, one still needs to access the context-pairs. The process of doing so is described in the next paragraph.
 
 \subsection{Creating the context pairs}
-We need to provide a way for the \texttt{dataloader} to access each word context pair. The straight forward way would be to go  over the whole dataset once and create a list that stores all those pairs. This approach is not suitable for very large datasets. The amount of RAM  needed to store a list of all the possible pairs for a small dataset (~250k words, more on the dataset in Section \ref{sec:dataset}) is roughly 4GB.  As some used datasets are 100x bigger in practice, this is not a suitable solution. Therefore we propose a way to compute the $i^{th}$ word-context pair of the dataset, by only storing the dataset in the RAM. Here we had two tasks, compute the number of possible pairs in our dataset, and given an index $i$ return the according pair. These task were done in the methods \texttt{\_\_len\_\_} and \texttt{\_\_getitem\_\_}.
+We need to provide a way for the \texttt{dataloader} to access each word context pair. The straight forward way would be to go over the whole dataset once and create a list that stores all those pairs. This approach is not suitable for very large datasets. The amount of RAM needed to store a list of all the possible pairs for a small dataset (~250k words, more on the dataset in Section \ref{sec:dataset}) is roughly 4GB. As some used datasets are 100x bigger in practice, this is not a suitable solution. Therefore, we propose a way to compute the $i^{th}$ word-context pair of the dataset, by only storing the dataset in the RAM. Here we had two tasks, compute the number of possible pairs in our dataset, and given an index $i$ return the according pair. These task were done in the methods \texttt{\_\_len\_\_} and \texttt{\_\_getitem\_\_}.
 
 \subsubsection{Number of pairs in the dataset}
 For the first task, calculating the number of pairs in the dataset, we knew that every sentence except the last one had a length of 20 words (more on this in Section \ref{sec:dataset}). As the number is fixed we only need to compute the number of pairs once in a sentence of length 20. This was done in the following way. We will distinguish two types of words in a sentence: first words that have the maximum amount of possible context words, and the border words that do not have this property because they are too close to the start or end of the sentence.
-We know that every center word has exactly 2 times the amount of the window size as context words. The border pairs can be computed by the following equation. 
+We know that every center word has exactly 2 times the amount of the window size as context words. The border pairs can be computed by the following equation.
 \begin{equation}
 2 * \sum_{i=0}^{window -1} window + i
 \end{equation}
-Finally, we have to compute the number of pairs in the last sentence. Here the challenge is to compute it if the sentence is shorter then twice the length of our window because then the equation described previously does not work. A pseudo-code description can be found in Algorithm \ref{alg2}. We will iterate over the length of the sentence and at each time step compute the number of context pairs the given word has. First, we check if the index is smaller than our window. If this is the case, this word does not have the maximum amount of context words, as it is to close to the begining of the sentence. Therefore we have to distinguish distinguish one special case, namely if our sentence is smaller than the position of the given word plus the window. If this is the case we add the length of our sentence -1 to the number of pairs (line 4). A short explanation: Instinctively one would first add the $j$ pairs that are left of our word, and then compute the number of pairs right of the word. Therefore, one would do $len\_last\_sen -1 -j$ because len\_last\_sen -1  is the index of the last word in our sentence. To get the number of words between the last and the current $j^{th}$ word one needs to subtract $j$. Therefore the number of pairs is $len\_last\_sen -1 -j + j = len\_last\_sen -1$.\\ Next we have to check if the word is to close to the end of the last sentence (line 7) to add the context pairs. Here we apply the same procedure as above, add the window amount context pairs from the left, we can do this because we know that $j \geq window$ from line 2. we also need to add the words right to the current word, therefore, we take the same difference as before: $len\_last\_sen -1 -j$.
+Finally, we have to compute the number of pairs in the last sentence. Here the challenge is to compute it if the sentence is shorter than twice the length of our window because then the equation described previously does not work. A pseudo-code description can be found in Algorithm \ref{alg2}. We will iterate over the length of the sentence and at each time step compute the number of context pairs the given word has. First, we check if the index is smaller than our window. If this is the case, this word does not have the maximum amount of context words, as it is to close to the begining of the sentence. Consequently, we have to distinguish one special case, namely if our sentence is smaller than the position of the given word plus the window. If this is the case we add the length of our sentence -1 to the number of pairs (line 4). A short explanation: Instinctively one would first add the $j$ pairs that are left of our word, and then compute the number of pairs right of the word. Therefore, one would do $len\_last\_sen -1 -j$ because len\_last\_sen -1 is the index of the last word in our sentence. To get the number of words between the last and the current $j^{th}$ word one needs to subtract $j$. Therefore, the number of pairs is $len\_last\_sen -1 -j + j = len\_last\_sen -1$.\\ Next we have to check if the word is to close to the end of the last sentence (line 7) to add the context pairs. Here we apply the same procedure as above, add the window amount context pairs from the left, we can do this because we know that $j \geq window$ from line 2. We also need to add the words right to the current word, therefore, we take the same difference as before: $len\_last\_sen -1 -j$.
 The final case is simply calculating the number of pairs per center word if there are any. \\
-Know we can simply add the number of pairs in our last sentence to the previously computed number, and return the number of pairs in our dataset.
+Now we can simply add the number of pairs in our last sentence to the previously computed number, and return the number of pairs in our dataset.
 
 %TODO think and give comment about random window size
 \begin{algorithm}[h]
@@ -102,17 +101,17 @@ Know we can simply add the number of pairs in our last sentence to the previousl
 \end{algorithmic}
 \end{algorithm}
 
- \subsubsection{Accessing each pair individually}
-The dataloader needs a way to access each pair individually, a pseudo code description can be found in \ref{alg1}. 
-Given an item index $idx$ we need to find the corresponding sentence. Because we know how many pairs  are in each sentence, except the last sentence, we only have to divide $idx$ by the number of pairs that can be built within one sentence (line 1). This division also holds for the last sentence, as it's the only one with a different number of words is positioned at the end of the dataset. Once this is done we have access to the sentence where our pair is located. (line2). We have to find the index of the pair within the sentence. We now the number of pairs in all sentence before our sentence (this also holds if our sentence is the last one), therefore we can subtract the number of pairs that are in all the sentences before the sentence from $idx$, and will get the index of our pair within it's sentence (line3). Once this is done we only have to iterate over all the possible pairs in our sentence, keep count and return when we find the correct pair (line 5-14).
+\subsubsection{Accessing each pair individually}
+The dataloader needs a way to access each pair individually, a pseudo code description can be found in \ref{alg1}.
+Given an item index $idx$ we need to find the corresponding sentence. Because we know how many pairs are in each sentence, except the last sentence, we only have to divide $idx$ by the number of pairs that can be built within one sentence (line 1). This division also holds for the last sentence, as it's the only one with a different number of words is positioned at the end of the dataset. Once this is done we have access to the sentence where our pair is located. (line2). We have to find the index of the pair within the sentence. We know the number of pairs in all sentence before our sentence (this also holds if our sentence is the last one), therefore we can subtract the number of pairs that are in all the sentences before the sentence from $idx$, and will get the index of our pair within it's sentence (line3). Once this is done we only have to iterate over all the possible pairs in our sentence, keep count and return when we find the correct pair (line 5-14).
 \begin{algorithm}
 \caption{Getting the context pair from the id}
 \label{alg1}
 \begin{algorithmic}[1]
 
- \STATE id\_sen = $\lfloor \frac{idx}{n\_pairs\_in\_sen} \rfloor$
-\STATE  sen  = dataset[id\_sen]
-\STATE  pair\_id\_in\_sen = $idx - id\_sen*(n\_pairs\_in\_sen)$
+\STATE id\_sen = $\lfloor \frac{idx}{n\_pairs\_in\_sen} \rfloor$
+\STATE sen = dataset[id\_sen]
+\STATE pair\_id\_in\_sen = $idx - id\_sen*(n\_pairs\_in\_sen)$
 \STATE counter = 0
 
 \FOR{$i=0$ \TO $len\_sen $}
@@ -135,5 +134,5 @@ Given an item index $idx$ we need to find the corresponding sentence. Because we
 \end{algorithm}
 
 \subsubsection{Adaptability to other datasets}
-The above-described implementation is limited to datasets formatted as ours, namely having all sentences except the last of the same length. Our model can be quickly modified to achieve the same results on any given dataset. To compute the length of the dataset one would have to use Algorithm \ref{alg1} to compute the length of each sentence, and take the sum over  the length of each sentence. To access the context-pairs the challenge lies in getting the id of the sentences. Therefore one would have to go over the dataset and compute the number of pairs for each sentence, sum them up and wait until the sum is greater than the searched pair. Once this is done the algorithm stays the same. 
+The above-described implementation is limited to datasets formatted as ours, namely having all sentences except the last of the same length. Our model can be quickly modified to achieve the same results on any given dataset. To compute the length of the dataset one would have to use Algorithm \ref{alg1} to compute the length of each sentence, and take the sum over the length of each sentence. To access the context-pairs the challenge lies in getting the id of the sentences. In consequence, one would have to go over the dataset and compute the number of pairs for each sentence, sum them up and wait until the sum is greater than the searched pair. Once this is done the algorithm stays the same.
 
