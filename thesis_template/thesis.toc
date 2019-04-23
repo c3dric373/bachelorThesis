@@ -84,11 +84,11 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {4.6.1}SGD}{32}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.6.2}Momentum and Nesterov}{32}% 
+\contentsline {subsection}{\numberline {4.6.2}Momentum and Nesterov}{33}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.6.3}Adagrad}{34}% 
+\contentsline {subsection}{\numberline {4.6.3}Adagrad}{33}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.6.4}Adadelta}{34}% 
+\contentsline {subsection}{\numberline {4.6.4}Adadelta}{35}% 
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {4.6.5}Adam}{35}% 
 \defcounter {refsection}{0}\relax 
