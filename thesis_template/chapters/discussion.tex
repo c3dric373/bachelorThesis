@@ -2,12 +2,7 @@
 
 
 %Discuss the results. What is the outcome of your experimetns?
-
-This section shortly discusses the empirical results and then extensively compares the findings of this work to the existing literature while trying to explain some of the differences.
-
-
-
- It is followed by a section describing the limitations and possible extensions of this work. This chapter is concluded by the problems we encountered during the implementation so others can avoid them in the future.
+This section shortly discusses the empirical results and then extensively compares the findings of this work to the existing literature while trying to explain some of the differences.It is followed by a section describing the limitations and possible extensions of this work. This chapter is concluded by the problems we encountered during the implementation so others can avoid them in the future.
 
 \section{Our work}
 This section discusses our findings, first we will analyze how input shuffling could influence the learning rate and conclude with the discussion of unexpected results.
@@ -18,11 +13,10 @@ When the model used SGD as an optimizer it was able to use higher learning rates
 \subsection{Large differences with NAG and SGD when using shuffling}
 SGD and NAG both have very different values when using shuffling in comparison to unshuffled input, as shown in figures \ref{fig:results_sgd} and \ref{fig:results_nag}, plain SGD. We do not only attribute those resultst to input shuffling but partially also to a good random initialization guess. Due to a lack of time these results where not replicate more than once. 
 
-\section{Related Work}
-This section will compare our findings to related work, by comparing  the empirical results extensively to Gensim \cite{gensim}.  As explained in Section \ref{sec:gensim}, Gensim is optimized to have a very high throughput, this made it possible to achieve a lot of computations. Furthermore, Gensim provides access to the loss and the resulting word embeddings, which facilitated the comparison process. 
+\section{Comparison to Gensim}
+This section will compare our finding extensively to Gensim \cite{gensim}.  As explained in Section \ref{sec:gensim}, Gensim is optimized to have a very high throughput, this made it possible to achieve a lot of computations. Furthermore, Gensim provides access to the loss and the resulting word embeddings, which facilitated the comparison process. 
 
 \iffalse
-\subsection{word2vec}
 As Mikolov et al. published the original paper which introduced the SGNS, it is, of course, relevant to compare ourselves to their work. The first important thing to take under account is that Mikolov et al. only trained their model on a very large google news dataset incorporating more than 3 billion words. This makes the comparison of our work more difficult. But we will make some assumptions, as they could be of value if true. 
 In their original paper, Mikolov et al. reported results from computations that took 1 and 3 epochs. We accord these good results, which clearly outperformed our SGD model and Gensim, to the very large dataset and furthermore, as a matter of fact, their results are better with 3 than with 1 epoch. We do not have any information about the convergence time or criterion. Hence it would be interesting to use their dataset for comparison. \\
 One thing we can compare is the quality of our word embeddings. Mikolov et al. did not report any results on their model with the text8 dataset, but they, therefore, published their code. Which was then used by Ji et al \cite{intel} and they tested the model on the text8 dataset. They reported a word similarity of 0.63 on the word similarity task. This is obviously outperformed by all our models. We did not find any explanation on why those results differ as much. \\
@@ -30,8 +24,8 @@ The final assumption is that an advanced optimizer could maybe outperform SGD in
  
 \fi
 
-\subsection{Gensim}
-The training with Gensim has a lot of possible parameters an extended list can be found in the appendix. This section will only describe the parameters we changed from the default setting.  The description of each parameter will be done in the following way: \\
+\subsection{Configuration of Gensim}
+The training with Gensim has a lot of possible parameters an extended list can be found in the appendix. This section will only describe the parameters we changed from the default setting.  The description of each parameter has the following form: \\
 \texttt{name} (type) -- \textit{Description} -- Value\\
 Parameters:
 \begin{itemize}
@@ -39,31 +33,32 @@ Parameters:
   \item \texttt{size}(int) – \textit{Dimensionality of the word vectors } -- 100
 \item \texttt{window} (int) --\textit {Maximum distance between the current and predicted word within a sentence }-- 5
   \item  \texttt{min\_count }(int) --\textit{ Ignores all words with total frequency lower than this }-- 5
- \item   \texttt{workers} (int) -- \textit{ Use these many worker threads to train the model (=faster training with multicore machines) }-- 4 
+ \item   \texttt{workers} (int) -- \textit{ Number of threads used to train the model} -- 4 
 \item    \texttt{sg} ({0, 1}) --\textit{ Training algorithm: 1 for skip--gram}--1
   \item  \texttt{negative} (int) --\textit{Number of negative samples}-- 10 
 \item   \texttt{ ns\_exponent} (float) --\textit{ Exponent in the unigram distribution, when choosing random samples, as shown in Equation \ref{eq:unigram} }-- 0.75
 \item    \texttt{alpha} (float) --\textit{ The initial learning rate. }-- 0.025
- \item   \texttt{min\_alpha} (float) --\textit{ Learning rate will linearly drop to min\_alpha as training progresses. }--0.0001
- \item   \texttt{sample} (float) --\textit{ Treshold for subsampling as described in Equation \ref{eq:sampling}. } -- 1e--4
+ \item   \texttt{min\_alpha} (float) --\textit{ Learning rate will linearly drop to min\_alpha as training progresses }--0.0001
+ \item   \texttt{sample} (float) --\textit{ Treshold for subsampling as described in Equation \ref{eq:sampling}} -- 1e--4
   \item  \texttt{iter} (int) --\textit{ Number of iterations (epochs) over the corpus. }-- 10 
  \
   \item  \texttt{compute\_loss} (bool) --\textit{If True, loss is stored at the end of each batch}-- True
- \item   \texttt{callbacks} (iterable of CallbackAny2Vec) --\textit{ Set of functions that will be executed at given training times, used in order to follow the loss and the progress of the model in word similarity }-- see Appendix
+ \item   \texttt{callbacks} (iterable of CallbackAny2Vec) --\textit{ Set of functions executed in order to follow the loss and the progress of the model in word similarity  }-- see Appendix
 \end{itemize}
 
-\subsubsection{Gensim vs. SGD}
-]First, as stated earlier, we are not going to compare ourselves to Gensim in runtime. This does not make any sense as first of all our code is written in pytorch in comparison to Gensim which is implemented in cython\footnote{https://rare-technologies.com/word2vec-in-python-part-two-optimizing/}, which is 23x faster then plain Numpy, we use pytorch that optimizes Matrix multiplication so the difference shouldn't be that big, but still makes a difference. Secondly, we did not use any other runtime optimization technique, as our main goal was to improve the convergence time.\\
-There are a few interesting contradictions to note between Gensim and our own implementation of the SGNS. First of all the convergence time was not the same. There are different possibilities for why this could be the case. First, our batched approach could hinder performance in term of convergence as our loss function is not exactly the same. When a word appears more than once in our batch, the gradient will be an average over the gradients of each pair alone, as it is done by Gensim. Another difference between our implementation is the fact that Gensim checks whether negative samples are not equal to the context word. And if that is the case selects a new random sample. Therefore the learning of the input and output context is optimized. Yet another possibility is the decay of the learning rate used by Gensim. In fact, decaying the learning rate has been proven in a lot of work to decrease the convergence time. Gensim linearly decreases the learning rate, as we did not use this technique, the decay of the learning rate could help explain the noted differences.
-The first hypothesis may be confirmed by the fact that when combined with input shuffling SGD does perform closer to Gensim, going from 11 to 7 epochs to converge, as input shuffling reduces the number of co-occurrence of the same word in a batch. Know the question arises if the 3 epochs, that Gensim is better, can be explained by the selection of better negative samples and the learning rate decay?
+\subsection{Gensim vs. SGD}
+As stated earlier, we are not going to compare this work to Gensim in runtime. Gensim is heavily optimized and written in cython\footnote{https://rare-technologies.com/word2vec-in-python-part-two-optimizing/}, which is 23x faster then plain Numpy. Since we used PyTorch the difference is not that big, but still remains. \\
+As shown in \ref{fig:gensim_vs_adam} the convergence time was not the same between our implementation and Gensim. There are different possibilities for why this could be the case. First, our batched approach could hinder performance in term of convergence as our loss function is not exactly the same. When a word appears more than once in our batch, the gradient will be an average over the gradients of each pair alone, as it is done by Gensim. Secondly, a difference between our implementation is the fact that Gensim checks whether negative samples are not equal to the context word. And if that is the case selects a new random sample. Therefore the learning of the input and output context is optimized. Finally, another possibility is the decay of the learning rate used by Gensim. In fact, decaying the learning rate has been proven in a lot of work to decrease the convergence time. Gensim linearly decreases the learning rate, as we did not use this technique, the decay of the learning rate could help explain the noted differences.
+The first hypothesis, the facted that we used a batched approach, may be confirmed by the fact that when combined with input shuffling SGD does perform closer to Gensim, going from 11 to 7 epochs to converge, as input shuffling reduces the number of co-occurrence of the same word in a batch. 
+Know the question arises if the 3 epochs, that Gensim is better, can be explained by the selection of better negative samples and the learning rate decay?
 
-\subsubsection{Gensim vs. Adam}
+\subsection{Gensim vs. Adam}
 The Adam optimizer did outperform the Gensim application in performance (only slightly: 0.01 correlation coefficient better) and convergence time. Adam converged in 2 epochs while Gensim in 4. To be sure of our results we ran each computation 40 times. The results can be  seen in Figure \ref{fig:gensim_vs_adam}.
 
 \begin{figure}[H]
     \centering
             \includegraphics[scale=0.45]{images/gensim_vs_adam} 
-    \caption{Training time Stochastic Gradient Descent with input Shuffling}
+    \caption{Convergence time of SGD and Adam compared to Gensim}
     \label{fig:gensim_vs_adam}
 \end{figure}
 
