@@ -109,7 +109,7 @@ Gensim \cite{gensim} is a pure Python library that holds a state of the art impl
 
 
 \subsection{Context sensitive word embedding}
-A word  has different meanings dependant on its context. This is a problem that is not addressed by the SGM. Some new models, that have taken this issue into consideration, were proposed. A lot of work has been done in this direction, Liu et al.\cite{topicalWE},  Bartunov et al.\cite{breaking} for example, but the one reporting the best results is Liu et al. \cite{contextWithTensor}. The concept of this approach is to change the way we compute the objective function and variables we use in our conditional probability. The idea is to look if a word given a certain context word matches to a topic. \textit{Bank} would match to \textit{finance} given the context word \textit{money}. \textit{Bank} would also match to \textit{nature} if \textit{river} was the given context word. But \textit{Bank} would not match to \textit{nature} with the context word \textit{money} Now one could ask how to achieve such a context sensitive word embedding? First, we have to introduce new variables, therefore let's look at the objective function used: 
+A word  has different meanings dependant on its context. This is a problem that is not addressed by the SGM. Some new models, that have taken this issue into consideration, were proposed. A lot of work has been done in this direction, Liu et al.\cite{topicalWE} and Bartunov et al.\cite{breaking} for example, but the one reporting the best results is Liu et al. \cite{contextWithTensor}. The concept of this approach is to change the way we compute the objective function and variables we use in our conditional probability. The idea is to look if a word given a certain context word matches to a topic. \textit{Bank} would match to \textit{finance} given the context word \textit{money}. \textit{Bank} would also match to \textit{nature} if \textit{river} was the given context word. But \textit{Bank} would not match to \textit{nature} with the context word \textit{money} Now one could ask how to achieve such a context sensitive word embedding? First, we have to introduce new variables, therefore let's look at the objective function used: 
 \begin{equation}
 J(\Omega) = \sum_{(w,t,c)\in D} \sum_{(w,\tilde{t},\tilde{c} \in{\tilde{D}})} max(0,1- g(w,t,c) + g(w,\tilde{t},\tilde{c})) \lambda||\Omega||_{2}^2
 \end{equation}
@@ -146,14 +146,14 @@ In this variant, the model will update the parameters after each training sample
 \subsubsection{Batch Gradient Descent} 
 Here the update of the model happens after having gone through the entire dataset. The problem with this approach is that one updates the model way to infrequently which will lead to a high convergence time.
 \subsubsection{Mini-Batch Gradient Descent} 
-Update the model after having gone through a specific number of training samples. The idea is that the batch will be representative of the entire dataset. Which will allow the model to learn quicker, as the updates are more frequent (in comparison to batch gradient descent) and less variant (in comparison to SGD).
+Here on updates the model after having gone through a specific number of training samples. The idea is that the batch will be representative of the entire dataset, which will allow the model to learn quicker, as the updates are more frequent (in comparison to batch gradient descent) and less variant (in comparison to SGD).
 
 \subsubsection{Problems with Gradient Descent Algorithms}
 SGD, though it's simplicity, is very limited, therefore some issues appear:
 
 \begin{itemize}
 \item The learning parameter is yet another hyperparameter to tune, as the optimum setting will largely vary depending on the training task and architecture of the network
-\item Learning rate schedules, that diminish the learning rate as the training progresses, are commonly accepted technique to improve accuracy. This schedule is most often set at the beginning of the training and will be completely independent of the training set. 
+\item Learning rate schedules, that diminish the learning rate as the training progresses, are a commonly accepted technique to improve accuracy. This schedule is most often set at the beginning of the training and will be completely independent of the training set. 
 \item Every parameter has the same learning rate
 \end{itemize}
 To tackle those issues numerous advanced optimizers were developed. They will be covered in the next sections. 
