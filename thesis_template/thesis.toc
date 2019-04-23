@@ -100,15 +100,15 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {5.1.2}Large differences with NAG and SGD when using shuffling}{38}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.2}Related Work}{38}% 
+\contentsline {section}{\numberline {5.2}Comparison to Gensim}{38}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.2.1}Gensim}{38}% 
+\contentsline {subsection}{\numberline {5.2.1}Configuration of Gensim}{38}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Gensim vs. SGD}{39}% 
+\contentsline {subsection}{\numberline {5.2.2}Gensim vs. SGD}{39}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Gensim vs. Adam}{40}% 
+\contentsline {subsection}{\numberline {5.2.3}Gensim vs. Adam}{40}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.3}Challenges faced}{41}% 
+\contentsline {section}{\numberline {5.3}Challenges faced}{40}% 
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {5.3.1}Using the wrong embeddings}{41}% 
 \defcounter {refsection}{0}\relax 
