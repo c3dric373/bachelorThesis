@@ -2030,7 +2030,7 @@
     <bcf:citekey order="35">contextWithTensor</bcf:citekey>
     <bcf:citekey order="36">contextWithTensor</bcf:citekey>
     <bcf:citekey order="37">contextWithTensor</bcf:citekey>
-    <bcf:citekey order="38">nesterov</bcf:citekey>
+    <bcf:citekey order="38">nag</bcf:citekey>
     <bcf:citekey order="39">adagrad</bcf:citekey>
     <bcf:citekey order="40">glove</bcf:citekey>
     <bcf:citekey order="41">adadelta</bcf:citekey>

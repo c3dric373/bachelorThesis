@@ -51,6 +51,7 @@ $10^{-5}$ & against radicals diggers \\ \hline
 \end{tabular}
 \caption{Example of a sentence with different sampling tresholds}\label{table:treshold_examples}
 \end{table}
+
 \subsection{Min count}
 We also deleted every word that did not appear more than 5 times in our dataset. We got this technique from Gensim \cite{gensim}, that introduced this parameter into their training. This is a good technique because of three reasons: First certain words of our data sets do not appear in a common lexicon (twigleg, melqu), or come from a foreign language (Volksvereinigung), or are names and acronyms. Secondly, each document often has spelling mistakes, those (as long as the same spelling mistake does not appear too often, what should be avoided in practice) would be deleted by sampling too, as the words do not have any meaning. Lastly, a word that only appears one time in our dataset will be very dependent on its original initialization. This is the case because it will only be updated with its context pairs once, which is only a dozen of times in practice and then won't be updated anymore. For all the above reasons, we applied this technique. Similar to subsampling, it should in theory improve the quality of the word embeddings and will decrease the computation time.
 

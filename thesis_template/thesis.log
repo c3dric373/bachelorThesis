@@ -1,63 +1,19 @@
-This is LuaTeX, Version 1.07.0 (TeX Live 2018/Arch Linux)  (format=lualatex 2019.4.14)  23 APR 2019 23:49
- restricted system commands enabled.
+This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018/Arch Linux) (preloaded format=xelatex 2019.4.14)  24 APR 2019 00:02
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
 **thesis.tex
 (./thesis.tex
 LaTeX2e <2018-12-01>
-Lua module: luaotfload-main 2019-01-28 2.95 luaotfload entry point
-Lua module: luaotfload-init 2019-01-28 2.95 luaotfload submodule / initializatio
-n
-Lua module: lualibs 2019-01-28 2.63 ConTeXt Lua standard libraries.
-Lua module: lualibs-extended 2019-01-28 2.63 ConTeXt Lua libraries -- extended c
-ollection.
-Lua module: luaotfload-log 2019-01-28 2.95 luaotfload submodule / logging
-Lua module: luaotfload-parsers 2019-01-28 2.95 luaotfload submodule / filelist
-Lua module: luaotfload-configuration 2019-01-28 2.95 luaotfload submodule / conf
-ig file reader
-luaotfload | conf : Root cache directory is /home/c3dric/.texlive/texmf-var/luat
-ex-cache/generic/names.
-luaotfload | init : Loading fontloader “fontloader-2019-01-28.lua” from kpse
--resolved path “/usr/share/texmf-dist/tex/luatex/luaotfload/fontloader-2019-01
--28.lua”.
-Lua-only attribute luaotfload@state = 1
-Lua-only attribute luaotfload@noligature = 2
-Lua-only attribute luaotfload@syllabe = 3
-luaotfload | init : Context OpenType loader version “3.107”
-Inserting `luaotfload.node_processor' at position 1 in `pre_linebreak_filter'.
-Inserting `luaotfload.node_processor' at position 1 in `hpack_filter'.
-Lua module: luaotfload-loaders 2019-01-28 2.95 luaotfload submodule / callback h
-andling
-Inserting `luaotfload.define_font' at position 1 in `define_font'.
-Lua module: luaotfload-database 2019-01-28 2.95 luaotfload submodule / database
-Lua module: luaotfload-colors 2019-01-28 2.95 luaotfload submodule / color
-Lua-only attribute luaotfload_color_attribute = 4
-Lua module: luaotfload-resolvers 2019-01-28 2.95 luaotfload submodule / resolver
-s
-luaotfload | conf : Root cache directory is /home/c3dric/.texlive/texmf-var/luat
-ex-cache/generic/names.
-Lua module: luaotfload-features 2019-01-28 2.95 luaotfload submodule / features
-Lua module: luaotfload-letterspace 2019-01-28 2.95 luaotfload submodule / color
-Lua module: luaotfload-auxiliary 2019-01-28 2.95 luaotfload submodule / auxiliar
-y functions
-Inserting `luaotfload.aux.set_sscale_dimens' at position 1 in `luaotfload.patch_
-font'.
-Inserting `luaotfload.aux.patch_cambria_domh' at position 2 in `luaotfload.patch
-_font'.
-Inserting `luaotfload.aux.fixup_fontdata' at position 1 in `luaotfload.patch_fon
-t_unsafe'.
-Inserting `luaotfload.aux.set_capheight' at position 3 in `luaotfload.patch_font
-'.
-Inserting `luaotfload.rewrite_fontname' at position 4 in `luaotfload.patch_font'
-.
-luaotfload | main : initialization completed in 0.113 seconds
 (/usr/share/texmf-dist/tex/latex/koma-script/scrbook.cls
 Document Class: scrbook 2019/02/01 v3.26b KOMA-Script document class (book)
 (/usr/share/texmf-dist/tex/latex/koma-script/scrkbase.sty
-Package: scrkbase 2019/02/01 v3.26b KOMA-Script package (KOMA-Script-dependent b
-asics and keyval usage)
+Package: scrkbase 2019/02/01 v3.26b KOMA-Script package (KOMA-Script-dependent 
+basics and keyval usage)
 
 (/usr/share/texmf-dist/tex/latex/koma-script/scrbase.sty
-Package: scrbase 2019/02/01 v3.26b KOMA-Script package (KOMA-Script-independent 
-basics and keyval usage)
+Package: scrbase 2019/02/01 v3.26b KOMA-Script package (KOMA-Script-independent
+ basics and keyval usage)
 
 (/usr/share/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
@@ -80,14 +36,13 @@ Class scrbook Info: You've used standard option `oneside'.
 (scrbook)           If you'd like to set the option with \KOMAoptions,
 (scrbook)           you'd have to use `twoside=false' there
 (scrbook)           instead of `oneside', too.
-Class scrbook Info: File `scrsize12pt.clo' used to setup font sizes on input lin
-e 2376.
+Class scrbook Info: File `scrsize12pt.clo' used to setup font sizes on input li
+ne 2376.
 
 (/usr/share/texmf-dist/tex/latex/koma-script/scrsize12pt.clo
-File: scrsize12pt.clo 2019/02/01 v3.26b KOMA-Script font size class option (12pt
+File: scrsize12pt.clo 2019/02/01 v3.26b KOMA-Script font size class option (12p
+t)
 )
-luaotfload | db : Font names database loaded from /home/c3dric/.texlive/texmf-va
-r/luatex-cache/generic/names/luaotfload-names.luc)
 (/usr/share/texmf-dist/tex/latex/koma-script/typearea.sty
 Package: typearea 2019/02/01 v3.26b KOMA-Script package (type area)
 \ta@bcor=\skip42
@@ -174,6 +129,203 @@ Package tocbasic Info: omitting babel extension for `lot'
 Class scrbook Info: Redefining `\numberline' on input line 6811.
 \bibindent=\dimen102
 )
+(/usr/share/texmf-dist/tex/latex/fontspec/fontspec.sty
+(/usr/share/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
+(/usr/share/texmf-dist/tex/latex/l3kernel/expl3.sty
+Package: expl3 2019-02-15 L3 programming layer (loader) 
+
+(/usr/share/texmf-dist/tex/latex/l3kernel/expl3-code.tex
+Package: expl3 2019-02-15 L3 programming layer (code)
+\c_max_int=\count90
+\l_tmpa_int=\count91
+\l_tmpb_int=\count92
+\g_tmpa_int=\count93
+\g_tmpb_int=\count94
+\g__kernel_prg_map_int=\count95
+\c_log_iow=\count96
+\l_iow_line_count_int=\count97
+\l__iow_line_target_int=\count98
+\l__iow_one_indent_int=\count99
+\l__iow_indent_int=\count100
+\c_zero_dim=\dimen103
+\c_max_dim=\dimen104
+\l_tmpa_dim=\dimen105
+\l_tmpb_dim=\dimen106
+\g_tmpa_dim=\dimen107
+\g_tmpb_dim=\dimen108
+\c_zero_skip=\skip58
+\c_max_skip=\skip59
+\l_tmpa_skip=\skip60
+\l_tmpb_skip=\skip61
+\g_tmpa_skip=\skip62
+\g_tmpb_skip=\skip63
+\c_zero_muskip=\muskip10
+\c_max_muskip=\muskip11
+\l_tmpa_muskip=\muskip12
+\l_tmpb_muskip=\muskip13
+\g_tmpa_muskip=\muskip14
+\g_tmpb_muskip=\muskip15
+\l_keys_choice_int=\count101
+\l__intarray_loop_int=\count102
+\c__intarray_sp_dim=\dimen109
+\g__intarray_font_int=\count103
+\c__fp_leading_shift_int=\count104
+\c__fp_middle_shift_int=\count105
+\c__fp_trailing_shift_int=\count106
+\c__fp_big_leading_shift_int=\count107
+\c__fp_big_middle_shift_int=\count108
+\c__fp_big_trailing_shift_int=\count109
+\c__fp_Bigg_leading_shift_int=\count110
+\c__fp_Bigg_middle_shift_int=\count111
+\c__fp_Bigg_trailing_shift_int=\count112
+\g__fp_array_int=\count113
+\l__fp_array_loop_int=\count114
+\l__sort_length_int=\count115
+\l__sort_min_int=\count116
+\l__sort_top_int=\count117
+\l__sort_max_int=\count118
+\l__sort_true_max_int=\count119
+\l__sort_block_int=\count120
+\l__sort_begin_int=\count121
+\l__sort_end_int=\count122
+\l__sort_A_int=\count123
+\l__sort_B_int=\count124
+\l__sort_C_int=\count125
+\l__tl_analysis_normal_int=\count126
+\l__tl_analysis_index_int=\count127
+\l__tl_analysis_nesting_int=\count128
+\l__tl_analysis_type_int=\count129
+\l__regex_internal_a_int=\count130
+\l__regex_internal_b_int=\count131
+\l__regex_internal_c_int=\count132
+\l__regex_balance_int=\count133
+\l__regex_group_level_int=\count134
+\l__regex_mode_int=\count135
+\c__regex_cs_in_class_mode_int=\count136
+\c__regex_cs_mode_int=\count137
+\l__regex_catcodes_int=\count138
+\l__regex_default_catcodes_int=\count139
+\c__regex_catcode_L_int=\count140
+\c__regex_catcode_O_int=\count141
+\c__regex_catcode_A_int=\count142
+\c__regex_all_catcodes_int=\count143
+\l__regex_show_lines_int=\count144
+\l__regex_min_state_int=\count145
+\l__regex_max_state_int=\count146
+\l__regex_left_state_int=\count147
+\l__regex_right_state_int=\count148
+\l__regex_capturing_group_int=\count149
+\l__regex_min_pos_int=\count150
+\l__regex_max_pos_int=\count151
+\l__regex_curr_pos_int=\count152
+\l__regex_start_pos_int=\count153
+\l__regex_success_pos_int=\count154
+\l__regex_curr_char_int=\count155
+\l__regex_curr_catcode_int=\count156
+\l__regex_last_char_int=\count157
+\l__regex_case_changed_char_int=\count158
+\l__regex_curr_state_int=\count159
+\l__regex_step_int=\count160
+\l__regex_min_active_int=\count161
+\l__regex_max_active_int=\count162
+\l__regex_replacement_csnames_int=\count163
+\l__regex_match_count_int=\count164
+\l__regex_min_submatch_int=\count165
+\l__regex_submatch_int=\count166
+\l__regex_zeroth_submatch_int=\count167
+\g__regex_trace_regex_int=\count168
+\c_empty_box=\box29
+\l_tmpa_box=\box30
+\l_tmpb_box=\box31
+\g_tmpa_box=\box32
+\g_tmpb_box=\box33
+\l__box_top_dim=\dimen110
+\l__box_bottom_dim=\dimen111
+\l__box_left_dim=\dimen112
+\l__box_right_dim=\dimen113
+\l__box_top_new_dim=\dimen114
+\l__box_bottom_new_dim=\dimen115
+\l__box_left_new_dim=\dimen116
+\l__box_right_new_dim=\dimen117
+\l__box_internal_box=\box34
+\l__coffin_internal_box=\box35
+\l__coffin_internal_dim=\dimen118
+\l__coffin_offset_x_dim=\dimen119
+\l__coffin_offset_y_dim=\dimen120
+\l__coffin_x_dim=\dimen121
+\l__coffin_y_dim=\dimen122
+\l__coffin_x_prime_dim=\dimen123
+\l__coffin_y_prime_dim=\dimen124
+\c_empty_coffin=\box36
+\l__coffin_aligned_coffin=\box37
+\l__coffin_aligned_internal_coffin=\box38
+\l_tmpa_coffin=\box39
+\l_tmpb_coffin=\box40
+\g_tmpa_coffin=\box41
+\g_tmpb_coffin=\box42
+\c__coffin_empty_coffin=\box43
+\l__coffin_display_coffin=\box44
+\l__coffin_display_coord_coffin=\box45
+\l__coffin_display_pole_coffin=\box46
+\l__coffin_display_offset_dim=\dimen125
+\l__coffin_display_x_dim=\dimen126
+\l__coffin_display_y_dim=\dimen127
+\g__file_internal_ior=\read1
+\l__coffin_bounding_shift_dim=\dimen128
+\l__coffin_left_corner_dim=\dimen129
+\l__coffin_right_corner_dim=\dimen130
+\l__coffin_bottom_corner_dim=\dimen131
+\l__coffin_top_corner_dim=\dimen132
+\l__coffin_scaled_total_height_dim=\dimen133
+\l__coffin_scaled_width_dim=\dimen134
+)
+(/usr/share/texmf-dist/tex/latex/l3kernel/l3xdvipdfmx.def
+File: l3xdvipdfmx.def 2019-02-15 v L3 Experimental driver: xdvipdfmx
+\g__driver_image_int=\count169
+\g__driver_pdf_object_int=\count170
+))
+Package: xparse 2018-10-17 L3 Experimental document command parser
+\l__xparse_current_arg_int=\count171
+\g__xparse_grabber_int=\count172
+\l__xparse_m_args_int=\count173
+\l__xparse_mandatory_args_int=\count174
+\l__xparse_v_nesting_int=\count175
+)
+Package: fontspec 2019/02/12 v2.7b Font selection for XeLaTeX and LuaLaTeX
+
+(/usr/share/texmf-dist/tex/latex/fontspec/fontspec-xetex.sty
+Package: fontspec-xetex 2019/02/12 v2.7b Font selection for XeLaTeX and LuaLaTe
+X
+\l__fontspec_script_int=\count176
+\l__fontspec_language_int=\count177
+\l__fontspec_strnum_int=\count178
+\l__fontspec_tmp_int=\count179
+\l__fontspec_tmpa_int=\count180
+\l__fontspec_tmpb_int=\count181
+\l__fontspec_tmpc_int=\count182
+\l__fontspec_em_int=\count183
+\l__fontspec_emdef_int=\count184
+\l__fontspec_strong_int=\count185
+\l__fontspec_strongdef_int=\count186
+\l__fontspec_tmpa_dim=\dimen135
+\l__fontspec_tmpb_dim=\dimen136
+\l__fontspec_tmpc_dim=\dimen137
+
+(/usr/share/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2018/08/11 v2.0j Standard LaTeX package
+
+(/usr/share/texmf-dist/tex/latex/base/tuenc.def
+File: tuenc.def 2018/08/11 v2.0j Standard LaTeX file
+LaTeX Font Info:    Redeclaring font encoding TU on input line 82.
+))
+(/usr/share/texmf-dist/tex/latex/fontspec/fontspec.cfg)
+LaTeX Info: Redefining \itshape on input line 4044.
+LaTeX Info: Redefining \slshape on input line 4049.
+LaTeX Info: Redefining \scshape on input line 4054.
+LaTeX Info: Redefining \upshape on input line 4059.
+LaTeX Info: Redefining \em on input line 4089.
+LaTeX Info: Redefining \emph on input line 4114.
+))
 (/usr/share/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
 
@@ -186,49 +338,49 @@ Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
 (/usr/share/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
-Package graphics Info: Driver file: luatex.def on input line 99.
+Package graphics Info: Driver file: xetex.def on input line 99.
 
-(/usr/share/texmf-dist/tex/latex/graphics-def/luatex.def
-File: luatex.def 2018/01/08 v1.0l Graphics/color driver for luatex
+(/usr/share/texmf-dist/tex/latex/graphics-def/xetex.def
+File: xetex.def 2017/06/24 v5.0h Graphics/color driver for xetex
 ))
-\Gin@req@height=\dimen103
-\Gin@req@width=\dimen104
+\Gin@req@height=\dimen138
+\Gin@req@width=\dimen139
 )
 (/usr/share/texmf-dist/tex/latex/setspace/setspace.sty
 Package: setspace 2011/12/19 v6.7a set line spacing
 )
 (/usr/share/texmf-dist/tex/latex/booktabs/booktabs.sty
 Package: booktabs 2016/04/27 v1.618033 publication quality tables
-\heavyrulewidth=\dimen105
-\lightrulewidth=\dimen106
-\cmidrulewidth=\dimen107
-\belowrulesep=\dimen108
-\belowbottomsep=\dimen109
-\aboverulesep=\dimen110
-\abovetopsep=\dimen111
-\cmidrulesep=\dimen112
-\cmidrulekern=\dimen113
-\defaultaddspace=\dimen114
-\@cmidla=\count90
-\@cmidlb=\count91
-\@aboverulesep=\dimen115
-\@belowrulesep=\dimen116
-\@thisruleclass=\count92
-\@lastruleclass=\count93
-\@thisrulewidth=\dimen117
+\heavyrulewidth=\dimen140
+\lightrulewidth=\dimen141
+\cmidrulewidth=\dimen142
+\belowrulesep=\dimen143
+\belowbottomsep=\dimen144
+\aboverulesep=\dimen145
+\abovetopsep=\dimen146
+\cmidrulesep=\dimen147
+\cmidrulekern=\dimen148
+\defaultaddspace=\dimen149
+\@cmidla=\count187
+\@cmidlb=\count188
+\@aboverulesep=\dimen150
+\@belowrulesep=\dimen151
+\@thisruleclass=\count189
+\@lastruleclass=\count190
+\@thisrulewidth=\dimen152
 )
 (/usr/share/texmf-dist/tex/latex/koma-script/scrlayer-scrpage.sty
-Package: scrlayer-scrpage 2019/02/01 v3.26b KOMA-Script package (end user interf
-ace for scrlayer)
+Package: scrlayer-scrpage 2019/02/01 v3.26b KOMA-Script package (end user inter
+face for scrlayer)
 
 (/usr/share/texmf-dist/tex/latex/koma-script/scrlayer.sty
-Package: scrlayer 2019/02/01 v3.26b KOMA-Script package (defining layers and pag
-e styles)
+Package: scrlayer 2019/02/01 v3.26b KOMA-Script package (defining layers and pa
+ge styles)
 Package scrlayer Info: Using already defined \footheight
 (scrlayer)             hoping, that this is a length and
 (scrlayer)             not only a macro on input line 109.
-Package scrlayer Info: patching LaTeX kernel macro \pagestyle on input line 2083
-.
+Package scrlayer Info: patching LaTeX kernel macro \pagestyle on input line 208
+3.
 )
 Package scrlayer-scrpage Info: Makeing stand-alone element `pagehead' from
 (scrlayer-scrpage)             alias to `pageheadfoot' on input line 1241.
@@ -241,15 +393,15 @@ Package scrlayer-scrpage Info: auto-selection of `pagestyleset=KOMA-Script'.
 Package: biblatex 2018/11/02 v3.12 programmable bibliographies (PK/MW)
 
 (/usr/share/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
-Package: pdftexcmds 2018/09/10 v0.29 Utility functions of pdfTeX for LuaTeX (HO)
-
+Package: pdftexcmds 2018/09/10 v0.29 Utility functions of pdfTeX for LuaTeX (HO
+)
 
 (/usr/share/texmf-dist/tex/generic/oberdiek/infwarerr.sty
 Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
 )
 (/usr/share/texmf-dist/tex/generic/oberdiek/ifluatex.sty
 Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
-Package ifluatex Info: LuaTeX detected.
+Package ifluatex Info: LuaTeX not detected.
 )
 (/usr/share/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
 Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
@@ -257,14 +409,15 @@ Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
 (/usr/share/texmf-dist/tex/generic/oberdiek/ifpdf.sty
 Package: ifpdf 2018/09/07 v3.3 Provides the ifpdf switch
 )
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: pdfTeX >= 1.30 not detected.
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
-Package pdftexcmds Info: \pdfdraftmode found.
-\pdftexcmds@toks=\toks15
+Package pdftexcmds Info: \pdfdraftmode not found.
 )
 (/usr/share/texmf-dist/tex/latex/etoolbox/etoolbox.sty
 Package: etoolbox 2018/08/19 v2.5f e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count94
+\etb@tempcnta=\count191
 )
 (/usr/share/texmf-dist/tex/latex/oberdiek/kvoptions.sty
 Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
@@ -274,10 +427,14 @@ Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
 
 (/usr/share/texmf-dist/tex/generic/oberdiek/etexcmds.sty
 Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
 )))
 (/usr/share/texmf-dist/tex/latex/logreq/logreq.sty
 Package: logreq 2010/08/04 v1.0 xml request logger
-\lrq@indent=\count95
+\lrq@indent=\count192
 
 (/usr/share/texmf-dist/tex/latex/logreq/logreq.def
 File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
@@ -286,63 +443,63 @@ File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
 Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 )
 (/usr/share/texmf-dist/tex/latex/url/url.sty
-\Urlmuskip=\muskip10
+\Urlmuskip=\muskip16
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
-\c@tabx@nest=\count96
-\c@listtotal=\count97
-\c@listcount=\count98
-\c@liststart=\count99
-\c@liststop=\count100
-\c@citecount=\count101
-\c@citetotal=\count102
-\c@multicitecount=\count103
-\c@multicitetotal=\count104
-\c@instcount=\count105
-\c@maxnames=\count106
-\c@minnames=\count107
-\c@maxitems=\count108
-\c@minitems=\count109
-\c@citecounter=\count110
-\c@maxcitecounter=\count111
-\c@savedcitecounter=\count112
-\c@uniquelist=\count113
-\c@uniquename=\count114
-\c@refsection=\count115
-\c@refsegment=\count116
-\c@maxextratitle=\count117
-\c@maxextratitleyear=\count118
-\c@maxextraname=\count119
-\c@maxextradate=\count120
-\c@maxextraalpha=\count121
-\c@abbrvpenalty=\count122
-\c@highnamepenalty=\count123
-\c@lownamepenalty=\count124
-\c@maxparens=\count125
-\c@parenlevel=\count126
-\blx@tempcnta=\count127
-\blx@tempcntb=\count128
-\blx@tempcntc=\count129
-\blx@maxsection=\count130
-\blx@maxsegment@0=\count131
-\blx@notetype=\count132
-\blx@parenlevel@text=\count133
-\blx@parenlevel@foot=\count134
-\blx@sectionciteorder@0=\count135
-\blx@entrysetcounter=\count136
-\labelnumberwidth=\skip58
-\labelalphawidth=\skip59
-\biblabelsep=\skip60
-\bibitemsep=\skip61
-\bibnamesep=\skip62
-\bibinitsep=\skip63
-\bibparsep=\skip64
-\bibhang=\skip65
-\blx@bcfin=\read1
+\c@tabx@nest=\count193
+\c@listtotal=\count194
+\c@listcount=\count195
+\c@liststart=\count196
+\c@liststop=\count197
+\c@citecount=\count198
+\c@citetotal=\count199
+\c@multicitecount=\count266
+\c@multicitetotal=\count267
+\c@instcount=\count268
+\c@maxnames=\count269
+\c@minnames=\count270
+\c@maxitems=\count271
+\c@minitems=\count272
+\c@citecounter=\count273
+\c@maxcitecounter=\count274
+\c@savedcitecounter=\count275
+\c@uniquelist=\count276
+\c@uniquename=\count277
+\c@refsection=\count278
+\c@refsegment=\count279
+\c@maxextratitle=\count280
+\c@maxextratitleyear=\count281
+\c@maxextraname=\count282
+\c@maxextradate=\count283
+\c@maxextraalpha=\count284
+\c@abbrvpenalty=\count285
+\c@highnamepenalty=\count286
+\c@lownamepenalty=\count287
+\c@maxparens=\count288
+\c@parenlevel=\count289
+\blx@tempcnta=\count290
+\blx@tempcntb=\count291
+\blx@tempcntc=\count292
+\blx@maxsection=\count293
+\blx@maxsegment@0=\count294
+\blx@notetype=\count295
+\blx@parenlevel@text=\count296
+\blx@parenlevel@foot=\count297
+\blx@sectionciteorder@0=\count298
+\blx@entrysetcounter=\count299
+\labelnumberwidth=\skip64
+\labelalphawidth=\skip65
+\biblabelsep=\skip66
+\bibitemsep=\skip67
+\bibnamesep=\skip68
+\bibinitsep=\skip69
+\bibparsep=\skip70
+\bibhang=\skip71
+\blx@bcfin=\read2
 \blx@bcfout=\write3
-\c@mincomprange=\count137
-\c@maxcomprange=\count138
-\c@mincompwidth=\count139
+\c@mincomprange=\count300
+\c@maxcomprange=\count301
+\c@mincompwidth=\count302
 Package biblatex Info: Trying to load biblatex default data model...
 Package biblatex Info: ... file 'blx-dm.def' found.
 
@@ -353,88 +510,88 @@ Package biblatex Info: Trying to load biblatex citestyle data model...
 Package biblatex Info: ... file 'alphabetic.dbx' not found.
 Package biblatex Info: Trying to load biblatex custom data model...
 Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
-\c@afterword=\count140
-\c@savedafterword=\count141
-\c@annotator=\count142
-\c@savedannotator=\count143
-\c@author=\count144
-\c@savedauthor=\count145
-\c@bookauthor=\count146
-\c@savedbookauthor=\count147
-\c@commentator=\count148
-\c@savedcommentator=\count149
-\c@editor=\count150
-\c@savededitor=\count151
-\c@editora=\count152
-\c@savededitora=\count153
-\c@editorb=\count154
-\c@savededitorb=\count155
-\c@editorc=\count156
-\c@savededitorc=\count157
-\c@foreword=\count158
-\c@savedforeword=\count159
-\c@holder=\count160
-\c@savedholder=\count161
-\c@introduction=\count162
-\c@savedintroduction=\count163
-\c@namea=\count164
-\c@savednamea=\count165
-\c@nameb=\count166
-\c@savednameb=\count167
-\c@namec=\count168
-\c@savednamec=\count169
-\c@translator=\count170
-\c@savedtranslator=\count171
-\c@shortauthor=\count172
-\c@savedshortauthor=\count173
-\c@shorteditor=\count174
-\c@savedshorteditor=\count175
-\c@labelname=\count176
-\c@savedlabelname=\count177
-\c@institution=\count178
-\c@savedinstitution=\count179
-\c@lista=\count180
-\c@savedlista=\count181
-\c@listb=\count182
-\c@savedlistb=\count183
-\c@listc=\count184
-\c@savedlistc=\count185
-\c@listd=\count186
-\c@savedlistd=\count187
-\c@liste=\count188
-\c@savedliste=\count189
-\c@listf=\count190
-\c@savedlistf=\count191
-\c@location=\count192
-\c@savedlocation=\count193
-\c@organization=\count194
-\c@savedorganization=\count195
-\c@origlocation=\count196
-\c@savedoriglocation=\count197
-\c@origpublisher=\count198
-\c@savedorigpublisher=\count199
-\c@publisher=\count266
-\c@savedpublisher=\count267
-\c@language=\count268
-\c@savedlanguage=\count269
-\c@origlanguage=\count270
-\c@savedoriglanguage=\count271
-\c@pageref=\count272
-\c@savedpageref=\count273
-\shorthandwidth=\skip66
-\shortjournalwidth=\skip67
-\shortserieswidth=\skip68
-\shorttitlewidth=\skip69
-\shortauthorwidth=\skip70
-\shorteditorwidth=\skip71
-\locallabelnumberwidth=\skip72
-\locallabelalphawidth=\skip73
-\localshorthandwidth=\skip74
-\localshortjournalwidth=\skip75
-\localshortserieswidth=\skip76
-\localshorttitlewidth=\skip77
-\localshortauthorwidth=\skip78
-\localshorteditorwidth=\skip79
+\c@afterword=\count303
+\c@savedafterword=\count304
+\c@annotator=\count305
+\c@savedannotator=\count306
+\c@author=\count307
+\c@savedauthor=\count308
+\c@bookauthor=\count309
+\c@savedbookauthor=\count310
+\c@commentator=\count311
+\c@savedcommentator=\count312
+\c@editor=\count313
+\c@savededitor=\count314
+\c@editora=\count315
+\c@savededitora=\count316
+\c@editorb=\count317
+\c@savededitorb=\count318
+\c@editorc=\count319
+\c@savededitorc=\count320
+\c@foreword=\count321
+\c@savedforeword=\count322
+\c@holder=\count323
+\c@savedholder=\count324
+\c@introduction=\count325
+\c@savedintroduction=\count326
+\c@namea=\count327
+\c@savednamea=\count328
+\c@nameb=\count329
+\c@savednameb=\count330
+\c@namec=\count331
+\c@savednamec=\count332
+\c@translator=\count333
+\c@savedtranslator=\count334
+\c@shortauthor=\count335
+\c@savedshortauthor=\count336
+\c@shorteditor=\count337
+\c@savedshorteditor=\count338
+\c@labelname=\count339
+\c@savedlabelname=\count340
+\c@institution=\count341
+\c@savedinstitution=\count342
+\c@lista=\count343
+\c@savedlista=\count344
+\c@listb=\count345
+\c@savedlistb=\count346
+\c@listc=\count347
+\c@savedlistc=\count348
+\c@listd=\count349
+\c@savedlistd=\count350
+\c@liste=\count351
+\c@savedliste=\count352
+\c@listf=\count353
+\c@savedlistf=\count354
+\c@location=\count355
+\c@savedlocation=\count356
+\c@organization=\count357
+\c@savedorganization=\count358
+\c@origlocation=\count359
+\c@savedoriglocation=\count360
+\c@origpublisher=\count361
+\c@savedorigpublisher=\count362
+\c@publisher=\count363
+\c@savedpublisher=\count364
+\c@language=\count365
+\c@savedlanguage=\count366
+\c@origlanguage=\count367
+\c@savedoriglanguage=\count368
+\c@pageref=\count369
+\c@savedpageref=\count370
+\shorthandwidth=\skip72
+\shortjournalwidth=\skip73
+\shortserieswidth=\skip74
+\shorttitlewidth=\skip75
+\shortauthorwidth=\skip76
+\shorteditorwidth=\skip77
+\locallabelnumberwidth=\skip78
+\locallabelalphawidth=\skip79
+\localshorthandwidth=\skip80
+\localshortjournalwidth=\skip81
+\localshortserieswidth=\skip82
+\localshorttitlewidth=\skip83
+\localshortauthorwidth=\skip84
+\localshorteditorwidth=\skip85
 Package biblatex Info: Trying to load enhanced support for Unicode engines...
 Package biblatex Info: ... file 'blx-unicode.def' found.
 
@@ -450,13 +607,13 @@ Package biblatex Info: ... file 'biblatex.def' found.
 
 (/usr/share/texmf-dist/tex/latex/biblatex/biblatex.def
 File: biblatex.def 2018/11/02 v3.12 biblatex compatibility (PK/MW)
-\c@textcitecount=\count274
-\c@textcitetotal=\count275
-\c@textcitemaxnames=\count276
-\c@biburlnumpenalty=\count277
-\c@biburlucpenalty=\count278
-\c@biburllcpenalty=\count279
-\c@smartand=\count280
+\c@textcitecount=\count371
+\c@textcitetotal=\count372
+\c@textcitemaxnames=\count373
+\c@biburlnumpenalty=\count374
+\c@biburlucpenalty=\count375
+\c@biburllcpenalty=\count376
+\c@smartand=\count377
 )
 Package biblatex Info: Trying to load bibliography style 'alphabetic'...
 Package biblatex Info: ... file 'alphabetic.bbx' found.
@@ -468,8 +625,8 @@ Package biblatex Info: ... file 'standard.bbx' found.
 
 (/usr/share/texmf-dist/tex/latex/biblatex/bbx/standard.bbx
 File: standard.bbx 2018/11/02 v3.12 biblatex bibliography style (PK/MW)
-\c@bbx:relatedcount=\count281
-\c@bbx:relatedtotal=\count282
+\c@bbx:relatedcount=\count378
+\c@bbx:relatedtotal=\count379
 ))
 Package biblatex Info: Trying to load citation style 'alphabetic'...
 Package biblatex Info: ... file 'alphabetic.cbx' found.
@@ -495,13 +652,13 @@ File: biblatex.cfg
 ))
 (/usr/share/texmf-dist/tex/latex/csquotes/csquotes.sty
 Package: csquotes 2018/04/13 v5.2d context-sensitive quotations (JAW)
-\csq@reset=\count283
-\csq@gtype=\count284
-\csq@glevel=\count285
-\csq@qlevel=\count286
-\csq@maxlvl=\count287
-\csq@tshold=\count288
-\csq@ltx@everypar=\toks16
+\csq@reset=\count380
+\csq@gtype=\count381
+\csq@glevel=\count382
+\csq@qlevel=\count383
+\csq@maxlvl=\count384
+\csq@tshold=\count385
+\csq@ltx@everypar=\toks15
 
 (/usr/share/texmf-dist/tex/latex/csquotes/csquotes.def
 File: csquotes.def 2018/04/13 v5.2d csquotes generic definitions (JAW)
@@ -518,13 +675,13 @@ Package csquotes Info: Redefining alias 'german' -> 'german/quotes'.
 )
 (/usr/share/texmf-dist/tex/latex/appendix/appendix.sty
 Package: appendix 2009/09/02 v1.2b extra appendix facilities
-\c@@pps=\count289
-\c@@ppsavesec=\count290
-\c@@ppsaveapp=\count291
+\c@@pps=\count386
+\c@@ppsavesec=\count387
+\c@@ppsaveapp=\count388
 )
 (/usr/share/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2018/12/01 v2.17b AMS math features
-\@mathmargin=\skip80
+\@mathmargin=\skip86
 
 For additional information on amsmath, use the `?' option.
 (/usr/share/texmf-dist/tex/latex/amsmath/amstext.sty
@@ -532,77 +689,79 @@ Package: amstext 2000/06/29 v2.01 AMS text
 
 (/usr/share/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
-\@emptytoks=\toks17
-\ex@=\dimen118
+\@emptytoks=\toks16
+\ex@=\dimen153
 ))
 (/usr/share/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
-\pmbraise@=\dimen119
+\pmbraise@=\dimen154
 )
 (/usr/share/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 2016/03/08 v2.02 operator names
 )
-\inf@bad=\count292
+\inf@bad=\count389
 LaTeX Info: Redefining \frac on input line 223.
-\uproot@=\count293
-\leftroot@=\count294
+\uproot@=\count390
+\leftroot@=\count391
 LaTeX Info: Redefining \overline on input line 385.
-\classnum@=\count295
-\DOTSCASE@=\count296
+\classnum@=\count392
+\DOTSCASE@=\count393
 LaTeX Info: Redefining \ldots on input line 482.
 LaTeX Info: Redefining \dots on input line 485.
 LaTeX Info: Redefining \cdots on input line 606.
-\Mathstrutbox@=\box29
-\strutbox@=\box30
-\big@size=\dimen120
+\Mathstrutbox@=\box47
+\strutbox@=\box48
+\big@size=\dimen155
 LaTeX Font Info:    Redeclaring font encoding OML on input line 729.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 730.
-\macc@depth=\count297
-\c@MaxMatrixCols=\count298
-\dotsspace@=\muskip11
-\c@parentequation=\count299
-\dspbrk@lvl=\count300
-\tag@help=\toks18
-\row@=\count301
-\column@=\count302
-\maxfields@=\count303
-\andhelp@=\toks19
-\eqnshift@=\dimen121
-\alignsep@=\dimen122
-\tagshift@=\dimen123
-\tagwidth@=\dimen124
-\totwidth@=\dimen125
-\lineht@=\dimen126
-\@envbody=\toks20
-\multlinegap=\skip81
-\multlinetaggap=\skip82
-\mathdisplay@stack=\toks21
+\macc@depth=\count394
+\c@MaxMatrixCols=\count395
+\dotsspace@=\muskip17
+\c@parentequation=\count396
+\dspbrk@lvl=\count397
+\tag@help=\toks17
+\row@=\count398
+\column@=\count399
+\maxfields@=\count400
+\andhelp@=\toks18
+\eqnshift@=\dimen156
+\alignsep@=\dimen157
+\tagshift@=\dimen158
+\tagwidth@=\dimen159
+\totwidth@=\dimen160
+\lineht@=\dimen161
+\@envbody=\toks19
+\multlinegap=\skip87
+\multlinetaggap=\skip88
+\mathdisplay@stack=\toks20
 LaTeX Info: Redefining \[ on input line 2844.
 LaTeX Info: Redefining \] on input line 2845.
 )
 (/usr/share/texmf-dist/tex/latex/algorithms/algorithm.sty
-Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating environ
-ment
+Invalid UTF-8 byte or sequence at line 11 replaced by U+FFFD.
+Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating enviro
+nment
 
 (/usr/share/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count304
-\float@exts=\toks22
-\float@box=\box31
-\@float@everytoks=\toks23
-\@floatcapt=\box32
+\c@float@type=\count401
+\float@exts=\toks21
+\float@box=\box49
+\@float@everytoks=\toks22
+\@floatcapt=\box50
 )
-\@float@every@algorithm=\toks24
-\c@algorithm=\count305
+\@float@every@algorithm=\toks23
+\c@algorithm=\count402
 )
 (/usr/share/texmf-dist/tex/latex/algorithms/algorithmic.sty
+Invalid UTF-8 byte or sequence at line 11 replaced by U+FFFD.
 Package: algorithmic 2009/08/24 v0.1 Document Style `algorithmic'
-\c@ALC@unique=\count306
-\c@ALC@line=\count307
-\c@ALC@rem=\count308
-\c@ALC@depth=\count309
-\ALC@tlm=\skip83
-\algorithmicindent=\skip84
+\c@ALC@unique=\count403
+\c@ALC@line=\count404
+\c@ALC@rem=\count405
+\c@ALC@depth=\count406
+\ALC@tlm=\skip89
+\algorithmicindent=\skip90
 )
 (/usr/share/texmf-dist/tex/latex/base/textcomp.sty
 Package: textcomp 2018/08/11 v2.0j Standard LaTeX package
@@ -647,6 +806,7 @@ Package textcomp Info: Setting ul9 sub-encoding to TS1/4 on input line 369.
 Package textcomp Info: Setting augie sub-encoding to TS1/5 on input line 370.
 Package textcomp Info: Setting dayrom sub-encoding to TS1/3 on input line 371.
 Package textcomp Info: Setting dayroms sub-encoding to TS1/3 on input line 372.
+
 Package textcomp Info: Setting pxr sub-encoding to TS1/0 on input line 373.
 Package textcomp Info: Setting pxss sub-encoding to TS1/0 on input line 374.
 Package textcomp Info: Setting pxtt sub-encoding to TS1/0 on input line 375.
@@ -687,59 +847,59 @@ Package textcomp Info: Setting ptmj sub-encoding to TS1/4 on input line 409.
 )
 (/usr/share/texmf-dist/tex/latex/tools/multicol.sty
 Package: multicol 2018/12/27 v1.8v multicolumn formatting (FMi)
-\c@tracingmulticols=\count310
-\mult@box=\box33
-\multicol@leftmargin=\dimen127
-\c@unbalance=\count311
-\c@collectmore=\count312
-\doublecol@number=\count313
-\multicoltolerance=\count314
-\multicolpretolerance=\count315
-\full@width=\dimen128
-\page@free=\dimen129
-\premulticols=\dimen130
-\postmulticols=\dimen131
-\multicolsep=\skip85
-\multicolbaselineskip=\skip86
-\partial@page=\box34
-\last@line=\box35
-\maxbalancingoverflow=\dimen132
-\mult@rightbox=\box36
-\mult@grightbox=\box37
-\mult@gfirstbox=\box38
-\mult@firstbox=\box39
-\@tempa=\box40
-\@tempa=\box41
-\@tempa=\box42
-\@tempa=\box43
-\@tempa=\box44
-\@tempa=\box45
-\@tempa=\box46
-\@tempa=\box47
-\@tempa=\box48
-\@tempa=\box49
-\@tempa=\box50
-\@tempa=\box51
-\@tempa=\box52
-\@tempa=\box53
-\@tempa=\box54
-\@tempa=\box55
-\@tempa=\box56
-\c@columnbadness=\count316
-\c@finalcolumnbadness=\count317
-\last@try=\dimen133
-\multicolovershoot=\dimen134
-\multicolundershoot=\dimen135
-\mult@nat@firstbox=\box57
-\colbreak@box=\box58
-\mc@col@check@num=\count318
+\c@tracingmulticols=\count407
+\mult@box=\box51
+\multicol@leftmargin=\dimen162
+\c@unbalance=\count408
+\c@collectmore=\count409
+\doublecol@number=\count410
+\multicoltolerance=\count411
+\multicolpretolerance=\count412
+\full@width=\dimen163
+\page@free=\dimen164
+\premulticols=\dimen165
+\postmulticols=\dimen166
+\multicolsep=\skip91
+\multicolbaselineskip=\skip92
+\partial@page=\box52
+\last@line=\box53
+\maxbalancingoverflow=\dimen167
+\mult@rightbox=\box54
+\mult@grightbox=\box55
+\mult@gfirstbox=\box56
+\mult@firstbox=\box57
+\@tempa=\box58
+\@tempa=\box59
+\@tempa=\box60
+\@tempa=\box61
+\@tempa=\box62
+\@tempa=\box63
+\@tempa=\box64
+\@tempa=\box65
+\@tempa=\box66
+\@tempa=\box67
+\@tempa=\box68
+\@tempa=\box69
+\@tempa=\box70
+\@tempa=\box71
+\@tempa=\box72
+\@tempa=\box73
+\@tempa=\box74
+\c@columnbadness=\count413
+\c@finalcolumnbadness=\count414
+\last@try=\dimen168
+\multicolovershoot=\dimen169
+\multicolundershoot=\dimen170
+\mult@nat@firstbox=\box75
+\colbreak@box=\box76
+\mc@col@check@num=\count415
 )
 (/usr/share/texmf-dist/tex/latex/multirow/multirow.sty
 Package: multirow 2019/01/01 v2.4 Span multiple rows of a table
-\multirow@colwidth=\skip87
-\multirow@cntb=\count319
-\multirow@dima=\skip88
-\bigstrutjot=\dimen136
+\multirow@colwidth=\skip93
+\multirow@cntb=\count416
+\multirow@dima=\skip94
+\bigstrutjot=\dimen171
 )
 (/usr/share/texmf-dist/tex/latex/caption/subcaption.sty
 Package: subcaption 2018/05/01 v1.1-162 Sub-captions (AR)
@@ -750,41 +910,41 @@ Package: caption 2018/10/06 v3.3-154 Customizing captions (AR)
 (/usr/share/texmf-dist/tex/latex/caption/caption3.sty
 Package: caption3 2018/09/12 v1.8c caption3 kernel (AR)
 Package caption3 Info: TeX engine: e-TeX on input line 64.
-\captionmargin=\dimen137
-\captionmargin@=\dimen138
-\captionwidth=\dimen139
-\caption@tempdima=\dimen140
-\caption@indent=\dimen141
-\caption@parindent=\dimen142
-\caption@hangindent=\dimen143
+\captionmargin=\dimen172
+\captionmargin@=\dimen173
+\captionwidth=\dimen174
+\caption@tempdima=\dimen175
+\caption@indent=\dimen176
+\caption@parindent=\dimen177
+\caption@hangindent=\dimen178
 )
 Package caption Info: KOMA-Script document class.
-\c@caption@flags=\count320
-\c@ContinuedFloat=\count321
+\c@caption@flags=\count417
+\c@ContinuedFloat=\count418
 Package caption Info: float package is loaded.
 )
-\c@subfigure=\count322
-\c@subtable=\count323
+\c@subfigure=\count419
+\c@subtable=\count420
 )
 (/usr/share/texmf-dist/tex/latex/listings/listings.sty
-\lst@mode=\count324
-\lst@gtempboxa=\box59
-\lst@token=\toks25
-\lst@length=\count325
-\lst@currlwidth=\dimen144
-\lst@column=\count326
-\lst@pos=\count327
-\lst@lostspace=\dimen145
-\lst@width=\dimen146
-\lst@newlines=\count328
-\lst@lineno=\count329
-\lst@maxwidth=\dimen147
+\lst@mode=\count421
+\lst@gtempboxa=\box77
+\lst@token=\toks24
+\lst@length=\count422
+\lst@currlwidth=\dimen179
+\lst@column=\count423
+\lst@pos=\count424
+\lst@lostspace=\dimen180
+\lst@width=\dimen181
+\lst@newlines=\count425
+\lst@lineno=\count426
+\lst@maxwidth=\dimen182
 
 (/usr/share/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2018/09/02 1.7 (Carsten Heinz)
-\c@lstnumber=\count330
-\lst@skipnumbers=\count331
-\lst@framebox=\box60
+\c@lstnumber=\count427
+\lst@skipnumbers=\count428
+\lst@framebox=\box78
 )
 (/usr/share/texmf-dist/tex/latex/listings/listings.cfg
 File: listings.cfg 2018/09/02 1.7 listings configuration
@@ -797,7 +957,7 @@ Package: color 2016/07/10 v1.1e Standard LaTeX Color (DPC)
 (/usr/share/texmf-dist/tex/latex/graphics-cfg/color.cfg
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
-Package color Info: Driver file: luatex.def on input line 147.
+Package color Info: Driver file: xetex.def on input line 147.
 )
 Package biblatex Info: Trying to load language 'english'...
 Package biblatex Info: ... file 'english.lbx' found.
@@ -810,124 +970,147 @@ Package csquotes Info: ... none found.
 
 
 Package csquotes Warning: No multilingual support.
-(csquotes)                Cannot enable multilingual quotes on input line 104.
+(csquotes)                Cannot enable multilingual quotes on input line 103.
 
 (./thesis.aux (./includes/BA-titlepage.aux) (./includes/abstract.aux)
 (./chapters/introduction.aux) (./chapters/background.aux)
 (./chapters/methods.aux) (./chapters/results.aux) (./chapters/discussion.aux)
 (./chapters/conclusion.aux))
-\openout1 = thesis.aux
+\openout1 = `thesis.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 104.
-LaTeX Font Info:    ... okay on input line 104.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 104.
-LaTeX Font Info:    ... okay on input line 104.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 104.
-LaTeX Font Info:    ... okay on input line 104.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 104.
-LaTeX Font Info:    ... okay on input line 104.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 104.
-LaTeX Font Info:    ... okay on input line 104.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 104.
-LaTeX Font Info:    ... okay on input line 104.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 104.
-LaTeX Font Info:    ... okay on input line 104.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 104.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 104.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 103.
+LaTeX Font Info:    ... okay on input line 103.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 103.
+LaTeX Font Info:    ... okay on input line 103.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 103.
+LaTeX Font Info:    ... okay on input line 103.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 103.
+LaTeX Font Info:    ... okay on input line 103.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 103.
+LaTeX Font Info:    ... okay on input line 103.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 103.
+LaTeX Font Info:    ... okay on input line 103.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 103.
+LaTeX Font Info:    ... okay on input line 103.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 103.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 103.
+
  (/usr/share/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 104.
+LaTeX Font Info:    ... okay on input line 103.
 
-(/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
-[Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count332
-\scratchdimen=\dimen148
-\scratchbox=\box61
-\nofMPsegments=\count333
-\nofMParguments=\count334
-\everyMPshowfont=\toks26
-\MPscratchCnt=\count335
-\MPscratchDim=\dimen149
-\MPnumerator=\count336
-\makeMPintoPDFobject=\count337
-\everyMPtoPDFconversion=\toks27
-) (/usr/share/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
-Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
+Package fontspec Info: Adjusting the maths setup (use [no-math] to avoid
+(fontspec)             this).
 
-(/usr/share/texmf-dist/tex/latex/oberdiek/grfext.sty
-Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
+\symlegacymaths=\mathgroup4
+LaTeX Font Info:    Overwriting symbol font `legacymaths' in version `bold'
+(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 103.
+LaTeX Font Info:    Redeclaring math accent \acute on input line 103.
+LaTeX Font Info:    Redeclaring math accent \grave on input line 103.
+LaTeX Font Info:    Redeclaring math accent \ddot on input line 103.
+LaTeX Font Info:    Redeclaring math accent \tilde on input line 103.
+LaTeX Font Info:    Redeclaring math accent \bar on input line 103.
+LaTeX Font Info:    Redeclaring math accent \breve on input line 103.
+LaTeX Font Info:    Redeclaring math accent \check on input line 103.
+LaTeX Font Info:    Redeclaring math accent \hat on input line 103.
+LaTeX Font Info:    Redeclaring math accent \dot on input line 103.
+LaTeX Font Info:    Redeclaring math accent \mathring on input line 103.
+LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 103.
+LaTeX Font Info:    Redeclaring math symbol \Delta on input line 103.
+LaTeX Font Info:    Redeclaring math symbol \Theta on input line 103.
+LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 103.
+LaTeX Font Info:    Redeclaring math symbol \Xi on input line 103.
+LaTeX Font Info:    Redeclaring math symbol \Pi on input line 103.
+LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 103.
+LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 103.
+LaTeX Font Info:    Redeclaring math symbol \Phi on input line 103.
+LaTeX Font Info:    Redeclaring math symbol \Psi on input line 103.
+LaTeX Font Info:    Redeclaring math symbol \Omega on input line 103.
+LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 103.
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 103.
+LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
+(Font)              `operators' in the math version `normal' on input line 103.
 
-(/usr/share/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
-Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
-))
-Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 43
-8.
-Package grfext Info: Graphics extension search list:
-(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPEG
-,.JBIG2,.JB2,.eps]
-(grfext)             \AppendGraphicsExtensions on input line 456.
-
-(/usr/share/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
-File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
-
-))
-Package biblatex Info: LuaTeX detected.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  OT1/cmr/m/n --> TU/lmr/m/n on input line 103.
+LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
+(Font)              `operators' in the math version `bold' on input line 103.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/cmr/bx/n --> TU/lmr/m/n on input line 103.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  TU/lmr/m/n --> TU/lmr/m/n on input line 103.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
+(Font)                  OT1/cmr/m/it --> TU/lmr/m/it on input line 103.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
+(Font)                  OT1/cmr/bx/n --> TU/lmr/bx/n on input line 103.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
+(Font)                  OT1/cmss/m/n --> TU/lmss/m/n on input line 103.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 103.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  TU/lmr/m/n --> TU/lmr/bx/n on input line 103.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
+(Font)                  OT1/cmr/bx/it --> TU/lmr/bx/it on input line 103.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
+(Font)                  OT1/cmss/bx/n --> TU/lmss/bx/n on input line 103.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/bx/n on input line 103.
+Package biblatex Info: XeTeX detected.
 (biblatex)             Assuming input encoding 'utf8'.
 Package biblatex Info: Automatic encoding selection.
 (biblatex)             Assuming data encoding 'utf8'.
+\openout3 = `thesis.bcf'.
 
-\openout3 = thesis.bcf
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'thesis.bbl' found.
- (./thesis.bbl
+
+(./thesis.bbl
 
 Package biblatex Warning: The following entry could not be found
 (biblatex)                in the database:
-(biblatex)                Mikolov
+(biblatex)                cpu
 (biblatex)                Please verify the spelling and rerun
 (biblatex)                LaTeX afterwards.
 
 )
-Package biblatex Info: Reference section=0 on input line 104.
-Package biblatex Info: Reference segment=0 on input line 104.
+Package biblatex Info: Reference section=0 on input line 103.
+Package biblatex Info: Reference segment=0 on input line 103.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: listings package is loaded.
 Package caption Info: End \AtBeginDocument code.
-\c@lstlisting=\count338
+\c@lstlisting=\count429
+\openout2 = `includes/BA-titlepage.aux'.
 
-\openout2 = includes/BA-titlepage.aux
  (./includes/BA-titlepage.tex
-<images/uni-logo.png, id=1, 501.875pt x 133.49875pt>
-File: images/uni-logo.png Graphic file (type png)
-<use images/uni-logo.png>
-Package luatex.def Info: images/uni-logo.png  used on input line 7.
-(luatex.def)             Requested size: 199.16928pt x 52.97891pt.
+File: images/uni-logo.png Graphic file (type bmp)
+<images/uni-logo.png>
  [1
 
 
 
 
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}<./images/uni-logo.png>]) (.
-/thesis.toc [2
+]) (./thesis.toc [2
 
 
 
 ])
 \tf@toc=\write4
+\openout4 = `thesis.toc'.
 
-\openout4 = thesis.toc
  [3]
-\openout2 = includes/abstract.aux
- (./includes/abstract.tex) [4
+\openout2 = `includes/abstract.aux'.
+
+
+(./includes/abstract.tex) [4
 
 
 
 ] (./thesis.lof)
 \tf@lof=\write5
+\openout5 = `thesis.lof'.
 
-\openout5 = thesis.lof
  [5
 
 
@@ -936,16 +1119,18 @@ Package luatex.def Info: images/uni-logo.png  used on input line 7.
 
 ] (./thesis.lot)
 \tf@lot=\write6
+\openout6 = `thesis.lot'.
 
-\openout6 = thesis.lot
  [6
 
 
 
 
 ]
-\openout2 = chapters/introduction.aux
- (./chapters/introduction.tex
+\openout2 = `chapters/introduction.aux'.
+
+
+(./chapters/introduction.tex
 chapter 1.
 
 Class scrbook Warning: \float@addtolists detected!
@@ -968,14 +1153,12 @@ Class scrbook Warning: \float@addtolists detected!
 
 
 ]) [2]
-\openout2 = chapters/background.aux
+\openout2 = `chapters/background.aux'.
+
  (./chapters/background.tex
 chapter 2.
-<images/window_ex.png, id=36, 1414.28375pt x 357.335pt>
-File: images/window_ex.png Graphic file (type png)
-<use images/window_ex.png>
-Package luatex.def Info: images/window_ex.png  used on input line 8.
-(luatex.def)             Requested size: 424.2884pt x 107.20132pt.
+File: images/window_ex.png Graphic file (type bmp)
+<images/window_ex.png>
 
 Underfull \hbox (badness 10000) in paragraph at lines 13--14
 
@@ -986,40 +1169,23 @@ Underfull \hbox (badness 10000) in paragraph at lines 13--14
 
 
 
-<./images/window_ex.png>] [4] [5]
-<images/frequency_ex.png, id=56, 803.0pt x 501.875pt>
-File: images/frequency_ex.png Graphic file (type png)
-<use images/frequency_ex.png>
-Package luatex.def Info: images/frequency_ex.png  used on input line 57.
-(luatex.def)             Requested size: 361.34666pt x 225.84166pt.
- [6] [7<./images/frequency_ex.png>]
-<images/cachingEfficiency.png, id=64, 816.04875pt x 649.42625pt>
-File: images/cachingEfficiency.png Graphic file (type png)
-<use images/cachingEfficiency.png>
-Package luatex.def Info: images/cachingEfficiency.png  used on input line 76.
-(luatex.def)             Requested size: 244.81651pt x 194.82938pt.
- [8]
-[9<./images/cachingEfficiency.png>] [10] [11]
-<images/multipleContext.png, id=78, 471.7625pt x 89.33376pt>
-File: images/multipleContext.png Graphic file (type png)
-<use images/multipleContext.png>
-Package luatex.def Info: images/multipleContext.png  used on input line 121.
-(luatex.def)             Requested size: 330.23149pt x 62.53319pt.
- [12<./images/multipleContext.png>] [13]
-
-LaTeX Warning: Citation 'nesterov' on page 14 undefined on input line 166.
-
-[14] [15] [16]
-
-LaTeX Warning: Citation 'adam' on page 17 undefined on input line 215.
-
-
+] [4] [5]
+File: images/frequency_ex.png Graphic file (type bmp)
+<images/frequency_ex.png>
+ [6] [7]
+File: images/cachingEfficiency.png Graphic file (type bmp)
+<images/cachingEfficiency.png>
+ [8] [9] [10] [11]
+File: images/multipleContext.png Graphic file (type bmp)
+<images/multipleContext.png>
+ [12] [13] [14] [15] [16]
 Underfull \hbox (badness 10000) in paragraph at lines 223--226
 
  []
 
 [17]) [18]
-\openout2 = chapters/methods.aux
+\openout2 = `chapters/methods.aux'.
+
  (./chapters/methods.tex
 chapter 3.
 [19
@@ -1058,12 +1224,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 63--66
  []
 
 [21] [22] [23] [24]) [25]
-\openout2 = chapters/results.aux
+\openout2 = `chapters/results.aux'.
+
  (./chapters/results.tex
 chapter 4.
-
-LaTeX Warning: Citation 'cpu' on page 26 undefined on input line 8.
-
 
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 10.
@@ -1079,69 +1243,49 @@ LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 42.
 
 
-Overfull \hbox (0.96936pt too wide) in paragraph at lines 43--52
+Overfull \hbox (0.96915pt too wide) in paragraph at lines 43--52
 [][] 
  []
 
 [27] [28]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 71.
+               Default added (so using `tbp') on input line 72.
 
 [29] [30] [31]
-<images/results_sgd_shuffle.png, id=145, 803.0pt x 501.875pt>
-File: images/results_sgd_shuffle.png Graphic file (type png)
-<use images/results_sgd_shuffle.png>
-Package luatex.def Info: images/results_sgd_shuffle.png  used on input line 131.
-
-(luatex.def)             Requested size: 361.34666pt x 225.84166pt.
+File: images/results_sgd_shuffle.png Graphic file (type bmp)
+<images/results_sgd_shuffle.png>
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<images/results_mom_shuffle.png, id=146, 803.0pt x 501.875pt>
-File: images/results_mom_shuffle.png Graphic file (type png)
-<use images/results_mom_shuffle.png>
-Package luatex.def Info: images/results_mom_shuffle.png  used on input line 141.
+File: images/results_mom_shuffle.png Graphic file (type bmp)
+<images/results_mom_shuffle.png>
 
-(luatex.def)             Requested size: 240.90186pt x 150.56366pt.
-
-Overfull \hbox (16.83638pt too wide) in paragraph at lines 141--142
+Overfull \hbox (16.83638pt too wide) in paragraph at lines 142--143
  [][] 
  []
 
-<images/results_nag_shuffle.png, id=147, 803.0pt x 501.875pt>
-File: images/results_nag_shuffle.png Graphic file (type png)
-<use images/results_nag_shuffle.png>
-Package luatex.def Info: images/results_nag_shuffle.png  used on input line 148.
+File: images/results_nag_shuffle.png Graphic file (type bmp)
+<images/results_nag_shuffle.png>
 
-(luatex.def)             Requested size: 240.90186pt x 150.56366pt.
-
-Overfull \hbox (16.83638pt too wide) in paragraph at lines 148--149
+Overfull \hbox (16.83638pt too wide) in paragraph at lines 149--150
  [][] 
  []
 
 [32]
-<images/results_adagrad_shuffle.png, id=151, 803.0pt x 501.875pt>
-File: images/results_adagrad_shuffle.png Graphic file (type png)
-<use images/results_adagrad_shuffle.png>
-Package luatex.def Info: images/results_adagrad_shuffle.png  used on input line 
-158.
-(luatex.def)             Requested size: 361.34666pt x 225.84166pt.
- [33<./images/results_sgd_shuffle.png><./images/results_mom_shuffle.png><./image
-s/results_nag_shuffle.png>] [34<./images/results_adagrad_shuffle.png>]
-<images/results_adam_shuffle.png, id=162, 803.0pt x 501.875pt>
-File: images/results_adam_shuffle.png Graphic file (type png)
-<use images/results_adam_shuffle.png>
-Package luatex.def Info: images/results_adam_shuffle.png  used on input line 181
-.
-(luatex.def)             Requested size: 361.34666pt x 225.84166pt.
+File: images/results_adagrad_shuffle.png Graphic file (type bmp)
+<images/results_adagrad_shuffle.png>
+ [33] [34]
+File: images/results_adam_shuffle.png Graphic file (type bmp)
+<images/results_adam_shuffle.png>
 )
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[35] [36<./images/results_adam_shuffle.png>]
-\openout2 = chapters/discussion.aux
+[35] [36]
+\openout2 = `chapters/discussion.aux'.
+
  (./chapters/discussion.tex
 chapter 5.
 [37
@@ -1149,20 +1293,13 @@ chapter 5.
 
 
 
-]
+] [38] [39]
+File: images/gensim_vs_adam.png Graphic file (type bmp)
+<images/gensim_vs_adam.png>
+ [40] [41]) [42]
+\openout2 = `chapters/conclusion.aux'.
 
-LaTeX Warning: Reference `sec:gensim' on page 38 undefined on input line 16.
-
-[38] [39]
-<images/gensim_vs_adam.png, id=180, 803.0pt x 501.875pt>
-File: images/gensim_vs_adam.png Graphic file (type png)
-<use images/gensim_vs_adam.png>
-Package luatex.def Info: images/gensim_vs_adam.png  used on input line 57.
-(luatex.def)             Requested size: 361.34666pt x 225.84166pt.
- [40<./images/gensim_vs_adam.png>] [41]) [42]
-\openout2 = chapters/conclusion.aux
-
-(./chapters/conclusion.tex
+ (./chapters/conclusion.tex
 chapter 6.
 ) [43
 
@@ -1179,23 +1316,23 @@ File: lstlang1.sty 2018/09/02 1.7 listings language file
 
 
 ]) [45]
-Overfull \hbox (28.20792pt too wide) in paragraph at lines 22--24
-\TU/lmr/m/n/12 gen-sim.utils.RULE_DIS-CARD, gen-sim.utils.RULE_KEEP or gen-sim.
-utils.RULE_DE-
+Overfull \hbox (60.55067pt too wide) in paragraph at lines 22--24
+\TU/lmr/m/n/12 cepts parameters (word, count, min_count) and returns either gen
+sim.utils.RULE_DISCARD,
  []
 
 ) [46]
 chapter without number
 
-Overfull \hbox (27.83556pt too wide) in paragraph at lines 162--162
-[]\TU/lmr/m/n/12 Priya Goyal, Pi-otr Dol-lár, Ross B. Gir-shick, Pieter No-ord
--huis, Lukasz Wesolowski,
+Overfull \hbox (27.83531pt too wide) in paragraph at lines 161--161
+[]\TU/lmr/m/n/12 Priya Goyal, Piotr Dollár, Ross B. Girshick, Pieter Noordhuis,
+ Lukasz Wesolowski,
  []
 
 
-Overfull \hbox (16.15007pt too wide) in paragraph at lines 162--162
-\TU/lmr/m/n/12 Large Mini-batch SGD: Train-ing Im-a-geNet in 1 Hour”. In: \TU
-/lmr/m/it/12 CoRR \TU/lmr/m/n/12 abs/1706.02677
+Overfull \hbox (15.98186pt too wide) in paragraph at lines 161--161
+\TU/lmr/m/n/12 Large Minibatch SGD: Training ImageNet in 1 Hour”. In: \TU/lmr/m
+/it/12 CoRR \TU/lmr/m/n/12 abs/1706.02677
  []
 
 [47
@@ -1204,72 +1341,38 @@ Overfull \hbox (16.15007pt too wide) in paragraph at lines 162--162
 
 
 ]
-Overfull \hbox (32.16348pt too wide) in paragraph at lines 162--162
-\TU/lmr/m/n/12 ma-tion of word rep-re-sen-ta-tions in vec-tor space”. In: \TU
-/lmr/m/it/12 arXiv preprint arXiv:1301.3781
+Overfull \hbox (32.16338pt too wide) in paragraph at lines 161--161
+\TU/lmr/m/n/12 mation of word representations in vector space”. In: \TU/lmr/m/i
+t/12 arXiv preprint arXiv:1301.3781
  []
 
 
-Overfull \hbox (9.18336pt too wide) in paragraph at lines 162--162
-[]\TU/lmr/m/n/12 Jef-frey Pen-ning-ton, Richard Socher, and Christo-pher Man-ni
-ng. “  Glove: Global
+Overfull \hbox (9.1832pt too wide) in paragraph at lines 161--161
+[]\TU/lmr/m/n/12 Jeffrey Pennington, Richard Socher, and Christopher Manning. “
+  Glove: Global
  []
 
 
-Overfull \hbox (0.76077pt too wide) in paragraph at lines 162--162
-[]\TU/lmr/m/n/12 Bar-tunov Sergey, Kon-drashkin Dmitry, Os-okin An-ton, and P. 
-Vetrov Dmitry.
+Overfull \hbox (0.7606pt too wide) in paragraph at lines 161--161
+[]\TU/lmr/m/n/12 Bartunov Sergey, Kondrashkin Dmitry, Osokin Anton, and P. Vetr
+ov Dmitry.
  []
 
-[48] [49] (./thesis.aux (./includes/BA-titlepage.aux) (./includes/abstract.aux) (./chapters/introduction.aux) (./chapters/background.aux)
+[48] [49] (./thesis.aux (./includes/BA-titlepage.aux) (./includes/abstract.aux)
+(./chapters/introduction.aux) (./chapters/background.aux)
 (./chapters/methods.aux) (./chapters/results.aux) (./chapters/discussion.aux)
 (./chapters/conclusion.aux))
-
-LaTeX Warning: There were undefined references.
-
-
-Package biblatex Warning: Please (re)run Biber on the file:
-(biblatex)                thesis
-(biblatex)                and rerun LaTeX afterwards.
-
 Package logreq Info: Writing requests to 'thesis.run.xml'.
+\openout1 = `thesis.run.xml'.
 
-\openout1 = thesis.run.xml
-)
+ ) 
+Here is how much of TeX's memory you used:
+ 27854 strings out of 492933
+ 580493 string characters out of 6138667
+ 1242586 words of memory out of 5000000
+ 31588 multiletter control sequences out of 15000+600000
+ 538661 words of font info for 69 fonts, out of 8000000 for 9000
+ 1348 hyphenation exceptions out of 8191
+ 60i,21n,76p,9085b,4861s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Here is how much of LuaTeX's memory you used:
- 17700 strings out of 494383
- 100000,1144653 words of node,token memory allocated
- 903 words of node memory still in use:
-   6 hlist, 2 vlist, 2 rule, 11 glue, 4 kern, 1 sub_mlist, 1 glyph, 71 attribute
-, 71 glue_spec, 71 attribute_list, 1 write nodes
-   avail lists: 1:2,2:1913,3:220,4:1375,5:1342,6:120,7:4722,8:1112,9:2908,10:26,
-11:258,12:1
- 21018 multiletter control sequences out of 65536+600000
- 68 fonts using 5468647 bytes
- 60i,21n,76p,9084b,1444s stack positions out of 5000i,500n,10000p,200000b,100000s
-</usr/share/texmf-dist/fonts/opentype/public/lm/lmroman10-regular.otf></usr/shar
-e/texmf-dist/fonts/opentype/public/lm/lmroman7-regular.otf></usr/share/texmf-dis
-t/fonts/opentype/public/lm/lmmono12-regular.otf></usr/share/texmf-dist/fonts/ope
-ntype/public/lm/lmroman8-regular.otf></usr/share/texmf-dist/fonts/opentype/publi
-c/lm/lmroman12-italic.otf></usr/share/texmf-dist/fonts/opentype/public/lm/lmroma
-nslant12-regular.otf></usr/share/texmf-dist/fonts/opentype/public/lm/lmsans10-bo
-ld.otf></usr/share/texmf-dist/fonts/opentype/public/lm/lmroman12-regular.otf></u
-sr/share/texmf-dist/fonts/opentype/public/lm/lmromancaps10-regular.otf></usr/sha
-re/texmf-dist/fonts/opentype/public/lm/lmroman17-regular.otf></usr/share/texmf-d
-ist/fonts/opentype/public/lm/lmsans17-regular.otf></usr/share/texmf-dist/fonts/o
-pentype/public/lm/lmroman12-bold.otf></usr/share/texmf-dist/fonts/type1/public/a
-msfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi
-12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/sha
-re/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fo
-nts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public
-/amsfonts/cm/cmr6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8
-.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/shar
-e/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on thesis.pdf (55 pages, 640029 bytes).
-
-PDF statistics: 316 PDF objects out of 1000 (max. 8388607)
- 193 compressed objects within 2 object streams
- 0 named destinations out of 1000 (max. 131072)
- 1 words of extra memory for PDF output out of 10000 (max. 100000000)
-
+Output written on thesis.pdf (55 pages).

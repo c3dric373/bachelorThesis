@@ -324,6 +324,34 @@
       \verb http://arxiv.org/abs/1604.04661
       \endverb
     \endentry
+    \entry{adam}{article}{}
+      \name{author}{2}{}{%
+        {{hash=b6fbd171848aad4edf3925543f1f1522}{%
+           family={Kingma},
+           familyi={K\bibinitperiod},
+           given={Diederik\bibnamedelima P},
+           giveni={D\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+        {{hash=8aa66e8231cc2fdbe67aa4f18ca970c6}{%
+           family={Ba},
+           familyi={B\bibinitperiod},
+           given={Jimmy},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{a09df9f123146b8e2c7f1134c9496932}
+      \strng{fullhash}{a09df9f123146b8e2c7f1134c9496932}
+      \strng{bibnamehash}{a09df9f123146b8e2c7f1134c9496932}
+      \strng{authorbibnamehash}{a09df9f123146b8e2c7f1134c9496932}
+      \strng{authornamehash}{a09df9f123146b8e2c7f1134c9496932}
+      \strng{authorfullhash}{a09df9f123146b8e2c7f1134c9496932}
+      \field{labelalpha}{KB14}
+      \field{sortinit}{K}
+      \field{sortinithash}{9fd838a31ba64d981e8f44562bd33f89}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{arXiv preprint arXiv:1412.6980}
+      \field{title}{Adam: A method for stochastic optimization}
+      \field{year}{2014}
+    \endentry
     \entry{contextWithTensor}{inproceedings}{}
       \name{author}{3}{}{%
         {{hash=b2e07ef809f78891cf3fb983160853ce}{%
@@ -890,7 +918,7 @@
       \endverb
     \endentry
   \enddatalist
-  \missing{Mikolov}
+  \missing{cpu}
 \endrefsection
 \endinput
 

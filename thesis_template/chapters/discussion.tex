@@ -13,7 +13,7 @@ When the model used SGD as an optimizer it was able to use higher learning rates
 SGD and NAG both have very different values when using shuffling in comparison to unshuffled input, as shown in figures \ref{fig:results_sgd} and \ref{fig:results_nag}, plain SGD. We do not only attribute those results to input shuffling but partially also to a good random initialization guess. Due to a lack of time these results were not replicate more than once.
 
 \section{Comparison to Gensim}
-This section will compare our finding extensively to Gensim \cite{gensim}. As explained in Section \ref{sec:gensim}, Gensim is optimized to have a very high throughput, this made it possible to achieve a lot of computations. Furthermore, Gensim provides access to the loss and the resulting word embeddings, which facilitated the comparison process.
+This section will compare our finding extensively to Gensim \cite{gensim}. As explained in Section \ref{ssec:gensim}, Gensim is optimized to have a very high throughput, this made it possible to achieve a lot of computations. Furthermore, Gensim provides access to the loss and the resulting word embeddings, which facilitated the comparison process.
 
 \iffalse
 As Mikolov et al. published the original paper which introduced the SGNS, it is, of course, relevant to compare ourselves to their work. The first important thing to take under account is that Mikolov et al. only trained their model on a very large google news dataset incorporating more than 3 billion words. This makes the comparison of our work more difficult. But we will make some assumptions, as they could be of value if true.
