@@ -9,25 +9,27 @@ The SGM is a very simple model used to learn WE. The idea is to train the model,
     \caption{Example of a center word and it's context words}
     \label{fig:window_ex}
 \end{figure}
-
-  As we know have those definitions we can define our fake task: given a pair of center, context words the goal of the network is to predict the probability of each word to appear in the context of the center word. Know one may ask himself how such a network is built. The network consists of two matrices. Both of these matrices will store word embeddings. The first one, our projection layer, will store in each row the WE for one specific word. It will have dimension $T\times d$, with $T$ being the size of our vocabulary and $d$ the dimension of our WE. The second layer, our output layer, will store one WE in each column. The idea behind these 2 layers is that the input layer will represent our words as center word and the output layer as context words. With all of this information, we can construct the following probability what we want to maximize:\\
-
-
-
-\begin{equation} \label{basicSkip} \prod_{t=1}^T \prod_{-m<j<m}  p(w_{t+j}|w_t) \end{equation} Where T is the number of words in the corpus data, $w_t$ the $t^{th}$ word in the corpus data and $m$ is the context window. This means that the $m$ nearest words to $w$ are considered as context words.
-Equation \ref{basicSkip} can be transformed into sums by using log probabilities: 
-\begin{equation} \sum _{t=1}^T \sum_{-m<j<m} log( p(w_{t+j}|w_t) )\end{equation} 
-    where the parameters are the same as in Equation \ref{basicSkip}.
+%TODO think about example matrix
+  As we have those definitions we can define the fake task: given a pair of center and context words, which will be our training samples, the goal of the network is to predict the probability of each word to appear in the context of the center word. One may ask how such a network is built. The network consists of two matrices, a projection and an output layer. Both of these matrices store word embeddings. The first one, the projection layer, will store in each row the WE for one specific word. It will have dimension $T\times d$, with $T$ being the size of our vocabulary and $d$ the dimension of our WE. The second layer, the output layer, will store one WE in each column. The idea behind these 2 layers is that the input layer will represent our words as center word and the output layer as context words. The task of the network being to predict the probability of each word appearing in the context of a given center word, we can construct the following probability what we want to maximize:\\
+\begin{equation} \label{eq:basicSkip}
+ \prod_{t=1}^T \prod_{-m<j<m}  p(w_{t+j}|w_t)
+ \end{equation}
+ Where T is the number of words in the corpus data, $w_t$ the $t^{th}$ word in the corpus data and $m$ is the context window. This means that the $m$ nearest words to $w$ are considered as context words.
+Equation \ref{eq:basicSkip} can be transformed into sums by using log probabilities: 
+\begin{equation}
+ \sum _{t=1}^T \sum_{-m<j<m} log( p(w_{t+j}|w_t) )
+\end{equation}
+    where the parameters are the same as in Equation \ref{eq:basicSkip}.
 
 The basic Skip-Gram Model uses a classical Softmax to calculate the conditional probability $p(w_{t+j}|w_t)$: 
-   \begin{equation}
+   \begin{equation} \label{eq:softmax}
    p(w_{t+j}|w_t)=  \frac{exp( \tilde{v}_{w_{t+j}}^Tv_{w_t})}{\sum_{w=1}^v exp(\tilde{v}_w^Tv_{ w_t})}
-   \end{equation}\label{eq:softmax}
+   \end{equation}
   
-  Here $\tilde{v}_{w_t}$ and $ v_{w_t}$ are the vector representations. The model stores vector representations of each word. One for the input words and another for the context word. Here $\tilde{v}_{w_t}$ is the output vector and  $ v_{w_t}$ the projection layer. There lies a problem in the approach with a classical softmax. As a matter of fact, it is unsuitable to compute the softmax. For the computation of $\sum_{w=1}^v exp(\tilde{v_w}^T w_t)$, the denominator in Equation \ref{eq:softmax} one has to go over the whole corpus data. As very big data sets are needed to train the model, this is not a solution. Consequently, different solutions were proposed by Mikolov et al. \cite{mikolov2}. The first one is to use a Hierarchical softmax introduced by Morin and Bengio \cite{hsoftmax}. In this model, the probability distribution of the output nodes is saved in a binary tree which gives one a logarithmic computation time for each of these probabilities and makes it suitable to compute the softmax. Another possibility is the use of negative sampling which we shall discuss in the next section. 
+  Here $\tilde{v}_{w_t}$ and $ v_{w_t}$ are the vector representations, stored respectively in the projection Layer (first Matrix) and in the output layer (second Matrix). There is a problem with the classical softmax. As a matter of fact, it is unsuitable to compute the softmax. For the computation of $\sum_{w=1}^v exp(\tilde{v_w}^T w_t)$, the denominator in Equation \ref{eq:softmax} one has to go over the whole corpus data. As very big data sets are needed to train the model, this is not a solution. Mikolov et al. \cite{mikolov2} porposed different solutions. The first solution is to use a Hierarchical softmax introduced by Morin and Bengio \cite{hsoftmax}. In this model, the probability distribution of the output nodes is saved in a binary tree which gives one a logarithmic computation time for each of these probabilities and makes it suitable to compute the softmax. Another possibility is the use of negative sampling which is discussed in the next section.
 
 \section{Negative Sampling}
-An alternative to the Hierarchical Softmax is Noise Contrastive Estimation (NCE) which was introduced by Gutmann and Hyv{\"a}rinen \cite{nce-original},  and first applied to NLP by Mnih and Teh \cite{mnih}. The idea behind NCE is to distinguish targets words from noise. It does so by reducing the problem to a logistic regression task and does it by maximizing the log probability. The skip-gram Model is only interested in good word representation, hence the probability of the word is not meaningful as long as the quality of the word representations remains high. Mikolov et al. \cite{mikolov2} simplified NCE and called it Negative Sampling. Let's dive into it.\\
+A second alternative solution to the use of a classical softmax is negative sampling. Negative Sampling is a simplification of Noise Contrastive Estimation (NCE) which was introduced by Gutmann and Hyv{\"a}rinen \cite{nce-original},  and first applied to NLP by Mnih and Teh \cite{mnih}. This section will shortly describe NCE and then how Mikolov et al. simplified it to create the technique called negative sampling. \\The idea behind NCE is to distinguish targets words from noise. It does so by reducing the problem to a logistic regression task and does it by maximizing the log probability. The skip-gram Model is only interested in good word representation, hence the probability of the word is not meaningful as long as the quality of the word representations remains high. Mikolov et al. \cite{mikolov2} simplified NCE and called it Negative Sampling. Let's dive into it.\\
 The idea behind negative sampling is to only update the output nodes of certain words. This will obviously save an enormous amount of computation time. The idea is that given a pair $(c,w) \in D$, where $c$ is a word in the context window of $w$ and select $K$ random words $k_i$ from the corpus data, more on the random distribution later. We will assume those words do not appear in the context of $w$. We will denote the score that the $(c,w)$ wasn't drawn at random the following way: $p(y=1|c,w)$, and if $(k,w) $ is chosen at random this way: $p(y=0|k,w)$.  Now we will use logistic regression to update the weights of the $k$ selected context words and $c$. By doing so we will only have to update $k+1$ nodes.
 
 Let's look at how we construct our objective function for a given word $w$ and one of its context words $c$: 
