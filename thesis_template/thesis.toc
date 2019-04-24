@@ -125,3 +125,5 @@
 \contentsline {section}{\numberline {A.2}Parameters}{45}% 
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\nonumberline Bibliography}{47}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\nonumberline Eidesstattliche Erkl\"arung}{50}% 

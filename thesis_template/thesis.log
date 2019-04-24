@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018/Arch Linux) (preloaded format=xelatex 2019.4.14)  24 APR 2019 00:08
+This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018/Arch Linux) (preloaded format=xelatex 2019.4.14)  24 APR 2019 08:37
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1350,21 +1350,30 @@ Overfull \hbox (0.7606pt too wide) in paragraph at lines 161--161
 ov Dmitry.
  []
 
-[48] [49] (./thesis.aux (./includes/BA-titlepage.aux) (./includes/abstract.aux)
+[48] [49]
+\openout2 = `includes/eidesstattlicheErklaerung.aux'.
+
+ (./includes/eidesstattlicheErklaerung.tex
+chapter without number
+) [50
+
+
+
+] (./thesis.aux (./includes/BA-titlepage.aux) (./includes/abstract.aux)
 (./chapters/introduction.aux) (./chapters/background.aux)
 (./chapters/methods.aux) (./chapters/results.aux) (./chapters/discussion.aux)
-(./chapters/conclusion.aux))
+(./chapters/conclusion.aux) (./includes/eidesstattlicheErklaerung.aux))
 Package logreq Info: Writing requests to 'thesis.run.xml'.
 \openout1 = `thesis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 27853 strings out of 492933
- 580483 string characters out of 6138667
+ 27859 strings out of 492933
+ 580709 string characters out of 6138667
  1242566 words of memory out of 5000000
- 31587 multiletter control sequences out of 15000+600000
+ 31588 multiletter control sequences out of 15000+600000
  538661 words of font info for 69 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  60i,21n,76p,9085b,4861s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on thesis.pdf (55 pages).
+Output written on thesis.pdf (56 pages).
